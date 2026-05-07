@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Shootin360">
+        <meta name="description" content="360° Virtual Tour Services in Pune – Hotels, Schools, Showrooms, Real Estate, Hospitals, Gyms & Corporate Offices. Google Street View specialists in Maharashtra.">
+        <meta name="keywords" content="360 virtual tour pune, hotel virtual tour, school virtual tour, showroom 360 tour, real estate virtual tour pune, hospital virtual tour, gym virtual tour pune">
+        <title>Our Services – Shootin 360 | 360° Virtual Tour Experts in Pune</title>
+        <link rel="shortcut icon" href="assets/img/favicon.svg">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/all.min.css">
+        <link rel="stylesheet" href="assets/css/animate.css">
+        <link rel="stylesheet" href="assets/css/magnific-popup.css">
+        <link rel="stylesheet" href="assets/css/meanmenu.css">
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+        <link rel="stylesheet" href="assets/css/nice-select.css">
+        <link rel="stylesheet" href="assets/css/main.css">
+        <style>
+            /* ===== Shootin360 Custom Overrides ===== */
+            :root {
+                --theme: #F5C200;
+                --bg: #1A1A1A;
+                --header: #1A1A1A;
+                --text: #555555;
+                --body: #F8F8F8;
+                --white: #ffffff;
+                --border: #e0e0e0;
+            }
+
+            /* Logo text */
+            .shootin-logo-text {
+                font-family: 'Quicksand', sans-serif;
+                font-weight: 800;
+                font-size: 26px;
+                color: var(--theme);
+                line-height: 1;
+                text-decoration: none;
+                letter-spacing: -1px;
+            }
+            .shootin-logo-text span {
+                color: #cccccc;
+                font-size: 11px;
+                display: block;
+                letter-spacing: 2px;
+                font-weight: 500;
+                margin-top: 2px;
+            }
+
+            /* Page Banner */
+            .s360-page-banner {
+                background: linear-gradient(135deg, #FFFDF4 0%, #FFF8E6 100%);
+                border-bottom: 3px solid #F5C200;
+                padding: 140px 0 80px;
+                position: relative;
+                overflow: hidden;
+            }
+            .s360-page-banner::before {
+                content: '';
+                position: absolute;
+                top: 0; left: 0; right: 0; bottom: 0;
+                background: radial-gradient(ellipse at 60% 50%, rgba(245,194,0,0.12) 0%, transparent 65%);
+                pointer-events: none;
+            }
+            .s360-page-banner h1 {
+                font-family: 'Quicksand', sans-serif;
+                font-size: 52px;
+                font-weight: 800;
+                color: #1A1A1A;
+                margin-bottom: 16px;
+                position: relative;
+                z-index: 2;
+            }
+            .s360-page-banner h1 span { color: var(--theme); }
+            .s360-breadcrumb {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                position: relative;
+                z-index: 2;
+            }
+            .s360-breadcrumb a {
+                color: #888888;
+                text-decoration: none;
+                font-size: 14px;
+                transition: color 0.3s;
+            }
+            .s360-breadcrumb a:hover { color: var(--theme); }
+            .s360-breadcrumb span { color: var(--theme); font-size: 13px; }
+            .s360-breadcrumb .current { color: var(--theme); font-size: 14px; font-weight: 600; }
+
+            /* Section Label */
+            .s360-section-label {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                color: var(--theme);
+                font-size: 13px;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                margin-bottom: 16px;
+            }
+            .s360-section-label::before {
+                content: '';
+                width: 30px;
+                height: 2px;
+                background: var(--theme);
+                display: inline-block;
+            }
+
+            /* Service Section */
+            .s360-service-section {
+                padding: 90px 0;
+            }
+            .s360-service-section.alt-bg {
+                background: #F8F8F8;
+            }
+            .s360-service-section.white-bg {
+                background: #ffffff;
+            }
+
+            /* Service Icon Block */
+            .s360-svc-icon {
+                width: 80px;
+                height: 80px;
+                background: rgba(245,194,0,0.12);
+                border-radius: 16px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 36px;
+                color: var(--theme);
+                margin-bottom: 24px;
+                border: 2px solid rgba(245,194,0,0.2);
+                transition: all 0.3s;
+            }
+            .s360-svc-icon:hover {
+                background: var(--theme);
+                color: #1A1A1A;
+            }
+
+            /* Service Content */
+            .s360-svc-label {
+                display: inline-block;
+                background: rgba(245,194,0,0.12);
+                color: var(--theme);
+                font-size: 12px;
+                font-weight: 700;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                padding: 6px 16px;
+                border-radius: 50px;
+                margin-bottom: 16px;
+                border: 1px solid rgba(245,194,0,0.25);
+            }
+            .s360-svc-title {
+                font-family: 'Quicksand', sans-serif;
+                font-size: 36px;
+                font-weight: 800;
+                color: #1A1A1A;
+                line-height: 1.2;
+                margin-bottom: 18px;
+            }
+            .s360-svc-title span { color: var(--theme); }
+            .s360-svc-desc {
+                font-size: 16px;
+                color: var(--text);
+                line-height: 1.8;
+                margin-bottom: 28px;
+            }
+
+            /* Benefit list */
+            .s360-benefit-list {
+                list-style: none;
+                padding: 0;
+                margin: 0 0 32px;
+            }
+            .s360-benefit-list li {
+                display: flex;
+                align-items: flex-start;
+                gap: 12px;
+                margin-bottom: 14px;
+                font-size: 15px;
+                color: #333;
+                line-height: 1.5;
+            }
+            .s360-benefit-list li i {
+                color: var(--theme);
+                font-size: 16px;
+                margin-top: 2px;
+                flex-shrink: 0;
+            }
+
+            /* Book Button */
+            .btn-book-360 {
+                background: var(--theme);
+                color: #1A1A1A;
+                font-weight: 700;
+                padding: 14px 32px;
+                border-radius: 4px;
+                text-decoration: none;
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+                font-size: 15px;
+                transition: all 0.3s;
+                font-family: 'Quicksand', sans-serif;
+            }
+            .btn-book-360:hover {
+                background: #e0ae00;
+                color: #1A1A1A;
+                transform: translateY(-2px);
+                box-shadow: 0 8px 24px rgba(245,194,0,0.3);
+            }
+            .btn-whatsapp-360 {
+                background: #25D366;
+                color: #ffffff;
+                font-weight: 700;
+                padding: 14px 28px;
+                border-radius: 4px;
+                text-decoration: none;
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+                font-size: 15px;
+                transition: all 0.3s;
+            }
+            .btn-whatsapp-360:hover { background: #1db954; color: #fff; transform: translateY(-2px); }
+            .btn-outline-360 {
+                background: transparent;
+                color: #ffffff;
+                border: 2px solid rgba(255,255,255,0.3);
+                font-weight: 600;
+                padding: 14px 32px;
+                border-radius: 4px;
+                text-decoration: none;
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+                font-size: 15px;
+                transition: all 0.3s;
+            }
+            .btn-outline-360:hover { border-color: var(--theme); color: var(--theme); }
+
+            /* Service Visual with real images */
+            .s360-svc-visual {
+                border-radius: 16px;
+                overflow: hidden;
+                position: relative;
+                min-height: 380px;
+                background: #1A1A1A;
+            }
+            .s360-svc-visual img {
+                width: 100%;
+                height: 100%;
+                min-height: 380px;
+                object-fit: cover;
+                display: block;
+                transition: transform 0.6s ease;
+            }
+            .s360-svc-visual:hover img { transform: scale(1.05); }
+            /* Hotspot dots for virtual tour effect */
+            .s360-svc-hotspot-wrap {
+                position: absolute;
+                inset: 0;
+                pointer-events: none;
+                z-index: 3;
+            }
+            .s360-svc-hotspot {
+                position: absolute;
+                width: 16px;
+                height: 16px;
+                background: #F5C200;
+                border-radius: 50%;
+                transform: translate(-50%, -50%);
+                animation: svchp-pulse 2.5s ease-in-out infinite;
+            }
+            .s360-svc-hotspot::before {
+                content: '';
+                position: absolute;
+                inset: -6px;
+                border-radius: 50%;
+                border: 2px solid rgba(245,194,0,0.65);
+                animation: svchp-ring 2.5s ease-out infinite;
+            }
+            .s360-svc-hotspot::after {
+                content: '';
+                position: absolute;
+                inset: -15px;
+                border-radius: 50%;
+                border: 1.5px solid rgba(245,194,0,0.3);
+                animation: svchp-ring 2.5s ease-out infinite 0.55s;
+            }
+            .s360-svc-hotspot:nth-child(2) { animation-delay: 0.85s; }
+            @keyframes svchp-pulse {
+                0%, 100% { transform: translate(-50%,-50%) scale(1); }
+                50% { transform: translate(-50%,-50%) scale(1.25); }
+            }
+            @keyframes svchp-ring {
+                0% { transform: scale(0.7); opacity: 1; }
+                100% { transform: scale(2.8); opacity: 0; }
+            }
+            .s360-svc-badge {
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                background: var(--theme);
+                color: #1A1A1A;
+                font-size: 12px;
+                font-weight: 700;
+                padding: 6px 16px;
+                border-radius: 4px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                display: flex;
+                align-items: center;
+                gap: 6px;
+            }
+
+            /* Intro Section */
+            .s360-services-intro {
+                background: #ffffff;
+                padding: 80px 0;
+                text-align: center;
+            }
+            .s360-intro-grid {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 24px;
+                margin-top: 50px;
+            }
+            .s360-intro-card {
+                background: #F8F8F8;
+                border-radius: 12px;
+                padding: 30px 20px;
+                border: 1px solid var(--border);
+                transition: all 0.3s;
+            }
+            .s360-intro-card:hover {
+                border-color: var(--theme);
+                transform: translateY(-4px);
+                box-shadow: 0 12px 30px rgba(245,194,0,0.1);
+            }
+            .s360-intro-card i {
+                font-size: 32px;
+                color: var(--theme);
+                margin-bottom: 14px;
+                display: block;
+            }
+            .s360-intro-card h5 {
+                font-family: 'Quicksand', sans-serif;
+                font-size: 15px;
+                font-weight: 700;
+                color: #1A1A1A;
+                margin: 0;
+            }
+            @media (max-width: 991px) {
+                .s360-intro-grid { grid-template-columns: repeat(2, 1fr); }
+                .s360-svc-title { font-size: 28px; }
+                .s360-page-banner h1 { font-size: 36px; }
+            }
+            @media (max-width: 575px) {
+                .s360-intro-grid { grid-template-columns: repeat(2, 1fr); }
+                .s360-svc-title { font-size: 24px; }
+                .s360-page-banner h1 { font-size: 28px; }
+                .s360-page-banner { padding: 120px 0 60px; }
+            }
+
+            /* CTA Section */
+            .s360-cta-section {
+                background: linear-gradient(135deg, #1A1A1A 0%, #2c2c2c 100%);
+                padding: 100px 0;
+                position: relative;
+                overflow: hidden;
+            }
+            .s360-cta-section::before {
+                content: '';
+                position: absolute;
+                top: -50%; left: -10%;
+                width: 500px; height: 500px;
+                background: radial-gradient(circle, rgba(245,194,0,0.15) 0%, transparent 70%);
+                pointer-events: none;
+            }
+
+            /* Footer */
+            .s360-footer { background: #111111; padding: 80px 0 0; }
+            .s360-footer-brand p { color: #888; font-size: 14px; line-height: 1.8; margin: 16px 0 24px; }
+            .s360-footer h5 { color: #ffffff; font-size: 16px; font-weight: 700; margin-bottom: 24px; }
+            .s360-footer-links { list-style: none; padding: 0; margin: 0; }
+            .s360-footer-links li { margin-bottom: 12px; }
+            .s360-footer-links a { color: #888; text-decoration: none; font-size: 14px; transition: color 0.3s; display: flex; align-items: center; gap: 8px; }
+            .s360-footer-links a:hover { color: var(--theme); }
+            .s360-footer-links a::before { content: '→'; font-size: 12px; color: var(--theme); }
+            .s360-footer-contact li { color: #888; font-size: 14px; margin-bottom: 14px; display: flex; gap: 12px; align-items: flex-start; }
+            .s360-footer-contact li i { color: var(--theme); margin-top: 4px; }
+            .s360-footer-contact a { color: #888; text-decoration: none; }
+            .s360-footer-contact a:hover { color: var(--theme); }
+            .s360-social { display: flex; gap: 10px; margin-top: 24px; }
+            .s360-social a {
+                width: 40px; height: 40px;
+                border-radius: 8px;
+                background: rgba(255,255,255,0.06);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #888;
+                text-decoration: none;
+                transition: all 0.3s;
+            }
+            .s360-social a:hover { background: var(--theme); color: #1A1A1A; }
+            .s360-footer-bottom {
+                border-top: 1px solid rgba(255,255,255,0.06);
+                padding: 24px 0;
+                margin-top: 60px;
+            }
+            .s360-footer-bottom p { color: #666; font-size: 13px; margin: 0; }
+
+            /* WhatsApp Float */
+            .s360-wa-float {
+                position: fixed;
+                bottom: 30px;
+                right: 30px;
+                width: 56px; height: 56px;
+                background: #25D366;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 24px;
+                color: #fff;
+                text-decoration: none;
+                z-index: 999;
+                box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+                transition: all 0.3s;
+            }
+            .s360-wa-float:hover { transform: scale(1.1); color: #fff; }
+
+            /* Marquee */
+            .s360-marquee-section {
+                background: var(--theme);
+                padding: 16px 0;
+                overflow: hidden;
+            }
+            .s360-marquee {
+                display: flex;
+                animation: s360marquee 20s linear infinite;
+                white-space: nowrap;
+            }
+            .s360-marquee-item {
+                display: flex;
+                align-items: center;
+                gap: 16px;
+                padding: 0 32px;
+                font-size: 14px;
+                font-weight: 700;
+                color: #1A1A1A;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                flex-shrink: 0;
+            }
+            .s360-marquee-item i { font-size: 8px; opacity: 0.5; }
+            @keyframes s360marquee {
+                0% { transform: translateX(0); }
+                100% { transform: translateX(-50%); }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="page-wrapper">
+
+            <!-- Preloader -->
+            <div class="preloader"><div class="loader"></div></div>
+
+            <!-- Back To Top -->
+            <button id="back-top" class="back-to-top"><i class="fa-regular fa-arrow-up"></i></button>
+
+            <!-- Mouse Cursor -->
+            <div class="mouseCursor cursor-outer"></div>
+            <div class="mouseCursor cursor-inner"></div>
+
+            <!-- WhatsApp Float -->
+            <a href="https://wa.me/919876543210?text=Hi%20Shootin360!%20I%20want%20to%20book%20a%20360%20Virtual%20Tour%20for%20my%20business." class="s360-wa-float" target="_blank" title="Chat on WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+
+            <!-- Offcanvas -->
+            <div class="fix-area">
+                <div class="offcanvas__info">
+                    <div class="offcanvas__wrapper">
+                        <div class="offcanvas__content">
+                            <div class="offcanvas__top d-flex justify-content-between align-items-center">
+                                <div class="offcanvas__logo">
+                                    <a href="index.html" class="shootin-logo-text">
+                                        SHOOTIN<span style="color:var(--theme)">360°</span>
+                                        <span>Street View Creator</span>
+                                    </a>
+                                </div>
+                                <div class="offcanvas__close">
+                                    <button><i class="fa-thin fa-times"></i></button>
+                                </div>
+                            </div>
+                            <p class="text d-none d-xl-block">
+                                Professional 360° Virtual Tour Services in Pune & Maharashtra. Get your business on Google Street View today!
+                            </p>
+                            <div class="mobile-menu fix"></div>
+                            <div class="off-contact-info">
+                                <span class="info-title">Contact Info</span>
+                                <div class="contact-details">
+                                    <span class="sub-info">Phone</span>
+                                    <p><a href="tel:+919876543210">+91 98765 43210</a></p>
+                                </div>
+                                <div class="contact-details">
+                                    <span class="sub-info">Email</span>
+                                    <p><a href="mailto:info@shootin360.com">info@shootin360.com</a></p>
+                                </div>
+                                <div class="contact-details">
+                                    <span class="sub-info">Location</span>
+                                    <p>Pune, Maharashtra, India</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="social-icon-list">
+                            <span class="follow-title">Follow us:</span>
+                            <div class="social-icon d-flex align-items-center">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                                <a href="#"><i class="fab fa-google"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="offcanvas__overlay"></div>
+
+            <!-- Header -->
+            <header id="header-sticky" class="header-1">
+                <div class="container">
+                    <div class="mega-menu-wrapper">
+                        <div class="header-main">
+                            <a href="index.html" class="logo shootin-logo-text" style="text-decoration:none;">
+                                SHOOTIN<span style="color:var(--theme);font-size:18px;display:inline;">360°</span>
+                                <span style="color:#999;font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;display:block;line-height:1;margin-top:2px;">Street View Creator</span>
+                            </a>
+                            <div class="mean__menu-wrapper">
+                                <div class="main-menu">
+                                    <nav id="mobile-menu">
+                                        <ul>
+                                            <li><a href="index.html">Home</a></li>
+                                            <li><a href="about.html">About</a></li>
+                                            <li class="active"><a href="services.html">Services</a></li>
+                                            <li><a href="portfolio.html">Portfolio</a></li>
+                                            <li class="has-dropdown">
+                                                <a href="#">Pages <i class="fa-solid fa-chevron-down"></i></a>
+                                                <ul class="submenu">
+                                                    <li><a href="gallery.html">Gallery</a></li>
+                                                    <li><a href="faq.html">FAQ</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="header-right d-flex justify-content-end align-items-center">
+                                <a href="booking.html" class="theme-btn header-bg">Book a Shoot <i class="fa-regular fa-camera"></i></a>
+                                <div class="header__hamburger d-xl-none my-auto">
+                                    <div class="sidebar__toggle"><span></span><span></span><span></span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div id="smooth-wrapper">
+                <div id="smooth-content">
+
+                    <!-- ===== PAGE BANNER ===== -->
+                    <section class="s360-page-banner">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <div class="s360-section-label wow fadeInUp" style="color:var(--theme);">What We Offer</div>
+                                    <h1 class="wow fadeInUp" data-wow-delay=".2s">Our <span>Services</span></h1>
+                                    <nav class="s360-breadcrumb wow fadeInUp" data-wow-delay=".3s" aria-label="breadcrumb">
+                                        <a href="index.html"><i class="fa-solid fa-house" style="font-size:12px;"></i> Home</a>
+                                        <span><i class="fa-solid fa-chevron-right" style="font-size:10px;"></i></span>
+                                        <span class="current">Our Services</span>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ===== MARQUEE ===== -->
+                    <div class="s360-marquee-section">
+                        <div class="s360-marquee">
+                            <div class="s360-marquee-item"><i class="fa-solid fa-circle-dot"></i> Hotel &amp; Restaurant</div>
+                            <div class="s360-marquee-item"><i class="fa-solid fa-circle-dot"></i> School &amp; College</div>
+                            <div class="s360-marquee-item"><i class="fa-solid fa-circle-dot"></i> Showroom Tours</div>
+                            <div class="s360-marquee-item"><i class="fa-solid fa-circle-dot"></i> Real Estate</div>
+                            <div class="s360-marquee-item"><i class="fa-solid fa-circle-dot"></i> Hospital &amp; Clinic</div>
+                            <div class="s360-marquee-item"><i class="fa-solid fa-circle-dot"></i> Gym &amp; Salon</div>
+                            <div class="s360-marquee-item"><i class="fa-solid fa-circle-dot"></i> Corporate Office</div>
+                            <div class="s360-marquee-item"><i class="fa-solid fa-circle-dot"></i> Google Street View</div>
+                            <div class="s360-marquee-item"><i class="fa-solid fa-circle-dot"></i> Hotel &amp; Restaurant</div>
+                            <div class="s360-marquee-item"><i class="fa-solid fa-circle-dot"></i> School &amp; College</div>
+                            <div class="s360-marquee-item"><i class="fa-solid fa-circle-dot"></i> Showroom Tours</div>
+                            <div class="s360-marquee-item"><i class="fa-solid fa-circle-dot"></i> Real Estate</div>
+                            <div class="s360-marquee-item"><i class="fa-solid fa-circle-dot"></i> Hospital &amp; Clinic</div>
+                            <div class="s360-marquee-item"><i class="fa-solid fa-circle-dot"></i> Gym &amp; Salon</div>
+                            <div class="s360-marquee-item"><i class="fa-solid fa-circle-dot"></i> Corporate Office</div>
+                            <div class="s360-marquee-item"><i class="fa-solid fa-circle-dot"></i> Google Street View</div>
+                        </div>
+                    </div>
+
+                    <!-- ===== INTRO SECTION ===== -->
+                    <section class="s360-services-intro">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <div class="s360-section-label wow fadeInUp" style="justify-content:center;">360° Virtual Tour Experts</div>
+                                    <h2 class="wow fadeInUp" data-wow-delay=".2s" style="font-family:'Quicksand',sans-serif;font-weight:800;font-size:40px;color:#1A1A1A;line-height:1.2;margin-bottom:20px;">
+                                        Immersive Virtual Tours for <span style="color:var(--theme);">Every Business</span> in Pune
+                                    </h2>
+                                    <p class="wow fadeInUp" data-wow-delay=".3s" style="color:var(--text);font-size:16px;line-height:1.8;margin-bottom:0;">
+                                        From hotels and restaurants to schools, showrooms, hospitals and corporate offices — we create professional 360° virtual tours that get published directly on Google Street View and Google Maps, helping your business attract more customers online.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="s360-intro-grid wow fadeInUp" data-wow-delay=".4s">
+                                <div class="s360-intro-card">
+                                    <i class="fa-solid fa-utensils"></i>
+                                    <h5>Hotel &amp; Restaurant</h5>
+                                </div>
+                                <div class="s360-intro-card">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                    <h5>School &amp; College</h5>
+                                </div>
+                                <div class="s360-intro-card">
+                                    <i class="fa-solid fa-car"></i>
+                                    <h5>Showroom Tours</h5>
+                                </div>
+                                <div class="s360-intro-card">
+                                    <i class="fa-solid fa-building"></i>
+                                    <h5>Real Estate</h5>
+                                </div>
+                                <div class="s360-intro-card">
+                                    <i class="fa-solid fa-hospital"></i>
+                                    <h5>Hospital &amp; Clinic</h5>
+                                </div>
+                                <div class="s360-intro-card">
+                                    <i class="fa-solid fa-dumbbell"></i>
+                                    <h5>Gym &amp; Salon</h5>
+                                </div>
+                                <div class="s360-intro-card">
+                                    <i class="fa-solid fa-briefcase"></i>
+                                    <h5>Corporate Office</h5>
+                                </div>
+                                <div class="s360-intro-card">
+                                    <i class="fab fa-google"></i>
+                                    <h5>Google Street View</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ===== #hotel — Hotel & Restaurant Virtual Tours ===== -->
+                    <section id="hotel" class="s360-service-section alt-bg">
+                        <div class="container">
+                            <div class="row g-5 align-items-center">
+                                <div class="col-lg-6 wow fadeInLeft" data-wow-delay=".2s">
+                                    <span class="s360-svc-label">Service 01</span>
+                                    <div class="s360-svc-icon"><i class="fa-solid fa-utensils"></i></div>
+                                    <h2 class="s360-svc-title">Hotel &amp; Restaurant <span>Virtual Tours</span></h2>
+                                    <p class="s360-svc-desc">
+                                        Give your guests an immersive first impression — before they even walk through your door. Our 360° virtual tours showcase every corner of your hotel or restaurant: from elegantly set dining areas and bar counters to cozy rooms and rooftop terraces. Published on Google Street View, your tour appears directly in Google Maps and Google Search, making it easy for potential guests to explore and choose you.
+                                    </p>
+                                    <ul class="s360-benefit-list">
+                                        <li><i class="fa-solid fa-circle-check"></i> <span>Full room showcase — suites, deluxe rooms, lobby and reception areas with 360° hotspot navigation</span></li>
+                                        <li><i class="fa-solid fa-circle-check"></i> <span>Dining area and ambience captured in high-definition 360° photography for increased restaurant footfall</span></li>
+                                        <li><i class="fa-solid fa-circle-check"></i> <span>Published on Google Maps — guests feel confident booking after exploring your space virtually</span></li>
+                                        <li><i class="fa-solid fa-circle-check"></i> <span>Proven to increase bookings by 30–40% — customers who view virtual tours convert at higher rates</span></li>
+                                    </ul>
+                                    <a href="booking.html" class="btn-book-360">
+                                        <i class="fa-regular fa-calendar-check"></i> Book This Tour
+                                    </a>
+                                </div>
+                                <div class="col-lg-6 wow fadeInRight" data-wow-delay=".3s">
+                                    <div class="s360-svc-visual">
+                                        <div class="s360-svc-badge"><i class="fab fa-google"></i> Google Street View</div>
+                                        <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=700&auto=format&fit=crop&q=80" alt="Hotel & Restaurant 360 Virtual Tour">
+                                        <div class="s360-svc-hotspot-wrap">
+                                            <div class="s360-svc-hotspot" style="top:42%;left:35%;"></div>
+                                            <div class="s360-svc-hotspot" style="top:65%;left:68%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ===== #school — School & College Tours ===== -->
+                    <section id="school" class="s360-service-section white-bg">
+                        <div class="container">
+                            <div class="row g-5 align-items-center">
+                                <div class="col-lg-6 order-lg-2 wow fadeInRight" data-wow-delay=".2s">
+                                    <span class="s360-svc-label">Service 02</span>
+                                    <div class="s360-svc-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                                    <h2 class="s360-svc-title">School &amp; College <span>Virtual Tours</span></h2>
+                                    <p class="s360-svc-desc">
+                                        Let parents and prospective students explore your entire campus without leaving home. Our school and college virtual tours provide a complete walkthrough of classrooms, science and computer labs, sports grounds, libraries, hostels and administrative blocks. When admission season peaks, your 360° campus tour on Google becomes a powerful tool to build trust and drive enquiries.
+                                    </p>
+                                    <ul class="s360-benefit-list">
+                                        <li><i class="fa-solid fa-circle-check"></i> <span>Complete campus walkthrough — classrooms, labs, sports facilities and infrastructure on display</span></li>
+                                        <li><i class="fa-solid fa-circle-check"></i> <span>Boost admission enquiries — parents feel confident about your school's environment and facilities</span></li>
+                                        <li><i class="fa-solid fa-circle-check"></i> <span>Ideal for admission season — parents abroad or in other cities can tour your campus remotely</span></li>
+                                        <li><i class="fa-solid fa-circle-check"></i> <span>Google Maps publication builds credibility and online search visibility for your institution</span></li>
+                                    </ul>
+                                    <a href="booking.html" class="btn-book-360">
+                                        <i class="fa-regular fa-calendar-check"></i> Book This Tour
+                                    </a>
+                                </div>
+                                <div class="col-lg-6 order-lg-1 wow fadeInLeft" data-wow-delay=".3s">
+                                    <div class="s360-svc-visual">
+                                        <div class="s360-svc-badge"><i class="fab fa-google"></i> Google Street View</div>
+                                        <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=700&auto=format&fit=crop&q=80" alt="School & College 360 Virtual Tour">
+                                        <div class="s360-svc-hotspot-wrap">
+                                            <div class="s360-svc-hotspot" style="top:38%;left:28%;"></div>
+                                            <div class="s360-svc-hotspot" style="top:60%;left:70%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ===== #showroom — Showroom Virtual Tours ===== -->
+                    <section id="showroom" class="s360-service-section alt-bg">
+                        <div class="container">
+                            <div class="row g-5 align-items-center">
+                                <div class="col-lg-6 wow fadeInLeft" data-wow-delay=".2s">
+                                    <span class="s360-svc-label">Service 03</span>
+                                    <div class="s360-svc-icon"><i class="fa-solid fa-car"></i></div>
+                                    <h2 class="s360-svc-title">Showroom <span>Virtual Tours</span></h2>
+                                    <p class="s360-svc-desc">
+                                        Let customers browse your entire showroom from the comfort of their phone or desktop. Whether you run an automobile dealership, a furniture store, a jewellery showroom or a retail outlet — our 360° tours let shoppers explore your inventory, interior design and floor layout virtually. Reduce foot-traffic friction and pre-qualify customers who walk in already knowing what they want.
+                                    </p>
+                                    <ul class="s360-benefit-list">
+                                        <li><i class="fa-solid fa-circle-check"></i> <span>Automobile, furniture, jewellery and retail showrooms — all product displays captured in stunning 360°</span></li>
+                                        <li><i class="fa-solid fa-circle-check"></i> <span>Interactive hotspots on products let online viewers zoom in and learn more before visiting</span></li>
+                                        <li><i class="fa-solid fa-circle-check"></i> <span>Boost online-to-store conversions — customers arrive pre-informed and ready to purchase</span></li>
+                                        <li><i class="fa-solid fa-circle-check"></i> <span>Google Maps listing with virtual tour builds trust and differentiates you from local competitors</span></li>
+                                    </ul>
+                                    <a href="booking.html" class="btn-book-360">
+                                        <i class="fa-regular fa-calendar-check"></i> Book This Tour
+                                    </a>
+                                </div>
+                                <div class="col-lg-6 wow fadeInRight" data-wow-delay=".3s">
+                                    <div class="s360-svc-visual">
+                                        <div class="s360-svc-badge"><i class="fab fa-google"></i> Google Street View</div>
+                                        <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=700&auto=format&fit=crop&q=80" alt="Showroom 360 Virtual Tour">
+                                        <div class="s360-svc-hotspot-wrap">
+                                            <div class="s360-svc-hotspot" style="top:50%;left:30%;"></div>
+                                            <div class="s360-svc-hotspot" style="top:35%;left:72%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ===== #realestate — Real Estate Tours ===== -->
+                    <section id="realestate" class="s360-service-section white-bg">
+                        <div class="container">
+                            <div class="row g-5 align-items-center">
+                                <div class="col-lg-6 order-lg-2 wow fadeInRight" data-wow-delay=".2s">
+                                    <span class="s360-svc-label">Service 04</span>
+                                    <div class="s360-svc-icon"><i class="fa-solid fa-building"></i></div>
+                                    <h2 class="s360-svc-title">Real Estate <span>Virtual Tours</span></h2>
+                                    <p class="s360-svc-desc">
+                                        Sell flats, villas and commercial properties faster with immersive 360° walkthroughs. Buyers from other cities or NRIs can explore every room, balcony and amenity area without travelling to Pune. Real estate developers and brokers who use virtual tours close deals faster, reduce site visits and attract more serious inquiries from genuinely interested buyers.
+                                    </p>
+                                    <ul class="s360-benefit-list">
+                                        <li><i class="fa-solid fa-circle-check"></i> <span>Flats, villas, row houses and commercial spaces — every property type covered with full-room 360° tours</span></li>
+                                        <li><i class="fa-solid fa-circle-check"></i> <span>NRI and outstation buyers can explore properties remotely — reducing unnecessary site visits</span></li>
+                                        <li><i class="fa-solid fa-circle-check"></i> <span>Amenity area showcasing — clubhouse, gym, pool and parking areas covered in the tour</span></li>
+                                        <li><i class="fa-solid fa-circle-check"></i> <span>Embed tour on your real estate website and portals — increase lead quality significantly</span></li>
+                                    </ul>
+                                    <a href="booking.html" class="btn-book-360">
+                                        <i class="fa-regular fa-calendar-check"></i> Book This Tour
+                                    </a>
+                                </div>
+                                <div class="col-lg-6 order-lg-1 wow fadeInLeft" data-wow-delay=".3s">
+                                    <div class="s360-svc-visual">
+                                        <div class="s360-svc-badge"><i class="fab fa-google"></i> Google Street View</div>
+                                        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=700&auto=format&fit=crop&q=80" alt="Real Estate 360 Virtual Tour">
+                                        <div class="s360-svc-hotspot-wrap">
+                                            <div class="s360-svc-hotspot" style="top:45%;left:40%;"></div>
+                                            <div class="s360-svc-hotspot" style="top:30%;left:70%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ===== #hospital — Hospital & Clinic Tours ===== -->
+                    <section id="hospital" class="s360-service-section alt-bg">
+                        <div class="container">
+                            <div class="row g-5 align-items-center">
+                                <div class="col-lg-6 wow fadeInLeft" data-wow-delay=".2s">
+                                    <span class="s360-svc-label">Service 05</span>
+                                    <div class="s360-svc-icon"><i class="fa-solid fa-hospital"></i></div>
+                                    <h2 class="s360-svc-title">Hospital &amp; Clinic <span>Virtual Tours</span></h2>
+                                    <p class="s360-svc-desc">
+                                        Build patient trust before they step into your facility. Our hospital and clinic virtual tours showcase your reception areas, waiting rooms, operation theatres, diagnostic labs and wards in a clean, reassuring 360° presentation. Patients who can see your hygiene standards, modern equipment and organized spaces are far more confident in choosing your facility for their healthcare needs.
+                                    </p>
+                                    <ul class="s360-benefit-list">
+                                        <li><i class="fa-solid fa-circle-check"></i> <span>Reception, waiting area, OPD and consultation rooms — full facility tour builds patient confidence</span></li>
+                                        <li><i class="fa-solid fa-circle-check"></i> <span>Operation theatre and diagnostic lab showcase — highlight your advanced medical infrastructure</span></li>
+                                        <li><i class="fa-solid fa-circle-check"></i> <span>Hygiene standards visible through crystal-clear 360° imagery — reassure anxious patients online</span></li>
+                                        <li><i class="fa-solid fa-circle-check"></i> <span>Google Maps tour strengthens your hospital's digital presence and local search rankings</span></li>
+                                    </ul>
+                                    <a href="booking.html" class="btn-book-360">
+                                        <i class="fa-regular fa-calendar-check"></i> Book This Tour
+                                    </a>
+                                </div>
+                                <div class="col-lg-6 wow fadeInRight" data-wow-delay=".3s">
+                                    <div class="s360-svc-visual">
+                                        <div class="s360-svc-badge"><i class="fab fa-google"></i> Google Street View</div>
+                                        <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=700&auto=format&fit=crop&q=80" alt="Hospital & Clinic 360 Virtual Tour">
+                                        <div class="s360-svc-hotspot-wrap">
+                                            <div class="s360-svc-hotspot" style="top:40%;left:32%;"></div>
+                                            <div class="s360-svc-hotspot" style="top:62%;left:65%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ===== #gym — Gym & Salon Tours ===== -->
+                    <section id="gym" class="s360-service-section white-bg">
+                        <div class="container">
+                            <div class="row g-5 align-items-center">
+                                <div class="col-lg-6 order-lg-2 wow fadeInRight" data-wow-delay=".2s">
+                                    <span class="s360-svc-label">Service 06</span>
+                                    <div class="s360-svc-icon"><i class="fa-solid fa-dumbbell"></i></div>
+                                    <h2 class="s360-svc-title">Gym &amp; Salon <span>Virtual Tours</span></h2>
+                                    <p class="s360-svc-desc">
+                                        Show off your premium ambience, state-of-the-art equipment and stylish interiors to attract more members and clients. Gyms, fitness centres, spas and beauty salons with 360° virtual tours give potential customers a complete feel of the experience before their first visit. Whether it's your cardio zone, weight training area, steam room or styling stations — every space speaks for your brand.
+                                    </p>
+                                    <ul class="s360-benefit-list">
+                                        <li><i class="fa-solid fa-circle-check"></i> <span>Full interior tour — cardio zone, weight area, group class studio, changing rooms and reception</span></li>
+                                        <li><i class="fa-solid fa-circle-check"></i> <span>Premium equipment and ambience showcase — attract health-conscious clients who value quality</span></li>
+                                        <li><i class="fa-solid fa-circle-check"></i> <span>Salon stations, treatment rooms and spa areas displayed to convert online viewers to walk-ins</span></li>
+                                        <li><i class="fa-solid fa-circle-check"></i> <span>Google Maps listing with tour boosts local discovery and membership inquiries significantly</span></li>
+                                    </ul>
+                                    <a href="booking.html" class="btn-book-360">
+                                        <i class="fa-regular fa-calendar-check"></i> Book This Tour
+                                    </a>
+                                </div>
+                                <div class="col-lg-6 order-lg-1 wow fadeInLeft" data-wow-delay=".3s">
+                                    <div class="s360-svc-visual">
+                                        <div class="s360-svc-badge"><i class="fab fa-google"></i> Google Street View</div>
+                                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=700&auto=format&fit=crop&q=80" alt="Gym & Salon 360 Virtual Tour">
+                                        <div class="s360-svc-hotspot-wrap">
+                                            <div class="s360-svc-hotspot" style="top:38%;left:28%;"></div>
+                                            <div class="s360-svc-hotspot" style="top:60%;left:68%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ===== #office — Corporate Office Tours ===== -->
+                    <section id="office" class="s360-service-section alt-bg">
+                        <div class="container">
+                            <div class="row g-5 align-items-center">
+                                <div class="col-lg-6 wow fadeInLeft" data-wow-delay=".2s">
+                                    <span class="s360-svc-label">Service 07</span>
+                                    <div class="s360-svc-icon"><i class="fa-solid fa-briefcase"></i></div>
+                                    <h2 class="s360-svc-title">Corporate Office <span>Virtual Tours</span></h2>
+                                    <p class="s360-svc-desc">
+                                        Make a powerful first impression on clients, investors, partners and potential hires. A professional 360° virtual tour of your corporate office showcases your work culture, infrastructure, meeting rooms, collaboration spaces and brand identity in a compelling digital format. Whether you're a startup, an MNC branch or a co-working space, your office tour establishes credibility and professionalism in the digital world.
+                                    </p>
+                                    <ul class="s360-benefit-list">
+                                        <li><i class="fa-solid fa-circle-check"></i> <span>Workspaces, cabins, meeting rooms and conference halls — complete office tour for maximum impact</span></li>
+                                        <li><i class="fa-solid fa-circle-check"></i> <span>Attract top talent — showcase your work culture and office environment to prospective employees</span></li>
+                                        <li><i class="fa-solid fa-circle-check"></i> <span>Impress clients and investors with a virtual office tour linked to your Google Business Profile</span></li>
+                                        <li><i class="fa-solid fa-circle-check"></i> <span>Ideal for co-working spaces to showcase hot desks, private cabins and event halls to members</span></li>
+                                    </ul>
+                                    <a href="booking.html" class="btn-book-360">
+                                        <i class="fa-regular fa-calendar-check"></i> Book This Tour
+                                    </a>
+                                </div>
+                                <div class="col-lg-6 wow fadeInRight" data-wow-delay=".3s">
+                                    <div class="s360-svc-visual">
+                                        <div class="s360-svc-badge"><i class="fab fa-google"></i> Google Street View</div>
+                                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=700&auto=format&fit=crop&q=80" alt="Corporate Office 360 Virtual Tour">
+                                        <div class="s360-svc-hotspot-wrap">
+                                            <div class="s360-svc-hotspot" style="top:45%;left:35%;"></div>
+                                            <div class="s360-svc-hotspot" style="top:30%;left:65%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ===== FINAL CTA ===== -->
+                    <section class="s360-cta-section">
+                        <div class="container text-center position-relative" style="z-index:2;">
+                            <div class="s360-section-label wow fadeInUp" style="justify-content:center;color:var(--theme);">Ready to Go Live?</div>
+                            <h2 class="text-white wow fadeInUp" data-wow-delay=".2s" style="font-family:'Quicksand',sans-serif;font-size:46px;font-weight:800;line-height:1.2;margin-bottom:20px;">
+                                Get Your Business on <br> <span style="color:var(--theme);">Google Street View Today</span>
+                            </h2>
+                            <p class="wow fadeInUp" data-wow-delay=".3s" style="color:#aaa;font-size:17px;margin-bottom:40px;max-width:580px;margin-left:auto;margin-right:auto;">
+                                Join 100+ businesses in Pune & Maharashtra already on Google Maps with immersive 360° virtual tours. Book your shoot — fast delivery guaranteed.
+                            </p>
+                            <div class="d-flex justify-content-center gap-3 flex-wrap wow fadeInUp" data-wow-delay=".4s">
+                                <a href="booking.html" class="btn-book-360">
+                                    <i class="fa-regular fa-calendar-check"></i> Book a Shoot Now
+                                </a>
+                                <a href="https://wa.me/919876543210?text=Hi%20Shootin360!%20I%20want%20to%20book%20a%20360%20Virtual%20Tour%20for%20my%20business." class="btn-whatsapp-360" target="_blank">
+                                    <i class="fab fa-whatsapp"></i> WhatsApp Us
+                                </a>
+                                <a href="tel:+919876543210" class="btn-outline-360">
+                                    <i class="fa-solid fa-phone"></i> Call Now
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ===== FOOTER ===== -->
+                    <footer class="s360-footer">
+                        <div class="container">
+                            <div class="row g-5">
+                                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                                    <div class="s360-footer-brand">
+                                        <a href="index.html" style="text-decoration:none;">
+                                            <div style="font-family:'Quicksand',sans-serif;font-weight:800;font-size:28px;color:var(--theme);line-height:1;">
+                                                SHOOTIN<span style="font-size:20px;">360°</span>
+                                            </div>
+                                            <div style="font-size:11px;color:#666;letter-spacing:2px;text-transform:uppercase;margin-top:4px;">Street View Creator &amp; All Photography</div>
+                                        </a>
+                                        <p>Professional 360° virtual tour services in Pune &amp; Maharashtra. We put your business on Google Street View &amp; Google Maps.</p>
+                                        <div class="s360-social">
+                                            <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                                            <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                                            <a href="#" title="Google"><i class="fab fa-google"></i></a>
+                                            <a href="https://wa.me/919876543210" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                                    <h5>Services</h5>
+                                    <ul class="s360-footer-links">
+                                        <li><a href="services.html#hotel">Hotel &amp; Restaurant</a></li>
+                                        <li><a href="services.html#school">School &amp; College</a></li>
+                                        <li><a href="services.html#showroom">Showroom Tours</a></li>
+                                        <li><a href="services.html#realestate">Real Estate</a></li>
+                                        <li><a href="services.html#hospital">Hospital &amp; Clinic</a></li>
+                                        <li><a href="services.html#gym">Gym &amp; Salon</a></li>
+                                        <li><a href="services.html#office">Corporate Office</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-2 col-md-6 wow fadeInUp" data-wow-delay=".4s">
+                                    <h5>Quick Links</h5>
+                                    <ul class="s360-footer-links">
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="about.html">About Us</a></li>
+                                        <li><a href="portfolio.html">Portfolio</a></li>
+                                        <li><a href="gallery.html">Gallery</a></li>
+                                        <li><a href="faq.html">FAQ</a></li>
+                                        <li><a href="booking.html">Book a Shoot</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".5s">
+                                    <h5>Contact Us</h5>
+                                    <ul class="s360-footer-contact list-unstyled">
+                                        <li>
+                                            <i class="fa-solid fa-location-dot"></i>
+                                            <span>Pune, Maharashtra, India – 411001</span>
+                                        </li>
+                                        <li>
+                                            <i class="fa-solid fa-phone"></i>
+                                            <a href="tel:+919876543210">+91 98765 43210</a>
+                                        </li>
+                                        <li>
+                                            <i class="fa-solid fa-envelope"></i>
+                                            <a href="mailto:info@shootin360.com">info@shootin360.com</a>
+                                        </li>
+                                        <li>
+                                            <i class="fab fa-whatsapp"></i>
+                                            <a href="https://wa.me/919876543210" target="_blank">WhatsApp Us</a>
+                                        </li>
+                                        <li>
+                                            <i class="fa-solid fa-clock"></i>
+                                            <span>Mon – Sat: 9:00 AM – 7:00 PM</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="s360-footer-bottom">
+                            <div class="container">
+                                <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
+                                    <p>© 2026 <strong style="color:var(--theme);">Shootin 360</strong>. All Rights Reserved.</p>
+                                    <div style="display:flex;gap:20px;">
+                                        <a href="contact.html" style="color:#666;text-decoration:none;font-size:13px;">Privacy Policy</a>
+                                        <a href="contact.html" style="color:#666;text-decoration:none;font-size:13px;">Terms &amp; Conditions</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- JS -->
+        <script src="assets/js/jquery-3.7.1.min.js"></script>
+        <script src="assets/js/viewport.jquery.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/gsap.min.js"></script>
+        <script src="assets/js/ScrollTrigger.min.js"></script>
+        <script src="assets/js/ScrollSmoother.min.js"></script>
+        <script src="assets/js/ScrollToPlugin.min.js"></script>
+        <script src="assets/js/SplitText.min.js"></script>
+        <script src="assets/js/chroma.min.js"></script>
+        <script src="assets/js/jquery.nice-select.min.js"></script>
+        <script src="assets/js/jquery.waypoints.js"></script>
+        <script src="assets/js/jquery.counterup.min.js"></script>
+        <script src="assets/js/jquery.meanmenu.min.js"></script>
+        <script src="assets/js/swiper-bundle.min.js"></script>
+        <script src="assets/js/jquery.magnific-popup.min.js"></script>
+        <script src="assets/js/wow.min.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,375 @@
+.grt-donation-wrapper {
+    max-width: 560px;
+    margin: 60px auto 0;
+    background-color: $white;
+    border-radius: 6px;
+
+    @include breakpoint (max-lg){
+        margin-top: 30px;
+    }
+
+    .text {
+        font-size: 15px;
+        font-weight: 600;
+        color: $header-color;
+        text-align: center;
+        line-height: 1;
+        padding: 40px 20px;
+        border-bottom: 1px solid #D6D6D6;
+        padding-bottom: 20px;
+    }
+
+    .grt-donation-wrap {
+        padding: 40px 32px;
+
+        @include breakpoint (max-sm){
+            padding: 32px 28px;
+        }
+
+        .donation-amount-form-box {
+            &::placeholder {
+                color: $text-color;
+            }
+
+            .donation-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 15px;
+                margin-top: 25px;
+
+                span {
+                    font-size: 16px;
+                    color: $header-color;
+                }
+
+                .currency {
+                    background: #F0F0F0;
+                    padding: 12px 18px;
+                    border-radius: 20px;
+                    font-size: 13px;
+                    font-weight: 500;
+                    line-height: 1;
+                }
+            }
+
+            .amount-list {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 10px;
+                margin-bottom: 16px;
+
+                .amount-btn {
+                    padding: 0 10px;
+                    width: 100%;
+                    border-radius: 50px;
+                    border: 1px solid #CCCCCC;
+                    background: transparent;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    font-size: 18px;
+                    color: $text-color;
+                    font-weight: 400;
+                    height: 56px;
+                    line-height: 56px;
+
+                    @include breakpoint (max-sm){
+                        padding: 0 8px;
+                        font-size: 13px;
+                        height: 48px;
+                        line-height: 48px;
+                    }
+
+                    &.active {
+                        background-color: $theme-color;
+                        border-color: $theme-color;
+                    }
+                }
+            }
+
+            .custom-amount {
+                width: 100%;
+                padding: 0 18px;
+                border-radius: 30px;
+                border: 1px solid #73828C;
+                font-size: 16px;
+                outline: none;
+                text-align: center;
+                margin-bottom: 18px;
+                color: $text-color;
+                height: 56px;
+                line-height: 56px;
+            }
+
+            .theme-btn {
+                height: 56px;
+                line-height: 56px;
+                width: 100%;
+                justify-content: center;
+                @include transition;
+
+                &::before {
+                    display: none;
+                }
+
+                &:hover {
+                    background: $header-color;
+                }
+            }
+
+            .secure-text {
+                margin-top: 14px;
+                background: #FAF6F1;
+                padding: 0 12px;
+                border-radius: 50px;
+                text-align: center;
+                font-size: 14px;
+                color: $text-color;
+                height: 56px;
+                line-height: 56px;
+
+                i {
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}
+
+.grt-donation-section {
+    position: relative;
+
+    .shape-1 {
+        position: absolute;
+        top: 0;
+        left: -10%;
+    }
+
+    .shape-2 {
+        position: absolute;
+        bottom: 0;
+        right: -6%;
+    }
+}
+
+.grt-donate-wrapprt-2 {
+    .grt-section-title {
+        @include breakpoint (max-lg){
+            text-align: center;
+        }
+
+        p {
+            font-size: 18px;
+            color: $white;
+            max-width: 560px;
+            margin-top: 30px;
+
+            @include breakpoint (max-lg){
+               margin: 30px auto 0;
+            }
+
+            @include breakpoint (max-md){
+                margin-top: 20px;
+                font-size: 16px;
+            }
+        }
+
+        .theme-btn {
+            margin-top: 45px;
+
+            @include breakpoint (max-md){
+                margin-top: 25px;
+            }
+
+            &::before {
+                background-color: $white;
+            }
+
+            &:hover {
+                color: $header-color;
+            }
+        }
+
+        &.style-2 {
+            .text-2 {
+                color: $header-color;
+                letter-spacing: -0.2px;
+                font-weight: 500;
+            }
+
+            .text-3 {
+                color: $header-color;
+                max-width: 545px;
+            }
+        }
+    }
+
+    .grt-donation-wrapper {
+        margin-left: auto;
+    }
+}
+
+.grt-donate-section-2 {
+    position: relative;
+
+    .line-1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        @include breakpoint (max-xxl){
+            display: none;
+        }
+    }
+}
+
+.contact-left-items {
+    margin-top: 30px;
+
+    .contact-map {
+        margin-bottom: 55px;
+
+          @include breakpoint (max-lg){
+            margin-bottom: 30px;
+        }
+
+        iframe {
+            width: 100%;
+            border-radius: 12px;
+            height: 556px;
+        }
+    }
+
+    .contact-info-list {
+        li {
+            @include flex;
+            gap: 70px;
+
+            @include breakpoint (max-xxl){
+                gap: 30px;
+            }
+
+             @include breakpoint (max-xl){
+               flex-wrap: wrap;
+            }
+
+            &:not(:last-child){
+                margin-bottom: 50px;
+
+                @include breakpoint (max-xl){
+                   gap: 30px;
+                }
+            }
+
+            .contact-info {
+                @include flex;
+                gap: 15px;
+            }
+
+             .icon {
+                width: 56px;
+                height: 56px;
+                line-height: 56px;
+                text-align: center;
+                border-radius: 50%;
+                background-color: $theme-color;
+                font-size: 19px;
+             }
+
+            .info {
+                font-size: 18px;
+                font-weight: 600;
+                color: $header-color;
+                font-family: $heading-font;
+
+                 @include breakpoint (max-xxl){
+                   font-size: 18px;
+                }
+
+                a {
+                    color: $header-color;
+                }
+            }
+
+            .social-icon {
+                @include flex;
+                gap: 18px;
+
+                span {
+                    font-size: 16px;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+
+.contact-form2 {
+    background-color: #FBF3E6;
+    padding: 60px 36px;
+    margin-top: 30px;
+    border-radius: 12px;
+
+     @include breakpoint (max-xl){
+       padding: 30px;
+    }
+
+    @include breakpoint (max-sm){
+       padding: 30px 25px;
+    }
+
+    h2 {
+        font-size: 40px;
+        font-weight: 700;
+        margin-bottom: 15px;
+
+         @include breakpoint (max-sm){
+           font-size: 30px;
+        }
+    }
+
+    form {
+        margin-top: 25px;
+    }
+
+     .form-clt {
+        input,textarea {
+            display: inline-block;
+            border: 1px solid rgba(22, 51, 59, 0.1);
+            width: 100%;
+            padding: 18px 22px;
+            line-height: 1;
+            border-radius: 8px;
+            color: $header-color;
+            font-weight: 400;
+
+            &::placeholder {
+                color: $header-color;
+            }
+        }
+
+        .single-select  {
+             display: inline-block;
+            border: 1px solid rgba(22, 51, 59, 0.1);
+            width: 100%;
+            padding: 18px 22px;
+            line-height: 1;
+            border-radius: 8px;
+            color: $text-color;
+            font-weight: 400;
+
+            .list {
+                width: 100%;
+            }
+        }
+
+        textarea {
+            height: 126px;
+        }
+    }
+
+    .theme-btn {
+        width: 100%;
+        text-align: center;
+    }
+}

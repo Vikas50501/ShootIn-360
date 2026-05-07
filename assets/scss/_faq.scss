@@ -1,0 +1,167 @@
+.grt-faq-content-1 {
+     .accordion-box {
+        position: relative;
+        margin-top: 40px;
+
+        @include breakpoint (max-md){
+            margin-top: 30px;
+        }
+
+        .block {
+            position: relative;
+            background-color: transparent;
+            border: 1px solid rgba(22, 51, 59, .1);
+            margin-bottom: 17px;
+            line-height: 1;
+            border-radius: 8px;
+           padding: 28.5px 25px;
+
+           @include breakpoint (max-lg){
+            padding: 25px 20px;
+           }
+
+            .acc-btn {
+                position: relative;
+                font-size: 22px;
+                color: $header-color;
+                font-weight: 600;
+                font-family: $heading-font;
+                cursor: pointer;
+                -webkit-transition: all 500ms ease;
+                transition: all 500ms ease;
+
+                @include breakpoint (max-xxl){
+                    padding-right: 40px;
+                    line-height: 1.4;
+                    font-size: 20px;
+                }
+
+                @include breakpoint (max-xxs){
+                    font-size: 18px;
+                }
+
+
+                .icon {
+                    position: absolute;
+                    right: 0;
+                    top: -7px;
+                    width: 35px;
+                    height: 35px;
+                    font-size: 16px;
+                    line-height: 35px;
+                    background-color: $theme-color;
+                    -webkit-transition: all 500ms ease;
+                    transition: all 500ms ease;
+                    border-radius: 50%;
+                    color: $header-color;
+                    text-align: center;
+                }
+            }
+
+            .acc-content {
+                position: relative;
+                display: none;
+                margin-top: 22px;
+
+                @include breakpoint (max-xxs){
+                    margin-top: 10px;
+                }
+
+                .content {
+                    position: relative;
+
+                    .text {
+                        line-height: 175%;
+                        font-size: 17px;
+                        font-weight: 400;
+                        color: rgba(22, 51, 59, .8);
+                        max-width: 560px;
+
+                        @include breakpoint (max-xl){
+                            font-size: 14px;
+                        }
+
+                        @include breakpoint (max-xxs){
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.style-2 {
+            margin-top: 30px;
+
+            .block {
+                .acc-btn {
+                    font-size: 24px;
+                }
+
+                .acc-content {
+                    .content {
+                        .text {
+                            max-width: 1190px;
+                        }
+                    }
+                }
+            }
+
+            .active-block {
+                background-color: $theme-color;
+                border-color: $theme-color;
+
+                .icon {
+                    background-color: $header-color;
+                   
+                    &::before {
+                         color: $white !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .accordion-box .block .acc-content.current {
+        display: block;
+    }
+
+    .accordion-box .block .acc-btn.active .icon:before {
+        content: "\f00d";
+        color: $header-color;
+    }
+
+    .accordion-box .block .acc-btn.active {
+        color: $header-color;
+    }
+
+    .accordion-box .block:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.faq-image {
+    border-radius: 10px;
+    margin-left: 18px;
+
+     @include breakpoint (max-xl){
+       margin-left: 0;
+    }
+
+    @include breakpoint (max-lg){
+        height: 520px;
+    }
+
+    @include breakpoint (max-md){
+        height: 480px;
+    }
+
+    img {
+        @include imgw;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+}
+
+.grt-faq-section-2 {
+    border-top: 1px solid rgba(22, 51, 59, .10);
+}

@@ -1,0 +1,1660 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Shootin360">
+        <meta name="description" content="Professional 360° Virtual Tour Services in Pune. Showcase your business on Google Street View & Google Maps. Hotels, Restaurants, Schools, Showrooms, Real Estate & more.">
+        <meta name="keywords" content="360 virtual tour pune, google street view pune, google maps virtual tour, business virtual tour maharashtra, 360 photography pune">
+        <title>Shootin 360 – Professional Virtual Tour Services in Pune</title>
+        <link rel="shortcut icon" href="assets/img/favicon.svg">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/all.min.css">
+        <link rel="stylesheet" href="assets/css/animate.css">
+        <link rel="stylesheet" href="assets/css/magnific-popup.css">
+        <link rel="stylesheet" href="assets/css/meanmenu.css">
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+        <link rel="stylesheet" href="assets/css/nice-select.css">
+        <link rel="stylesheet" href="assets/css/main.css">
+        <style>
+            /* ===== Shootin360 Custom Overrides ===== */
+            :root {
+                --theme: #F5C200;
+                --bg: #1A1A1A;
+                --header: #1A1A1A;
+                --text: #555555;
+                --body: #F8F8F8;
+                --white: #ffffff;
+                --border: #e0e0e0;
+            }
+
+            /* Logo text in header */
+            .shootin-logo-text {
+                font-family: 'Quicksand', sans-serif;
+                font-weight: 800;
+                font-size: 26px;
+                color: var(--theme);
+                line-height: 1;
+                text-decoration: none;
+                letter-spacing: -1px;
+            }
+            .shootin-logo-text span {
+                color: #ffffff;
+                font-size: 11px;
+                display: block;
+                letter-spacing: 2px;
+                font-weight: 500;
+                color: #cccccc;
+                margin-top: 2px;
+            }
+            .header-1 .shootin-logo-text { color: var(--theme); }
+            .header-1 .shootin-logo-text span { color: #888; }
+
+            /* Hero Section */
+            .s360-hero {
+                min-height: 100vh;
+                background: linear-gradient(135deg, #FFFDF4 0%, #FFF8E6 50%, #FFFDF4 100%);
+                display: flex;
+                align-items: center;
+                position: relative;
+                overflow: hidden;
+                padding: 120px 0 80px;
+                border-bottom: 3px solid #F5C200;
+            }
+            .s360-hero::before {
+                content: '';
+                position: absolute;
+                top: 0; left: 0; right: 0; bottom: 0;
+                background: radial-gradient(ellipse at 75% 40%, rgba(245,194,0,0.18) 0%, transparent 60%);
+                pointer-events: none;
+            }
+            .s360-hero-content { position: relative; z-index: 2; }
+            .s360-hero-badge {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                background: rgba(245,194,0,0.15);
+                border: 1px solid rgba(245,194,0,0.5);
+                border-radius: 50px;
+                padding: 8px 20px;
+                color: #8a6e00;
+                font-size: 14px;
+                font-weight: 600;
+                letter-spacing: 1px;
+                margin-bottom: 24px;
+                text-transform: uppercase;
+            }
+            .s360-hero h1 {
+                font-size: 62px;
+                font-weight: 800;
+                color: #1A1A1A;
+                line-height: 1.1;
+                margin-bottom: 24px;
+            }
+            .s360-hero h1 span { color: #c89600; }
+            .s360-hero p {
+                font-size: 18px;
+                color: #555555;
+                line-height: 1.8;
+                margin-bottom: 36px;
+                max-width: 520px;
+            }
+            .s360-hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
+            .btn-primary-360 {
+                background: var(--theme);
+                color: #1A1A1A;
+                font-weight: 700;
+                padding: 16px 36px;
+                border-radius: 4px;
+                text-decoration: none;
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+                font-size: 15px;
+                transition: all 0.3s;
+            }
+            .btn-primary-360:hover { background: #e0ae00; color: #1A1A1A; transform: translateY(-2px); }
+            .btn-outline-360 {
+                background: transparent;
+                color: #1A1A1A;
+                border: 2px solid rgba(0,0,0,0.2);
+                font-weight: 600;
+                padding: 14px 34px;
+                border-radius: 4px;
+                text-decoration: none;
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+                font-size: 15px;
+                transition: all 0.3s;
+            }
+            .btn-outline-360:hover { border-color: #c89600; color: #c89600; }
+            .btn-whatsapp-360 {
+                background: #25D366;
+                color: #ffffff;
+                font-weight: 700;
+                padding: 16px 28px;
+                border-radius: 4px;
+                text-decoration: none;
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+                font-size: 15px;
+                transition: all 0.3s;
+            }
+            .btn-whatsapp-360:hover { background: #1db954; color: #fff; transform: translateY(-2px); }
+
+            /* Hero visual */
+            .s360-hero-visual {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .s360-tour-preview {
+                width: 100%;
+                max-width: 540px;
+                border-radius: 16px;
+                background: #1A1A1A;
+                overflow: hidden;
+                box-shadow: 0 30px 60px rgba(0,0,0,0.18), 0 0 0 1px rgba(245,194,0,0.2);
+                position: relative;
+            }
+            .s360-tour-preview img { width: 100%; display: block; }
+            .s360-tour-badge {
+                position: absolute;
+                top: 16px;
+                left: 16px;
+                background: var(--theme);
+                color: #1A1A1A;
+                font-weight: 700;
+                padding: 6px 14px;
+                border-radius: 4px;
+                font-size: 13px;
+                display: flex;
+                align-items: center;
+                gap: 6px;
+            }
+            .s360-floating-stat {
+                position: absolute;
+                background: #ffffff;
+                border-radius: 12px;
+                padding: 14px 20px;
+                box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+                border: 1px solid rgba(245,194,0,0.2);
+                z-index: 3;
+            }
+            .s360-floating-stat .num { font-size: 28px; font-weight: 800; color: #c89600; font-family: 'Quicksand', sans-serif; line-height: 1; }
+            .s360-floating-stat .lbl { font-size: 12px; color: #666; margin-top: 4px; }
+            .s360-stat-1 { bottom: -20px; left: -30px; }
+            .s360-stat-2 { top: 20px; right: -30px; }
+
+            /* Trust bar */
+            .s360-trust-bar {
+                background: #1A1A1A;
+                padding: 24px 0;
+                border-top: 1px solid rgba(245,194,0,0.2);
+                border-bottom: 1px solid rgba(245,194,0,0.2);
+            }
+            .s360-trust-item {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                padding: 8px 28px;
+                border-right: 1px solid rgba(255,255,255,0.1);
+                flex-shrink: 0;
+            }
+            .s360-trust-item i { color: var(--theme); font-size: 22px; }
+            .s360-trust-item span { color: #ffffff; font-size: 14px; font-weight: 500; white-space: nowrap; }
+
+            /* Section Headings */
+            .s360-section-label {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                color: var(--theme);
+                font-size: 13px;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                margin-bottom: 16px;
+            }
+            .s360-section-label::before {
+                content: '';
+                width: 30px;
+                height: 2px;
+                background: var(--theme);
+                display: inline-block;
+            }
+
+            /* Services */
+            .s360-service-card {
+                background: #ffffff;
+                border-radius: 12px;
+                padding: 36px 28px;
+                border: 1px solid var(--border);
+                transition: all 0.3s;
+                height: 100%;
+                position: relative;
+                overflow: hidden;
+            }
+            .s360-service-card::before {
+                content: '';
+                position: absolute;
+                bottom: 0; left: 0; right: 0;
+                height: 3px;
+                background: var(--theme);
+                transform: scaleX(0);
+                transition: transform 0.3s;
+            }
+            .s360-service-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+            .s360-service-card:hover::before { transform: scaleX(1); }
+            .s360-service-icon {
+                width: 60px; height: 60px;
+                background: rgba(245,194,0,0.12);
+                border-radius: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 26px;
+                color: var(--theme);
+                margin-bottom: 20px;
+            }
+            .s360-service-card h4 { font-size: 20px; font-weight: 700; color: #1A1A1A; margin-bottom: 12px; }
+            .s360-service-card p { color: var(--text); font-size: 14px; line-height: 1.7; margin-bottom: 20px; }
+            .s360-service-link {
+                color: var(--theme);
+                font-weight: 600;
+                font-size: 14px;
+                text-decoration: none;
+                display: inline-flex;
+                align-items: center;
+                gap: 6px;
+                transition: gap 0.3s;
+            }
+            .s360-service-link:hover { gap: 10px; color: var(--theme); }
+
+            /* Why Choose */
+            .s360-why-item {
+                display: flex;
+                gap: 20px;
+                margin-bottom: 32px;
+            }
+            .s360-why-icon {
+                width: 52px; height: 52px;
+                min-width: 52px;
+                background: rgba(245,194,0,0.12);
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 22px;
+                color: var(--theme);
+            }
+            .s360-why-item h5 { font-size: 17px; font-weight: 700; color: #1A1A1A; margin-bottom: 6px; }
+            .s360-why-item p { color: var(--text); font-size: 14px; line-height: 1.6; margin: 0; }
+
+            /* Stats */
+            .s360-stats-section { background: var(--bg); padding: 80px 0; }
+            .s360-stat-box { text-align: center; padding: 20px; }
+            .s360-stat-box .num {
+                font-size: 56px;
+                font-weight: 800;
+                color: var(--theme);
+                font-family: 'Quicksand', sans-serif;
+                line-height: 1;
+                margin-bottom: 8px;
+            }
+            .s360-stat-box .plus { font-size: 40px; }
+            .s360-stat-box p { color: #aaaaaa; font-size: 15px; margin: 0; }
+
+            /* Process */
+            .s360-process-step {
+                text-align: center;
+                padding: 40px 24px;
+                position: relative;
+            }
+            .s360-process-step::after {
+                content: '';
+                position: absolute;
+                top: 50px;
+                right: -50%;
+                width: 100%;
+                height: 2px;
+                background: linear-gradient(90deg, var(--theme) 0%, rgba(245,194,0,0.1) 100%);
+                z-index: 0;
+            }
+            .s360-process-step:last-child::after { display: none; }
+            .s360-step-num {
+                width: 80px; height: 80px;
+                background: var(--theme);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto 24px;
+                font-size: 28px;
+                font-weight: 800;
+                color: #1A1A1A;
+                font-family: 'Quicksand', sans-serif;
+                position: relative;
+                z-index: 1;
+                box-shadow: 0 8px 24px rgba(245,194,0,0.3);
+            }
+            .s360-process-step h4 { font-size: 18px; font-weight: 700; color: #1A1A1A; margin-bottom: 10px; }
+            .s360-process-step p { color: var(--text); font-size: 14px; line-height: 1.6; }
+
+            /* Testimonial */
+            .s360-testi-card {
+                background: #ffffff;
+                border-radius: 16px;
+                padding: 36px;
+                border: 1px solid var(--border);
+                margin: 0 12px;
+            }
+            .s360-testi-stars { color: var(--theme); margin-bottom: 16px; letter-spacing: 2px; }
+            .s360-testi-card p { color: #555; font-size: 15px; line-height: 1.8; margin-bottom: 24px; font-style: italic; }
+            .s360-testi-author { display: flex; align-items: center; gap: 14px; }
+            .s360-testi-avatar {
+                width: 50px; height: 50px;
+                border-radius: 50%;
+                background: rgba(245,194,0,0.2);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 20px;
+                color: var(--theme);
+                font-weight: 700;
+                font-family: 'Quicksand', sans-serif;
+            }
+            .s360-testi-author h6 { font-size: 15px; font-weight: 700; color: #1A1A1A; margin: 0; }
+            .s360-testi-author span { font-size: 13px; color: #888; }
+
+            /* FAQ */
+            .s360-faq-item {
+                border: 1px solid var(--border);
+                border-radius: 10px;
+                margin-bottom: 12px;
+                overflow: hidden;
+                background: #ffffff;
+            }
+            .s360-faq-question {
+                padding: 20px 24px;
+                cursor: pointer;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-weight: 600;
+                color: #1A1A1A;
+                transition: all 0.3s;
+            }
+            .s360-faq-question:hover { color: var(--theme); }
+            .s360-faq-question i { transition: transform 0.3s; color: var(--theme); }
+            .s360-faq-item.active .s360-faq-question i { transform: rotate(180deg); }
+            .s360-faq-answer {
+                padding: 0 24px;
+                max-height: 0;
+                overflow: hidden;
+                transition: all 0.4s ease;
+                color: var(--text);
+                font-size: 14px;
+                line-height: 1.7;
+            }
+            .s360-faq-item.active .s360-faq-answer { max-height: 200px; padding: 0 24px 20px; }
+
+            /* Blog */
+            .s360-blog-card {
+                background: #ffffff;
+                border-radius: 12px;
+                overflow: hidden;
+                border: 1px solid var(--border);
+                transition: all 0.3s;
+                height: 100%;
+            }
+            .s360-blog-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+            .s360-blog-thumb { position: relative; overflow: hidden; height: 220px; background: #2c2c2c; }
+            .s360-blog-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+            .s360-blog-card:hover .s360-blog-thumb img { transform: scale(1.05); }
+            .s360-blog-cat {
+                position: absolute;
+                top: 16px; left: 16px;
+                background: var(--theme);
+                color: #1A1A1A;
+                font-size: 11px;
+                font-weight: 700;
+                padding: 4px 12px;
+                border-radius: 4px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+            .s360-blog-content { padding: 24px; }
+            .s360-blog-meta { font-size: 12px; color: #999; margin-bottom: 12px; }
+            .s360-blog-content h4 { font-size: 17px; font-weight: 700; color: #1A1A1A; margin-bottom: 12px; line-height: 1.4; }
+            .s360-blog-content h4 a { color: inherit; text-decoration: none; }
+            .s360-blog-content h4 a:hover { color: var(--theme); }
+            .s360-blog-link {
+                color: var(--theme);
+                font-weight: 600;
+                font-size: 13px;
+                text-decoration: none;
+                display: inline-flex;
+                align-items: center;
+                gap: 6px;
+            }
+            .s360-blog-link:hover { gap: 10px; color: var(--theme); }
+
+            /* CTA */
+            .s360-cta-section {
+                background: linear-gradient(135deg, #1A1A1A 0%, #2c2c2c 100%);
+                padding: 100px 0;
+                position: relative;
+                overflow: hidden;
+            }
+            .s360-cta-section::before {
+                content: '';
+                position: absolute;
+                top: -50%; left: -10%;
+                width: 500px; height: 500px;
+                background: radial-gradient(circle, rgba(245,194,0,0.15) 0%, transparent 70%);
+            }
+
+            /* Footer */
+            .s360-footer { background: #111111; padding: 80px 0 0; }
+            .s360-footer-brand p { color: #888; font-size: 14px; line-height: 1.8; margin: 16px 0 24px; }
+            .s360-footer h5 { color: #ffffff; font-size: 16px; font-weight: 700; margin-bottom: 24px; }
+            .s360-footer-links { list-style: none; padding: 0; margin: 0; }
+            .s360-footer-links li { margin-bottom: 12px; }
+            .s360-footer-links a { color: #888; text-decoration: none; font-size: 14px; transition: color 0.3s; display: flex; align-items: center; gap: 8px; }
+            .s360-footer-links a:hover { color: var(--theme); }
+            .s360-footer-links a::before { content: '→'; font-size: 12px; color: var(--theme); }
+            .s360-footer-contact li { color: #888; font-size: 14px; margin-bottom: 14px; display: flex; gap: 12px; align-items: flex-start; }
+            .s360-footer-contact li i { color: var(--theme); margin-top: 4px; }
+            .s360-footer-contact a { color: #888; text-decoration: none; }
+            .s360-footer-contact a:hover { color: var(--theme); }
+            .s360-social { display: flex; gap: 10px; margin-top: 24px; }
+            .s360-social a {
+                width: 40px; height: 40px;
+                border-radius: 8px;
+                background: rgba(255,255,255,0.06);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #888;
+                text-decoration: none;
+                transition: all 0.3s;
+            }
+            .s360-social a:hover { background: var(--theme); color: #1A1A1A; }
+            .s360-footer-bottom {
+                border-top: 1px solid rgba(255,255,255,0.06);
+                padding: 24px 0;
+                margin-top: 60px;
+            }
+            .s360-footer-bottom p { color: #666; font-size: 13px; margin: 0; }
+
+            /* WhatsApp float */
+            .s360-wa-float {
+                position: fixed;
+                bottom: 30px;
+                right: 30px;
+                width: 56px; height: 56px;
+                background: #25D366;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 24px;
+                color: #fff;
+                text-decoration: none;
+                z-index: 999;
+                box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+                transition: all 0.3s;
+            }
+            .s360-wa-float:hover { transform: scale(1.1); color: #fff; }
+
+            /* Portfolio */
+            .s360-portfolio-card {
+                position: relative;
+                border-radius: 12px;
+                overflow: hidden;
+                height: 260px;
+                background: #2c2c2c;
+            }
+            .s360-portfolio-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+            .s360-portfolio-card:hover img { transform: scale(1.08); }
+            .s360-portfolio-overlay {
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 50%);
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                padding: 24px;
+                opacity: 0;
+                transition: opacity 0.3s;
+            }
+            .s360-portfolio-card:hover .s360-portfolio-overlay { opacity: 1; }
+            .s360-portfolio-overlay h5 { color: #fff; font-size: 17px; font-weight: 700; margin: 0 0 6px; }
+            .s360-portfolio-overlay span { color: var(--theme); font-size: 13px; font-weight: 600; }
+            .s360-portfolio-cat {
+                position: absolute;
+                top: 16px; left: 16px;
+                background: var(--theme);
+                color: #1A1A1A;
+                font-size: 11px;
+                font-weight: 700;
+                padding: 4px 12px;
+                border-radius: 4px;
+                text-transform: uppercase;
+            }
+
+            /* Marquee */
+            .s360-marquee-section {
+                background: var(--theme);
+                padding: 18px 0;
+                overflow: hidden;
+            }
+            .s360-marquee {
+                display: flex;
+                animation: s360marquee 20s linear infinite;
+                white-space: nowrap;
+            }
+            .s360-marquee-item {
+                display: flex;
+                align-items: center;
+                gap: 16px;
+                padding: 0 32px;
+                font-size: 15px;
+                font-weight: 700;
+                color: #1A1A1A;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                flex-shrink: 0;
+            }
+            .s360-marquee-item i { font-size: 8px; opacity: 0.5; }
+            @keyframes s360marquee {
+                0% { transform: translateX(0); }
+                100% { transform: translateX(-50%); }
+            }
+
+            /* Location badges */
+            .s360-location-badge {
+                display: inline-flex;
+                align-items: center;
+                gap: 6px;
+                background: #ffffff;
+                border: 1px solid var(--border);
+                border-radius: 50px;
+                padding: 8px 18px;
+                font-size: 13px;
+                font-weight: 600;
+                color: #444;
+                margin: 6px;
+                transition: all 0.3s;
+                text-decoration: none;
+            }
+            .s360-location-badge:hover { background: var(--theme); color: #1A1A1A; border-color: var(--theme); }
+            .s360-location-badge i { color: var(--theme); font-size: 12px; }
+            .s360-location-badge:hover i { color: #1A1A1A; }
+
+            /* ===== SVG & Animation Additions ===== */
+
+            /* Rotating 360° ring around hero preview */
+            .s360-ring-anim {
+                position: absolute;
+                width: 112%;
+                height: 112%;
+                top: -6%;
+                left: -6%;
+                pointer-events: none;
+                z-index: 0;
+            }
+            .s360-tour-preview { position: relative; z-index: 2; }
+
+
+            /* Camera SVG center illustration */
+            .s360-cam-svg-wrap {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+            }
+            .s360-cam-svg-wrap svg {
+                filter: drop-shadow(0 10px 24px rgba(245,194,0,0.28));
+                animation: s360-float-y 4s ease-in-out infinite;
+            }
+            @keyframes s360-float-y {
+                0%, 100% { transform: translateY(0); }
+                50% { transform: translateY(-12px); }
+            }
+
+            /* Scan line for stats section */
+            .s360-stats-section { position: relative; overflow: hidden; }
+            .s360-scan-line {
+                position: absolute;
+                left: 0; right: 0;
+                height: 2px;
+                background: linear-gradient(90deg, transparent 0%, rgba(245,194,0,0.45) 50%, transparent 100%);
+                animation: s360-scanline 4s linear infinite;
+                pointer-events: none;
+            }
+            @keyframes s360-scanline {
+                0% { top: 0%; opacity: 0.8; }
+                100% { top: 100%; opacity: 0; }
+            }
+
+            /* Responsive */
+            @media (max-width: 991px) {
+                .s360-hero h1 { font-size: 40px; }
+                .s360-hero { min-height: auto; padding: 100px 0 60px; }
+                .s360-stat-1, .s360-stat-2 { display: none; }
+                .s360-process-step::after { display: none; }
+                .s360-trust-item { border-right: none; padding: 10px 16px; }
+            }
+            @media (max-width: 575px) {
+                .s360-hero h1 { font-size: 32px; }
+                .s360-hero-btns { flex-direction: column; }
+                .btn-primary-360, .btn-outline-360, .btn-whatsapp-360 { justify-content: center; }
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="page-wrapper">
+
+            <!-- Preloader -->
+            <div class="preloader">
+                <div class="loader"></div>
+            </div>
+
+            <!-- Back To Top -->
+            <button id="back-top" class="back-to-top">
+                <i class="fa-regular fa-arrow-up"></i>
+            </button>
+
+            <!-- Mouse Cursor -->
+            <div class="mouseCursor cursor-outer"></div>
+            <div class="mouseCursor cursor-inner"></div>
+
+            <!-- WhatsApp Float -->
+            <a href="https://wa.me/919876543210?text=Hi%20Shootin360!%20I%20want%20to%20book%20a%20360%20Virtual%20Tour%20for%20my%20business." class="s360-wa-float" target="_blank" title="Chat on WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+
+            <!-- Offcanvas -->
+            <div class="fix-area">
+                <div class="offcanvas__info">
+                    <div class="offcanvas__wrapper">
+                        <div class="offcanvas__content">
+                            <div class="offcanvas__top d-flex justify-content-between align-items-center">
+                                <div class="offcanvas__logo">
+                                    <a href="index.html" class="shootin-logo-text">
+                                        SHOOTIN<span style="color:var(--theme)">360°</span>
+                                        <span>Street View Creator</span>
+                                    </a>
+                                </div>
+                                <div class="offcanvas__close">
+                                    <button><i class="fa-thin fa-times"></i></button>
+                                </div>
+                            </div>
+                            <p class="text d-none d-xl-block">
+                                Professional 360° Virtual Tour Services in Pune & Maharashtra. Get your business on Google Street View today!
+                            </p>
+                            <div class="mobile-menu fix"></div>
+                            <div class="off-contact-info">
+                                <span class="info-title">Contact Info</span>
+                                <div class="contact-details">
+                                    <span class="sub-info">Phone</span>
+                                    <p><a href="tel:+919876543210">+91 98765 43210</a></p>
+                                </div>
+                                <div class="contact-details">
+                                    <span class="sub-info">Email</span>
+                                    <p><a href="mailto:info@shootin360.com">info@shootin360.com</a></p>
+                                </div>
+                                <div class="contact-details">
+                                    <span class="sub-info">Location</span>
+                                    <p>Pune, Maharashtra, India</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="social-icon-list">
+                            <span class="follow-title">Follow us:</span>
+                            <div class="social-icon d-flex align-items-center">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                                <a href="#"><i class="fab fa-google"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="offcanvas__overlay"></div>
+
+            <!-- Header -->
+            <header id="header-sticky" class="header-1">
+                <div class="container">
+                    <div class="mega-menu-wrapper">
+                        <div class="header-main">
+                            <a href="index.html" class="logo shootin-logo-text" style="text-decoration:none;">
+                                SHOOTIN<span style="color:var(--theme);font-size:18px;display:inline;">360°</span>
+                                <span style="color:#999;font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;display:block;line-height:1;margin-top:2px;">Street View Creator</span>
+                            </a>
+                            <div class="mean__menu-wrapper">
+                                <div class="main-menu">
+                                    <nav id="mobile-menu">
+                                        <ul>
+                                            <li class="active">
+                                                <a href="index.html">Home</a>
+                                            </li>
+                                            <li>
+                                                <a href="about.html">About</a>
+                                            </li>
+                                            <li>
+                                                <a href="services.html">Services</a>
+                                            </li>
+                                            <li>
+                                                <a href="portfolio.html">Portfolio</a>
+                                            </li>
+                                            <li class="has-dropdown">
+                                                <a href="#">
+                                                    Pages <i class="fa-solid fa-chevron-down"></i>
+                                                </a>
+                                                <ul class="submenu">
+                                                    <li><a href="gallery.html">Gallery</a></li>
+                                                    <li><a href="faq.html">FAQ</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="contact.html">Contact</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="header-right d-flex justify-content-end align-items-center">
+                                <a href="booking.html" class="theme-btn header-bg">Book a Shoot <i class="fa-regular fa-camera"></i></a>
+                                <div class="header__hamburger d-xl-none my-auto">
+                                    <div class="sidebar__toggle">
+                                        <span></span><span></span><span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div id="smooth-wrapper">
+                <div id="smooth-content">
+
+                    <!-- ===== HERO SECTION ===== -->
+                    <section class="s360-hero">
+                        <div class="container">
+                            <div class="row align-items-center g-5">
+                                <div class="col-lg-6">
+                                    <div class="s360-hero-content wow fadeInLeft" data-wow-delay=".2s">
+                                        <div class="s360-hero-badge">
+                                            <i class="fab fa-google"></i>
+                                            Google Trusted Agency – Pune
+                                        </div>
+                                        <h1>
+                                            Professional <span>360° Virtual Tour</span> Services in Pune
+                                        </h1>
+                                        <p>
+                                            Put your business on Google Street View & Google Maps. Attract more customers with immersive virtual tours — hotels, restaurants, schools, showrooms & more.
+                                        </p>
+                                        <div class="s360-hero-btns">
+                                            <a href="booking.html" class="btn-primary-360">
+                                                <i class="fa-regular fa-calendar-check"></i> Book a Shoot
+                                            </a>
+                                            <a href="portfolio.html" class="btn-outline-360">
+                                                <i class="fa-regular fa-play-circle"></i> View Portfolio
+                                            </a>
+                                            <a href="https://wa.me/919876543210" class="btn-whatsapp-360" target="_blank">
+                                                <i class="fab fa-whatsapp"></i> WhatsApp
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="s360-hero-visual wow fadeInRight" data-wow-delay=".4s">
+                                        <!-- Animated 360° ring SVG -->
+                                        <svg class="s360-ring-anim" viewBox="0 0 580 580" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="290" cy="290" r="280" fill="none" stroke="rgba(245,194,0,0.08)" stroke-width="1"/>
+                                            <circle cx="290" cy="290" r="280" fill="none" stroke="rgba(245,194,0,0.5)" stroke-width="2.5" stroke-dasharray="70 40 20 80" stroke-linecap="round">
+                                                <animateTransform attributeName="transform" type="rotate" from="0 290 290" to="360 290 290" dur="9s" repeatCount="indefinite"/>
+                                            </circle>
+                                            <circle cx="290" cy="290" r="252" fill="none" stroke="rgba(245,194,0,0.22)" stroke-width="1.5" stroke-dasharray="28 38">
+                                                <animateTransform attributeName="transform" type="rotate" from="360 290 290" to="0 290 290" dur="15s" repeatCount="indefinite"/>
+                                            </circle>
+                                            <circle cx="290" cy="290" r="220" fill="none" stroke="rgba(245,194,0,0.07)" stroke-width="1" stroke-dasharray="5 22"/>
+                                            <!-- Orbiting gold dot -->
+                                            <circle cx="290" cy="10" r="7" fill="#F5C200" opacity="0.85">
+                                                <animateTransform attributeName="transform" type="rotate" from="0 290 290" to="360 290 290" dur="9s" repeatCount="indefinite"/>
+                                            </circle>
+                                            <!-- Counter-orbiting dot -->
+                                            <circle cx="290" cy="570" r="5" fill="rgba(245,194,0,0.5)">
+                                                <animateTransform attributeName="transform" type="rotate" from="360 290 290" to="0 290 290" dur="15s" repeatCount="indefinite"/>
+                                            </circle>
+                                        </svg>
+                                        <div class="s360-tour-preview">
+                                            <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&auto=format&fit=crop&q=80" alt="360 Virtual Tour Preview - Hotel Lobby">
+                                            <div class="s360-tour-badge">
+                                                <i class="fab fa-google"></i> Google Street View
+                                            </div>
+                                        </div>
+                                        <div class="s360-floating-stat s360-stat-1 wow fadeInUp" data-wow-delay=".7s">
+                                            <div class="num">100<span style="font-size:22px">+</span></div>
+                                            <div class="lbl">Businesses Listed</div>
+                                        </div>
+                                        <div class="s360-floating-stat s360-stat-2 wow fadeInUp" data-wow-delay=".9s">
+                                            <div class="num">5<span style="font-size:22px">★</span></div>
+                                            <div class="lbl">Google Rated</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ===== TRUST BAR ===== -->
+                    <div class="s360-trust-bar">
+                        <div class="container">
+                            <div class="d-flex flex-wrap justify-content-center justify-content-lg-between align-items-center" style="gap:0;">
+                                <div class="s360-trust-item">
+                                    <i class="fab fa-google"></i>
+                                    <span>Google Maps Published</span>
+                                </div>
+                                <div class="s360-trust-item">
+                                    <i class="fa-solid fa-building"></i>
+                                    <span>100+ Businesses</span>
+                                </div>
+                                <div class="s360-trust-item">
+                                    <i class="fa-solid fa-map-location-dot"></i>
+                                    <span>Maharashtra Coverage</span>
+                                </div>
+                                <div class="s360-trust-item">
+                                    <i class="fa-solid fa-mobile-screen"></i>
+                                    <span>Mobile Friendly</span>
+                                </div>
+                                <div class="s360-trust-item" style="border-right:none;">
+                                    <i class="fa-solid fa-bolt"></i>
+                                    <span>Fast Delivery</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ===== MARQUEE ===== -->
+                    <div class="s360-marquee-section">
+                        <div class="s360-marquee">
+                            <div class="s360-marquee-item"><i class="fa-solid fa-circle-dot"></i> 360° Virtual Tours</div>
+                            <div class="s360-marquee-item"><i class="fa-solid fa-circle-dot"></i> Google Street View</div>
+                            <div class="s360-marquee-item"><i class="fa-solid fa-circle-dot"></i> Business Photography</div>
+                            <div class="s360-marquee-item"><i class="fa-solid fa-circle-dot"></i> Google Maps Integration</div>
+                            <div class="s360-marquee-item"><i class="fa-solid fa-circle-dot"></i> Local SEO Boost</div>
+                            <div class="s360-marquee-item"><i class="fa-solid fa-circle-dot"></i> Hotel & Restaurant Tours</div>
+                            <div class="s360-marquee-item"><i class="fa-solid fa-circle-dot"></i> School Campus Tours</div>
+                            <div class="s360-marquee-item"><i class="fa-solid fa-circle-dot"></i> Real Estate Tours</div>
+                            <!-- Duplicate for infinite loop -->
+                            <div class="s360-marquee-item"><i class="fa-solid fa-circle-dot"></i> 360° Virtual Tours</div>
+                            <div class="s360-marquee-item"><i class="fa-solid fa-circle-dot"></i> Google Street View</div>
+                            <div class="s360-marquee-item"><i class="fa-solid fa-circle-dot"></i> Business Photography</div>
+                            <div class="s360-marquee-item"><i class="fa-solid fa-circle-dot"></i> Google Maps Integration</div>
+                            <div class="s360-marquee-item"><i class="fa-solid fa-circle-dot"></i> Local SEO Boost</div>
+                            <div class="s360-marquee-item"><i class="fa-solid fa-circle-dot"></i> Hotel & Restaurant Tours</div>
+                            <div class="s360-marquee-item"><i class="fa-solid fa-circle-dot"></i> School Campus Tours</div>
+                            <div class="s360-marquee-item"><i class="fa-solid fa-circle-dot"></i> Real Estate Tours</div>
+                        </div>
+                    </div>
+
+                    <!-- ===== SERVICES SECTION ===== -->
+                    <section class="section-padding" style="background:#F8F8F8;">
+                        <div class="container">
+                            <div class="row align-items-center" style="margin-bottom:56px;">
+                                <div class="col-lg-7">
+                                    <div class="s360-section-label wow fadeInUp">Our Services</div>
+                                    <h2 class="split-title wow fadeInUp" data-wow-delay=".2s">
+                                        360° Virtual Tours for <br> Every Business Type
+                                    </h2>
+                                </div>
+                                <div class="col-lg-5 text-lg-end">
+                                    <a href="services.html" class="theme-btn wow fadeInUp" data-wow-delay=".3s">
+                                        View All Services <i class="fa-regular fa-arrow-up-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row g-4">
+                                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                                    <div class="s360-service-card">
+                                        <div class="s360-service-icon"><i class="fa-solid fa-utensils"></i></div>
+                                        <h4>Hotel & Restaurant Tours</h4>
+                                        <p>Showcase your ambience, dining area, rooms & reception with stunning 360° tours. Let guests experience your space before they visit.</p>
+                                        <a href="services.html#hotel" class="s360-service-link">Learn More <i class="fa-regular fa-arrow-up-right"></i></a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                                    <div class="s360-service-card">
+                                        <div class="s360-service-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                                        <h4>School & College Tours</h4>
+                                        <p>Give parents & students a full campus walkthrough. Showcase infrastructure, labs, classrooms & sports facilities virtually.</p>
+                                        <a href="services.html#school" class="s360-service-link">Learn More <i class="fa-regular fa-arrow-up-right"></i></a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".4s">
+                                    <div class="s360-service-card">
+                                        <div class="s360-service-icon"><i class="fa-solid fa-car"></i></div>
+                                        <h4>Showroom Virtual Tours</h4>
+                                        <p>Let customers browse your showroom from anywhere. Perfect for automobile, furniture, jewellery & retail showrooms in Pune.</p>
+                                        <a href="services.html#showroom" class="s360-service-link">Learn More <i class="fa-regular fa-arrow-up-right"></i></a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".5s">
+                                    <div class="s360-service-card">
+                                        <div class="s360-service-icon"><i class="fa-solid fa-building"></i></div>
+                                        <h4>Real Estate Tours</h4>
+                                        <p>Sell flats, villas & commercial properties faster with immersive 360° walkthroughs. Let buyers explore every corner online.</p>
+                                        <a href="services.html#realestate" class="s360-service-link">Learn More <i class="fa-regular fa-arrow-up-right"></i></a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".6s">
+                                    <div class="s360-service-card">
+                                        <div class="s360-service-icon"><i class="fa-solid fa-hospital"></i></div>
+                                        <h4>Hospital & Clinic Tours</h4>
+                                        <p>Build patient trust by showcasing your facility, hygiene standards, reception & treatment rooms through 360° virtual tours.</p>
+                                        <a href="services.html#hospital" class="s360-service-link">Learn More <i class="fa-regular fa-arrow-up-right"></i></a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".7s">
+                                    <div class="s360-service-card">
+                                        <div class="s360-service-icon"><i class="fa-solid fa-dumbbell"></i></div>
+                                        <h4>Gym & Salon Tours</h4>
+                                        <p>Showcase your premium interior, equipment & ambience. Help clients see the experience before they walk through your door.</p>
+                                        <a href="services.html#gym" class="s360-service-link">Learn More <i class="fa-regular fa-arrow-up-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ===== WHY CHOOSE US ===== -->
+                    <section class="section-padding" style="background:#ffffff;">
+                        <div class="container">
+                            <div class="row g-5 align-items-center">
+                                <div class="col-lg-5">
+                                    <div class="s360-section-label wow fadeInUp">Why Choose Us</div>
+                                    <h2 class="wow fadeInUp" data-wow-delay=".2s">
+                                        Why Businesses Choose <br> <span style="color:var(--theme)">Shootin 360</span>
+                                    </h2>
+                                    <p class="mt-3 mb-40 wow fadeInUp" data-wow-delay=".3s" style="color:var(--text);">
+                                        We're Pune's leading 360° virtual tour specialists. From shoot to Google Maps publication — we handle everything for your business.
+                                    </p>
+                                    <div class="s360-why-item wow fadeInUp" data-wow-delay=".3s">
+                                        <div class="s360-why-icon"><i class="fab fa-google"></i></div>
+                                        <div>
+                                            <h5>Google Maps Integration</h5>
+                                            <p>Your virtual tour gets published directly on Google Maps & Google Business Profile for maximum visibility.</p>
+                                        </div>
+                                    </div>
+                                    <div class="s360-why-item wow fadeInUp" data-wow-delay=".4s">
+                                        <div class="s360-why-icon"><i class="fa-solid fa-vr-cardboard"></i></div>
+                                        <div>
+                                            <h5>Fully Interactive Experience</h5>
+                                            <p>360° hotspot navigation with smooth transitions. Works on desktop, mobile & VR headsets.</p>
+                                        </div>
+                                    </div>
+                                    <div class="s360-why-item wow fadeInUp" data-wow-delay=".5s">
+                                        <div class="s360-why-icon"><i class="fa-solid fa-chart-line"></i></div>
+                                        <div>
+                                            <h5>Better Local SEO</h5>
+                                            <p>Businesses with virtual tours get 2x more engagement on Google. Outrank competitors in local search.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Animated Camera SVG Center Column -->
+                                <div class="col-lg-2 d-none d-lg-flex align-items-center justify-content-center">
+                                    <div class="s360-cam-svg-wrap">
+                                        <svg viewBox="0 0 140 185" width="140" xmlns="http://www.w3.org/2000/svg">
+                                            <!-- Camera body -->
+                                            <rect x="8" y="58" width="124" height="92" rx="14" fill="#1A1A1A"/>
+                                            <!-- Top grip bump -->
+                                            <rect x="80" y="42" width="38" height="22" rx="8" fill="#1A1A1A"/>
+                                            <!-- Viewfinder -->
+                                            <rect x="16" y="64" width="24" height="14" rx="3" fill="#2c2c2c"/>
+                                            <!-- Lens outer ring with golden border -->
+                                            <circle cx="70" cy="104" r="38" fill="#111111" stroke="#F5C200" stroke-width="2.5"/>
+                                            <!-- Rotating dashes around lens -->
+                                            <circle cx="70" cy="104" r="34" fill="none" stroke="rgba(245,194,0,0.45)" stroke-width="1.5" stroke-dasharray="12 10">
+                                                <animateTransform attributeName="transform" type="rotate" from="0 70 104" to="360 70 104" dur="6s" repeatCount="indefinite"/>
+                                            </circle>
+                                            <!-- Lens middle ring -->
+                                            <circle cx="70" cy="104" r="27" fill="#1A1A1A" stroke="rgba(245,194,0,0.25)" stroke-width="1.5"/>
+                                            <!-- Lens iris (animates breathing) -->
+                                            <circle cx="70" cy="104" r="18" fill="#080808">
+                                                <animate attributeName="r" values="18;15;18" dur="3s" repeatCount="indefinite"/>
+                                            </circle>
+                                            <!-- Lens reflection -->
+                                            <circle cx="62" cy="97" r="5" fill="rgba(245,194,0,0.22)"/>
+                                            <!-- 360° text on lens -->
+                                            <text x="70" y="109" text-anchor="middle" font-size="10" font-weight="800" fill="#F5C200" font-family="Quicksand,sans-serif">360°</text>
+                                            <!-- Shutter button (pulses) -->
+                                            <circle cx="110" cy="70" r="11" fill="#F5C200">
+                                                <animate attributeName="opacity" values="1;0.45;1" dur="2s" repeatCount="indefinite"/>
+                                            </circle>
+                                            <!-- Flash burst (occasional) -->
+                                            <g>
+                                                <animate attributeName="opacity" values="0;0;0;0;0;1;0" dur="6s" repeatCount="indefinite"/>
+                                                <polygon points="70,2 75,20 65,20" fill="#F5C200"/>
+                                                <polygon points="32,14 46,28 40,20" fill="#F5C200"/>
+                                                <polygon points="108,14 94,28 100,20" fill="#F5C200"/>
+                                            </g>
+                                            <!-- Tripod mount -->
+                                            <rect x="63" y="150" width="14" height="18" rx="3" fill="#1A1A1A"/>
+                                            <ellipse cx="70" cy="168" rx="22" ry="5" fill="rgba(0,0,0,0.12)"/>
+                                        </svg>
+                                        <div style="text-align:center;">
+                                            <span style="font-size:10px;color:#bbb;letter-spacing:2px;text-transform:uppercase;display:block;">Professional</span>
+                                            <span style="font-size:13px;font-weight:800;color:#F5C200;font-family:'Quicksand',sans-serif;">360° Camera</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5">
+                                    <div class="s360-why-item wow fadeInUp" data-wow-delay=".3s">
+                                        <div class="s360-why-icon"><i class="fa-solid fa-shield-check"></i></div>
+                                        <div>
+                                            <h5>Increase Customer Trust</h5>
+                                            <p>Let customers see your business before visiting. Build confidence and reduce hesitation-to-visit.</p>
+                                        </div>
+                                    </div>
+                                    <div class="s360-why-item wow fadeInUp" data-wow-delay=".4s">
+                                        <div class="s360-why-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+                                        <div>
+                                            <h5>Mobile Compatible</h5>
+                                            <p>Virtual tours work on all smartphones. Your customers can explore your business on the go.</p>
+                                        </div>
+                                    </div>
+                                    <div class="s360-why-item wow fadeInUp" data-wow-delay=".5s">
+                                        <div class="s360-why-icon"><i class="fa-solid fa-camera"></i></div>
+                                        <div>
+                                            <h5>Professional Photography</h5>
+                                            <p>We use professional 360° cameras & lighting. Every shoot delivers crisp, high-quality imagery.</p>
+                                        </div>
+                                    </div>
+                                    <div class="s360-why-item wow fadeInUp" data-wow-delay=".6s">
+                                        <div class="s360-why-icon"><i class="fa-solid fa-clock"></i></div>
+                                        <div>
+                                            <h5>Fast Turnaround</h5>
+                                            <p>From shoot to Google Maps publication in 3-5 days. Quick, professional, and hassle-free.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ===== STATS SECTION ===== -->
+                    <section class="s360-stats-section">
+                        <div class="s360-scan-line"></div>
+                        <div class="container">
+                            <div class="row g-4 text-center">
+                                <div class="col-6 col-md-3 wow fadeInUp" data-wow-delay=".2s">
+                                    <div class="s360-stat-box">
+                                        <div class="num"><span class="count">100</span><span class="plus">+</span></div>
+                                        <p>Businesses Published on Google</p>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3 wow fadeInUp" data-wow-delay=".4s">
+                                    <div class="s360-stat-box">
+                                        <div class="num"><span class="count">5</span><span class="plus">+</span></div>
+                                        <p>Years of Experience</p>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3 wow fadeInUp" data-wow-delay=".6s">
+                                    <div class="s360-stat-box">
+                                        <div class="num"><span class="count">20</span><span class="plus">+</span></div>
+                                        <p>Cities in Maharashtra</p>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3 wow fadeInUp" data-wow-delay=".8s">
+                                    <div class="s360-stat-box">
+                                        <div class="num"><span class="count">98</span><span class="plus">%</span></div>
+                                        <p>Client Satisfaction Rate</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ===== PORTFOLIO PREVIEW ===== -->
+                    <section class="section-padding" style="background:#F8F8F8;">
+                        <div class="container">
+                            <div class="row align-items-center" style="margin-bottom:56px;">
+                                <div class="col-lg-7">
+                                    <div class="s360-section-label wow fadeInUp">Our Portfolio</div>
+                                    <h2 class="split-title wow fadeInUp" data-wow-delay=".2s">
+                                        Virtual Tours We've <br> Created for Businesses
+                                    </h2>
+                                </div>
+                                <div class="col-lg-5 text-lg-end">
+                                    <a href="portfolio.html" class="theme-btn wow fadeInUp" data-wow-delay=".3s">
+                                        View Full Portfolio <i class="fa-regular fa-arrow-up-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row g-4">
+                                <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                                    <div class="s360-portfolio-card" style="height:320px;">
+                                        <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=700&auto=format&fit=crop&q=75" alt="Hotel Virtual Tour">
+                                        <div class="s360-portfolio-cat">Hotel</div>
+                                        <div class="s360-portfolio-overlay">
+                                            <h5>The Grand Stay Hotel</h5>
+                                            <span><i class="fab fa-google"></i> Published on Google Maps</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                                    <div class="s360-portfolio-card" style="height:320px;">
+                                        <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=500&auto=format&fit=crop&q=75" alt="School Virtual Tour">
+                                        <div class="s360-portfolio-cat">School</div>
+                                        <div class="s360-portfolio-overlay">
+                                            <h5>Modern Public School</h5>
+                                            <span><i class="fab fa-google"></i> Google Street View</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".4s">
+                                    <div class="s360-portfolio-card" style="height:320px;">
+                                        <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=500&auto=format&fit=crop&q=75" alt="Showroom Virtual Tour">
+                                        <div class="s360-portfolio-cat">Showroom</div>
+                                        <div class="s360-portfolio-overlay">
+                                            <h5>AutoZone Showroom</h5>
+                                            <span><i class="fab fa-google"></i> Google Maps</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".5s">
+                                    <div class="s360-portfolio-card">
+                                        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=500&auto=format&fit=crop&q=75" alt="Restaurant Virtual Tour">
+                                        <div class="s360-portfolio-cat">Restaurant</div>
+                                        <div class="s360-portfolio-overlay">
+                                            <h5>Spice Garden Restaurant</h5>
+                                            <span><i class="fab fa-google"></i> Street View</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".6s">
+                                    <div class="s360-portfolio-card">
+                                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=500&auto=format&fit=crop&q=75" alt="Gym Virtual Tour">
+                                        <div class="s360-portfolio-cat">Gym</div>
+                                        <div class="s360-portfolio-overlay">
+                                            <h5>FitLife Gym & Wellness</h5>
+                                            <span><i class="fab fa-google"></i> Google Maps</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".7s">
+                                    <div class="s360-portfolio-card">
+                                        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=700&auto=format&fit=crop&q=75" alt="Real Estate Virtual Tour">
+                                        <div class="s360-portfolio-cat">Real Estate</div>
+                                        <div class="s360-portfolio-overlay">
+                                            <h5>Skyline Residency Pune</h5>
+                                            <span><i class="fab fa-google"></i> Virtual Walkthrough</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ===== HOW IT WORKS ===== -->
+                    <section class="section-padding" style="background:#ffffff;">
+                        <div class="container">
+                            <div class="text-center mb-60">
+                                <div class="s360-section-label wow fadeInUp" style="justify-content:center;">How It Works</div>
+                                <h2 class="split-title wow fadeInUp" data-wow-delay=".2s">
+                                    Get Your Business on Google <br> in Just 4 Simple Steps
+                                </h2>
+                                <!-- Animated radar SVG -->
+                                <div class="wow fadeInUp" data-wow-delay=".3s" style="display:flex;justify-content:center;margin-top:32px;margin-bottom:-20px;">
+                                    <svg viewBox="0 0 100 100" width="80" xmlns="http://www.w3.org/2000/svg">
+                                        <!-- Radar rings -->
+                                        <circle cx="50" cy="50" r="45" fill="none" stroke="rgba(245,194,0,0.15)" stroke-width="1.5"/>
+                                        <circle cx="50" cy="50" r="32" fill="none" stroke="rgba(245,194,0,0.2)" stroke-width="1.5"/>
+                                        <circle cx="50" cy="50" r="18" fill="none" stroke="rgba(245,194,0,0.3)" stroke-width="1.5"/>
+                                        <circle cx="50" cy="50" r="6" fill="#F5C200" opacity="0.8"/>
+                                        <!-- Cross hairs -->
+                                        <line x1="50" y1="5" x2="50" y2="95" stroke="rgba(245,194,0,0.1)" stroke-width="1"/>
+                                        <line x1="5" y1="50" x2="95" y2="50" stroke="rgba(245,194,0,0.1)" stroke-width="1"/>
+                                        <!-- Radar sweep -->
+                                        <path d="M50,50 L50,5 A45,45 0 0,1 95,50 Z" fill="rgba(245,194,0,0.12)">
+                                            <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="3s" repeatCount="indefinite"/>
+                                        </path>
+                                        <!-- Sweep leading edge -->
+                                        <line x1="50" y1="50" x2="50" y2="5" stroke="#F5C200" stroke-width="2" opacity="0.7">
+                                            <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="3s" repeatCount="indefinite"/>
+                                        </line>
+                                        <!-- Blip dot -->
+                                        <circle cx="72" cy="28" r="3" fill="#F5C200">
+                                            <animate attributeName="opacity" values="0;1;0" dur="3s" repeatCount="indefinite" begin="1s"/>
+                                        </circle>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="row g-0">
+                                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                                    <div class="s360-process-step">
+                                        <div class="s360-step-num">01</div>
+                                        <h4>Inquiry & Booking</h4>
+                                        <p>Contact us via WhatsApp, phone or online form. Share your business details & preferred shoot date.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".4s">
+                                    <div class="s360-process-step">
+                                        <div class="s360-step-num">02</div>
+                                        <h4>Shoot Scheduling</h4>
+                                        <p>Our professional photographer visits your location. 360° shoot done in 2-4 hours depending on space.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".6s">
+                                    <div class="s360-process-step">
+                                        <div class="s360-step-num">03</div>
+                                        <h4>Editing & Publishing</h4>
+                                        <p>We stitch, edit & create your virtual tour. Then publish it directly to Google Street View & Maps.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".8s">
+                                    <div class="s360-process-step">
+                                        <div class="s360-step-num">04</div>
+                                        <h4>Delivery & Embedding</h4>
+                                        <p>Receive your tour link. Embed on your website & share on social media. Go live on Google Maps!</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center mt-50 wow fadeInUp" data-wow-delay=".5s">
+                                <a href="booking.html" class="btn-primary-360">
+                                    <i class="fa-regular fa-calendar-check"></i> Book Your Shoot Now
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ===== TESTIMONIALS ===== -->
+                    <section class="section-padding section-bg">
+                        <div class="container">
+                            <div class="text-center mb-60">
+                                <div class="s360-section-label wow fadeInUp" style="justify-content:center;color:#fff;">Client Reviews</div>
+                                <h2 class="split-title text-white wow fadeInUp" data-wow-delay=".2s">
+                                    What Our Clients Say <br> About Us
+                                </h2>
+                            </div>
+                            <div class="swiper testimonial-slider">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="s360-testi-card">
+                                            <div class="s360-testi-stars">★★★★★</div>
+                                            <p>"Shootin 360 did an amazing job with our restaurant virtual tour. Our Google Maps profile now gets 3x more views and customers come in saying they saw us online first!"</p>
+                                            <div class="s360-testi-author">
+                                                <div class="s360-testi-avatar">R</div>
+                                                <div>
+                                                    <h6>Rajesh Mehta</h6>
+                                                    <span>Owner, Spice Garden Restaurant, Pune</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="s360-testi-card">
+                                            <div class="s360-testi-stars">★★★★★</div>
+                                            <p>"Our school admissions increased after we added the virtual tour. Parents love being able to see the campus before visiting. Highly professional team!"</p>
+                                            <div class="s360-testi-author">
+                                                <div class="s360-testi-avatar">P</div>
+                                                <div>
+                                                    <h6>Priya Sharma</h6>
+                                                    <span>Principal, Bright Future Academy, Baner</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="s360-testi-card">
+                                            <div class="s360-testi-stars">★★★★★</div>
+                                            <p>"The showroom virtual tour was delivered in just 4 days. Our online leads have doubled since we embedded it on our website. Great value for money!"</p>
+                                            <div class="s360-testi-author">
+                                                <div class="s360-testi-avatar">A</div>
+                                                <div>
+                                                    <h6>Amit Kulkarni</h6>
+                                                    <span>Manager, AutoZone Showroom, Wakad</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="s360-testi-card">
+                                            <div class="s360-testi-stars">★★★★★</div>
+                                            <p>"Our hotel bookings improved after the 360° tour went live on Google. Guests feel more confident booking when they can see every room virtually."</p>
+                                            <div class="s360-testi-author">
+                                                <div class="s360-testi-avatar">S</div>
+                                                <div>
+                                                    <h6>Suresh Patil</h6>
+                                                    <span>Owner, The Grand Stay Hotel, Koregaon Park</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="array-buttons">
+                                    <button class="array-prev"><i class="fa-sharp fa-solid fa-arrow-left"></i></button>
+                                    <button class="array-next"><i class="fa-sharp fa-solid fa-arrow-right"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ===== LOCATIONS ===== -->
+                    <section class="section-padding" style="background:#F8F8F8;">
+                        <div class="container">
+                            <div class="row align-items-center mb-50">
+                                <div class="col-lg-7">
+                                    <div class="s360-section-label wow fadeInUp">Service Areas</div>
+                                    <h2 class="wow fadeInUp" data-wow-delay=".2s">
+                                        Serving Businesses Across <br> <span style="color:var(--theme)">Pune & Maharashtra</span>
+                                    </h2>
+                                </div>
+                                <div class="col-lg-5 text-lg-end">
+                                    <p style="color:var(--text);" class="wow fadeInUp">We cover all major areas in Pune and travel across Maharashtra for virtual tour shoots.</p>
+                                </div>
+                            </div>
+                            <div class="text-center wow fadeInUp" data-wow-delay=".3s">
+                                <a href="#" class="s360-location-badge"><i class="fa-solid fa-location-dot"></i> Baner</a>
+                                <a href="#" class="s360-location-badge"><i class="fa-solid fa-location-dot"></i> Koregaon Park</a>
+                                <a href="#" class="s360-location-badge"><i class="fa-solid fa-location-dot"></i> Wakad</a>
+                                <a href="#" class="s360-location-badge"><i class="fa-solid fa-location-dot"></i> Hinjewadi</a>
+                                <a href="#" class="s360-location-badge"><i class="fa-solid fa-location-dot"></i> Kothrud</a>
+                                <a href="#" class="s360-location-badge"><i class="fa-solid fa-location-dot"></i> Viman Nagar</a>
+                                <a href="#" class="s360-location-badge"><i class="fa-solid fa-location-dot"></i> Hadapsar</a>
+                                <a href="#" class="s360-location-badge"><i class="fa-solid fa-location-dot"></i> Shivajinagar</a>
+                                <a href="#" class="s360-location-badge"><i class="fa-solid fa-location-dot"></i> Pimpri-Chinchwad</a>
+                                <a href="#" class="s360-location-badge"><i class="fa-solid fa-location-dot"></i> Aundh</a>
+                                <a href="#" class="s360-location-badge"><i class="fa-solid fa-location-dot"></i> Mumbai</a>
+                                <a href="#" class="s360-location-badge"><i class="fa-solid fa-location-dot"></i> Nashik</a>
+                                <a href="#" class="s360-location-badge"><i class="fa-solid fa-location-dot"></i> Aurangabad</a>
+                                <a href="#" class="s360-location-badge"><i class="fa-solid fa-location-dot"></i> Kolhapur</a>
+                                <a href="#" class="s360-location-badge"><i class="fa-solid fa-location-dot"></i> Solapur</a>
+                                <a href="#" class="s360-location-badge"><i class="fa-solid fa-location-dot"></i> + More Areas</a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ===== FAQ PREVIEW ===== -->
+                    <section class="section-padding" style="background:#ffffff;">
+                        <div class="container">
+                            <div class="row g-5 align-items-start">
+                                <div class="col-lg-5">
+                                    <div class="s360-section-label wow fadeInUp">FAQ</div>
+                                    <h2 class="wow fadeInUp" data-wow-delay=".2s">
+                                        Frequently Asked <br> Questions
+                                    </h2>
+                                    <p class="mt-3 mb-30 wow fadeInUp" data-wow-delay=".3s" style="color:var(--text);">
+                                        Have more questions? We're happy to help you understand how 360° virtual tours can grow your business.
+                                    </p>
+                                    <a href="faq.html" class="theme-btn wow fadeInUp" data-wow-delay=".4s">
+                                        View All FAQs <i class="fa-regular fa-arrow-up-right"></i>
+                                    </a>
+                                </div>
+                                <div class="col-lg-7">
+                                    <div class="s360-faq-item active wow fadeInUp" data-wow-delay=".2s">
+                                        <div class="s360-faq-question" onclick="toggleFaq(this)">
+                                            <span>What is a 360° Virtual Tour?</span>
+                                            <i class="fa-solid fa-chevron-down"></i>
+                                        </div>
+                                        <div class="s360-faq-answer">
+                                            A 360° virtual tour is an immersive experience that allows viewers to explore a location as if they were physically present. It uses 360° photographs stitched together to create a walkthrough that can be navigated online or on Google Maps.
+                                        </div>
+                                    </div>
+                                    <div class="s360-faq-item wow fadeInUp" data-wow-delay=".3s">
+                                        <div class="s360-faq-question" onclick="toggleFaq(this)">
+                                            <span>How much does a 360° virtual tour cost?</span>
+                                            <i class="fa-solid fa-chevron-down"></i>
+                                        </div>
+                                        <div class="s360-faq-answer">
+                                            Pricing depends on the size of your space and the number of rooms/areas to be covered. Contact us for a customized quote. We offer competitive packages for all business types.
+                                        </div>
+                                    </div>
+                                    <div class="s360-faq-item wow fadeInUp" data-wow-delay=".4s">
+                                        <div class="s360-faq-question" onclick="toggleFaq(this)">
+                                            <span>How long does it take to deliver the tour?</span>
+                                            <i class="fa-solid fa-chevron-down"></i>
+                                        </div>
+                                        <div class="s360-faq-answer">
+                                            Typically 3-5 working days from the shoot date. The tour will be published on Google Maps and you'll receive an embeddable link for your website.
+                                        </div>
+                                    </div>
+                                    <div class="s360-faq-item wow fadeInUp" data-wow-delay=".5s">
+                                        <div class="s360-faq-question" onclick="toggleFaq(this)">
+                                            <span>Will the tour appear on Google Maps & Search?</span>
+                                            <i class="fa-solid fa-chevron-down"></i>
+                                        </div>
+                                        <div class="s360-faq-answer">
+                                            Yes! Your virtual tour will be published directly on Google Street View and linked to your Google Business Profile. It appears in Google Maps, Google Search & Google Images.
+                                        </div>
+                                    </div>
+                                    <div class="s360-faq-item wow fadeInUp" data-wow-delay=".6s">
+                                        <div class="s360-faq-question" onclick="toggleFaq(this)">
+                                            <span>Which areas of Pune do you cover?</span>
+                                            <i class="fa-solid fa-chevron-down"></i>
+                                        </div>
+                                        <div class="s360-faq-answer">
+                                            We cover all areas of Pune including Baner, Koregaon Park, Wakad, Hinjewadi, Kothrud, Aundh, Viman Nagar, Hadapsar, and more. We also serve Mumbai, Nashik & other cities in Maharashtra.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ===== BLOG SECTION ===== -->
+                    <section class="section-padding" style="background:#F8F8F8;">
+                        <div class="container">
+                            <div class="row align-items-center" style="margin-bottom:56px;">
+                                <div class="col-lg-7">
+                                    <div class="s360-section-label wow fadeInUp">Blog</div>
+                                    <h2 class="split-title wow fadeInUp" data-wow-delay=".2s">
+                                        Latest Articles &amp; <br> Insights
+                                    </h2>
+                                </div>
+                                <div class="col-lg-5 text-lg-end">
+                                    <a href="services.html" class="theme-btn wow fadeInUp" data-wow-delay=".3s">
+                                        View Services <i class="fa-regular fa-arrow-up-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row g-4">
+                                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                                    <div class="s360-blog-card">
+                                        <div class="s360-blog-thumb">
+                                            <img src="https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=500&auto=format&fit=crop&q=75" alt="Google Virtual Tour Tips">
+                                            <span class="s360-blog-cat">Google Tips</span>
+                                        </div>
+                                        <div class="s360-blog-content">
+                                            <div class="s360-blog-meta">May 2, 2026 &nbsp;•&nbsp; By Admin</div>
+                                            <h4><a href="services.html">Why Every Business in Pune Needs a 360° Virtual Tour in 2026</a></h4>
+                                            <a href="services.html" class="s360-blog-link">Read More <i class="fa-regular fa-arrow-up-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".4s">
+                                    <div class="s360-blog-card">
+                                        <div class="s360-blog-thumb">
+                                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&auto=format&fit=crop&q=75" alt="Local SEO Google Maps">
+                                            <span class="s360-blog-cat">Local SEO</span>
+                                        </div>
+                                        <div class="s360-blog-content">
+                                            <div class="s360-blog-meta">Apr 18, 2026 &nbsp;•&nbsp; By Admin</div>
+                                            <h4><a href="services.html">How Google Virtual Tours Boost Your Local SEO Ranking</a></h4>
+                                            <a href="services.html" class="s360-blog-link">Read More <i class="fa-regular fa-arrow-up-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".6s">
+                                    <div class="s360-blog-card">
+                                        <div class="s360-blog-thumb">
+                                            <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=500&auto=format&fit=crop&q=75" alt="Hotel Virtual Tour">
+                                            <span class="s360-blog-cat">Hotels</span>
+                                        </div>
+                                        <div class="s360-blog-content">
+                                            <div class="s360-blog-meta">Apr 5, 2026 &nbsp;•&nbsp; By Admin</div>
+                                            <h4><a href="services.html">Virtual Tours for Hotels: Increase Bookings by 40%</a></h4>
+                                            <a href="services.html" class="s360-blog-link">Read More <i class="fa-regular fa-arrow-up-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ===== FINAL CTA ===== -->
+                    <section class="s360-cta-section">
+                        <div class="container text-center position-relative" style="z-index:2;">
+                            <div class="s360-section-label wow fadeInUp" style="justify-content:center;color:var(--theme);">Ready to Go Live?</div>
+                            <h2 class="text-white wow fadeInUp" data-wow-delay=".2s" style="font-size:48px;font-weight:800;line-height:1.2;margin-bottom:20px;">
+                                Ready to Put Your Business on <br> <span style="color:var(--theme)">Google Virtual Tour?</span>
+                            </h2>
+                            <p class="wow fadeInUp" data-wow-delay=".3s" style="color:#aaa;font-size:18px;margin-bottom:40px;max-width:600px;margin-left:auto;margin-right:auto;">
+                                Join 100+ businesses in Pune & Maharashtra already on Google Street View. Book your shoot today!
+                            </p>
+                            <div class="d-flex justify-content-center gap-3 flex-wrap wow fadeInUp" data-wow-delay=".4s">
+                                <a href="booking.html" class="btn-primary-360">
+                                    <i class="fa-regular fa-calendar-check"></i> Book a Shoot
+                                </a>
+                                <a href="https://wa.me/919876543210" class="btn-whatsapp-360" target="_blank">
+                                    <i class="fab fa-whatsapp"></i> WhatsApp Us
+                                </a>
+                                <a href="tel:+919876543210" class="btn-outline-360">
+                                    <i class="fa-solid fa-phone"></i> Call Now
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ===== FOOTER ===== -->
+                    <footer class="s360-footer">
+                        <div class="container">
+                            <div class="row g-5">
+                                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                                    <div class="s360-footer-brand">
+                                        <a href="index.html" style="text-decoration:none;">
+                                            <div style="font-family:'Quicksand',sans-serif;font-weight:800;font-size:28px;color:var(--theme);line-height:1;">
+                                                SHOOTIN<span style="font-size:20px;">360°</span>
+                                            </div>
+                                            <div style="font-size:11px;color:#666;letter-spacing:2px;text-transform:uppercase;margin-top:4px;">Street View Creator & All Photography</div>
+                                        </a>
+                                        <p>Professional 360° virtual tour services in Pune & Maharashtra. We put your business on Google Street View & Google Maps.</p>
+                                        <div class="s360-social">
+                                            <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                                            <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                                            <a href="#" title="Google"><i class="fab fa-google"></i></a>
+                                            <a href="https://wa.me/919876543210" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                                    <h5>Services</h5>
+                                    <ul class="s360-footer-links">
+                                        <li><a href="services.html#hotel">Hotel & Restaurant</a></li>
+                                        <li><a href="services.html#school">School & College</a></li>
+                                        <li><a href="services.html#showroom">Showroom Tours</a></li>
+                                        <li><a href="services.html#realestate">Real Estate</a></li>
+                                        <li><a href="services.html#hospital">Hospital & Clinic</a></li>
+                                        <li><a href="services.html#gym">Gym & Salon</a></li>
+                                        <li><a href="services.html#office">Corporate Office</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-2 col-md-6 wow fadeInUp" data-wow-delay=".4s">
+                                    <h5>Quick Links</h5>
+                                    <ul class="s360-footer-links">
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="about.html">About Us</a></li>
+                                        <li><a href="portfolio.html">Portfolio</a></li>
+                                        <li><a href="gallery.html">Gallery</a></li>
+                                        <li><a href="faq.html">FAQ</a></li>
+                                        <li><a href="booking.html">Book a Shoot</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".5s">
+                                    <h5>Contact Us</h5>
+                                    <ul class="s360-footer-contact list-unstyled">
+                                        <li>
+                                            <i class="fa-solid fa-location-dot"></i>
+                                            <span>Pune, Maharashtra, India – 411001</span>
+                                        </li>
+                                        <li>
+                                            <i class="fa-solid fa-phone"></i>
+                                            <a href="tel:+919876543210">+91 98765 43210</a>
+                                        </li>
+                                        <li>
+                                            <i class="fa-solid fa-envelope"></i>
+                                            <a href="mailto:info@shootin360.com">info@shootin360.com</a>
+                                        </li>
+                                        <li>
+                                            <i class="fab fa-whatsapp"></i>
+                                            <a href="https://wa.me/919876543210" target="_blank">WhatsApp Us</a>
+                                        </li>
+                                        <li>
+                                            <i class="fa-solid fa-clock"></i>
+                                            <span>Mon – Sat: 9:00 AM – 7:00 PM</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="s360-footer-bottom">
+                            <div class="container">
+                                <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
+                                    <p>© 2026 <strong style="color:var(--theme);">Shootin 360</strong>. All Rights Reserved.</p>
+                                    <div style="display:flex;gap:20px;">
+                                        <a href="contact.html" style="color:#666;text-decoration:none;font-size:13px;">Privacy Policy</a>
+                                        <a href="contact.html" style="color:#666;text-decoration:none;font-size:13px;">Terms & Conditions</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- JS -->
+        <script src="assets/js/jquery-3.7.1.min.js"></script>
+        <script src="assets/js/viewport.jquery.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/gsap.min.js"></script>
+        <script src="assets/js/ScrollTrigger.min.js"></script>
+        <script src="assets/js/ScrollSmoother.min.js"></script>
+        <script src="assets/js/ScrollToPlugin.min.js"></script>
+        <script src="assets/js/SplitText.min.js"></script>
+        <script src="assets/js/chroma.min.js"></script>
+        <script src="assets/js/jquery.nice-select.min.js"></script>
+        <script src="assets/js/jquery.waypoints.js"></script>
+        <script src="assets/js/jquery.counterup.min.js"></script>
+        <script src="assets/js/jquery.meanmenu.min.js"></script>
+        <script src="assets/js/swiper-bundle.min.js"></script>
+        <script src="assets/js/jquery.magnific-popup.min.js"></script>
+        <script src="assets/js/wow.min.js"></script>
+        <script src="assets/js/main.js"></script>
+
+        <script>
+            // FAQ Toggle
+            function toggleFaq(el) {
+                var item = el.closest('.s360-faq-item');
+                var allItems = document.querySelectorAll('.s360-faq-item');
+                allItems.forEach(function(i) {
+                    if (i !== item) i.classList.remove('active');
+                });
+                item.classList.toggle('active');
+            }
+        </script>
+    </body>
+</html>

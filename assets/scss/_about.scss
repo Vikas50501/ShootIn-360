@@ -1,0 +1,587 @@
+.grt-about-wrapepr {
+    margin: 0 50px;
+    position: relative;
+
+    @include breakpoint (max-xxl){
+        margin: 0 40px;
+    }
+
+     @include breakpoint (max-xl){
+        margin: 0 35px;
+    }
+
+     @include breakpoint (max-lg){
+        margin: 0 28px;
+    }
+
+    @include breakpoint (max-md){
+        margin: 0 22px;
+    }
+
+     @include breakpoint (max-sm){
+        margin: 0 18px;
+    }
+
+    .about-shape1 {
+        position: absolute;
+        top: 5%;
+        right: 21%;
+
+        @include breakpoint (max-xxl){
+            display: none;
+        }
+    }
+
+    .about-shape2 {
+        position: absolute;
+        right: -7%;
+        bottom: 0;
+
+        @include breakpoint (max-xxl){
+            display: none;
+        }
+    }
+
+    .grt-about-image {
+        border-radius: 12px;
+
+        img {
+            @include imgw;
+            border-radius: 12px;
+        }
+    }
+
+    .grt-about-content {
+        margin-left: 125px;
+
+        @include breakpoint (max-xl4){
+            margin-left: 90px;
+        }
+
+        @include breakpoint (max-xxxl){
+            margin-left: 50px;
+        }
+
+         @include breakpoint (max-xxxl){
+            margin-left: 50px;
+        }
+
+        @include breakpoint (max-xl){
+            margin-left: 0;
+        }
+
+        .grt-section-title  {
+            h2 {
+                @include breakpoint(max-xxxl){
+                    font-size: 55px;
+                }
+
+                  @include breakpoint(max-xxl){
+                    font-size: 44px;
+                }
+
+                @include breakpoint(max-xl){
+                    font-size: 40px;
+                }
+
+                @include breakpoint(max-lg){
+                    font-size: 55px;
+                }
+
+                @include breakpoint(max-md){
+                    font-size: 40px;
+                }
+
+                @include breakpoint(max-sm){
+                    font-size: 36px;
+                }
+
+
+                @include breakpoint(max-xxs){
+                    font-size: 32px;
+                }
+            }
+        }
+
+        .grt-text {
+            margin-top: 30px;
+            max-width: 570px;
+            margin-bottom: 38px;
+
+            @include breakpoint (max-xl){
+                max-width: initial;
+
+                br {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.grt-about-wrapper-3 {
+    position: relative;
+    z-index: 1;
+
+    .grt-thumb {
+        img {
+            @include imgw;
+        }
+    }
+
+    .grt-about-content {
+        max-width: 570px;
+        margin-left: auto;
+        position: relative;
+
+        @include breakpoint (max-lg){
+            margin-left: initial;
+        }
+
+        .text {
+            color: $white;
+            font-size: 18px;
+            max-width: 495px;
+            margin-top: 30px;
+
+            @include breakpoint (max-md){
+                margin-top: 20px;
+                font-size: 16px;
+            }
+        }
+
+        ul {
+            margin-top: 25px;
+            margin-bottom: 30px;
+
+            @include breakpoint (max-md){
+                margin-top: 20px;
+            }
+
+            li {
+                font-size: 18px;
+                font-weight: 600;
+                color: $white;
+                font-family: $heading-font;
+                @include flex;
+                gap: 8px;
+
+                @include breakpoint (max-md){
+                    font-size: 16px;
+                }
+
+                &:not(:last-child){
+                    margin-bottom: 15px;
+                }
+            }
+        }
+
+        .theme-btn {
+            &::before {
+                background-color: $white;
+            }
+
+            &:hover {
+                color: $header-color;
+            }
+        }
+    }
+}
+
+.grt-about-section-3 {
+    position: relative;
+
+    .about-line-1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        @include breakpoint (max-xxl){
+            display: none;
+        }
+    }
+
+    .about-line-2 {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        @include breakpoint (max-xxl){
+            display: none;
+        }
+    }
+}
+
+.about-wrapper-4 {
+    .about-image-items {
+        position: relative;
+
+        .thumb {
+            max-width: 576px;
+
+            img {
+                @include imgw;
+            }
+        }
+
+        .thumb-2 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+            img {
+                border-radius: 50%;
+                border: 6px solid $white;
+            }
+        }
+
+        .thumb-3 {
+            position: absolute;
+            top: 0;
+            right: 30px;
+
+            @include breakpoint (max-xl){
+                max-width: 180px;
+
+                img {
+                    @include imgw;
+                }
+            }
+
+            img {
+                border-radius: 50%;
+                border: 6px solid $white;
+            }
+        }
+    }
+
+    .about-content {
+        
+        .text {
+            font-size: 22px;
+            font-weight: 500;
+            line-height: 145%;
+            margin-top: 25px;
+            max-width: 550px;
+
+            @include breakpoint (max-xl){
+                font-size: 18px;
+            }
+        }
+
+        .text-2 {
+            max-width: 500px;
+            margin-top: 25px;
+        }
+
+        .theme-btn {
+            margin-top: 45px;
+
+            @include breakpoint (max-md){
+                margin-top: 25px;
+            }
+
+            &::before {
+                background-color: $white;
+            }
+
+            &:hover {
+                color: $header-color;
+            }
+        }
+    }
+}
+
+.grt-about-wrapper-5 {
+    .about-content {
+        margin-left: 50px;
+
+        @include breakpoint (max-xl){
+            margin-left: 0;
+        }
+
+        .text {
+            font-size: 22px;
+            font-weight: 500;
+            line-height: 145%;
+            margin-top: 25px;
+            max-width: 550px;
+
+            @include breakpoint (max-xl){
+                font-size: 18px;
+            }
+        }
+
+        .text-2 {
+            max-width: 500px;
+            margin-top: 25px;
+        }
+
+        .theme-btn {
+            margin-top: 45px;
+
+            @include breakpoint (max-md){
+                margin-top: 25px;
+            }
+
+            &::before {
+                background-color: $white;
+            }
+
+            &:hover {
+                color: $header-color;
+            }
+        }
+    }
+}
+
+.grt-about-wrapper-5 {
+  background-color: #16333B;
+  margin: 0 30px;
+  border-radius: 16px;
+
+  @include breakpoint (max-xxxl){
+    margin: 0 25px;
+  }
+
+   @include breakpoint (max-xl){
+    margin: 0 20px;
+  }
+
+   @include breakpoint (max-xxs){
+    margin: 0 15px;
+  }
+
+  .grt-thumb {
+    border-radius: 16px;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+
+    @include breakpoint (max-xxxl){
+        height: 700px;
+    }
+
+    @include breakpoint (max-xl){
+        height: 620px;
+    }
+
+     @include breakpoint (max-lg){
+        height: 520px;
+    }
+
+     @include breakpoint (max-md){
+        height: 480px;
+    }
+
+    img {
+      @include imgw;
+       border-radius: 16px;
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+      object-fit: cover;
+    }
+  }
+
+  .about-content {
+    @include breakpoint (max-xl){
+        padding-right: 20px;
+    }
+        @include breakpoint (max-lg){
+            margin-top: 30px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 50px;
+        }
+  }
+}
+
+.grt-about-inner-warpper {
+    .about-image {
+        max-width: 533px;
+        position: relative;
+
+        @include breakpoint (max-xl){
+           max-width: initial;
+        }
+
+         @include breakpoint (max-lg){
+            height: 520px;
+        }
+
+        @include breakpoint (max-md){
+            height: 480px;
+        }
+
+        img {
+            @include imgw;
+            border-radius: 12px;
+            object-fit: cover;
+        }
+
+        .small-image {
+            border: 7px solid $white;
+            border-radius: 12px;
+            position: absolute;
+            right: -22%;
+            bottom: 70px;
+
+            @include breakpoint (max-xxl){
+                right: -15%;
+            }
+
+            @include breakpoint (max-xl){
+                right: 20px;
+                bottom: 20px;
+            }
+
+            @include breakpoint (max-xxs){
+               max-width: 180px
+            }
+
+              img {
+                @include imgw;
+                border-radius: 12px;
+            }
+        }
+    }
+
+     .about-content {
+        margin-left: 70px;
+
+        @include breakpoint (max-xl){
+            margin-left: 0;
+        }
+
+        .text {
+            font-size: 22px;
+            font-weight: 500;
+            line-height: 145%;
+            margin-top: 25px;
+            max-width: 550px;
+
+            @include breakpoint (max-xl){
+                font-size: 18px;
+            }
+        }
+
+        .text-2 {
+            max-width: 500px;
+            margin-top: 25px;
+        }
+
+        .bottom-box {
+            background-color: $theme-color;
+            @include flex;
+            gap: 15px;
+            font-size: 30px;
+            font-weight: 600;
+            max-width: 560px;
+            padding: 20px 20px;
+            line-height: 1;
+            border-radius: 8px;
+            margin-top: 30px;
+
+            @include breakpoint (max-xxl){
+                font-size: 22px;
+            }
+
+             @include breakpoint (max-sm){
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+.grt-core-box-2 {
+    margin-top: 30px;
+    background-color: $white;
+    border-radius: 8px;
+
+    .thumb {
+        overflow: hidden;
+        position: relative;
+        border-radius: 8px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 200%;
+            height: 0%;
+            left: 50%;
+            top: 50%;
+            background-color: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%) rotate(-45deg);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        img {
+            @include imgw;
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+            object-fit: cover;
+            transition: all 1s;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+    }
+
+    .content {
+        padding: 30px;
+        padding-top: 22px;
+        margin-top: -61px;
+        position: relative;
+        z-index: 9;
+        @include transition;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+
+        @include breakpoint (max-xxl){
+            padding: 25px;
+        }
+
+        .icon {
+            margin-bottom: 20px;
+            opacity: 0;
+            visibility: hidden;
+            @include transition;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 5px;
+
+             @include breakpoint (max-xxl){
+                font-size: 20px;
+            }
+        }
+    }
+
+    &.active {
+        .thumb {
+             &:after {
+                height: 250%;
+                transition: all 600ms linear;
+                background-color: transparent;
+            }
+            
+            img {
+               
+                transform: scale(1.2);
+            }
+        }
+
+        .content {
+            background-color: $theme-color;
+
+            .icon {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+}

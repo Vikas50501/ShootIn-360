@@ -1,0 +1,500 @@
+.grt-banner-image {
+    height: 710px;
+    position: relative;
+
+    @include breakpoint (max-lg){
+        height: 500px;
+    }
+    
+     img {
+        @include imgw;
+        object-fit: cover;
+    }
+    
+    .content-box {
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        backdrop-filter: blur(15px);
+        border-radius: 10px;
+        padding: 50px 40px;
+        position: absolute;
+        right: 100px;
+        top: 100px;
+        max-width: 410px;
+
+        @include breakpoint (max-lg){
+            padding: 40px 30px;
+            right: 30px;
+            left: 30px;
+            bottom: 30px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+
+        .title {
+            font-size: 47px;
+            font-weight: 700;
+            color: $white;
+
+            @include breakpoint (max-lg){
+                font-size: 38px;
+
+                br {
+                    display: none;
+                }
+            }
+
+            span {
+                color: $theme-color;
+            }
+        }
+
+        .text {
+            color: $white;
+            margin-top: 30px;
+        }
+
+        .donate-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 16px;
+            font-weight: 700;
+            font-family: $body-font;
+            color: $white;
+            overflow: hidden;
+            text-transform: capitalize;
+            margin-top: 100px;
+
+            @include breakpoint (max-lg){
+                margin-top: 0;
+            }
+
+        .text {
+            position: relative;
+            display: inline-block;
+            height: 22px;
+            overflow: hidden;
+        }
+
+        .text-default,
+        .text-hover {
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .text-hover {
+            position: absolute;
+            left: 0;
+            top: 100%;
+            color: $theme-color;
+        }
+
+        &:hover {
+            .text-default {
+                transform: translateY(-100%);
+            }
+
+            .text-hover {
+                transform: translateY(-100%);
+            }
+        }
+
+        i {
+            transition: transform 0.4s ease;
+        }
+
+    }
+
+    }
+}
+
+.grt-volunteer-cta-wrapper {
+    position: relative;
+    background-color: #FFFCF8;
+    margin-top: 60px;
+    border-radius: 8px;
+
+    @include breakpoint (max-md){
+        margin-top: 30px;
+    }
+
+    .vec-line {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 52%;
+        transform: translateX(-50%);
+
+        @include breakpoint (max-xl){
+            display: none;
+        }
+
+        img {
+            height: 100%;
+        }
+    }
+
+    .grt-content {
+        padding: 100px 90px;
+
+        @include breakpoint (max-xxl){
+            padding: 90px 80px;
+        }
+
+        @include breakpoint (max-xl){
+            padding: 50px 40px;
+        }
+
+        @include breakpoint (max-sm){
+            padding: 40px 30px;
+        }
+
+        .title {
+            font-size: 45px;
+            margin-bottom: 25px;
+
+            @include breakpoint (max-md){
+                font-size: 35px;
+            }
+
+             @include breakpoint (max-sm){
+                font-size: 30px;
+                margin-top: 18px;
+            }
+        }
+
+        p {
+            font-size: 17px;
+            max-width: 400px;
+            margin-bottom: 30px;
+
+            @include breakpoint (max-sm){
+               margin-bottom: 20px;
+            }
+        }
+    }
+
+    .grt-thumb {
+        border-bottom-right-radius: 8px;
+        border-top-right-radius: 8px;
+
+        @include breakpoint (max-md){
+          img {
+            @include imgw;
+          }
+        }
+
+        img {
+             border-bottom-right-radius: 8px;
+             border-top-right-radius: 8px;
+        }
+    }
+}
+
+.grt-newsletter-section {
+    background-color: $theme-color;
+    padding: 80px 0;
+    position: relative;
+    z-index: 9;
+
+    .line-shape {
+        position: absolute;
+        bottom: -85px;
+        left: 0;
+        right: 0;
+        z-index: -1;
+
+        @include breakpoint (max-xxxl){
+          bottom: -75px;
+        }
+
+        @include breakpoint (max-xxl){
+          bottom: -65px;
+        }
+
+        @include breakpoint (max-xl){
+            display: none;
+        }
+        
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.grt-newsletter-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include breakpoint (max-xl) {
+        flex-wrap: wrap;
+        gap: 25px;
+    }
+
+    .content {
+        .title {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        p {
+            max-width: 370px;
+        }
+    }
+
+    form {
+        position: relative;
+        max-width: 560px;
+        width: 100%;
+
+        input {
+            width: 100%;
+            border: none;
+            background-color: $white;
+            padding: 0 30px;
+            border-radius: 4px;
+            line-height: 60px;
+            height: 60px;
+            color: $text-color;
+            padding-right: 80px;
+
+            &::placeholder {
+                color: $text-color;
+            }
+        }
+
+        .email-btn {
+            background: $header-color;
+            width: 52px;
+            height: 48px;
+            line-height: 48px;
+            text-align: center;
+            border-radius: 4px;
+            color: $white;
+            @include transition;
+            position: absolute;
+            top: 6px;
+            right: 6px;
+            bottom: 6px;
+            font-size: 18px;
+
+            &:hover {
+                background-color: $theme-color;
+                color: $header-color;
+            }
+        }
+    }
+
+
+    .terms-check {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        cursor: pointer;
+        user-select: none;
+        margin-top: 20px;
+    }
+
+
+    .terms-check input {
+        display: none;
+    }
+
+
+    .checkmark {
+        width: 22px;
+        height: 22px;
+        background-color: $header-color;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.25s ease;
+    }
+
+    .checkmark i {
+        color: #fff;
+        font-size: 14px;
+        opacity: 0;
+        transform: scale(0.5);
+        transition: all 0.25s ease;
+    }
+
+    .terms-check input:checked + .checkmark {
+        background: #0C2F36;
+    }
+
+    .terms-check input:checked + .checkmark i {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .terms-text {
+        font-size: 16px;
+        font-weight: 400;
+        color: $header-color;
+    }
+
+}
+
+.grt-cta-banner-section-3 {
+    position: relative;
+    z-index: 9;
+   margin-bottom: -30px;
+
+    &::before {
+        @include before;
+        background-color: $header-color;
+        top: 35%;
+    }
+
+    .grt-section-title-area {
+        .theme-btn {
+            &::before {
+                background-color: $white;
+            }
+
+            &:hover {
+                color: $header-color;
+            }
+        }
+    }
+
+    .banner-thumb {
+        border-radius: 10px;
+        overflow: hidden;
+        height: 600px;
+        margin-bottom: 50px;
+
+        img {
+            @include imgw;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+    }
+}
+
+.grt-cta-banner-section4 {
+    .thumb {
+        border-radius: 10px;
+        position: relative;
+        z-index: 9;
+
+        @include breakpoint (max-xl){
+            height: 590px;
+        }
+
+         @include breakpoint (max-lg){
+            height: 500px;
+        }
+
+        @include breakpoint (max-md){
+            height: 470px;
+        }
+
+        @include breakpoint (max-sm){
+            height: 400px;
+        }
+
+        &::before {
+            @include before;
+            background: linear-gradient(180deg, rgba(22, 51, 59, 0) 0%, #16333B 100%);
+            border-radius: 10px;
+
+        }
+
+        img {
+            @include imgw;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .grt-section-title-area {
+            position: absolute;
+            bottom: 60px;
+            left: 60px;
+            right: 60px;
+
+            .theme-btn {
+
+                &::before {
+                    background-color: $white;
+                }
+
+                &:hover {
+                    color: $header-color;
+                }
+            }
+        }
+    }
+}
+
+.grt-cta-banner-section4 {
+    position: relative;
+
+    &::before {
+        @include before;
+        background-color: #FBF3E6;
+        height: 50%;
+    }
+}
+
+.grt-cta-banner-section42 {
+    &::before {
+        display: none;
+    }
+
+     .skill-feature {
+        margin-top: 20px;
+
+         p {
+            font-size: 17px;
+            font-weight: bold;
+            font-family: $heading-font;
+            margin-bottom: 10px;
+         }   
+        .progress-value {
+            color: $header-color;
+            text-transform: capitalize;
+        }
+
+        .progress {
+            position: relative;
+            height: 7px;
+            background-color: $header-color;
+            border-radius: 3px;
+            overflow: visible;
+        }
+    
+        .progress-bar {
+            background-color: $theme-color;
+            height: 7px;
+            margin: 0;
+            border-radius: 3px;
+            overflow: visible;
+            position: relative;
+            margin-top: 0;
+        }
+
+        .progress-value {
+            position: absolute;
+            top: -38px;
+            right: -8px;
+            font-size: 14px;
+            font-weight: 500;
+            color: $header-color;
+            font-family: $body-font;
+            height: 35px;
+            line-height: 26px;
+            background-color: $theme-color;
+            border-radius: 2px;
+            padding: 0 6px;
+            clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+        }
+    }
+}

@@ -1,0 +1,108 @@
+.pricing-box-items {
+    margin-top: 30px;
+    border-radius: 12px;
+    background-color: #FBF3E6;
+    padding: 50px 30px;
+    @include transition;
+
+    @include breakpoint (max-md){
+        padding: 30px;
+    }
+
+    .pricing-header {
+        border-bottom: 1px solid rgba(22, 51, 59, .1);
+        padding-bottom: 27px;
+
+        .pricing-sub {
+            font-size: 24px;
+            font-weight: 600;
+            font-family: $heading-font;
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            font-size: 48px;
+            font-weight: 600;
+
+            sub {
+                font-size: 18px;
+                font-weight: 500;
+                left: -15px;
+                bottom: 0;
+            }
+        }
+
+        .text {
+            margin-top: 15px;
+        }
+    }
+
+    .pricing-list {
+        margin-top: 27px;
+        margin-bottom: 40px;
+
+         @include breakpoint (max-md){
+            margin-top: 35px;
+            margin-bottom: 30px;
+        }
+
+        li {
+            @include flex;
+            gap: 8px;
+
+            &:not(:last-child){
+                margin-bottom: 12px;
+            }
+        }
+    }
+
+    .theme-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    &:hover {
+        transform: translateY(-10px);
+    }
+
+    &.active {
+        background-color: $header-color;
+
+         .pricing-header {
+            border-bottom: 1px solid rgba(255, 252, 248, .10);
+
+            .pricing-sub {
+                color: $white;
+            }
+
+            h2 {
+                color: $white;
+            }
+
+            .text {
+                margin-top: 15px;
+                color: $white;
+            }
+        }
+
+        .pricing-list {
+            li {
+                color: $white;
+
+                img {
+                     filter: brightness(0) invert(1);
+                }
+            }
+        }
+
+        .theme-btn {
+            &::before {
+                background-color: $white;
+            }
+
+            &:hover {
+                color: $header-color;
+            }
+        }
+    }
+}

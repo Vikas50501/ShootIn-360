@@ -1,0 +1,652 @@
+.team-box-item-3 {
+    border-radius: 8px;
+    border: 1px solid rgba(22, 51, 59, .10);
+    padding: 15px;
+
+    .thumb {
+        overflow: hidden;
+        position: relative;
+        border-radius: 8px;
+
+        img {
+            @include imgw;
+            border-radius: 8px;
+            display: block;
+            object-fit: cover;
+            transition: all 500ms ease;
+
+            &:first-child {
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 1;
+                transform: translateX(50%) scaleX(2);
+                opacity: 0;
+                filter: blur(10px);
+            }
+        }
+        .social-icon {
+            @include flex;
+            gap: 10px;
+            justify-content: center;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%) scale(0.8);
+            left: 0;
+            right: 0;
+            z-index: 99;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.5s ease;
+
+            a {
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                border-radius: 50%;
+                color: $white;
+                background-color: $theme-color;
+                font-size: 14px;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    background-color: $header-color;
+                }
+            }
+        }
+    }
+
+    .content {
+        margin-top: 20px;
+        position: relative;
+
+        .icon {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            line-height: 32px;
+            border-radius: 50%;
+            text-align: center;
+            background-color: rgba(31, 41, 55, 0.35);
+            color: $white;
+            position: absolute;
+            right: 0;
+            top: 0;
+
+            &:hover {
+                background-color: $theme-color;
+            }
+        }
+
+        .title {
+            font-weight: 600;
+            font-size: 24px;
+            margin-bottom: 5px;
+
+            a {
+                color: $header-color;
+                background-position: 0 95%;
+                background-repeat: no-repeat;
+                background-size: 0% 2px;
+                display: inline;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    color: $theme-color;
+                    background-size: 100% 2px;
+                    background-image: linear-gradient(180deg, $theme-color 0%, $theme-color 100%);
+                }
+            }
+        }
+    }
+
+    &.style-2 {
+        .thumb {
+            .social-icon {
+                a {
+                    width: 40px;
+                    color: $header-color;
+                    background-color: $theme-color;
+
+                    &:hover {
+                        background-color: $header-color;
+                        color: $white;
+                    }
+                }
+            }
+        }
+
+        .content {
+            .icon {
+                background-color: rgba(31, 41, 55, 0.35);
+
+                &:hover {
+                    background-color: $theme-color;
+                }
+            }
+
+            .title {
+                font-weight: 600;
+                font-size: 24px;
+
+                a {
+                    color: $header-color;
+
+                    &:hover {
+                        color: $theme-color;
+                        background-size: 100% 2px;
+                        background-image: linear-gradient(180deg, $theme-color 0%, $theme-color 100%);
+                    }
+                }
+            }
+        }
+    }
+
+    &:hover {
+        .thumb {
+            img {
+                &:first-child {
+                    transform: translateX(0) scaleX(1);
+                    opacity: 1;
+                    filter: blur(0);
+                }
+
+                &:nth-child(2) {
+                    transform: translateX(-50%) scaleX(2);
+                    opacity: 0;
+                    filter: blur(10px);
+                }
+            }
+            .social-icon {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(-50%) scale(1);
+            }
+        }
+    }
+}
+
+.team-details-wrapper {
+    .team-details-image {
+         border-radius: 12px;
+        img {
+            @include imgw;
+            border-radius: 12px;
+        }
+    }
+
+    .team-details-content {
+        margin-left: 30px;
+        background-color: #FBF3E6;
+        border-radius: 10px;
+        padding: 45px 40px;
+
+        @include breakpoint (max-xl){
+            margin-left: 0;
+        }
+
+        .offer {
+            background-color: $theme-color;
+            color: $header-color;
+            padding: 8px 10px;
+            border-radius: 6px;
+        }
+
+        h2 {
+            margin-top: 30px;
+            font-size: 48px;
+
+            @include breakpoint(max-xxl){
+                font-size: 44px;
+            }
+
+            @include breakpoint(max-xl){
+                font-size: 40px;
+            }
+
+            @include breakpoint(max-lg){
+                font-size: 36px;
+            }
+
+            @include breakpoint(max-md){
+                font-size: 40px;
+            }
+
+            @include breakpoint(max-sm){
+                font-size: 36px;
+            }
+
+
+            @include breakpoint(max-xxs){
+                font-size: 32px;
+            }
+        }
+
+        p {
+            color: #16333B;
+            opacity: .8;
+        }
+        
+        .team-infrom {
+            margin-top: 30px;
+
+            li {
+                display: flex;
+                gap: 100px;
+                align-items: center;
+                color: $header-color;
+                font-size: 16px;
+                font-weight: 500;
+
+                @include breakpoint (max-xl){
+                    display: grid;
+                    gap: 20px;
+                }
+
+                span {
+                    color: $header-color;
+                    font-size: 16px;
+                    font-weight: 500;
+                    flex-basis: 28%;
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: 12px;
+                }
+            }
+        }
+
+        .follow {
+            font-size: 16px;
+            font-weight: 700;
+            margin-top: 60px;
+            text-transform: capitalize;
+        }
+        
+        .social-icon {
+            display: flex;
+            margin-top: 30px;
+            gap: 20px;
+                
+            a {
+                color: $header-color;
+                display: inline-block;
+                text-align: center;
+                font-size: 20px;
+
+                &:hover {
+                   color: $theme-color;
+                    
+                }
+            }
+        }
+    }
+
+    .team-middle-items {
+        h2 {
+            font-size: 48px;
+
+            @include breakpoint(max-xxl){
+                font-size: 44px;
+            }
+
+            @include breakpoint(max-xl){
+                font-size: 40px;
+            }
+
+            @include breakpoint(max-lg){
+                font-size: 36px;
+            }
+
+            @include breakpoint(max-md){
+                font-size: 40px;
+            }
+
+            @include breakpoint(max-sm){
+                font-size: 36px;
+            }
+
+
+            @include breakpoint(max-xxs){
+                font-size: 32px;
+            }
+        }
+        .team-skill-area {
+            margin-top: 60px;
+
+            .skill-content {
+                margin-right: 60px;
+
+                @include breakpoint (max-xl){
+                    margin-right: 0;
+                }
+
+                h3 {
+                    font-size: 32px;
+                    font-weight: 600;
+                    margin-bottom: 20px;
+                }
+
+                .progress-wrap {
+                    .pro-items {
+                        width: 100%;
+            
+                        &:not(:last-child){
+                            margin-bottom: 30px;
+                        }
+                        .pro-head {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            margin-bottom: 10px;
+            
+                            .title {
+                                color: $header-color;
+                                font-size: 18px;
+                                font-weight: 600;
+                            }
+                            
+                            .point {
+                                font-size: 18px;
+                                font-weight: 600;
+                                color: $header-color;
+                                font-family: $header-color;
+                            }
+                        }
+                        .progress {
+                            background: #16333B;
+                            justify-content: flex-start;
+                            align-items: center;
+                            position: relative;
+                            display: flex;
+                            height: 6px;
+                            width: 100%;
+                        }
+                        
+                        .progress-value {
+                            animation: load 3s normal forwards;
+                            border-radius: 0;
+                            background: $theme-color;
+                            height: 6px;
+                            width: 0;
+                        }
+                        .style-two{
+                            animation: load2 3s normal forwards;
+                        }
+                        .style-three{
+                            animation: load3 3s normal forwards;
+                        }
+                        @keyframes load {
+                            0% { width: 0; }
+                            100% { width: 69%; }
+                        }
+                        @keyframes load2 {
+                            0% { width: 0; }
+                            100% { width: 80%; }
+                        }
+                        @keyframes load3 {
+                            0% { width: 0; }
+                            100% { width: 98%; }
+                        }
+                    }
+                }
+            }
+
+            .career-content {
+                .career {
+                    font-size: 32px;
+                    font-weight: 600;
+                    margin-bottom: 20px;
+                }
+
+                ul {
+                    li {
+                        display: flex;
+                        gap: 20px;
+
+                        &:not(:last-child){
+                            margin-bottom: 20px;
+                        }
+
+                        .year {
+                            color: $header-color;
+                            font-size: 24px;
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .team-bottom-items {
+        margin-top: 120px;
+        border-radius: 10px;
+        background: #FBF3E6;
+        padding: 80px 60px;
+
+        @include breakpoint (max-xl){
+            margin-top: 100px;
+            padding: 50px;
+        }
+
+        @include breakpoint (max-lg){
+            margin-top: 80px;
+        }
+
+        @include breakpoint (max-md){
+           padding: 40px 30px;
+        }
+
+        @include breakpoint (max-sm){
+           padding: 30px;
+        }
+
+         h2 {
+            font-size: 48px;
+
+            @include breakpoint(max-xxl){
+                font-size: 44px;
+            }
+
+            @include breakpoint(max-xl){
+                font-size: 40px;
+            }
+
+            @include breakpoint(max-lg){
+                font-size: 36px;
+            }
+
+            @include breakpoint(max-md){
+                font-size: 40px;
+            }
+
+            @include breakpoint(max-sm){
+                font-size: 36px;
+            }
+
+
+            @include breakpoint(max-xxs){
+                font-size: 32px;
+            }
+        }
+        
+
+        .team-left-items {
+            p {
+                margin-top: 20px;
+            }
+
+            .phone-icon {
+                margin-top: 30px;
+
+                .theme-btn {
+                    padding: 0 25px;
+
+                    i {
+                        margin-left: 0;
+                        margin-right: 8px;
+                    }
+                }
+
+                .icon {
+                    color: $header-color;
+                }
+            }
+        }
+
+        .team-right-items {
+            margin-left: 80px;
+
+            @include breakpoint (max-xl){
+                margin-left: 0;
+            }
+
+            .contact-form-box {
+                margin-top: 30px;
+
+                .form-clt {
+                    input,textarea {
+                        outline: none;
+                        width: 100%;
+                        color: $header-color;
+                        border: none;
+                        background: #FFFCF8;
+                        border: 1px solid rgba(22, 51, 59, 0.1);
+                        border-radius: 8px;
+                        text-transform: capitalize;
+                        padding: 18px 20px;
+                        line-height: 1;
+                        font-size: 14px;
+
+                        &::placeholder {
+                            color: $header-color;
+                        }
+                    }
+
+                    textarea {
+                        padding-bottom: 120px;
+                    }
+
+                    .form {
+                    .single-select {
+                        border: none;
+                        background: #FFFCF8;
+                        border: 1px solid rgba(22, 51, 59, 0.1);
+                        border-radius: 8px;
+                        width: 100%;
+                        height: initial;
+                        line-height: initial;
+                        text-transform: capitalize;
+                        color: $header-color;
+                         border: 1px solid rgba(22, 51, 59, 0.1);
+                        border-radius: 8px;
+                        text-transform: capitalize;
+                        padding: 18px 20px;
+                        .current {
+                            color: $header-color;
+                            font-size: 14px;
+                        }
+
+                        &::after {
+                            border-bottom: 2px solid $header-color;
+                            border-right: 2px solid $header-color;
+                            width: 8px;
+                            height: 8px;
+                            right: 12px;
+                        }
+
+                        .list {
+                            width: 100%;
+                        }
+                    }
+                }
+                }
+            }
+        }
+    }
+}
+
+.volunteer-left-items {
+    .text {
+        margin-top: 20px;
+    }
+
+    .theme-btn {
+        font-size: 16px;
+        font-weight: 600;
+        padding: 0 25px;
+        height: 54px;
+        line-height: 54px;
+        margin-top: 30px;
+
+        i {
+            margin-left: 0;
+            margin-right: 8px;
+        }
+    }
+
+    .volunter-image {
+        border-radius: 10px;
+        max-width: 533px;
+        margin-top: 50px;
+
+        img {
+            border-radius: 10px;
+            @include imgw;
+        }
+    }
+}
+
+.volunteer-form-items {
+    background-color: #FBF3E6;
+    border-radius: 10px;
+    padding: 40px 36px;
+
+    @include breakpoint (max-md){
+        padding: 35px 25px;
+    }
+
+    .title {
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 120%;
+        margin-bottom: 25px;
+
+        @include breakpoint (max-lg){
+            font-size: 36px;
+           margin-bottom: 15px;
+        }
+
+         @include breakpoint (max-sm){
+            font-size: 34px;
+           margin-bottom: 15px;
+        }
+
+        br {
+            @include breakpoint (max-xl){
+                display: none;
+            }
+        }
+    }
+
+    p {
+        opacity: .80;
+        margin-bottom: 30px;
+    }
+
+    .form-clt {
+        input {
+            display: inline-block;
+            border: 1px solid rgba(22, 51, 59, 0.1);
+            width: 100%;
+            padding: 18px 22px;
+            line-height: 1;
+            border-radius: 8px;
+            color: $text-color;
+        }
+    }
+}

@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(powershell -command \"Select-String -Path 'index.html' -Pattern 'unsplash.com' | Measure-Object | Select-Object Count\")",
+      "Bash(powershell -command \"Select-String -Path 'portfolio.html' -Pattern 'unsplash.com' | Measure-Object | Select-Object Count; Select-String -Path 'gallery.html' -Pattern 'unsplash.com' | Measure-Object | Select-Object Count; Select-String -Path 'services.html' -Pattern 'unsplash.com' | Measure-Object | Select-Object Count; Select-String -Path 'about.html' -Pattern 'unsplash.com' | Measure-Object | Select-Object Count\")"
+    ]
+  }
+}
