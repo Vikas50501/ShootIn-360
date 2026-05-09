@@ -36,6 +36,10 @@ Version: 1.0.0
 /*---------------------------------------
 02. Base
 ---------------------------------------*/
+html {
+  scroll-behavior: smooth;
+}
+
 /* --------------------------------------------
     Template Default Fonts & Fonts Styles
  ---------------------------------------------- */
@@ -3440,6 +3444,16 @@ span {
 @media (max-width: 991px) {
   .section-padding {
     padding: 80px 0;
+  }
+}
+@media (max-width: 767px) {
+  .section-padding {
+    padding: 60px 0;
+  }
+}
+@media (max-width: 575px) {
+  .section-padding {
+    padding: 48px 0;
   }
 }
 
@@ -10321,4 +10335,185 @@ span {
 }
 .page-nav-wrap ul li .page-numbers:hover i {
   color: var(--header);
+}
+
+/* ==============================================
+   SHOOTIN360 — GLOBAL MOBILE SPACING FIXES
+   ============================================== */
+
+/* Container safe edge padding on phones */
+@media (max-width: 575px) {
+  .container { padding-left: 18px !important; padding-right: 18px !important; }
+}
+
+/* h2 on mobile — base is 36px at 575px which is still large; bring it down */
+@media (max-width: 575px) {
+  h2 { font-size: 28px !important; line-height: 1.25 !important; }
+}
+@media (max-width: 400px) {
+  h2 { font-size: 24px !important; }
+}
+
+/* h3 on mobile */
+@media (max-width: 575px) {
+  h3 { font-size: 20px; }
+}
+
+/* Marquee padding reduction on mobile */
+@media (max-width: 575px) {
+  .s360-marquee-item { padding: 0 16px !important; }
+}
+
+/* Theme button — full width on small phones */
+@media (max-width: 400px) {
+  .theme-btn { font-size: 14px; padding: 0 18px; height: 48px; line-height: 48px; }
+}
+
+/* Offcanvas sidebar mobile padding */
+@media (max-width: 575px) {
+  .offcanvas__info { padding: 24px 20px !important; }
+}
+
+/* Row gutter tighter on phones */
+@media (max-width: 575px) {
+  .row.g-4 { --bs-gutter-x: 1rem; --bs-gutter-y: 1rem; }
+  .row.g-5 { --bs-gutter-x: 1.25rem; --bs-gutter-y: 1.25rem; }
+}
+
+/* Footer spacing on mobile */
+@media (max-width: 575px) {
+  .s360-footer { padding: 56px 0 0 !important; }
+  .s360-footer h5 { font-size: 15px; margin-bottom: 16px; }
+  .s360-footer-links li { margin-bottom: 10px; }
+  .s360-footer-links a { font-size: 13px; }
+  .s360-footer-contact-f li { font-size: 13px; margin-bottom: 10px; }
+  .s360-footer-bottom { padding: 18px 0; margin-top: 40px; }
+  .s360-footer-bottom p { font-size: 12px; }
+}
+
+/* WhatsApp float consistent across all pages */
+@media (max-width: 575px) {
+  .s360-wa-float { width: 48px !important; height: 48px !important; font-size: 20px !important; bottom: 18px !important; right: 16px !important; }
+}
+
+/* Back-to-top button */
+@media (max-width: 575px) {
+  .back-to-top { width: 40px; height: 40px; font-size: 14px; right: 16px; bottom: 72px; }
+}
+
+/* Page banner — shared across all pages */
+@media (max-width: 767px) {
+  .s360-page-banner { padding: 100px 0 52px !important; }
+  .s360-page-banner h1 { font-size: 30px !important; }
+  .s360-page-banner p { font-size: 14px !important; }
+}
+@media (max-width: 575px) {
+  .s360-page-banner { padding: 86px 0 40px !important; }
+  .s360-page-banner h1 { font-size: 24px !important; }
+  .s360-page-banner .breadcrumb { font-size: 12px; }
+}
+@media (max-width: 400px) {
+  .s360-page-banner h1 { font-size: 20px !important; }
+}
+
+/* Section label on mobile */
+@media (max-width: 575px) {
+  .s360-section-label { font-size: 11px; letter-spacing: 1.5px; gap: 6px; margin-bottom: 10px; }
+  .s360-section-label::before { width: 20px; }
+}
+
+/* Split-title gap */
+@media (max-width: 575px) {
+  .split-title br { display: none; }
+}
+
+/* =====================================================
+   MISSING MARGIN UTILITIES (mb-60/50/40/30 used site-
+   wide but were never defined — Bootstrap 5 only goes
+   to mb-5 = 3rem)
+===================================================== */
+.mb-60 { margin-bottom: 60px !important; }
+.mb-50 { margin-bottom: 50px !important; }
+.mb-40 { margin-bottom: 40px !important; }
+.mb-30 { margin-bottom: 30px !important; }
+.mb-20 { margin-bottom: 20px !important; }
+.mt-60 { margin-top: 60px !important; }
+.mt-50 { margin-top: 50px !important; }
+.mt-40 { margin-top: 40px !important; }
+
+@media (max-width: 991px) {
+  .mb-60 { margin-bottom: 44px !important; }
+  .mb-50 { margin-bottom: 36px !important; }
+  .mb-40 { margin-bottom: 28px !important; }
+  .mb-30 { margin-bottom: 22px !important; }
+}
+@media (max-width: 767px) {
+  .mb-60 { margin-bottom: 36px !important; }
+  .mb-50 { margin-bottom: 28px !important; }
+  .mb-40 { margin-bottom: 22px !important; }
+  .mb-30 { margin-bottom: 16px !important; }
+}
+@media (max-width: 575px) {
+  .mb-60 { margin-bottom: 28px !important; }
+  .mb-50 { margin-bottom: 20px !important; }
+  .mb-40 { margin-bottom: 16px !important; }
+  .mb-30 { margin-bottom: 12px !important; }
+}
+
+/* =====================================================
+   GLOBAL BUTTON IMPROVEMENTS ON MOBILE
+===================================================== */
+@media (max-width: 575px) {
+  .theme-btn {
+    font-size: 14px;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+  }
+}
+@media (max-width: 400px) {
+  .theme-btn {
+    font-size: 13px;
+    height: 46px;
+    line-height: 46px;
+    padding: 0 18px;
+  }
+}
+
+/* =====================================================
+   GLOBAL HEADING SCALE (inline font-size on CTAs etc.)
+===================================================== */
+@media (max-width: 767px) {
+  h2 { font-size: clamp(22px, 6vw, 34px) !important; line-height: 1.25 !important; }
+}
+@media (max-width: 575px) {
+  h2 { font-size: clamp(20px, 5.5vw, 28px) !important; }
+  h3 { font-size: clamp(18px, 5vw, 22px) !important; }
+  h4 { font-size: clamp(16px, 4.5vw, 20px) !important; }
+  p  { font-size: 14px; line-height: 1.75; }
+}
+@media (max-width: 400px) {
+  h2 { font-size: clamp(18px, 5vw, 22px) !important; }
+}
+
+/* =====================================================
+   ROW GAPS — tighter on small phones
+===================================================== */
+@media (max-width: 575px) {
+  .row.g-5 { --bs-gutter-x: 1.25rem; --bs-gutter-y: 1.5rem; }
+}
+
+/* =====================================================
+   HEADER — better mobile nav spacing
+===================================================== */
+@media (max-width: 575px) {
+  .header-main { padding: 12px 0; }
+}
+
+/* =====================================================
+   OFFCANVAS — cleaner on small phones
+===================================================== */
+@media (max-width: 400px) {
+  .offcanvas__info { padding: 20px 16px !important; }
+  .off-contact-info { padding-top: 16px; }
 }/*# sourceMappingURL=main.css.map */

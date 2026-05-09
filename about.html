@@ -68,31 +68,90 @@
             .s360-footer-bottom { border-top:1px solid rgba(255,255,255,0.06); padding:24px 0; margin-top:60px; }
             .s360-footer-bottom p { color:#666; font-size:13px; margin:0; }
 
+            /* Vision section & dark equipment section inline items */
+            .s360-vision-img { transition: none; }
+            @media (max-width: 767px) {
+                .s360-vision-img { height: 340px !important; }
+            }
+            @media (max-width: 575px) {
+                .s360-vision-img { height: 56vw !important; min-height: 220px !important; max-height: 320px !important; }
+            }
+            /* Dark equipment section inline-styled items */
+            @media (max-width: 575px) {
+                .s360-equip-dark [style*="padding:40px"] { padding: 20px 12px !important; }
+                .s360-equip-dark [style*="font-size:48px"] { font-size: 32px !important; margin-bottom: 12px !important; }
+                .s360-equip-dark h5 { font-size: 14px !important; margin-bottom: 6px !important; }
+                .s360-equip-dark p { font-size: 12px !important; }
+            }
+
             /* ===== RESPONSIVE ===== */
+            @media (max-width: 1199px) {
+                .s360-page-banner h1 { font-size: 42px; }
+            }
             @media (max-width: 991px) {
                 .section-padding { padding: 72px 0 !important; }
-                .s360-page-banner { padding: 120px 0 70px; }
+                .s360-page-banner { padding: 120px 0 60px; }
                 .s360-page-banner h1 { font-size: 36px; }
                 .s360-footer { padding: 60px 0 0; }
+                .s360-value-item { gap: 16px; }
+                .s360-team-info { padding: 20px 18px; }
+                .s360-equip-item { padding: 28px 18px; }
             }
             @media (max-width: 767px) {
                 .section-padding { padding: 56px 0 !important; }
-                .s360-page-banner { padding: 100px 0 56px; }
+                .s360-page-banner { padding: 100px 0 52px; }
                 .s360-page-banner h1 { font-size: 30px; }
-                .s360-about-img-wrap img { height: 340px !important; }
-                .s360-exp-badge { width: 100px; height: 100px; bottom: -10px; right: -10px; }
-                .s360-exp-badge .num { font-size: 34px; }
+                .s360-about-img-wrap img { height: 300px !important; }
+                .s360-exp-badge { width: 90px; height: 90px; bottom: -8px; right: -8px; }
+                .s360-exp-badge .num { font-size: 30px; }
                 .s360-exp-badge .txt { font-size: 10px; }
-                h2 { font-size: 28px !important; line-height: 1.25 !important; }
+                .s360-value-item { gap: 14px; padding: 18px 16px; }
+                .s360-value-icon { width: 46px; height: 46px; min-width: 46px; font-size: 20px; }
+                .s360-value-item h5 { font-size: 15px; }
+                .s360-value-item p { font-size: 13px; }
+                .s360-equip-item { padding: 22px 14px; }
+                .s360-equip-item i { font-size: 34px; margin-bottom: 14px; }
+                .s360-equip-item h5 { font-size: 15px; }
+                .s360-equip-item p { font-size: 12px; }
+                .s360-team-thumb { height: 240px; }
+                .s360-team-info { padding: 18px 16px; }
+                .s360-team-info h4 { font-size: 16px; }
             }
             @media (max-width: 575px) {
                 .section-padding { padding: 48px 0 !important; }
-                .s360-page-banner h1 { font-size: 26px; }
-                .s360-page-banner { padding: 88px 0 48px; }
-                .s360-about-img-wrap img { height: 280px !important; }
-                h2 { font-size: 24px !important; }
+                .s360-page-banner h1 { font-size: 24px; }
+                .s360-page-banner { padding: 86px 0 40px; }
+                .s360-about-img-wrap img { height: 56vw !important; min-height: 220px !important; max-height: 320px !important; }
+                .s360-exp-badge { width: 80px; height: 80px; bottom: -6px; right: -6px; }
+                .s360-exp-badge .num { font-size: 26px; }
+                .s360-value-item { gap: 12px; padding: 14px 12px; }
+                .s360-value-icon { width: 42px; height: 42px; min-width: 42px; font-size: 17px; border-radius: 8px; }
+                .s360-value-item h5 { font-size: 14px; }
+                .s360-value-item p { font-size: 13px; }
+                .s360-equip-item { padding: 18px 12px; }
+                .s360-equip-item i { font-size: 28px; margin-bottom: 12px; }
+                .s360-equip-item h5 { font-size: 13px; margin-bottom: 6px; }
+                .s360-equip-item p { font-size: 12px; line-height: 1.5; }
+                .s360-team-thumb { height: 56vw; min-height: 200px; max-height: 260px; }
+                .s360-team-info { padding: 14px 12px; }
+                .s360-team-info h4 { font-size: 15px; }
+                .s360-team-info span { font-size: 12px; }
+                .s360-footer { padding: 48px 0 0; }
                 .s360-footer-bottom .d-flex { flex-direction: column; align-items: center; gap: 10px !important; }
                 .s360-wa-float { width: 48px; height: 48px; font-size: 20px; bottom: 20px; right: 20px; }
+                /* Inline stats boxes on about hero */
+                .row.g-3 [style*="padding:20px"] { padding: 14px 12px !important; }
+                .row.g-3 [style*="font-size:40px"] { font-size: 30px !important; }
+                .row.g-3 [style*="font-size:13px"] { font-size: 11px !important; }
+            }
+            @media (max-width: 400px) {
+                .s360-page-banner h1 { font-size: 20px; }
+                .s360-about-img-wrap img { height: 60vw !important; }
+                .s360-exp-badge { width: 72px; height: 72px; }
+                .s360-exp-badge .num { font-size: 22px; }
+                .s360-equip-item { padding: 16px 10px; }
+                .s360-team-thumb { height: 62vw; }
+                .s360-value-item { padding: 12px 10px; }
             }
         </style>
     </head>
@@ -333,14 +392,14 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6 wow fadeInRight" data-wow-delay=".3s">
-                                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&auto=format&fit=crop&q=80" alt="Our Vision" style="border-radius:16px;width:100%;height:500px;object-fit:cover;">
+                                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&auto=format&fit=crop&q=80" alt="Our Vision" class="s360-vision-img" style="border-radius:16px;width:100%;height:500px;object-fit:cover;">
                                 </div>
                             </div>
                         </div>
                     </section>
 
                     <section class="section-padding" style="background:#1A1A1A;">
-                        <div class="container">
+                        <div class="container s360-equip-dark">
                             <div class="text-center mb-60">
                                 <div class="s360-section-label wow fadeInUp" style="justify-content:center;">Equipment & Technology</div>
                                 <h2 class="text-white wow fadeInUp" data-wow-delay=".2s">We Use <span style="color:var(--theme)">Professional Grade</span> Equipment</h2>

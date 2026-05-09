@@ -52,30 +52,42 @@
             .btn-primary-360:hover { background:#e0ae00; color:#1A1A1A; }
 
             /* ===== RESPONSIVE ===== */
+            @media (max-width: 1199px) {
+                .s360-page-banner h1 { font-size: 42px; }
+            }
             @media (max-width: 991px) {
                 .section-padding { padding: 72px 0 !important; }
-                .s360-page-banner { padding: 120px 0 70px; }
+                .s360-page-banner { padding: 120px 0 60px; }
                 .s360-page-banner h1 { font-size: 36px; }
-                .s360-gallery-item[style*="height:320px"] { height: 260px !important; }
-                .s360-gallery-item[style*="height:260px"] { height: 220px !important; }
-                .s360-gallery-item[style*="height:240px"] { height: 200px !important; }
-                .s360-gallery-item[style*="height:220px"] { height: 190px !important; }
+                .s360-gallery-item { height: 260px !important; }
             }
             @media (max-width: 767px) {
                 .section-padding { padding: 56px 0 !important; }
-                .s360-page-banner { padding: 100px 0 56px; }
-                .s360-page-banner h1 { font-size: 28px; }
-                h2 { font-size: 26px !important; }
-                .s360-gallery-item { height: 200px !important; }
+                .s360-page-banner { padding: 100px 0 52px; }
+                .s360-page-banner h1 { font-size: 30px; }
+                .s360-gallery-item { height: 56vw !important; min-height: 240px !important; max-height: 320px !important; }
+                .s360-gallery-cat { font-size: 10px; padding: 3px 8px; }
+                .s360-gallery-overlay i { font-size: 22px; }
+                .s360-filter-tabs { gap: 6px; margin-bottom: 28px; }
+                .s360-filter-btn { padding: 7px 14px; font-size: 12px; }
             }
             @media (max-width: 575px) {
                 .section-padding { padding: 48px 0 !important; }
                 .s360-page-banner h1 { font-size: 24px; }
-                .s360-page-banner { padding: 88px 0 48px; }
-                .s360-gallery-item { height: 180px !important; }
-                h2 { font-size: 22px !important; }
+                .s360-page-banner { padding: 86px 0 40px; }
+                .s360-gallery-item { height: 58vw !important; min-height: 220px !important; max-height: 300px !important; }
+                .s360-filter-tabs { gap: 5px; margin-bottom: 22px; }
+                .s360-filter-btn { padding: 6px 12px; font-size: 11px; }
+                .s360-gallery-cat { font-size: 9px; padding: 2px 7px; }
+                .s360-gallery-overlay i { font-size: 18px; }
                 .s360-footer-bottom .d-flex { flex-direction: column; align-items: center; gap: 10px !important; }
                 .s360-wa-float { width: 48px; height: 48px; font-size: 20px; bottom: 20px; right: 20px; }
+                #galleryGrid.row { --bs-gutter-x: 0.625rem; --bs-gutter-y: 0.625rem; }
+            }
+            @media (max-width: 400px) {
+                .s360-page-banner h1 { font-size: 20px; }
+                .s360-gallery-item { height: 62vw !important; min-height: 200px !important; }
+                .s360-filter-btn { padding: 5px 10px; font-size: 10px; }
             }
         </style>
     </head>

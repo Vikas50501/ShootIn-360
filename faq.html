@@ -478,7 +478,9 @@
                 .s360-faq-tabs { gap: 8px; flex-wrap: wrap; justify-content: center; }
                 .s360-faq-tab { padding: 8px 18px; font-size: 13px; }
                 .s360-faq-question { font-size: 13px; padding: 16px 18px; }
-                .s360-faq-answer { padding: 0 18px 16px; font-size: 13px; }
+                .s360-faq-answer { padding: 0 18px 16px; font-size: 13px; line-height: 1.7; }
+                .s360-faq-item.active .s360-faq-answer { max-height: 600px; }
+                .s360-faq-num { width: 26px; height: 26px; min-width: 26px; font-size: 11px; }
                 .btn-ask-360 { padding: 14px 28px; font-size: 14px; }
             }
             @media (max-width: 575px) {
@@ -487,9 +489,13 @@
                 .s360-page-banner { padding: 90px 0 44px; }
                 .s360-faq-intro { padding: 40px 0 30px; }
                 .s360-faq-intro h2 { font-size: 22px; }
-                .s360-faq-tabs { gap: 8px; }
+                .s360-faq-tabs { gap: 6px; }
                 .s360-faq-tab { padding: 8px 14px; font-size: 12px; }
                 .s360-faq-question { font-size: 13px; padding: 14px 16px; }
+                .s360-faq-answer { font-size: 13px; line-height: 1.65; }
+                .s360-faq-num { width: 24px; height: 24px; min-width: 24px; border-radius: 5px; }
+                .s360-faq-cat-badge { font-size: 9px; padding: 2px 8px; margin-left: 6px; }
+                .btn-ask-360 { width: 100%; text-align: center; padding: 14px 20px; }
                 .s360-footer-bottom .d-flex { flex-direction: column; align-items: center; gap: 10px !important; }
                 .s360-wa-float { width: 48px; height: 48px; font-size: 20px; bottom: 20px; right: 20px; }
             }
@@ -497,6 +503,7 @@
                 .s360-page-banner h1 { font-size: 20px; }
                 .s360-faq-tab { padding: 7px 10px; font-size: 11px; }
                 .s360-faq-question { font-size: 12px; padding: 12px 14px; }
+                .s360-faq-answer { font-size: 12px; padding: 0 14px 14px; }
             }
         </style>
     </head>
