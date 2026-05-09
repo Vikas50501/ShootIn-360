@@ -5,6 +5,7 @@
     const $windowOn = $(window);
   
     $documentOn.ready( function() {
+      $('body').addClass('s360-no-scroll');
   
       /* ================================
        Mobile Menu Js Start
@@ -977,7 +978,11 @@
        Preloader Js Start
     ================================ */
     $windowOn.on('load', function() {
-        $(".preloader").fadeOut(600);
+        setTimeout(function() {
+            $(".preloader").fadeOut(500, function() {
+                $('body').removeClass('s360-no-scroll');
+            });
+        }, 2000);
     });
 
   

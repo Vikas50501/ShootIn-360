@@ -643,18 +643,220 @@
                 100% { top: 100%; opacity: 0; }
             }
 
-            /* Responsive */
-            @media (max-width: 991px) {
-                .s360-hero h1 { font-size: 40px; }
-                .s360-hero { min-height: auto; padding: 100px 0 60px; }
-                .s360-stat-1, .s360-stat-2 { display: none; }
-                .s360-process-step::after { display: none; }
-                .s360-trust-item { border-right: none; padding: 10px 16px; }
+            /* ===== RESPONSIVE SYSTEM ===== */
+
+            /* Heading gap helper — controlled per breakpoint */
+            .s360-head-gap { margin-bottom: 56px; }
+
+            /* ---- Large desktop tweaks ---- */
+            @media (max-width: 1199px) {
+                .s360-hero h1 { font-size: 52px; }
+                .s360-floating-stat.s360-stat-1 { left: -10px; }
+                .s360-floating-stat.s360-stat-2 { right: -10px; }
             }
+
+            /* ---- Tablet (≤ 991px) ---- */
+            @media (max-width: 991px) {
+                /* Section padding */
+                .section-padding { padding: 72px 0 !important; }
+
+                /* Hero */
+                .s360-hero { min-height: auto; padding: 100px 0 64px; }
+                .s360-hero h1 { font-size: 40px; }
+                .s360-hero p { font-size: 16px; max-width: 100%; }
+                .s360-hero-visual { margin-top: 48px; }
+                .s360-ring-anim { display: none; }
+                .s360-stat-1, .s360-stat-2 { display: none; }
+
+                /* Section heading gap */
+                .s360-head-gap,
+                [style*="margin-bottom:56px"] { margin-bottom: 40px !important; }
+
+                /* Section labels & headings */
+                .s360-section-label { font-size: 12px; letter-spacing: 1.5px; }
+
+                /* Trust bar */
+                .s360-trust-bar { padding: 18px 0; }
+                .s360-trust-item { border-right: none; padding: 8px 18px; }
+
+                /* Service cards */
+                .s360-service-card { padding: 28px 22px; }
+                .s360-service-icon { width: 52px; height: 52px; font-size: 22px; }
+
+                /* Why choose — hide SVG camera column */
+                .s360-cam-svg-col { display: none !important; }
+
+                /* Stats */
+                .s360-stats-section { padding: 64px 0; }
+                .s360-stat-box .num { font-size: 48px; }
+
+                /* Process */
+                .s360-process-step::after { display: none; }
+                .s360-process-step { padding: 28px 18px; }
+
+                /* CTA */
+                .s360-cta-section { padding: 72px 0; }
+                .s360-cta-section h2 { font-size: 36px !important; }
+
+                /* Footer */
+                .s360-footer { padding: 64px 0 0; }
+                .s360-footer-bottom { margin-top: 48px; }
+            }
+
+            /* ---- Large phone (≤ 767px) ---- */
+            @media (max-width: 767px) {
+                /* Section padding */
+                .section-padding { padding: 56px 0 !important; }
+
+                /* Hero */
+                .s360-hero { padding: 88px 0 52px; }
+                .s360-hero h1 { font-size: 34px; line-height: 1.15; }
+                .s360-hero p { font-size: 15px; margin-bottom: 28px; }
+                .s360-hero-badge { font-size: 12px; padding: 6px 14px; margin-bottom: 18px; }
+                .s360-hero-visual { margin-top: 36px; }
+
+                /* Section headings */
+                .s360-head-gap,
+                [style*="margin-bottom:56px"] { margin-bottom: 32px !important; }
+
+                /* Service cards */
+                .s360-service-card { padding: 26px 20px; }
+                .s360-service-card h4 { font-size: 18px; margin-bottom: 10px; }
+                .s360-service-card p { font-size: 13px; }
+                .s360-service-icon { width: 48px; height: 48px; font-size: 20px; margin-bottom: 16px; }
+
+                /* Why choose */
+                .s360-why-item { margin-bottom: 22px; gap: 16px; }
+                .s360-why-icon { width: 44px; height: 44px; min-width: 44px; font-size: 18px; }
+                .s360-why-item h5 { font-size: 16px; }
+                .s360-why-item p { font-size: 13px; }
+
+                /* Stats */
+                .s360-stats-section { padding: 56px 0; }
+                .s360-stat-box { padding: 14px; }
+                .s360-stat-box .num { font-size: 42px; }
+                .s360-stat-box .plus { font-size: 30px; }
+                .s360-stat-box p { font-size: 13px; }
+
+                /* Process */
+                .s360-step-num { width: 66px; height: 66px; font-size: 24px; margin-bottom: 18px; }
+                .s360-process-step { padding: 24px 12px; }
+                .s360-process-step h4 { font-size: 15px; }
+                .s360-process-step p { font-size: 13px; }
+
+                /* Testimonials */
+                .s360-testi-card { padding: 24px 20px; margin: 0 6px; }
+                .s360-testi-card p { font-size: 14px; }
+                .s360-testi-author h6 { font-size: 14px; }
+
+                /* Portfolio cards */
+                .s360-portfolio-card { height: 220px !important; }
+
+                /* Blog */
+                .s360-blog-thumb { height: 195px; }
+                .s360-blog-content { padding: 18px; }
+                .s360-blog-content h4 { font-size: 15px; }
+
+                /* Trust bar */
+                .s360-trust-bar { padding: 14px 0; }
+                .s360-trust-item { padding: 8px 14px; }
+                .s360-trust-item span { font-size: 12px; }
+                .s360-trust-item i { font-size: 18px; }
+
+                /* Locations */
+                .s360-location-badge { padding: 6px 14px; font-size: 12px; margin: 4px; }
+
+                /* FAQ */
+                .s360-faq-question { font-size: 14px; padding: 16px 18px; }
+                .s360-faq-answer { font-size: 13px; }
+                .s360-faq-item.active .s360-faq-answer { padding: 0 18px 16px; }
+
+                /* CTA */
+                .s360-cta-section { padding: 56px 0; }
+                .s360-cta-section h2 { font-size: 28px !important; }
+
+                /* Footer */
+                .s360-footer { padding: 52px 0 0; }
+                .s360-footer-bottom { margin-top: 40px; }
+                .s360-footer-bottom p { font-size: 12px; }
+            }
+
+            /* ---- Small phone (≤ 575px) ---- */
             @media (max-width: 575px) {
-                .s360-hero h1 { font-size: 32px; }
-                .s360-hero-btns { flex-direction: column; }
-                .btn-primary-360, .btn-outline-360, .btn-whatsapp-360 { justify-content: center; }
+                /* Section padding */
+                .section-padding { padding: 48px 0 !important; }
+
+                /* Hero */
+                .s360-hero { padding: 80px 0 44px; }
+                .s360-hero h1 { font-size: 28px; line-height: 1.2; }
+                .s360-hero p { font-size: 14px; margin-bottom: 24px; }
+                .s360-hero-badge { font-size: 11px; padding: 5px 12px; letter-spacing: 0.5px; }
+                .s360-hero-content { text-align: center; }
+                .s360-hero-badge { margin-left: auto; margin-right: auto; }
+                .s360-hero-btns { flex-direction: column; gap: 12px; align-items: center; }
+                .btn-primary-360, .btn-outline-360, .btn-whatsapp-360 {
+                    justify-content: center; width: 100%; max-width: 320px; padding: 14px 20px; font-size: 14px;
+                }
+
+                /* Section heading gap */
+                .s360-head-gap,
+                [style*="margin-bottom:56px"] { margin-bottom: 28px !important; }
+
+                /* Section label */
+                .s360-section-label { font-size: 11px; margin-bottom: 12px; }
+
+                /* Service cards */
+                .s360-service-card { padding: 24px 18px; }
+                .s360-service-card h4 { font-size: 17px; }
+
+                /* Portfolio cards */
+                .s360-portfolio-card { height: 200px !important; }
+                .s360-portfolio-overlay h5 { font-size: 15px; }
+
+                /* Stats */
+                .s360-stats-section { padding: 48px 0; }
+                .s360-stat-box .num { font-size: 36px; }
+                .s360-stat-box .plus { font-size: 26px; }
+
+                /* Process */
+                .s360-step-num { width: 58px; height: 58px; font-size: 20px; margin-bottom: 16px; }
+
+                /* Blog */
+                .s360-blog-thumb { height: 180px; }
+
+                /* Trust bar — 2 per row */
+                .s360-trust-item { width: 50%; padding: 10px 12px; }
+
+                /* Testimonials */
+                .s360-testi-card { padding: 18px 14px; margin: 0 2px; }
+                .s360-testi-stars { font-size: 14px; margin-bottom: 12px; }
+
+                /* CTA */
+                .s360-cta-section { padding: 48px 0; }
+                .s360-cta-section h2 { font-size: 24px !important; }
+                .s360-cta-section p { font-size: 15px !important; }
+                .s360-cta-section .d-flex { flex-direction: column; align-items: center; }
+                .s360-cta-section .btn-primary-360,
+                .s360-cta-section .btn-whatsapp-360,
+                .s360-cta-section .btn-outline-360 { width: 100%; max-width: 300px; }
+
+                /* FAQ section layout */
+                .s360-faq-question { font-size: 13px; padding: 14px 16px; }
+
+                /* Footer */
+                .s360-footer { padding: 44px 0 0; }
+                .s360-footer-bottom { margin-top: 32px; }
+                .s360-footer-bottom .d-flex { flex-direction: column; align-items: center; gap: 10px !important; }
+                .s360-footer-bottom div { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px !important; }
+                .s360-wa-float { width: 48px; height: 48px; font-size: 20px; bottom: 20px; right: 20px; }
+            }
+
+            /* ---- Very small (≤ 400px) ---- */
+            @media (max-width: 400px) {
+                .s360-hero h1 { font-size: 24px; }
+                .s360-stat-box .num { font-size: 30px; }
+                .s360-blog-thumb { height: 160px; }
+                .s360-trust-item { width: 100%; border-right: none; }
             }
         </style>
     </head>
@@ -664,7 +866,21 @@
 
             <!-- Preloader -->
             <div class="preloader">
-                <div class="loader"></div>
+                <div class="s360-preloader">
+                    <svg class="s360-pre-ring" viewBox="0 0 100 100" width="90" height="90">
+                        <circle cx="50" cy="50" r="22" fill="none" stroke="rgba(245,194,0,0.2)" stroke-width="2.5"/>
+                        <circle cx="50" cy="50" r="38" fill="none" stroke="#F5C200" stroke-width="3.5" stroke-dasharray="195 45" stroke-linecap="round" class="s360-pre-arc"/>
+                        <line x1="50" y1="28" x2="50" y2="20" stroke="#F5C200" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
+                        <line x1="50" y1="72" x2="50" y2="80" stroke="#F5C200" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
+                        <line x1="28" y1="50" x2="20" y2="50" stroke="#F5C200" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
+                        <line x1="72" y1="50" x2="80" y2="50" stroke="#F5C200" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
+                        <circle cx="50" cy="50" r="7" fill="#F5C200" class="s360-pre-dot"/>
+                    </svg>
+                    <div class="s360-pre-text">
+                        <div class="s360-pre-name">SHOOTIN<span>360°</span></div>
+                        <div class="s360-pre-tag">Street View Creator</div>
+                    </div>
+                </div>
             </div>
 
             <!-- Back To Top -->
@@ -912,7 +1128,7 @@
                     <!-- ===== SERVICES SECTION ===== -->
                     <section class="section-padding" style="background:#F8F8F8;">
                         <div class="container">
-                            <div class="row align-items-center" style="margin-bottom:56px;">
+                            <div class="row align-items-center s360-head-gap">
                                 <div class="col-lg-7">
                                     <div class="s360-section-label wow fadeInUp">Our Services</div>
                                     <h2 class="split-title wow fadeInUp" data-wow-delay=".2s">
@@ -1013,7 +1229,7 @@
                                     </div>
                                 </div>
                                 <!-- Animated Camera SVG Center Column -->
-                                <div class="col-lg-2 d-none d-lg-flex align-items-center justify-content-center">
+                                <div class="col-lg-2 d-none d-lg-flex align-items-center justify-content-center s360-cam-svg-col">
                                     <div class="s360-cam-svg-wrap">
                                         <svg viewBox="0 0 140 185" width="140" xmlns="http://www.w3.org/2000/svg">
                                             <!-- Camera body -->
@@ -1129,7 +1345,7 @@
                     <!-- ===== PORTFOLIO PREVIEW ===== -->
                     <section class="section-padding" style="background:#F8F8F8;">
                         <div class="container">
-                            <div class="row align-items-center" style="margin-bottom:56px;">
+                            <div class="row align-items-center s360-head-gap">
                                 <div class="col-lg-7">
                                     <div class="s360-section-label wow fadeInUp">Our Portfolio</div>
                                     <h2 class="split-title wow fadeInUp" data-wow-delay=".2s">
@@ -1456,7 +1672,7 @@
                     <!-- ===== BLOG SECTION ===== -->
                     <section class="section-padding" style="background:#F8F8F8;">
                         <div class="container">
-                            <div class="row align-items-center" style="margin-bottom:56px;">
+                            <div class="row align-items-center s360-head-gap">
                                 <div class="col-lg-7">
                                     <div class="s360-section-label wow fadeInUp">Blog</div>
                                     <h2 class="split-title wow fadeInUp" data-wow-delay=".2s">

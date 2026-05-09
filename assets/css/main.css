@@ -665,45 +665,82 @@ span {
   -webkit-transition-delay: 0.7s;
 }
 
+/* ===== Shootin360 Branded Preloader ===== */
+.s360-no-scroll { overflow: hidden !important; }
+
 .preloader {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  top: 0; left: 0; right: 0; bottom: 0;
   z-index: 99999;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--white);
+  background: rgba(20, 20, 20, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 
-.loader {
-  width: fit-content;
-  font-size: 120px;
-  line-height: 1.5;
-  font-family: "Quicksand", sans-serif;
+.loader { display: none; }
+
+.s360-preloader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+}
+
+/* Spinning outer arc */
+.s360-pre-arc {
+  transform-origin: 50px 50px;
+  animation: s360-arc-spin 1.6s linear infinite;
+}
+@keyframes s360-arc-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Pulsing center dot */
+.s360-pre-dot {
+  transform-origin: 50px 50px;
+  animation: s360-dot-pulse 1.6s ease-in-out infinite;
+}
+@keyframes s360-dot-pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50%       { transform: scale(0.6); opacity: 0.4; }
+}
+
+/* Brand text */
+.s360-pre-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+.s360-pre-name {
+  font-family: 'Quicksand', sans-serif;
   font-weight: 800;
-  text-transform: uppercase;
-  color: rgba(0, 0, 0, 0);
-  -webkit-text-stroke: 1px #FCDF50;
-  background: radial-gradient(1.13em at 50% 1.6em, #FCDF50 99%, rgba(0, 0, 0, 0) 101%) calc(50% - 1.6em) 0/3.2em 100% text, radial-gradient(1.13em at 50% -0.8em, rgba(0, 0, 0, 0) 99%, #FCDF50 101%) 50% 0.8em/3.2em 100% repeat-x text;
-  animation: l9 2s linear infinite;
+  font-size: 28px;
+  color: #ffffff;
+  letter-spacing: -0.5px;
 }
-@media (max-width: 575px) {
-  .loader {
-    font-size: 70px;
-  }
+.s360-pre-name span { color: #F5C200; }
+.s360-pre-tag {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  font-size: 10px;
+  color: #555555;
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
 }
 
-.loader:before {
-  content: "Heartly";
+
+@media (max-width: 575px) {
+  .s360-pre-ring { width: 72px !important; height: 72px !important; }
+  .s360-pre-name { font-size: 22px; }
+  .s360-pre-bar  { width: 120px; }
 }
 
 @keyframes l9 {
-  to {
-    background-position: calc(50% + 1.6em) 0, calc(50% + 3.2em) 0.8em;
-  }
+  to { background-position: calc(50% + 1.6em) 0, calc(50% + 3.2em) 0.8em; }
 }
 @-webkit-keyframes rippleOne {
   70% {

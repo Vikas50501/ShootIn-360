@@ -27,18 +27,33 @@
             .s360-filter-tabs { display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin-bottom:50px; }
             .s360-filter-btn { padding:10px 24px; border:2px solid #e0e0e0; border-radius:50px; background:#fff; color:#444; font-size:14px; font-weight:600; cursor:pointer; transition:all 0.3s; }
             .s360-filter-btn:hover, .s360-filter-btn.active { background:#F5C200; border-color:#F5C200; color:#1A1A1A; }
-            /* Portfolio cards */
-            .s360-port-card { position:relative; border-radius:14px; overflow:hidden; background:#2c2c2c; cursor:pointer; }
-            .s360-port-card img { width:100%; height:260px; object-fit:cover; transition:transform 0.5s; display:block; }
-            .s360-port-card:hover img { transform:scale(1.08); }
-            .s360-port-overlay { position:absolute; inset:0; background:linear-gradient(to top,rgba(0,0,0,0.85) 0%,rgba(0,0,0,0.2) 50%,transparent 100%); opacity:0; transition:opacity 0.3s; display:flex; flex-direction:column; justify-content:flex-end; padding:24px; }
-            .s360-port-card:hover .s360-port-overlay { opacity:1; }
-            .s360-port-overlay h5 { color:#fff; font-size:18px; font-weight:700; margin:0 0 4px; }
-            .s360-port-overlay .loc { color:#aaa; font-size:13px; margin-bottom:12px; }
-            .s360-port-overlay .view-btn { display:inline-flex; align-items:center; gap:8px; background:#F5C200; color:#1A1A1A; font-weight:700; font-size:13px; padding:8px 18px; border-radius:6px; text-decoration:none; transition:all 0.3s; }
-            .s360-port-overlay .view-btn:hover { background:#fff; color:#1A1A1A; }
-            .s360-port-cat { position:absolute; top:16px; left:16px; background:#F5C200; color:#1A1A1A; font-size:11px; font-weight:700; padding:4px 12px; border-radius:4px; text-transform:uppercase; }
-            .s360-port-google { position:absolute; top:16px; right:16px; background:rgba(255,255,255,0.95); color:#1A1A1A; font-size:11px; font-weight:600; padding:4px 10px; border-radius:4px; display:flex; align-items:center; gap:5px; }
+            /* Portfolio embed cards */
+            .s360-port-card { position:relative; border-radius:14px; overflow:hidden; background:#fff; border:1px solid #e8e8e8; transition:all 0.3s; height:auto !important; }
+            .s360-port-card:hover { box-shadow:0 16px 40px rgba(0,0,0,0.13); transform:translateY(-5px); }
+            .s360-port-iframe-wrap { position:relative; height:380px; overflow:hidden; background:#1c1c1c; }
+            .s360-port-iframe-wrap iframe { width:100%; height:100%; border:none; display:block; }
+            .s360-port-cat { position:absolute; top:12px; left:12px; background:#F5C200; color:#1A1A1A; font-size:10px; font-weight:800; padding:4px 10px; border-radius:4px; text-transform:uppercase; z-index:5; pointer-events:none; }
+            .s360-360-live { position:absolute; top:12px; right:12px; background:rgba(26,26,26,0.82); color:#F5C200; font-size:9px; font-weight:800; padding:5px 10px; border-radius:20px; letter-spacing:1.5px; text-transform:uppercase; pointer-events:none; z-index:5; display:flex; align-items:center; gap:5px; }
+            .s360-360-live i { font-size:7px; animation:s360-blink 1.2s ease-in-out infinite; }
+            @keyframes s360-blink { 0%,100%{opacity:1} 50%{opacity:0.15} }
+            .s360-port-info { padding:16px 20px 18px; }
+            .s360-port-info h5 { font-size:15px; font-weight:700; color:#1A1A1A; margin:0 0 4px; }
+            .s360-port-info .loc { color:#888; font-size:12px; margin:0 0 12px; display:flex; align-items:center; gap:5px; }
+            .s360-port-info .loc i { color:#F5C200; font-size:11px; }
+            .s360-port-cta { display:inline-flex; align-items:center; gap:7px; background:#F5C200; color:#1A1A1A; font-size:12px; font-weight:700; padding:7px 14px; border-radius:6px; text-decoration:none; transition:all 0.3s; }
+            .s360-port-cta:hover { background:#1A1A1A; color:#F5C200; }
+            /* Full-screen tour lightbox */
+            .s360-tour-lb { display:none; position:fixed; inset:0; z-index:99998; background:rgba(0,0,0,0.94); align-items:center; justify-content:center; padding:16px; }
+            .s360-tour-lb.open { display:flex; }
+            .s360-tour-lb-inner { background:#111; border-radius:14px; overflow:hidden; width:100%; max-width:960px; position:relative; }
+            .s360-tour-lb iframe { width:100%; height:520px; border:none; display:block; }
+            .s360-tour-lb-bar { padding:16px 20px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+            .s360-tour-lb-bar h4 { color:#fff; font-size:16px; margin:0; font-weight:700; }
+            .s360-tour-lb-bar p { color:#888; font-size:12px; margin:0; }
+            .s360-tour-lb-close { background:rgba(255,255,255,0.08); border:none; color:#fff; width:36px; height:36px; border-radius:50%; font-size:16px; cursor:pointer; display:flex; align-items:center; justify-content:center; flex-shrink:0; transition:background 0.2s; }
+            .s360-tour-lb-close:hover { background:#F5C200; color:#1A1A1A; }
+            @media (max-width:767px) { .s360-tour-lb iframe { height:340px; } }
+            @media (max-width:575px) { .s360-tour-lb iframe { height:260px; } .s360-tour-lb-bar { flex-direction:column; align-items:flex-start; gap:8px; } }
             /* CTA */
             .s360-cta-dark { background:#1A1A1A; padding:80px 0; text-align:center; }
             .btn-primary-360 { background:#F5C200; color:#1A1A1A; font-weight:700; padding:16px 36px; border-radius:4px; text-decoration:none; display:inline-flex; align-items:center; gap:10px; font-size:15px; transition:all 0.3s; }
@@ -65,11 +80,64 @@
             .s360-footer-bottom p { color:#666; font-size:13px; margin:0; }
             .port-item { transition:all 0.3s; }
             .port-item.hidden { display:none; }
+
+            /* ===== RESPONSIVE ===== */
+            @media (max-width: 1199px) {
+                .s360-page-banner h1 { font-size: 42px; }
+                .s360-port-iframe-wrap { height: 340px; }
+            }
+            @media (max-width: 991px) {
+                .section-padding { padding: 72px 0 !important; }
+                .s360-page-banner { padding: 120px 0 70px; }
+                .s360-page-banner h1 { font-size: 36px; }
+                .s360-port-iframe-wrap { height: 300px; }
+                .s360-filter-btn { padding: 8px 18px; font-size: 13px; }
+            }
+            @media (max-width: 767px) {
+                .section-padding { padding: 56px 0 !important; }
+                .s360-page-banner { padding: 100px 0 56px; }
+                .s360-page-banner h1 { font-size: 30px; }
+                .s360-port-iframe-wrap { height: 260px; }
+                .s360-filter-wrap { gap: 8px; }
+                .s360-filter-btn { padding: 7px 14px; font-size: 12px; }
+            }
+            @media (max-width: 575px) {
+                .section-padding { padding: 48px 0 !important; }
+                .s360-page-banner h1 { font-size: 24px; }
+                .s360-page-banner { padding: 88px 0 48px; }
+                .s360-port-iframe-wrap { height: 220px; }
+                .s360-port-info { padding: 12px 14px 14px; }
+                .s360-filter-btn { padding: 6px 12px; font-size: 11px; }
+                .s360-footer-bottom .d-flex { flex-direction: column; align-items: center; gap: 10px !important; }
+                .s360-wa-float { width: 48px; height: 48px; font-size: 20px; bottom: 20px; right: 20px; }
+            }
+            @media (max-width: 400px) {
+                .s360-page-banner h1 { font-size: 20px; }
+                .s360-port-iframe-wrap { height: 190px; }
+                .s360-filter-btn { padding: 5px 10px; font-size: 10px; letter-spacing: 0.5px; }
+                .s360-port-info h5 { font-size: 13px; }
+            }
         </style>
     </head>
     <body>
         <div class="page-wrapper">
-            <div class="preloader"><div class="loader"></div></div>
+            <div class="preloader">
+                <div class="s360-preloader">
+                    <svg class="s360-pre-ring" viewBox="0 0 100 100" width="90" height="90">
+                        <circle cx="50" cy="50" r="22" fill="none" stroke="rgba(245,194,0,0.2)" stroke-width="2.5"/>
+                        <circle cx="50" cy="50" r="38" fill="none" stroke="#F5C200" stroke-width="3.5" stroke-dasharray="195 45" stroke-linecap="round" class="s360-pre-arc"/>
+                        <line x1="50" y1="28" x2="50" y2="20" stroke="#F5C200" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
+                        <line x1="50" y1="72" x2="50" y2="80" stroke="#F5C200" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
+                        <line x1="28" y1="50" x2="20" y2="50" stroke="#F5C200" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
+                        <line x1="72" y1="50" x2="80" y2="50" stroke="#F5C200" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
+                        <circle cx="50" cy="50" r="7" fill="#F5C200" class="s360-pre-dot"/>
+                    </svg>
+                    <div class="s360-pre-text">
+                        <div class="s360-pre-name">SHOOTIN<span>360°</span></div>
+                        <div class="s360-pre-tag">Street View Creator</div>
+                    </div>
+                </div>
+            </div>
             <button id="back-top" class="back-to-top"><i class="fa-regular fa-arrow-up"></i></button>
             <div class="mouseCursor cursor-outer"></div>
             <div class="mouseCursor cursor-inner"></div>
@@ -81,7 +149,7 @@
                         <div class="offcanvas__content">
                             <div class="offcanvas__top d-flex justify-content-between align-items-center">
                                 <div class="offcanvas__logo">
-                                    <a href="index.html" style="font-family:'Quicksand',sans-serif;font-weight:800;font-size:22px;color:#F5C200;text-decoration:none;">SHOOTIN360°</a>
+                                    <a href="index.html"><img src="assets/img/logo.svg" height="42" alt="Shootin 360 Logo"></a>
                                 </div>
                                 <div class="offcanvas__close"><button><i class="fa-thin fa-times"></i></button></div>
                             </div>
@@ -107,10 +175,7 @@
                 <div class="container">
                     <div class="mega-menu-wrapper">
                         <div class="header-main">
-                            <a href="index.html" class="logo" style="font-family:'Quicksand',sans-serif;font-weight:800;font-size:24px;color:#F5C200;text-decoration:none;line-height:1;">
-                                SHOOTIN<span style="font-size:17px;">360°</span>
-                                <span style="color:#999;font-size:10px;font-weight:500;letter-spacing:2px;display:block;line-height:1;margin-top:2px;">Street View Creator</span>
-                            </a>
+                            <a href="index.html" class="logo"><img src="assets/img/logo.svg" height="44" alt="Shootin 360 Logo"></a>
                             <div class="mean__menu-wrapper">
                                 <div class="main-menu">
                                     <nav id="mobile-menu">
@@ -171,152 +236,240 @@
                                 <button class="s360-filter-btn" onclick="filterPort(this,'gym')">Gyms & Salons</button>
                             </div>
 
-                            <!-- Portfolio Grid -->
+                            <!--
+                            =======================================================
+                            HOW TO ADD A REAL 360° STREET VIEW EMBED
+                            =======================================================
+                            STEP 1: Open maps.google.com
+                            STEP 2: Search your client's location → drag the yellow
+                                    PEGMAN icon (bottom-right) onto the road, OR
+                                    click a blue dot to enter Street View
+                            STEP 3: Inside Street View, click SHARE (top-left) →
+                                    "Embed a map"
+                            STEP 4: Copy the src="..." URL from the iframe code.
+                                    It will look like:
+                                    https://www.google.com/maps/embed?pb=!4v1234...
+                                    (starts with !4v — that means Street View)
+                            STEP 5: Replace the src="..." on the iframe below with
+                                    your copied URL.
+
+                            NOTE:  Always test on a live web server (http/https).
+                                   Google Maps embeds DO NOT work on local
+                                   file:// (e.g. opening index.html directly).
+                            =======================================================
+                            -->
+                            <!-- Portfolio Grid — Google Maps 360° embeds -->
                             <div class="row g-4" id="portfolioGrid">
-                                <div class="col-lg-4 col-md-6 port-item wow fadeInUp" data-cat="hotel" data-wow-delay=".1s">
+
+                                <!-- 1 Hotel -->
+                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="hotel" data-wow-delay=".1s">
                                     <div class="s360-port-card">
-                                        <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=600&auto=format&fit=crop&q=75" alt="Hotel Virtual Tour">
-                                        <div class="s360-port-cat">Hotel</div>
-                                        <div class="s360-port-google"><i class="fab fa-google" style="color:#4285F4;"></i> Google Maps</div>
-                                        <div class="s360-port-overlay">
+                                        <div class="s360-port-iframe-wrap">
+                                            <!-- PLACEHOLDER: Replace src with your client's real embed URL (see guide above) -->
+                                            <iframe src="https://www.google.com/maps/embed?pb=!4v1778348346804!6m8!1m7!1sQpIp8vX0FvMCNA_Q6XRmEQ!2m2!1d18.49508090844547!2d73.858124368091!3f56.13875!4f0!5f0.7820865974627469" loading="lazy" allowfullscreen title="Hotel Tour Preview"></iframe>
+                                            <div class="s360-port-cat">Hotel</div>
+                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360° LIVE</div>
+                                        </div>
+                                        <div class="s360-port-info">
                                             <h5>The Grand Stay Hotel</h5>
-                                            <p class="loc"><i class="fa-solid fa-location-dot" style="color:#F5C200;"></i> Koregaon Park, Pune</p>
-                                            <a href="#" class="view-btn"><i class="fa-solid fa-play"></i> View 360° Tour</a>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Koregaon Park, Pune</p>
+                                            <a href="booking.html" class="s360-port-cta"><i class="fa-solid fa-camera"></i> Book Similar Tour</a>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 port-item wow fadeInUp" data-cat="school" data-wow-delay=".2s">
+
+                                <!-- 2 School -->
+                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="school" data-wow-delay=".2s">
                                     <div class="s360-port-card">
-                                        <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&auto=format&fit=crop&q=75" alt="School Tour">
-                                        <div class="s360-port-cat">School</div>
-                                        <div class="s360-port-google"><i class="fab fa-google" style="color:#4285F4;"></i> Google Maps</div>
-                                        <div class="s360-port-overlay">
+                                        <div class="s360-port-iframe-wrap">
+                                            <!-- PLACEHOLDER: Replace src with your client's real embed URL -->
+                                            <iframe src="https://maps.google.com/maps?layer=c&cbll=18.5196,73.8385&cbp=12,0,0,0,0&output=embed" loading="lazy" allowfullscreen title="School Tour Preview"></iframe>
+                                            <div class="s360-port-cat">School</div>
+                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360° LIVE</div>
+                                        </div>
+                                        <div class="s360-port-info">
                                             <h5>Bright Future Academy</h5>
-                                            <p class="loc"><i class="fa-solid fa-location-dot" style="color:#F5C200;"></i> Baner, Pune</p>
-                                            <a href="#" class="view-btn"><i class="fa-solid fa-play"></i> View 360° Tour</a>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Baner, Pune</p>
+                                            <a href="booking.html" class="s360-port-cta"><i class="fa-solid fa-camera"></i> Book Similar Tour</a>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 port-item wow fadeInUp" data-cat="showroom" data-wow-delay=".3s">
+
+                                <!-- 3 Car Showroom -->
+                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="showroom" data-wow-delay=".3s">
                                     <div class="s360-port-card">
-                                        <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=600&auto=format&fit=crop&q=75" alt="Showroom Tour">
-                                        <div class="s360-port-cat">Showroom</div>
-                                        <div class="s360-port-google"><i class="fab fa-google" style="color:#4285F4;"></i> Google Maps</div>
-                                        <div class="s360-port-overlay">
+                                        <div class="s360-port-iframe-wrap">
+                                            <!-- PLACEHOLDER: Replace src with your client's real embed URL -->
+                                            <iframe src="https://maps.google.com/maps?layer=c&cbll=18.5920,73.7625&cbp=12,0,0,0,0&output=embed" loading="lazy" allowfullscreen title="Showroom Tour Preview"></iframe>
+                                            <div class="s360-port-cat">Showroom</div>
+                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360° LIVE</div>
+                                        </div>
+                                        <div class="s360-port-info">
                                             <h5>AutoZone Car Showroom</h5>
-                                            <p class="loc"><i class="fa-solid fa-location-dot" style="color:#F5C200;"></i> Wakad, Pune</p>
-                                            <a href="#" class="view-btn"><i class="fa-solid fa-play"></i> View 360° Tour</a>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Wakad, Pune</p>
+                                            <a href="booking.html" class="s360-port-cta"><i class="fa-solid fa-camera"></i> Book Similar Tour</a>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 port-item wow fadeInUp" data-cat="realestate" data-wow-delay=".4s">
+
+                                <!-- 4 Real Estate -->
+                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="realestate" data-wow-delay=".4s">
                                     <div class="s360-port-card">
-                                        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&auto=format&fit=crop&q=75" alt="Real Estate Tour">
-                                        <div class="s360-port-cat">Real Estate</div>
-                                        <div class="s360-port-google"><i class="fab fa-google" style="color:#4285F4;"></i> Google Maps</div>
-                                        <div class="s360-port-overlay">
+                                        <div class="s360-port-iframe-wrap">
+                                            <!-- PLACEHOLDER: Replace src with your client's real embed URL -->
+                                            <iframe src="https://maps.google.com/maps?layer=c&cbll=18.5914,73.7388&cbp=12,0,0,0,0&output=embed" loading="lazy" allowfullscreen title="Real Estate Tour Preview"></iframe>
+                                            <div class="s360-port-cat">Real Estate</div>
+                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360° LIVE</div>
+                                        </div>
+                                        <div class="s360-port-info">
                                             <h5>Skyline Residency</h5>
-                                            <p class="loc"><i class="fa-solid fa-location-dot" style="color:#F5C200;"></i> Hinjewadi, Pune</p>
-                                            <a href="#" class="view-btn"><i class="fa-solid fa-play"></i> View 360° Tour</a>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Hinjewadi, Pune</p>
+                                            <a href="booking.html" class="s360-port-cta"><i class="fa-solid fa-camera"></i> Book Similar Tour</a>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 port-item wow fadeInUp" data-cat="hotel" data-wow-delay=".5s">
+
+                                <!-- 5 Restaurant -->
+                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="hotel" data-wow-delay=".5s">
                                     <div class="s360-port-card">
-                                        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&auto=format&fit=crop&q=75" alt="Restaurant Tour">
-                                        <div class="s360-port-cat">Restaurant</div>
-                                        <div class="s360-port-google"><i class="fab fa-google" style="color:#4285F4;"></i> Street View</div>
-                                        <div class="s360-port-overlay">
+                                        <div class="s360-port-iframe-wrap">
+                                            <!-- PLACEHOLDER: Replace src with your client's real embed URL -->
+                                            <iframe src="https://maps.google.com/maps?layer=c&cbll=18.5625,73.9185&cbp=12,0,0,0,0&output=embed" loading="lazy" allowfullscreen title="Restaurant Tour Preview"></iframe>
+                                            <div class="s360-port-cat">Restaurant</div>
+                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360° LIVE</div>
+                                        </div>
+                                        <div class="s360-port-info">
                                             <h5>Spice Garden Restaurant</h5>
-                                            <p class="loc"><i class="fa-solid fa-location-dot" style="color:#F5C200;"></i> Viman Nagar, Pune</p>
-                                            <a href="#" class="view-btn"><i class="fa-solid fa-play"></i> View 360° Tour</a>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Viman Nagar, Pune</p>
+                                            <a href="booking.html" class="s360-port-cta"><i class="fa-solid fa-camera"></i> Book Similar Tour</a>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 port-item wow fadeInUp" data-cat="gym" data-wow-delay=".6s">
+
+                                <!-- 6 Gym -->
+                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="gym" data-wow-delay=".6s">
                                     <div class="s360-port-card">
-                                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&auto=format&fit=crop&q=75" alt="Gym Tour">
-                                        <div class="s360-port-cat">Gym</div>
-                                        <div class="s360-port-google"><i class="fab fa-google" style="color:#4285F4;"></i> Google Maps</div>
-                                        <div class="s360-port-overlay">
-                                            <h5>FitLife Gym & Wellness</h5>
-                                            <p class="loc"><i class="fa-solid fa-location-dot" style="color:#F5C200;"></i> Kothrud, Pune</p>
-                                            <a href="#" class="view-btn"><i class="fa-solid fa-play"></i> View 360° Tour</a>
+                                        <div class="s360-port-iframe-wrap">
+                                            <!-- PLACEHOLDER: Replace src with your client's real embed URL -->
+                                            <iframe src="https://maps.google.com/maps?layer=c&cbll=18.5010,73.8082&cbp=12,0,0,0,0&output=embed" loading="lazy" allowfullscreen title="Gym Tour Preview"></iframe>
+                                            <div class="s360-port-cat">Gym</div>
+                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360° LIVE</div>
+                                        </div>
+                                        <div class="s360-port-info">
+                                            <h5>FitLife Gym &amp; Wellness</h5>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Kothrud, Pune</p>
+                                            <a href="booking.html" class="s360-port-cta"><i class="fa-solid fa-camera"></i> Book Similar Tour</a>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 port-item wow fadeInUp" data-cat="hospital" data-wow-delay=".2s">
+
+                                <!-- 7 Hospital -->
+                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="hospital" data-wow-delay=".2s">
                                     <div class="s360-port-card">
-                                        <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&auto=format&fit=crop&q=75" alt="Hospital Tour">
-                                        <div class="s360-port-cat">Hospital</div>
-                                        <div class="s360-port-google"><i class="fab fa-google" style="color:#4285F4;"></i> Google Maps</div>
-                                        <div class="s360-port-overlay">
+                                        <div class="s360-port-iframe-wrap">
+                                            <!-- PLACEHOLDER: Replace src with your client's real embed URL -->
+                                            <iframe src="https://maps.google.com/maps?layer=c&cbll=18.5625,73.8098&cbp=12,0,0,0,0&output=embed" loading="lazy" allowfullscreen title="Hospital Tour Preview"></iframe>
+                                            <div class="s360-port-cat">Hospital</div>
+                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360° LIVE</div>
+                                        </div>
+                                        <div class="s360-port-info">
                                             <h5>Sunrise Multi-Specialty Hospital</h5>
-                                            <p class="loc"><i class="fa-solid fa-location-dot" style="color:#F5C200;"></i> Aundh, Pune</p>
-                                            <a href="#" class="view-btn"><i class="fa-solid fa-play"></i> View 360° Tour</a>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Aundh, Pune</p>
+                                            <a href="booking.html" class="s360-port-cta"><i class="fa-solid fa-camera"></i> Book Similar Tour</a>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 port-item wow fadeInUp" data-cat="school" data-wow-delay=".3s">
+
+                                <!-- 8 College -->
+                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="school" data-wow-delay=".3s">
                                     <div class="s360-port-card">
-                                        <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=600&auto=format&fit=crop&q=75" alt="College Tour">
-                                        <div class="s360-port-cat">College</div>
-                                        <div class="s360-port-google"><i class="fab fa-google" style="color:#4285F4;"></i> Street View</div>
-                                        <div class="s360-port-overlay">
+                                        <div class="s360-port-iframe-wrap">
+                                            <!-- PLACEHOLDER: Replace src with your client's real embed URL -->
+                                            <iframe src="https://maps.google.com/maps?layer=c&cbll=18.5217,73.8381&cbp=12,0,0,0,0&output=embed" loading="lazy" allowfullscreen title="College Tour Preview"></iframe>
+                                            <div class="s360-port-cat">College</div>
+                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360° LIVE</div>
+                                        </div>
+                                        <div class="s360-port-info">
                                             <h5>Modern Engineering College</h5>
-                                            <p class="loc"><i class="fa-solid fa-location-dot" style="color:#F5C200;"></i> Shivajinagar, Pune</p>
-                                            <a href="#" class="view-btn"><i class="fa-solid fa-play"></i> View 360° Tour</a>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Shivajinagar, Pune</p>
+                                            <a href="booking.html" class="s360-port-cta"><i class="fa-solid fa-camera"></i> Book Similar Tour</a>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 port-item wow fadeInUp" data-cat="showroom" data-wow-delay=".4s">
+
+                                <!-- 9 Furniture Showroom -->
+                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="showroom" data-wow-delay=".4s">
                                     <div class="s360-port-card">
-                                        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&auto=format&fit=crop&q=75" alt="Furniture Showroom Tour">
-                                        <div class="s360-port-cat">Showroom</div>
-                                        <div class="s360-port-google"><i class="fab fa-google" style="color:#4285F4;"></i> Google Maps</div>
-                                        <div class="s360-port-overlay">
+                                        <div class="s360-port-iframe-wrap">
+                                            <!-- PLACEHOLDER: Replace src with your client's real embed URL -->
+                                            <iframe src="https://maps.google.com/maps?layer=c&cbll=18.6235,73.8052&cbp=12,0,0,0,0&output=embed" loading="lazy" allowfullscreen title="Furniture Showroom Tour Preview"></iframe>
+                                            <div class="s360-port-cat">Showroom</div>
+                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360° LIVE</div>
+                                        </div>
+                                        <div class="s360-port-info">
                                             <h5>HomePlex Furniture</h5>
-                                            <p class="loc"><i class="fa-solid fa-location-dot" style="color:#F5C200;"></i> Pimpri, Pune</p>
-                                            <a href="#" class="view-btn"><i class="fa-solid fa-play"></i> View 360° Tour</a>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Pimpri, Pune</p>
+                                            <a href="booking.html" class="s360-port-cta"><i class="fa-solid fa-camera"></i> Book Similar Tour</a>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 port-item wow fadeInUp" data-cat="gym" data-wow-delay=".5s">
+
+                                <!-- 10 Salon -->
+                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="gym" data-wow-delay=".5s">
                                     <div class="s360-port-card">
-                                        <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&auto=format&fit=crop&q=75" alt="Salon Tour">
-                                        <div class="s360-port-cat">Salon</div>
-                                        <div class="s360-port-google"><i class="fab fa-google" style="color:#4285F4;"></i> Street View</div>
-                                        <div class="s360-port-overlay">
+                                        <div class="s360-port-iframe-wrap">
+                                            <!-- PLACEHOLDER: Replace src with your client's real embed URL -->
+                                            <iframe src="https://maps.google.com/maps?layer=c&cbll=18.5537,73.9082&cbp=12,0,0,0,0&output=embed" loading="lazy" allowfullscreen title="Salon Tour Preview"></iframe>
+                                            <div class="s360-port-cat">Salon</div>
+                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360° LIVE</div>
+                                        </div>
+                                        <div class="s360-port-info">
                                             <h5>Glam Studio Salon</h5>
-                                            <p class="loc"><i class="fa-solid fa-location-dot" style="color:#F5C200;"></i> Kalyani Nagar, Pune</p>
-                                            <a href="#" class="view-btn"><i class="fa-solid fa-play"></i> View 360° Tour</a>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Kalyani Nagar, Pune</p>
+                                            <a href="booking.html" class="s360-port-cta"><i class="fa-solid fa-camera"></i> Book Similar Tour</a>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 port-item wow fadeInUp" data-cat="realestate" data-wow-delay=".6s">
+
+                                <!-- 11 Villa / Real Estate -->
+                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="realestate" data-wow-delay=".6s">
                                     <div class="s360-port-card">
-                                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&auto=format&fit=crop&q=75" alt="Villa Tour">
-                                        <div class="s360-port-cat">Real Estate</div>
-                                        <div class="s360-port-google"><i class="fab fa-google" style="color:#4285F4;"></i> Google Maps</div>
-                                        <div class="s360-port-overlay">
+                                        <div class="s360-port-iframe-wrap">
+                                            <!-- PLACEHOLDER: Replace src with your client's real embed URL -->
+                                            <iframe src="https://maps.google.com/maps?layer=c&cbll=18.4615,73.9130&cbp=12,0,0,0,0&output=embed" loading="lazy" allowfullscreen title="Villa Tour Preview"></iframe>
+                                            <div class="s360-port-cat">Real Estate</div>
+                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360° LIVE</div>
+                                        </div>
+                                        <div class="s360-port-info">
                                             <h5>Green Valley Villas</h5>
-                                            <p class="loc"><i class="fa-solid fa-location-dot" style="color:#F5C200;"></i> Undri, Pune</p>
-                                            <a href="#" class="view-btn"><i class="fa-solid fa-play"></i> View 360° Tour</a>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Undri, Pune</p>
+                                            <a href="booking.html" class="s360-port-cta"><i class="fa-solid fa-camera"></i> Book Similar Tour</a>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 port-item wow fadeInUp" data-cat="hotel" data-wow-delay=".2s">
+
+                                <!-- 12 Hotel Mumbai -->
+                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="hotel" data-wow-delay=".2s">
                                     <div class="s360-port-card">
-                                        <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=600&auto=format&fit=crop&q=75" alt="Hotel Tour Mumbai">
-                                        <div class="s360-port-cat">Hotel</div>
-                                        <div class="s360-port-google"><i class="fab fa-google" style="color:#4285F4;"></i> Google Maps</div>
-                                        <div class="s360-port-overlay">
+                                        <div class="s360-port-iframe-wrap">
+                                            <!-- PLACEHOLDER: Replace src with your client's real embed URL -->
+                                            <iframe src="https://maps.google.com/maps?layer=c&cbll=18.9367,72.8296&cbp=12,0,0,0,0&output=embed" loading="lazy" allowfullscreen title="Hotel Mumbai Tour Preview"></iframe>
+                                            <div class="s360-port-cat">Hotel</div>
+                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360° LIVE</div>
+                                        </div>
+                                        <div class="s360-port-info">
                                             <h5>Pearl Heritage Hotel</h5>
-                                            <p class="loc"><i class="fa-solid fa-location-dot" style="color:#F5C200;"></i> Mumbai, Maharashtra</p>
-                                            <a href="#" class="view-btn"><i class="fa-solid fa-play"></i> View 360° Tour</a>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Mumbai, Maharashtra</p>
+                                            <a href="booking.html" class="s360-port-cta"><i class="fa-solid fa-camera"></i> Book Similar Tour</a>
                                         </div>
                                     </div>
                                 </div>
+
+                            </div>
+
+                            <!-- Street View Tip -->
+                            <div class="text-center mt-4">
+                                <p style="color:#888;font-size:13px;"><i class="fa-solid fa-circle-info" style="color:#F5C200;margin-right:6px;"></i>Click and drag inside any tour to look around 360°. Use the navigation arrows to move through the space.</p>
                             </div>
                         </div>
                     </section>
