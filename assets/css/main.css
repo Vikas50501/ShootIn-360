@@ -476,6 +476,11 @@ span {
   opacity: 0;
 }
 
+/* Hide custom cursor on touch/mobile — hover:none = primary input cannot hover */
+@media (hover: none) {
+  .mouseCursor { display: none !important; }
+}
+
 .search-popup {
   position: fixed;
   width: 100%;

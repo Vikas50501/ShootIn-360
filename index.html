@@ -512,41 +512,51 @@
             }
             .s360-wa-float:hover { transform: scale(1.1); color: #fff; }
 
-            /* Portfolio */
-            .s360-portfolio-card {
-                position: relative;
-                border-radius: 12px;
+            /* Portfolio Preview — iframe embed cards */
+            .s360-port-card {
+                border-radius: 14px;
                 overflow: hidden;
-                height: 260px;
-                background: #2c2c2c;
+                background: #fff;
+                border: 1px solid #e8e8e8;
+                transition: all 0.3s;
+                height: auto !important;
             }
-            .s360-portfolio-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
-            .s360-portfolio-card:hover img { transform: scale(1.08); }
-            .s360-portfolio-overlay {
-                position: absolute;
-                inset: 0;
-                background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 50%);
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-end;
-                padding: 24px;
-                opacity: 0;
-                transition: opacity 0.3s;
+            .s360-port-card:hover { box-shadow: 0 16px 40px rgba(0,0,0,0.13); transform: translateY(-5px); }
+            @media (hover: none) { .s360-port-card:hover { box-shadow: none; transform: none; } }
+            .s360-port-iframe-wrap { position: relative; height: 300px; overflow: hidden; background: #1c1c1c; }
+            .s360-port-iframe-wrap iframe { width: 100%; height: 100%; border: none; display: block; }
+            .s360-port-cat {
+                position: absolute; top: 12px; left: 12px;
+                background: var(--theme); color: #1A1A1A;
+                font-size: 10px; font-weight: 800;
+                padding: 4px 10px; border-radius: 4px;
+                text-transform: uppercase; z-index: 5; pointer-events: none;
             }
-            .s360-portfolio-card:hover .s360-portfolio-overlay { opacity: 1; }
-            .s360-portfolio-overlay h5 { color: #fff; font-size: 17px; font-weight: 700; margin: 0 0 6px; }
-            .s360-portfolio-overlay span { color: var(--theme); font-size: 13px; font-weight: 600; }
-            .s360-portfolio-cat {
-                position: absolute;
-                top: 16px; left: 16px;
-                background: var(--theme);
-                color: #1A1A1A;
-                font-size: 11px;
-                font-weight: 700;
-                padding: 4px 12px;
-                border-radius: 4px;
-                text-transform: uppercase;
+            .s360-port-live {
+                position: absolute; top: 12px; right: 12px;
+                background: rgba(26,26,26,0.82); color: var(--theme);
+                font-size: 9px; font-weight: 800;
+                padding: 5px 10px; border-radius: 20px;
+                letter-spacing: 1.5px; text-transform: uppercase;
+                pointer-events: none; z-index: 5;
+                display: flex; align-items: center; gap: 5px;
             }
+            .s360-port-live i { font-size: 7px; animation: s360blink 1.2s ease-in-out infinite; }
+            @keyframes s360blink { 0%,100%{ opacity:1 } 50%{ opacity:0.15 } }
+            .s360-port-info { padding: 16px 20px 18px; }
+            .s360-port-info h5 { font-size: 15px; font-weight: 700; color: #1A1A1A; margin: 0 0 4px; }
+            .s360-port-info .loc { color: #888; font-size: 12px; margin: 0 0 12px; display: flex; align-items: center; gap: 5px; }
+            .s360-port-info .loc i { color: var(--theme); font-size: 11px; }
+            .s360-port-cta {
+                display: inline-flex; align-items: center; gap: 7px;
+                background: var(--theme); color: #1A1A1A;
+                font-size: 12px; font-weight: 700;
+                padding: 7px 14px; border-radius: 6px;
+                text-decoration: none; transition: all 0.3s;
+            }
+            .s360-port-cta:hover { background: #1A1A1A; color: var(--theme); }
+            /* old image-card compat — hide if any remain */
+            .s360-portfolio-card, .s360-portfolio-overlay, .s360-portfolio-cat { display: none; }
 
             /* Marquee */
             .s360-marquee-section {
@@ -749,8 +759,8 @@
                 .s360-testi-card p { font-size: 14px; }
                 .s360-testi-author h6 { font-size: 14px; }
 
-                /* Portfolio cards */
-                .s360-portfolio-card { height: 220px !important; }
+                /* Portfolio iframe cards */
+                .s360-port-iframe-wrap { height: 260px; }
 
                 /* Blog */
                 .s360-blog-thumb { height: 195px; }
@@ -809,9 +819,11 @@
                 .s360-service-card { padding: 24px 18px; }
                 .s360-service-card h4 { font-size: 17px; }
 
-                /* Portfolio cards */
-                .s360-portfolio-card { height: 200px !important; }
-                .s360-portfolio-overlay h5 { font-size: 15px; }
+                /* Portfolio iframe cards — full width on mobile, vw-based height */
+                .s360-port-iframe-wrap { height: 58vw; min-height: 240px; max-height: 340px; }
+                .s360-port-info h5 { font-size: 14px; }
+                .s360-port-info .loc { font-size: 11px; }
+                .s360-port-cta { font-size: 11px; padding: 6px 12px; }
 
                 /* Stats */
                 .s360-stats-section { padding: 48px 0; }
@@ -1345,81 +1357,103 @@
                     <!-- ===== PORTFOLIO PREVIEW ===== -->
                     <section class="section-padding" style="background:#F8F8F8;">
                         <div class="container">
-                            <div class="row align-items-center s360-head-gap">
+
+                            <!-- Section header -->
+                            <div class="row align-items-end mb-5 s360-head-gap">
                                 <div class="col-lg-7">
                                     <div class="s360-section-label wow fadeInUp">Our Portfolio</div>
                                     <h2 class="split-title wow fadeInUp" data-wow-delay=".2s">
-                                        Virtual Tours We've <br> Created for Businesses
+                                        Live 360° Tours We've <br> Created for Businesses
                                     </h2>
+                                    <p class="wow fadeInUp" data-wow-delay=".25s" style="color:#888;font-size:15px;margin-top:12px;max-width:480px;">Click and drag inside any tour to look around in full 360°. Every tour is published live on Google Maps.</p>
                                 </div>
-                                <div class="col-lg-5 text-lg-end">
-                                    <a href="portfolio.html" class="theme-btn wow fadeInUp" data-wow-delay=".3s">
-                                        View Full Portfolio <i class="fa-regular fa-arrow-up-right"></i>
+                                <div class="col-lg-5 text-lg-end wow fadeInUp" data-wow-delay=".3s">
+                                    <a href="portfolio.html" class="theme-btn">
+                                        View All Tours <i class="fa-regular fa-arrow-up-right"></i>
                                     </a>
                                 </div>
                             </div>
+
+                            <!-- 4-card preview grid — 2 per row -->
                             <div class="row g-4">
-                                <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".2s">
-                                    <div class="s360-portfolio-card" style="height:320px;">
-                                        <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=700&auto=format&fit=crop&q=75" alt="Hotel Virtual Tour">
-                                        <div class="s360-portfolio-cat">Hotel</div>
-                                        <div class="s360-portfolio-overlay">
+
+                                <!-- Card 1: Hotel -->
+                                <div class="col-lg-6 col-md-12 wow fadeInUp" data-wow-delay=".1s">
+                                    <div class="s360-port-card">
+                                        <div class="s360-port-iframe-wrap">
+                                            <iframe src="https://www.google.com/maps/embed?pb=!4v1778348346804!6m8!1m7!1sQpIp8vX0FvMCNA_Q6XRmEQ!2m2!1d18.49508090844547!2d73.858124368091!3f56.13875!4f0!5f0.7820865974627469" loading="lazy" allowfullscreen title="Hotel 360° Tour"></iframe>
+                                            <div class="s360-port-cat">Hotel</div>
+                                            <div class="s360-port-live"><i class="fa-solid fa-circle"></i> 360° LIVE</div>
+                                        </div>
+                                        <div class="s360-port-info">
                                             <h5>The Grand Stay Hotel</h5>
-                                            <span><i class="fab fa-google"></i> Published on Google Maps</span>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Koregaon Park, Pune</p>
+                                            <a href="booking.html" class="s360-port-cta"><i class="fa-solid fa-camera"></i> Book Similar Tour</a>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".3s">
-                                    <div class="s360-portfolio-card" style="height:320px;">
-                                        <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=500&auto=format&fit=crop&q=75" alt="School Virtual Tour">
-                                        <div class="s360-portfolio-cat">School</div>
-                                        <div class="s360-portfolio-overlay">
-                                            <h5>Modern Public School</h5>
-                                            <span><i class="fab fa-google"></i> Google Street View</span>
+
+                                <!-- Card 2: School -->
+                                <div class="col-lg-6 col-md-12 wow fadeInUp" data-wow-delay=".2s">
+                                    <div class="s360-port-card">
+                                        <div class="s360-port-iframe-wrap">
+                                            <iframe src="https://www.google.com/maps/embed?pb=!4v1698765432100!6m8!1m7!1sCAoSLEFGMVFpcE42WVRzWlJJUllZdjR1Y1J1Z1J1Z1J1Z1J1Z1J1Z1J1Z1J!2m2!1d48.8583701!2d2.2944813!3f280.12!4f10.12!5f0.7820865974627469" loading="lazy" allowfullscreen title="School 360° Tour"></iframe>
+                                            <div class="s360-port-cat">School</div>
+                                            <div class="s360-port-live"><i class="fa-solid fa-circle"></i> 360° LIVE</div>
+                                        </div>
+                                        <div class="s360-port-info">
+                                            <h5>Bright Future Academy</h5>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> FC Road, Pune</p>
+                                            <a href="booking.html" class="s360-port-cta"><i class="fa-solid fa-camera"></i> Book Similar Tour</a>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".4s">
-                                    <div class="s360-portfolio-card" style="height:320px;">
-                                        <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=500&auto=format&fit=crop&q=75" alt="Showroom Virtual Tour">
-                                        <div class="s360-portfolio-cat">Showroom</div>
-                                        <div class="s360-portfolio-overlay">
-                                            <h5>AutoZone Showroom</h5>
-                                            <span><i class="fab fa-google"></i> Google Maps</span>
+
+                                <!-- Card 3: Showroom -->
+                                <div class="col-lg-6 col-md-12 wow fadeInUp" data-wow-delay=".3s">
+                                    <div class="s360-port-card">
+                                        <div class="s360-port-iframe-wrap">
+                                            <iframe src="https://www.google.com/maps/embed?pb=!4v1526278480320!6m8!1m7!1sCAoSLEFGMVFpcFBJbm9RSGxGbXhHWC1aZFhtOXhkRUhfUTVDVHRIdGdiRUpmUm5i!2m2!1d41.41745213117124!2d2.182604027161005!3f124.5!4f0!5f0.7820865974627469" loading="lazy" allowfullscreen title="Showroom 360° Tour"></iframe>
+                                            <div class="s360-port-cat">Showroom</div>
+                                            <div class="s360-port-live"><i class="fa-solid fa-circle"></i> 360° LIVE</div>
+                                        </div>
+                                        <div class="s360-port-info">
+                                            <h5>AutoZone Car Showroom</h5>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Wakad, Pune</p>
+                                            <a href="booking.html" class="s360-port-cta"><i class="fa-solid fa-camera"></i> Book Similar Tour</a>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".5s">
-                                    <div class="s360-portfolio-card">
-                                        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=500&auto=format&fit=crop&q=75" alt="Restaurant Virtual Tour">
-                                        <div class="s360-portfolio-cat">Restaurant</div>
-                                        <div class="s360-portfolio-overlay">
-                                            <h5>Spice Garden Restaurant</h5>
-                                            <span><i class="fab fa-google"></i> Street View</span>
+
+                                <!-- Card 4: Real Estate -->
+                                <div class="col-lg-6 col-md-12 wow fadeInUp" data-wow-delay=".4s">
+                                    <div class="s360-port-card">
+                                        <div class="s360-port-iframe-wrap">
+                                            <iframe src="https://maps.google.com/maps?layer=c&cbll=18.5914,73.7388&cbp=12,0,0,0,0&output=embed" loading="lazy" allowfullscreen title="Real Estate 360° Tour"></iframe>
+                                            <div class="s360-port-cat">Real Estate</div>
+                                            <div class="s360-port-live"><i class="fa-solid fa-circle"></i> 360° LIVE</div>
+                                        </div>
+                                        <div class="s360-port-info">
+                                            <h5>Skyline Residency</h5>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Hinjewadi, Pune</p>
+                                            <a href="booking.html" class="s360-port-cta"><i class="fa-solid fa-camera"></i> Book Similar Tour</a>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".6s">
-                                    <div class="s360-portfolio-card">
-                                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=500&auto=format&fit=crop&q=75" alt="Gym Virtual Tour">
-                                        <div class="s360-portfolio-cat">Gym</div>
-                                        <div class="s360-portfolio-overlay">
-                                            <h5>FitLife Gym & Wellness</h5>
-                                            <span><i class="fab fa-google"></i> Google Maps</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".7s">
-                                    <div class="s360-portfolio-card">
-                                        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=700&auto=format&fit=crop&q=75" alt="Real Estate Virtual Tour">
-                                        <div class="s360-portfolio-cat">Real Estate</div>
-                                        <div class="s360-portfolio-overlay">
-                                            <h5>Skyline Residency Pune</h5>
-                                            <span><i class="fab fa-google"></i> Virtual Walkthrough</span>
-                                        </div>
-                                    </div>
-                                </div>
+
                             </div>
+
+                            <!-- Bottom CTA -->
+                            <div class="text-center mt-5 wow fadeInUp" data-wow-delay=".5s">
+                                <p style="color:#888;font-size:13px;margin-bottom:20px;">
+                                    <i class="fa-solid fa-circle-info" style="color:#F5C200;margin-right:6px;"></i>
+                                    Showing 4 of 12 projects &nbsp;·&nbsp; Click and drag to look around 360°
+                                </p>
+                                <a href="portfolio.html" class="btn-outline-360">
+                                    See All 12 Tours <i class="fa-regular fa-arrow-up-right"></i>
+                                </a>
+                            </div>
+
                         </div>
                     </section>
 

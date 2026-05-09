@@ -25,11 +25,12 @@
             .s360-section-label::before { content:''; width:30px; height:2px; background:#F5C200; display:inline-block; }
             /* Filter tabs */
             .s360-filter-tabs { display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin-bottom:50px; }
-            .s360-filter-btn { padding:10px 24px; border:2px solid #e0e0e0; border-radius:50px; background:#fff; color:#444; font-size:14px; font-weight:600; cursor:pointer; transition:all 0.3s; }
+            .s360-filter-btn { padding:10px 24px; border:2px solid #e0e0e0; border-radius:50px; background:#fff; color:#444; font-size:14px; font-weight:600; cursor:pointer; transition:all 0.3s; white-space:nowrap; }
             .s360-filter-btn:hover, .s360-filter-btn.active { background:#F5C200; border-color:#F5C200; color:#1A1A1A; }
             /* Portfolio embed cards */
             .s360-port-card { position:relative; border-radius:14px; overflow:hidden; background:#fff; border:1px solid #e8e8e8; transition:all 0.3s; height:auto !important; }
             .s360-port-card:hover { box-shadow:0 16px 40px rgba(0,0,0,0.13); transform:translateY(-5px); }
+            @media (hover: none) { .s360-port-card:hover { box-shadow:none; transform:none; } }
             .s360-port-iframe-wrap { position:relative; height:380px; overflow:hidden; background:#1c1c1c; }
             .s360-port-iframe-wrap iframe { width:100%; height:100%; border:none; display:block; }
             .s360-port-cat { position:absolute; top:12px; left:12px; background:#F5C200; color:#1A1A1A; font-size:10px; font-weight:800; padding:4px 10px; border-radius:4px; text-transform:uppercase; z-index:5; pointer-events:none; }
@@ -90,32 +91,43 @@
                 .section-padding { padding: 72px 0 !important; }
                 .s360-page-banner { padding: 120px 0 70px; }
                 .s360-page-banner h1 { font-size: 36px; }
-                .s360-port-iframe-wrap { height: 300px; }
+                /* col-md-12 gives full width; keep map tall */
+                .s360-port-iframe-wrap { height: 400px; }
                 .s360-filter-btn { padding: 8px 18px; font-size: 13px; }
             }
             @media (max-width: 767px) {
                 .section-padding { padding: 56px 0 !important; }
                 .s360-page-banner { padding: 100px 0 56px; }
                 .s360-page-banner h1 { font-size: 30px; }
-                .s360-port-iframe-wrap { height: 260px; }
-                .s360-filter-wrap { gap: 8px; }
+                /* Map scales with viewport width */
+                .s360-port-iframe-wrap { height: 56vw; min-height: 280px; max-height: 420px; }
+                .s360-filter-tabs { gap: 6px; margin-bottom: 32px; }
                 .s360-filter-btn { padding: 7px 14px; font-size: 12px; }
+                .s360-port-info { padding: 14px 16px 16px; }
+                .s360-port-info h5 { font-size: 15px; }
             }
             @media (max-width: 575px) {
-                .section-padding { padding: 48px 0 !important; }
+                .section-padding { padding: 40px 0 !important; }
                 .s360-page-banner h1 { font-size: 24px; }
-                .s360-page-banner { padding: 88px 0 48px; }
-                .s360-port-iframe-wrap { height: 220px; }
+                .s360-page-banner { padding: 88px 0 44px; }
+                /* Map fills almost full screen width on phones */
+                .s360-port-iframe-wrap { height: 60vw; min-height: 260px; max-height: 360px; }
                 .s360-port-info { padding: 12px 14px 14px; }
+                .s360-port-info h5 { font-size: 14px; }
+                .s360-port-info .loc { font-size: 11px; margin-bottom: 10px; }
+                .s360-port-cta { font-size: 11px; padding: 6px 12px; }
                 .s360-filter-btn { padding: 6px 12px; font-size: 11px; }
                 .s360-footer-bottom .d-flex { flex-direction: column; align-items: center; gap: 10px !important; }
                 .s360-wa-float { width: 48px; height: 48px; font-size: 20px; bottom: 20px; right: 20px; }
+                /* Tighter card gap on small screens */
+                #portfolioGrid.row { --bs-gutter-x: 1rem; --bs-gutter-y: 1rem; }
             }
             @media (max-width: 400px) {
                 .s360-page-banner h1 { font-size: 20px; }
-                .s360-port-iframe-wrap { height: 190px; }
-                .s360-filter-btn { padding: 5px 10px; font-size: 10px; letter-spacing: 0.5px; }
+                .s360-port-iframe-wrap { height: 65vw; min-height: 240px; }
+                .s360-filter-btn { padding: 5px 10px; font-size: 10px; letter-spacing: 0.3px; }
                 .s360-port-info h5 { font-size: 13px; }
+                .s360-filter-tabs { gap: 5px; }
             }
         </style>
     </head>
@@ -262,7 +274,7 @@
                             <div class="row g-4" id="portfolioGrid">
 
                                 <!-- 1 Hotel -->
-                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="hotel" data-wow-delay=".1s">
+                                <div class="col-lg-6 col-md-12 port-item wow fadeInUp" data-cat="hotel" data-wow-delay=".1s">
                                     <div class="s360-port-card">
                                         <div class="s360-port-iframe-wrap">
                                             <!-- PLACEHOLDER: Replace src with your client's real embed URL (see guide above) -->
@@ -279,11 +291,11 @@
                                 </div>
 
                                 <!-- 2 School -->
-                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="school" data-wow-delay=".2s">
+                                <div class="col-lg-6 col-md-12 port-item wow fadeInUp" data-cat="school" data-wow-delay=".2s">
                                     <div class="s360-port-card">
                                         <div class="s360-port-iframe-wrap">
                                             <!-- PLACEHOLDER: Replace src with your client's real embed URL -->
-                                            <iframe src="https://maps.google.com/maps?layer=c&cbll=18.5196,73.8385&cbp=12,0,0,0,0&output=embed" loading="lazy" allowfullscreen title="School Tour Preview"></iframe>
+                                            <iframe src="https://www.google.com/maps/embed?pb=!4v1698765432100!6m8!1m7!1sCAoSLEFGMVFpcE42WVRzWlJJUllZdjR1Y1J1Z1J1Z1J1Z1J1Z1J1Z1J1Z1J!2m2!1d48.8583701!2d2.2944813!3f280.12!4f10.12!5f0.7820865974627469" loading="lazy" allowfullscreen title="School Tour Preview"></iframe>
                                             <div class="s360-port-cat">School</div>
                                             <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360° LIVE</div>
                                         </div>
@@ -296,11 +308,11 @@
                                 </div>
 
                                 <!-- 3 Car Showroom -->
-                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="showroom" data-wow-delay=".3s">
+                                <div class="col-lg-6 col-md-12 port-item wow fadeInUp" data-cat="showroom" data-wow-delay=".3s">
                                     <div class="s360-port-card">
                                         <div class="s360-port-iframe-wrap">
                                             <!-- PLACEHOLDER: Replace src with your client's real embed URL -->
-                                            <iframe src="https://maps.google.com/maps?layer=c&cbll=18.5920,73.7625&cbp=12,0,0,0,0&output=embed" loading="lazy" allowfullscreen title="Showroom Tour Preview"></iframe>
+                                            <iframe src="https://www.google.com/maps/embed?pb=!4v1526278480320!6m8!1m7!1sCAoSLEFGMVFpcFBJbm9RSGxGbXhHWC1aZFhtOXhkRUhfUTVDVHRIdGdiRUpmUm5i!2m2!1d41.41745213117124!2d2.182604027161005!3f124.5!4f0!5f0.7820865974627469" loading="lazy" allowfullscreen title="Showroom Tour Preview"></iframe>
                                             <div class="s360-port-cat">Showroom</div>
                                             <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360° LIVE</div>
                                         </div>
@@ -313,11 +325,11 @@
                                 </div>
 
                                 <!-- 4 Real Estate -->
-                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="realestate" data-wow-delay=".4s">
+                                <div class="col-lg-6 col-md-12 port-item wow fadeInUp" data-cat="realestate" data-wow-delay=".4s">
                                     <div class="s360-port-card">
                                         <div class="s360-port-iframe-wrap">
                                             <!-- PLACEHOLDER: Replace src with your client's real embed URL -->
-                                            <iframe src="https://maps.google.com/maps?layer=c&cbll=18.5914,73.7388&cbp=12,0,0,0,0&output=embed" loading="lazy" allowfullscreen title="Real Estate Tour Preview"></iframe>
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.309280729802!2d-74.00425368459418!3d40.74844797932881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1672915200000!5m2!1sen!2sus" loading="lazy" allowfullscreen title="Real Estate Tour Preview"></iframe>
                                             <div class="s360-port-cat">Real Estate</div>
                                             <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360° LIVE</div>
                                         </div>
@@ -330,11 +342,11 @@
                                 </div>
 
                                 <!-- 5 Restaurant -->
-                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="hotel" data-wow-delay=".5s">
+                                <div class="col-lg-6 col-md-12 port-item wow fadeInUp" data-cat="hotel" data-wow-delay=".5s">
                                     <div class="s360-port-card">
                                         <div class="s360-port-iframe-wrap">
                                             <!-- PLACEHOLDER: Replace src with your client's real embed URL -->
-                                            <iframe src="https://maps.google.com/maps?layer=c&cbll=18.5625,73.9185&cbp=12,0,0,0,0&output=embed" loading="lazy" allowfullscreen title="Restaurant Tour Preview"></iframe>
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d158858.18237072596!2d-0.2416812061320499!3d51.52877184087611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon%2C%20UK!5e0!3m2!1sen!2sus!4v1680000000000!5m2!1sen!2sus" loading="lazy" allowfullscreen title="Restaurant Tour Preview"></iframe>
                                             <div class="s360-port-cat">Restaurant</div>
                                             <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360° LIVE</div>
                                         </div>
@@ -347,11 +359,11 @@
                                 </div>
 
                                 <!-- 6 Gym -->
-                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="gym" data-wow-delay=".6s">
+                                <div class="col-lg-6 col-md-12 port-item wow fadeInUp" data-cat="gym" data-wow-delay=".6s">
                                     <div class="s360-port-card">
                                         <div class="s360-port-iframe-wrap">
                                             <!-- PLACEHOLDER: Replace src with your client's real embed URL -->
-                                            <iframe src="https://maps.google.com/maps?layer=c&cbll=18.5010,73.8082&cbp=12,0,0,0,0&output=embed" loading="lazy" allowfullscreen title="Gym Tour Preview"></iframe>
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d158858.18237072596!2d-0.2416812061320499!3d51.52877184087611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon%2C%20UK!5e0!3m2!1sen!2sus!4v1680000000000!5m2!1sen!2sus" loading="lazy" allowfullscreen title="Gym Tour Preview"></iframe>
                                             <div class="s360-port-cat">Gym</div>
                                             <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360° LIVE</div>
                                         </div>
@@ -364,7 +376,7 @@
                                 </div>
 
                                 <!-- 7 Hospital -->
-                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="hospital" data-wow-delay=".2s">
+                                <div class="col-lg-6 col-md-12 port-item wow fadeInUp" data-cat="hospital" data-wow-delay=".2s">
                                     <div class="s360-port-card">
                                         <div class="s360-port-iframe-wrap">
                                             <!-- PLACEHOLDER: Replace src with your client's real embed URL -->
@@ -381,7 +393,7 @@
                                 </div>
 
                                 <!-- 8 College -->
-                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="school" data-wow-delay=".3s">
+                                <div class="col-lg-6 col-md-12 port-item wow fadeInUp" data-cat="school" data-wow-delay=".3s">
                                     <div class="s360-port-card">
                                         <div class="s360-port-iframe-wrap">
                                             <!-- PLACEHOLDER: Replace src with your client's real embed URL -->
@@ -398,7 +410,7 @@
                                 </div>
 
                                 <!-- 9 Furniture Showroom -->
-                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="showroom" data-wow-delay=".4s">
+                                <div class="col-lg-6 col-md-12 port-item wow fadeInUp" data-cat="showroom" data-wow-delay=".4s">
                                     <div class="s360-port-card">
                                         <div class="s360-port-iframe-wrap">
                                             <!-- PLACEHOLDER: Replace src with your client's real embed URL -->
@@ -415,7 +427,7 @@
                                 </div>
 
                                 <!-- 10 Salon -->
-                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="gym" data-wow-delay=".5s">
+                                <div class="col-lg-6 col-md-12 port-item wow fadeInUp" data-cat="gym" data-wow-delay=".5s">
                                     <div class="s360-port-card">
                                         <div class="s360-port-iframe-wrap">
                                             <!-- PLACEHOLDER: Replace src with your client's real embed URL -->
@@ -432,7 +444,7 @@
                                 </div>
 
                                 <!-- 11 Villa / Real Estate -->
-                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="realestate" data-wow-delay=".6s">
+                                <div class="col-lg-6 col-md-12 port-item wow fadeInUp" data-cat="realestate" data-wow-delay=".6s">
                                     <div class="s360-port-card">
                                         <div class="s360-port-iframe-wrap">
                                             <!-- PLACEHOLDER: Replace src with your client's real embed URL -->
@@ -449,7 +461,7 @@
                                 </div>
 
                                 <!-- 12 Hotel Mumbai -->
-                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="hotel" data-wow-delay=".2s">
+                                <div class="col-lg-6 col-md-12 port-item wow fadeInUp" data-cat="hotel" data-wow-delay=".2s">
                                     <div class="s360-port-card">
                                         <div class="s360-port-iframe-wrap">
                                             <!-- PLACEHOLDER: Replace src with your client's real embed URL -->
