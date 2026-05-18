@@ -14,7 +14,7 @@
         <meta property="og:title" content="Portfolio – Shootin 360 | Live 360° Tours on Google Maps | Kanpur">
         <meta property="og:description" content="View live 360° virtual tours published on Google Maps — hotels, schools, gyms, jewellery shops and more across India. Photography by © Gajender Singh.">
         <meta property="og:image" content="https://www.shootin360.com/assets/img/og-image.jpg">
-        <link rel="shortcut icon" href="assets/img/favicon.svg">
+        <link rel="shortcut icon" href="assets/img/favicon.png">
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
         <link rel="stylesheet" href="assets/css/all.min.css">
         <link rel="stylesheet" href="assets/css/animate.css">
@@ -143,18 +143,26 @@
         <div class="page-wrapper">
             <div class="preloader">
                 <div class="s360-preloader">
-                    <svg class="s360-pre-ring" viewBox="0 0 100 100" width="90" height="90">
-                        <circle cx="50" cy="50" r="22" fill="none" stroke="rgba(245,194,0,0.2)" stroke-width="2.5"/>
-                        <circle cx="50" cy="50" r="38" fill="none" stroke="#F5C200" stroke-width="3.5" stroke-dasharray="195 45" stroke-linecap="round" class="s360-pre-arc"/>
-                        <line x1="50" y1="28" x2="50" y2="20" stroke="#F5C200" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
-                        <line x1="50" y1="72" x2="50" y2="80" stroke="#F5C200" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
-                        <line x1="28" y1="50" x2="20" y2="50" stroke="#F5C200" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
-                        <line x1="72" y1="50" x2="80" y2="50" stroke="#F5C200" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
-                        <circle cx="50" cy="50" r="7" fill="#F5C200" class="s360-pre-dot"/>
-                    </svg>
+                    <!-- Double spinning rings + favicon -->
+                    <div class="s360-pre-rings">
+                        <svg class="s360-pre-ring-outer" viewBox="0 0 170 170" width="170" height="170">
+                            <circle cx="85" cy="85" r="78" fill="none" stroke="rgba(245,194,0,0.08)" stroke-width="1.5"/>
+                            <circle cx="85" cy="85" r="78" fill="none" stroke="#F5C200" stroke-width="2.5" stroke-dasharray="100 390" stroke-linecap="round"/>
+                            <circle cx="85" cy="85" r="78" fill="none" stroke="rgba(245,194,0,0.3)" stroke-width="1" stroke-dasharray="30 460" stroke-dashoffset="-150" stroke-linecap="round"/>
+                        </svg>
+                        <svg class="s360-pre-ring-inner" viewBox="0 0 110 110" width="110" height="110">
+                            <circle cx="55" cy="55" r="48" fill="none" stroke="rgba(245,194,0,0.07)" stroke-width="1.5"/>
+                            <circle cx="55" cy="55" r="48" fill="none" stroke="rgba(245,194,0,0.6)" stroke-width="2" stroke-dasharray="60 242" stroke-linecap="round"/>
+                        </svg>
+                        <div class="s360-pre-logo-wrap">
+                            <img src="assets/img/favicon.png" alt="Shootin360" class="s360-pre-logo">
+                        </div>
+                    </div>
+                    <!-- Brand -->
                     <div class="s360-pre-text">
                         <div class="s360-pre-name">SHOOTIN<span>360°</span></div>
                         <div class="s360-pre-tag">Street View Creator</div>
+                        <div class="s360-pre-dots"><span></span><span></span><span></span></div>
                     </div>
                 </div>
             </div>
@@ -245,16 +253,6 @@
 
                     <section class="section-padding" style="background:#F8F8F8;">
                         <div class="container">
-                            <!-- Filter Tabs -->
-                            <div class="s360-filter-tabs">
-                                <button class="s360-filter-btn active" onclick="filterPort(this,'all')">All Projects</button>
-                                <button class="s360-filter-btn" onclick="filterPort(this,'hotel')">Hotels</button>
-                                <button class="s360-filter-btn" onclick="filterPort(this,'school')">Schools</button>
-                                <button class="s360-filter-btn" onclick="filterPort(this,'showroom')">Showrooms</button>
-                                <button class="s360-filter-btn" onclick="filterPort(this,'realestate')">Real Estate</button>
-                                <button class="s360-filter-btn" onclick="filterPort(this,'hospital')">Hospitals</button>
-                                <button class="s360-filter-btn" onclick="filterPort(this,'gym')">Gyms & Salons</button>
-                            </div>
 
                             <!--
                             =======================================================
@@ -281,205 +279,145 @@
                             <!-- Portfolio Grid — Google Maps 360° embeds -->
                             <div class="row g-4" id="portfolioGrid">
 
-                                <!-- 1 Hotel -->
-                                <div class="col-lg-6 col-md-12 port-item wow fadeInUp" data-cat="hotel" data-wow-delay=".1s">
+                                <!-- LIVE TOUR: Pages By Fairdeal, Govind Nagar, Kanpur -->
+                                <div class="col-lg-6 col-md-12 port-item wow fadeInUp" data-cat="showroom" data-wow-delay=".1s">
                                     <div class="s360-port-card">
                                         <div class="s360-port-iframe-wrap">
-                                            <!-- PLACEHOLDER: Replace src with your client's real embed URL (see guide above) -->
-                                            <iframe src="https://www.google.com/maps/embed?pb=!4v1778348346804!6m8!1m7!1sQpIp8vX0FvMCNA_Q6XRmEQ!2m2!1d18.49508090844547!2d73.858124368091!3f56.13875!4f0!5f0.7820865974627469" loading="lazy" allowfullscreen title="Hotel Tour Preview"></iframe>
-                                            <div class="s360-port-cat">Hotel</div>
-                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360° LIVE</div>
-                                        </div>
-                                        <div class="s360-port-info">
-                                            <h5>The Grand Stay Hotel</h5>
-                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Kanpur, Uttar Pradesh</p>
-                                            <a href="booking.html" class="s360-port-cta"><i class="fa-solid fa-camera"></i> Book Similar Tour</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- 2 School -->
-                                <div class="col-lg-6 col-md-12 port-item wow fadeInUp" data-cat="school" data-wow-delay=".2s">
-                                    <div class="s360-port-card">
-                                        <div class="s360-port-iframe-wrap">
-                                            <!-- PLACEHOLDER: Replace src with your client's real embed URL -->
-                                            <iframe src="https://www.google.com/maps/embed?pb=!4v1698765432100!6m8!1m7!1sCAoSLEFGMVFpcE42WVRzWlJJUllZdjR1Y1J1Z1J1Z1J1Z1J1Z1J1Z1J1Z1J!2m2!1d48.8583701!2d2.2944813!3f280.12!4f10.12!5f0.7820865974627469" loading="lazy" allowfullscreen title="School Tour Preview"></iframe>
-                                            <div class="s360-port-cat">School</div>
-                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360° LIVE</div>
-                                        </div>
-                                        <div class="s360-port-info">
-                                            <h5>Bright Future Academy</h5>
-                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Kanpur, Uttar Pradesh</p>
-                                            <a href="booking.html" class="s360-port-cta"><i class="fa-solid fa-camera"></i> Book Similar Tour</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- 3 Car Showroom -->
-                                <div class="col-lg-6 col-md-12 port-item wow fadeInUp" data-cat="showroom" data-wow-delay=".3s">
-                                    <div class="s360-port-card">
-                                        <div class="s360-port-iframe-wrap">
-                                            <!-- PLACEHOLDER: Replace src with your client's real embed URL -->
-                                            <iframe src="https://www.google.com/maps/embed?pb=!4v1526278480320!6m8!1m7!1sCAoSLEFGMVFpcFBJbm9RSGxGbXhHWC1aZFhtOXhkRUhfUTVDVHRIdGdiRUpmUm5i!2m2!1d41.41745213117124!2d2.182604027161005!3f124.5!4f0!5f0.7820865974627469" loading="lazy" allowfullscreen title="Showroom Tour Preview"></iframe>
+                                            <iframe src="https://www.google.com/maps/embed?pb=!4v1779120648778!6m8!1m7!1sCAoSHENJQUJJaEFEeWNLemF3VUxsR2ZreTFFQUJjZ0g.!2m2!1d26.44916801279673!2d80.31212627429898!3f4.74!4f2.3100000000000023!5f0.4000000000000002" loading="lazy" allowfullscreen title="Pages By Fairdeal 360° Tour"></iframe>
                                             <div class="s360-port-cat">Showroom</div>
                                             <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360° LIVE</div>
                                         </div>
                                         <div class="s360-port-info">
-                                            <h5>AutoZone Car Showroom</h5>
-                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Kanpur, Uttar Pradesh</p>
-                                            <a href="booking.html" class="s360-port-cta"><i class="fa-solid fa-camera"></i> Book Similar Tour</a>
+                                            <h5>Pages By Fairdeal</h5>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Govind Nagar, Kanpur</p>
+                                            <a href="https://maps.app.goo.gl/68PZmy5uxeLmYgdeA" class="s360-port-cta" target="_blank"><i class="fa-solid fa-street-view"></i> View on Google Maps</a>
                                         </div>
                                     </div>
                                 </div>
 
-                                <!-- 4 Real Estate -->
-                                <div class="col-lg-6 col-md-12 port-item wow fadeInUp" data-cat="realestate" data-wow-delay=".4s">
+                                <!-- LIVE TOUR: Stylush Salon, Govind Nagar, Kanpur -->
+                                <div class="col-lg-6 col-md-12 port-item wow fadeInUp" data-cat="gym" data-wow-delay=".2s">
                                     <div class="s360-port-card">
                                         <div class="s360-port-iframe-wrap">
-                                            <!-- PLACEHOLDER: Replace src with your client's real embed URL -->
-                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.309280729802!2d-74.00425368459418!3d40.74844797932881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1672915200000!5m2!1sen!2sus" loading="lazy" allowfullscreen title="Real Estate Tour Preview"></iframe>
-                                            <div class="s360-port-cat">Real Estate</div>
-                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360° LIVE</div>
-                                        </div>
-                                        <div class="s360-port-info">
-                                            <h5>Skyline Residency</h5>
-                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Lucknow, Uttar Pradesh</p>
-                                            <a href="booking.html" class="s360-port-cta"><i class="fa-solid fa-camera"></i> Book Similar Tour</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- 5 Restaurant -->
-                                <div class="col-lg-6 col-md-12 port-item wow fadeInUp" data-cat="hotel" data-wow-delay=".5s">
-                                    <div class="s360-port-card">
-                                        <div class="s360-port-iframe-wrap">
-                                            <!-- PLACEHOLDER: Replace src with your client's real embed URL -->
-                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d158858.18237072596!2d-0.2416812061320499!3d51.52877184087611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon%2C%20UK!5e0!3m2!1sen!2sus!4v1680000000000!5m2!1sen!2sus" loading="lazy" allowfullscreen title="Restaurant Tour Preview"></iframe>
-                                            <div class="s360-port-cat">Restaurant</div>
-                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360° LIVE</div>
-                                        </div>
-                                        <div class="s360-port-info">
-                                            <h5>Spice Garden Restaurant</h5>
-                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Kanpur, Uttar Pradesh</p>
-                                            <a href="booking.html" class="s360-port-cta"><i class="fa-solid fa-camera"></i> Book Similar Tour</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- 6 Gym -->
-                                <div class="col-lg-6 col-md-12 port-item wow fadeInUp" data-cat="gym" data-wow-delay=".6s">
-                                    <div class="s360-port-card">
-                                        <div class="s360-port-iframe-wrap">
-                                            <!-- PLACEHOLDER: Replace src with your client's real embed URL -->
-                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d158858.18237072596!2d-0.2416812061320499!3d51.52877184087611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon%2C%20UK!5e0!3m2!1sen!2sus!4v1680000000000!5m2!1sen!2sus" loading="lazy" allowfullscreen title="Gym Tour Preview"></iframe>
-                                            <div class="s360-port-cat">Gym</div>
-                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360° LIVE</div>
-                                        </div>
-                                        <div class="s360-port-info">
-                                            <h5>FitLife Gym &amp; Wellness</h5>
-                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Kanpur, Uttar Pradesh</p>
-                                            <a href="booking.html" class="s360-port-cta"><i class="fa-solid fa-camera"></i> Book Similar Tour</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- 7 Hospital -->
-                                <div class="col-lg-6 col-md-12 port-item wow fadeInUp" data-cat="hospital" data-wow-delay=".2s">
-                                    <div class="s360-port-card">
-                                        <div class="s360-port-iframe-wrap">
-                                            <!-- PLACEHOLDER: Replace src with your client's real embed URL -->
-                                            <iframe src="https://maps.google.com/maps?layer=c&cbll=18.5625,73.8098&cbp=12,0,0,0,0&output=embed" loading="lazy" allowfullscreen title="Hospital Tour Preview"></iframe>
-                                            <div class="s360-port-cat">Hospital</div>
-                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360° LIVE</div>
-                                        </div>
-                                        <div class="s360-port-info">
-                                            <h5>Sunrise Multi-Specialty Hospital</h5>
-                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Kanpur, Uttar Pradesh</p>
-                                            <a href="booking.html" class="s360-port-cta"><i class="fa-solid fa-camera"></i> Book Similar Tour</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- 8 College -->
-                                <div class="col-lg-6 col-md-12 port-item wow fadeInUp" data-cat="school" data-wow-delay=".3s">
-                                    <div class="s360-port-card">
-                                        <div class="s360-port-iframe-wrap">
-                                            <!-- PLACEHOLDER: Replace src with your client's real embed URL -->
-                                            <iframe src="https://maps.google.com/maps?layer=c&cbll=18.5217,73.8381&cbp=12,0,0,0,0&output=embed" loading="lazy" allowfullscreen title="College Tour Preview"></iframe>
-                                            <div class="s360-port-cat">College</div>
-                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360° LIVE</div>
-                                        </div>
-                                        <div class="s360-port-info">
-                                            <h5>Modern Engineering College</h5>
-                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Prayagraj, Uttar Pradesh</p>
-                                            <a href="booking.html" class="s360-port-cta"><i class="fa-solid fa-camera"></i> Book Similar Tour</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- 9 Furniture Showroom -->
-                                <div class="col-lg-6 col-md-12 port-item wow fadeInUp" data-cat="showroom" data-wow-delay=".4s">
-                                    <div class="s360-port-card">
-                                        <div class="s360-port-iframe-wrap">
-                                            <!-- PLACEHOLDER: Replace src with your client's real embed URL -->
-                                            <iframe src="https://maps.google.com/maps?layer=c&cbll=18.6235,73.8052&cbp=12,0,0,0,0&output=embed" loading="lazy" allowfullscreen title="Furniture Showroom Tour Preview"></iframe>
-                                            <div class="s360-port-cat">Showroom</div>
-                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360° LIVE</div>
-                                        </div>
-                                        <div class="s360-port-info">
-                                            <h5>HomePlex Furniture</h5>
-                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Kanpur, Uttar Pradesh</p>
-                                            <a href="booking.html" class="s360-port-cta"><i class="fa-solid fa-camera"></i> Book Similar Tour</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- 10 Salon -->
-                                <div class="col-lg-6 col-md-12 port-item wow fadeInUp" data-cat="gym" data-wow-delay=".5s">
-                                    <div class="s360-port-card">
-                                        <div class="s360-port-iframe-wrap">
-                                            <!-- PLACEHOLDER: Replace src with your client's real embed URL -->
-                                            <iframe src="https://maps.google.com/maps?layer=c&cbll=18.5537,73.9082&cbp=12,0,0,0,0&output=embed" loading="lazy" allowfullscreen title="Salon Tour Preview"></iframe>
+                                            <iframe src="https://www.google.com/maps/embed?pb=!4v1779120715763!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQzd3TkNnVnc.!2m2!1d26.44919995766685!2d80.31221579231853!3f1.31!4f16.14!5f0.7820865974627469" loading="lazy" allowfullscreen title="Stylush Salon 360° Tour"></iframe>
                                             <div class="s360-port-cat">Salon</div>
                                             <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360° LIVE</div>
                                         </div>
                                         <div class="s360-port-info">
-                                            <h5>Glam Studio Salon</h5>
-                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Varanasi, Uttar Pradesh</p>
+                                            <h5>Stylush Salon</h5>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Govind Nagar, Kanpur</p>
+                                            <a href="https://maps.app.goo.gl/RSohGX2aJdsjMQH58" class="s360-port-cta" target="_blank"><i class="fa-solid fa-street-view"></i> View on Google Maps</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- LIVE TOUR: Coiffuer Salon, Tilak Nagar, Kanpur -->
+                                <div class="col-lg-6 col-md-12 port-item wow fadeInUp" data-cat="gym" data-wow-delay=".3s">
+                                    <div class="s360-port-card">
+                                        <div class="s360-port-iframe-wrap">
+                                            <iframe src="https://www.google.com/maps/embed?pb=!4v1779120732877!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJRHJ5S1NhbFFF!2m2!1d26.48741309554188!2d80.32164270634424!3f3.18!4f-12.310000000000002!5f0.4000000000000002" loading="lazy" allowfullscreen title="Coiffuer Salon 360° Tour"></iframe>
+                                            <div class="s360-port-cat">Salon</div>
+                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360° LIVE</div>
+                                        </div>
+                                        <div class="s360-port-info">
+                                            <h5>Coiffuer Salon</h5>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Tilak Nagar, Kanpur</p>
+                                            <a href="https://maps.app.goo.gl/DXg5GUZWeoAJrWPM9" class="s360-port-cta" target="_blank"><i class="fa-solid fa-street-view"></i> View on Google Maps</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- LIVE TOUR: Wisdomwood Public School, Kalyanpur, Kanpur -->
+                                <div class="col-lg-6 col-md-12 port-item wow fadeInUp" data-cat="school" data-wow-delay=".4s">
+                                    <div class="s360-port-card">
+                                        <div class="s360-port-iframe-wrap">
+                                            <iframe src="https://www.google.com/maps/embed?pb=!4v1779120752021!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQzcwdi1LWHc.!2m2!1d26.48764970598025!2d80.27155983114821!3f40.14!4f4.280000000000001!5f0.4000000000000002" loading="lazy" allowfullscreen title="Wisdomwood Public School 360° Tour"></iframe>
+                                            <div class="s360-port-cat">School</div>
+                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360° LIVE</div>
+                                        </div>
+                                        <div class="s360-port-info">
+                                            <h5>Wisdomwood Public School</h5>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Kalyanpur, Kanpur</p>
+                                            <a href="https://maps.app.goo.gl/CjLvU64fSt8UoJNe7" class="s360-port-cta" target="_blank"><i class="fa-solid fa-street-view"></i> View on Google Maps</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- LIVE TOUR: CHS Gurukulam, Mohanpuram, Kanpur -->
+                                <div class="col-lg-6 col-md-12 port-item wow fadeInUp" data-cat="school" data-wow-delay=".5s">
+                                    <div class="s360-port-card">
+                                        <div class="s360-port-iframe-wrap">
+                                            <iframe src="https://www.google.com/maps/embed?pb=!4v1779121292947!6m8!1m7!1sCAoSHENJQUJJaEJpRjNzQ0NzdEF5REJVRElpcWMta0o.!2m2!1d26.43032654627833!2d80.27208741471772!3f60.98549593371138!4f10.13737216045675!5f0.9123626835198464" loading="lazy" allowfullscreen title="CHS Gurukulam 360° Tour"></iframe>
+                                            <div class="s360-port-cat">School</div>
+                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360° LIVE</div>
+                                        </div>
+                                        <div class="s360-port-info">
+                                            <h5>CHS Gurukulam</h5>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Mohanpuram, Kanpur</p>
+                                            <a href="https://maps.app.goo.gl/u7PDpZY61kBWUAdb6" class="s360-port-cta" target="_blank"><i class="fa-solid fa-street-view"></i> View on Google Maps</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- LIVE TOUR: Institute of Journalism & Mass Communications, CSJMU, Kanpur -->
+                                <div class="col-lg-6 col-md-12 port-item wow fadeInUp" data-cat="school" data-wow-delay=".6s">
+                                    <div class="s360-port-card">
+                                        <div class="s360-port-iframe-wrap">
+                                            <iframe src="https://www.google.com/maps/embed?pb=!4v1779121311260!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdNQ0FfTGpieHdF!2m2!1d26.49877331213196!2d80.26460661387713!3f285.64!4f-5.560000000000002!5f0.4000000000000002" loading="lazy" allowfullscreen title="IJMC CSJMU 360° Tour"></iframe>
+                                            <div class="s360-port-cat">College</div>
+                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360° LIVE</div>
+                                        </div>
+                                        <div class="s360-port-info">
+                                            <h5>Institute of Journalism &amp; Mass Communications</h5>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> CSJMU, Kanpur</p>
+                                            <a href="https://maps.app.goo.gl/SiuH4r97UZmRgZ148" class="s360-port-cta" target="_blank"><i class="fa-solid fa-street-view"></i> View on Google Maps</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- LIVE TOUR: Virtual Tour – Govind Nagar, Kanpur -->
+                                <div class="col-lg-6 col-md-12 port-item wow fadeInUp" data-cat="showroom" data-wow-delay=".1s">
+                                    <div class="s360-port-card">
+                                        <div class="s360-port-iframe-wrap">
+                                            <iframe src="https://www.google.com/maps/embed?pb=!4v1779121326009!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQzdzcl9fWkE.!2m2!1d26.42961549696273!2d80.31090693249631!3f358.17!4f1.7900000000000063!5f0.4000000000000002" loading="lazy" allowfullscreen title="360° Virtual Tour – Kanpur"></iframe>
+                                            <div class="s360-port-cat">Street View</div>
+                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360° LIVE</div>
+                                        </div>
+                                        <div class="s360-port-info">
+                                            <h5>Virtual Tour – Govind Nagar</h5>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Kanpur, Uttar Pradesh</p>
                                             <a href="booking.html" class="s360-port-cta"><i class="fa-solid fa-camera"></i> Book Similar Tour</a>
                                         </div>
                                     </div>
                                 </div>
 
-                                <!-- 11 Villa / Real Estate -->
-                                <div class="col-lg-6 col-md-12 port-item wow fadeInUp" data-cat="realestate" data-wow-delay=".6s">
+                                <!-- LIVE TOUR: Virtual Tour – Kidwai Nagar East, Kanpur -->
+                                <div class="col-lg-6 col-md-12 port-item wow fadeInUp" data-cat="showroom" data-wow-delay=".2s">
                                     <div class="s360-port-card">
                                         <div class="s360-port-iframe-wrap">
-                                            <!-- PLACEHOLDER: Replace src with your client's real embed URL -->
-                                            <iframe src="https://maps.google.com/maps?layer=c&cbll=18.4615,73.9130&cbp=12,0,0,0,0&output=embed" loading="lazy" allowfullscreen title="Villa Tour Preview"></iframe>
-                                            <div class="s360-port-cat">Real Estate</div>
+                                            <iframe src="https://www.google.com/maps/embed?pb=!4v1779121340300!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJRF8tT0hxWXc.!2m2!1d26.47461392647747!2d80.34297179993234!3f0.02!4f6.519999999999996!5f0.4000000000000002" loading="lazy" allowfullscreen title="360° Virtual Tour – Kanpur"></iframe>
+                                            <div class="s360-port-cat">Street View</div>
                                             <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360° LIVE</div>
                                         </div>
                                         <div class="s360-port-info">
-                                            <h5>Green Valley Villas</h5>
-                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Agra, Uttar Pradesh</p>
+                                            <h5>Virtual Tour – Kidwai Nagar East</h5>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Kanpur, Uttar Pradesh</p>
                                             <a href="booking.html" class="s360-port-cta"><i class="fa-solid fa-camera"></i> Book Similar Tour</a>
                                         </div>
                                     </div>
                                 </div>
 
-                                <!-- 12 Hotel Mumbai -->
-                                <div class="col-lg-6 col-md-12 port-item wow fadeInUp" data-cat="hotel" data-wow-delay=".2s">
+                                <!-- LIVE TOUR: Virtual Tour – Naramau, Kanpur -->
+                                <div class="col-lg-6 col-md-12 port-item wow fadeInUp" data-cat="showroom" data-wow-delay=".3s">
                                     <div class="s360-port-card">
                                         <div class="s360-port-iframe-wrap">
-                                            <!-- PLACEHOLDER: Replace src with your client's real embed URL -->
-                                            <iframe src="https://maps.google.com/maps?layer=c&cbll=18.9367,72.8296&cbp=12,0,0,0,0&output=embed" loading="lazy" allowfullscreen title="Hotel Mumbai Tour Preview"></iframe>
-                                            <div class="s360-port-cat">Hotel</div>
+                                            <iframe src="https://www.google.com/maps/embed?pb=!4v1779121354311!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQ0x2YTNuR0E.!2m2!1d26.43152615678565!2d80.33602913828794!3f346.1566828087167!4f-14.769539951573847!5f0.4000000000000002" loading="lazy" allowfullscreen title="360° Virtual Tour – Kanpur"></iframe>
+                                            <div class="s360-port-cat">Street View</div>
                                             <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360° LIVE</div>
                                         </div>
                                         <div class="s360-port-info">
-                                            <h5>Pearl Heritage Hotel</h5>
-                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Delhi, India</p>
+                                            <h5>Virtual Tour – Naramau</h5>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Kanpur, Uttar Pradesh</p>
                                             <a href="booking.html" class="s360-port-cta"><i class="fa-solid fa-camera"></i> Book Similar Tour</a>
                                         </div>
                                     </div>
@@ -580,18 +518,5 @@
         <script src="assets/js/jquery.meanmenu.min.js"></script>
         <script src="assets/js/wow.min.js"></script>
         <script src="assets/js/main.js"></script>
-        <script>
-            function filterPort(btn, cat) {
-                document.querySelectorAll('.s360-filter-btn').forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                document.querySelectorAll('.port-item').forEach(item => {
-                    if (cat === 'all' || item.dataset.cat === cat) {
-                        item.classList.remove('hidden');
-                    } else {
-                        item.classList.add('hidden');
-                    }
-                });
-            }
-        </script>
     </body>
 </html>
