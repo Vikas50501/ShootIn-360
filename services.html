@@ -271,47 +271,6 @@
                 transition: transform 0.6s ease;
             }
             .s360-svc-visual:hover img { transform: scale(1.05); }
-            /* Hotspot dots for virtual tour effect */
-            .s360-svc-hotspot-wrap {
-                position: absolute;
-                inset: 0;
-                pointer-events: none;
-                z-index: 3;
-            }
-            .s360-svc-hotspot {
-                position: absolute;
-                width: 16px;
-                height: 16px;
-                background: #F5C200;
-                border-radius: 50%;
-                transform: translate(-50%, -50%);
-                animation: svchp-pulse 2.5s ease-in-out infinite;
-            }
-            .s360-svc-hotspot::before {
-                content: '';
-                position: absolute;
-                inset: -6px;
-                border-radius: 50%;
-                border: 2px solid rgba(245,194,0,0.65);
-                animation: svchp-ring 2.5s ease-out infinite;
-            }
-            .s360-svc-hotspot::after {
-                content: '';
-                position: absolute;
-                inset: -15px;
-                border-radius: 50%;
-                border: 1.5px solid rgba(245,194,0,0.3);
-                animation: svchp-ring 2.5s ease-out infinite 0.55s;
-            }
-            .s360-svc-hotspot:nth-child(2) { animation-delay: 0.85s; }
-            @keyframes svchp-pulse {
-                0%, 100% { transform: translate(-50%,-50%) scale(1); }
-                50% { transform: translate(-50%,-50%) scale(1.25); }
-            }
-            @keyframes svchp-ring {
-                0% { transform: scale(0.7); opacity: 1; }
-                100% { transform: scale(2.8); opacity: 0; }
-            }
             .s360-svc-badge {
                 position: absolute;
                 top: 20px;
@@ -767,10 +726,6 @@
                                     <div class="s360-svc-visual">
                                         <div class="s360-svc-badge"><i class="fab fa-google"></i> Google Street View</div>
                                         <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=700&auto=format&fit=crop&q=80" alt="Hotel & Restaurant 360 Virtual Tour">
-                                        <div class="s360-svc-hotspot-wrap">
-                                            <div class="s360-svc-hotspot" style="top:42%;left:35%;"></div>
-                                            <div class="s360-svc-hotspot" style="top:65%;left:68%;"></div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -802,10 +757,6 @@
                                     <div class="s360-svc-visual">
                                         <div class="s360-svc-badge"><i class="fab fa-google"></i> Google Street View</div>
                                         <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=700&auto=format&fit=crop&q=80" alt="School & College 360 Virtual Tour">
-                                        <div class="s360-svc-hotspot-wrap">
-                                            <div class="s360-svc-hotspot" style="top:38%;left:28%;"></div>
-                                            <div class="s360-svc-hotspot" style="top:60%;left:70%;"></div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -837,10 +788,6 @@
                                     <div class="s360-svc-visual">
                                         <div class="s360-svc-badge"><i class="fab fa-google"></i> Google Street View</div>
                                         <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=700&auto=format&fit=crop&q=80" alt="Showroom 360 Virtual Tour">
-                                        <div class="s360-svc-hotspot-wrap">
-                                            <div class="s360-svc-hotspot" style="top:50%;left:30%;"></div>
-                                            <div class="s360-svc-hotspot" style="top:35%;left:72%;"></div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -872,10 +819,6 @@
                                     <div class="s360-svc-visual">
                                         <div class="s360-svc-badge"><i class="fab fa-google"></i> Google Street View</div>
                                         <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=700&auto=format&fit=crop&q=80" alt="Real Estate 360 Virtual Tour">
-                                        <div class="s360-svc-hotspot-wrap">
-                                            <div class="s360-svc-hotspot" style="top:45%;left:40%;"></div>
-                                            <div class="s360-svc-hotspot" style="top:30%;left:70%;"></div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -907,10 +850,6 @@
                                     <div class="s360-svc-visual">
                                         <div class="s360-svc-badge"><i class="fab fa-google"></i> Google Street View</div>
                                         <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=700&auto=format&fit=crop&q=80" alt="Hospital & Clinic 360 Virtual Tour">
-                                        <div class="s360-svc-hotspot-wrap">
-                                            <div class="s360-svc-hotspot" style="top:40%;left:32%;"></div>
-                                            <div class="s360-svc-hotspot" style="top:62%;left:65%;"></div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -942,10 +881,6 @@
                                     <div class="s360-svc-visual">
                                         <div class="s360-svc-badge"><i class="fab fa-google"></i> Google Street View</div>
                                         <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=700&auto=format&fit=crop&q=80" alt="Gym & Salon 360 Virtual Tour">
-                                        <div class="s360-svc-hotspot-wrap">
-                                            <div class="s360-svc-hotspot" style="top:38%;left:28%;"></div>
-                                            <div class="s360-svc-hotspot" style="top:60%;left:68%;"></div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -977,10 +912,6 @@
                                     <div class="s360-svc-visual">
                                         <div class="s360-svc-badge"><i class="fab fa-google"></i> Google Street View</div>
                                         <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=700&auto=format&fit=crop&q=80" alt="Corporate Office 360 Virtual Tour">
-                                        <div class="s360-svc-hotspot-wrap">
-                                            <div class="s360-svc-hotspot" style="top:45%;left:35%;"></div>
-                                            <div class="s360-svc-hotspot" style="top:30%;left:65%;"></div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
