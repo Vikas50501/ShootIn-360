@@ -118,7 +118,7 @@
        Wow Animation Js Start
     ================================ */
 
-      new WOW().init();
+      new WOW({ offset: 80, mobile: true, live: false }).init();
   
       /* ================================
        Nice Select Js Start
@@ -664,12 +664,12 @@
             start: "top 90%",
             toggleActions: "play none none none"
         },
-        duration: 0.8,
+        duration: 0.5,
         clipPath: "inset(0% 0% -15% 0%)",
         x: 0,
         opacity: 1,
-        ease: "power4.out",
-        stagger: 0.03
+        ease: "power2.out",
+        stagger: 0.012
         });
 
     });

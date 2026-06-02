@@ -33,6 +33,9 @@
             .s360-page-banner .breadcrumb-item a { color:#F5C200; text-decoration:none; }
             .s360-page-banner .breadcrumb-item.active { color:#888; }
             .s360-page-banner .breadcrumb-item+.breadcrumb-item::before { color:#666; }
+            .s360-btab { background:#fff; border:2px solid #e8e8e8; color:#1A1A1A; font-weight:700; font-family:'Quicksand',sans-serif; font-size:15px; padding:13px 30px; border-radius:50px; cursor:pointer; transition:all .25s cubic-bezier(0.22,0.61,0.36,1); }
+            .s360-btab:hover { border-color:#F5C200; transform:translateY(-2px); }
+            .s360-btab.active { background:#F5C200; border-color:#F5C200; color:#1A1A1A; box-shadow:0 10px 24px rgba(245,194,0,0.35); }
             .s360-section-label { display:inline-flex; align-items:center; gap:8px; color:#F5C200; font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:2px; margin-bottom:16px; }
             .s360-section-label::before { content:''; width:30px; height:2px; background:#F5C200; display:inline-block; }
             .s360-booking-form { background:#fff; border-radius:16px; padding:48px; box-shadow:0 10px 40px rgba(0,0,0,0.08); }
@@ -202,7 +205,14 @@
                                         <ul>
                                             <li><a href="index.html">Home</a></li>
                                             <li><a href="about.html">About</a></li>
-                                            <li><a href="services.html">Services</a></li>
+                                            <li>
+                                                <a href="services.html">Services <i class="fa-solid fa-angle-down" style="font-size:11px;"></i></a>
+                                                <ul class="submenu">
+                                                    <li><a href="service-virtual-tour.html">360° Virtual Tours</a></li>
+                                                    <li><a href="service-photography.html">Photography</a></li>
+                                                    <li><a href="services.html">All Services</a></li>
+                                                </ul>
+                                            </li>
                                             <li><a href="portfolio.html">Portfolio</a></li>
                                             <li><a href="faq.html">FAQ</a></li>
                                             <li><a href="contact.html">Contact</a></li>
@@ -226,8 +236,8 @@
 
                     <div class="s360-page-banner">
                         <div class="container">
-                            <h1>Book a Virtual Tour Shoot</h1>
-                            <p style="color:#666;font-size:16px;margin-top:12px;position:relative;z-index:2;">Fill the form below to request a custom quote for your business</p>
+                            <h1>Book Your Shoot</h1>
+                            <p style="color:#666;font-size:16px;margin-top:12px;position:relative;z-index:2;">Choose what you'd like to book and fill the quick form — we'll reply with a custom quote within 24 hours.</p>
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
@@ -237,13 +247,23 @@
                         </div>
                     </div>
 
-                    <section class="section-padding" style="background:#F8F8F8;">
+                    <!-- ===== BOOKING TYPE TABS ===== -->
+                    <section style="background:#F8F8F8;padding:50px 0 0;">
+                        <div class="container">
+                            <div class="s360-booking-tabs" style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center;">
+                                <button type="button" class="s360-btab active" data-target="tab-virtual">360° Virtual Tour</button>
+                                <button type="button" class="s360-btab" data-target="tab-photography">Photography &amp; Events</button>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="tab-virtual" class="section-padding" style="background:#F8F8F8;padding-top:40px;">
                         <div class="container">
                             <div class="row g-5">
                                 <!-- Booking Form -->
                                 <div class="col-lg-8 wow fadeInLeft" data-wow-delay=".2s">
-                                    <div class="s360-section-label">Booking Form</div>
-                                    <h2 style="margin-bottom:10px;">Request a <span style="color:#F5C200;">Custom Quote</span></h2>
+                                    <div class="s360-section-label">360° Virtual Tour</div>
+                                    <h2 style="margin-bottom:10px;">Virtual Tour <span style="color:#F5C200;">Booking</span></h2>
                                     <p style="color:#555;margin-bottom:32px;">Share your details and we'll get back to you with a personalized quote within 24 hours.</p>
                                     <div class="s360-booking-form">
                                         <form id="bookingForm" novalidate>
@@ -400,8 +420,8 @@
                         </div>
                     </section>
 
-                    <!-- ===== CREATE YOUR OWN PACKAGE ===== -->
-                    <section style="background:#FFFDF4;padding:90px 0 70px;position:relative;overflow:hidden;">
+                    <!-- ===== PHOTOGRAPHY & EVENTS BOOKING ===== -->
+                    <section id="tab-photography" style="background:#FFFDF4;padding:60px 0 70px;position:relative;overflow:hidden;display:none;">
                         <div style="position:absolute;top:0;right:0;width:260px;height:260px;background:radial-gradient(circle at 100% 0,rgba(245,194,0,0.09) 0%,transparent 70%);pointer-events:none;"></div>
                         <div class="container">
                             <div class="row justify-content-center">
@@ -413,9 +433,9 @@
                                             <div style="width:36px;height:2px;background:#F5C200;"></div>
                                         </div>
                                         <h2 style="font-family:'Quicksand',sans-serif;font-size:40px;font-weight:800;color:#1A1A1A;line-height:1.25;margin-bottom:12px;">
-                                            Create Your Own <span style="color:#F5C200;">Package</span>
+                                            Photography &amp; Event <span style="color:#F5C200;">Booking</span>
                                         </h2>
-                                        <p style="color:#777;font-size:15px;">Not sure which package fits? Tell us about your shoot — wedding, event, or business — and we'll craft a custom quote just for you.</p>
+                                        <p style="color:#777;font-size:15px;">Tell us about your shoot — wedding, pre-wedding, baby, birthday or corporate event — and we'll craft a custom quote just for you.</p>
                                     </div>
                                     <form style="background:#fff;border-radius:20px;padding:40px 36px;border:1px solid rgba(245,194,0,0.2);box-shadow:0 8px 40px rgba(0,0,0,0.06);" action="https://formsubmit.co/shootin360.officials@gmail.com" method="POST">
                                         <input type="hidden" name="_subject" value="Custom Package Inquiry – Shootin 360">
@@ -614,6 +634,36 @@
                         msg.scrollIntoView({ behavior: 'smooth', block: 'center' });
                     });
             });
+        })();
+        </script>
+        <script>
+        // Booking type tabs (Virtual Tour vs Photography)
+        (function () {
+            var tabs = document.querySelectorAll('.s360-btab');
+            var secV = document.getElementById('tab-virtual');
+            var secP = document.getElementById('tab-photography');
+            if (!tabs.length || !secV || !secP) return;
+            function reveal(sec) {
+                // WOW.js leaves .wow elements hidden if their tab was display:none at load — force-reveal them.
+                sec.querySelectorAll('.wow').forEach(function (el) {
+                    el.style.visibility = 'visible';
+                    el.style.opacity = '1';
+                });
+            }
+            function show(target) {
+                var photo = (target === 'tab-photography');
+                secV.style.display = photo ? 'none' : '';
+                secP.style.display = photo ? '' : 'none';
+                reveal(photo ? secP : secV);
+                tabs.forEach(function (b) { b.classList.toggle('active', b.dataset.target === target); });
+            }
+            tabs.forEach(function (b) {
+                b.addEventListener('click', function () {
+                    show(b.dataset.target);
+                    history.replaceState(null, '', b.dataset.target === 'tab-photography' ? '#photography' : '#virtual');
+                });
+            });
+            show(location.hash === '#photography' ? 'tab-photography' : 'tab-virtual');
         })();
         </script>
     </body>
