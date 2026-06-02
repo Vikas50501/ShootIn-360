@@ -19,7 +19,7 @@
 
        $('#mobile-menus').meanmenu({
         meanMenuContainer: '.mobile-menus',
-        meanScreenWidth: "19920",
+        meanScreenWidth: "991",
         meanExpand: ['<i class="far fa-plus"></i>'],
     });
 
@@ -132,7 +132,7 @@
        Parallaxie Js Start
     ================================ */
 
-      if ($('.parallaxie').length && $(window).width() > 991) {
+      if ($.fn.parallaxie && $('.parallaxie').length && $(window).width() > 991) {
           if ($(window).width() > 768) {
               $('.parallaxie').parallaxie({
                   speed: 0.55,
@@ -220,143 +220,6 @@
     });
 
 
-    if ($('#showcase-slider-wrappper').length > 0) {
-        // Function to update the active slide
-        const updateActiveSlide = () => {
-                $('.tp-slider-dot').find('.swiper-pagination-bullet').each(function () {
-                        if (!$(this).hasClass("swiper-pagination-bullet-active")) {
-                            handleActiveSlideClick('#trigger-slides .swiper-slide-active');
-                            handleActiveSlideClick('#trigger-slides .swiper-slide-duplicate-active');
-                        }
-                });
-        };
-
-        // Function to handle slide click events
-        const handleActiveSlideClick = (selector) => {
-                $(selector).find('div').first().each(function () {
-                        if (!$(this).hasClass("active")) {
-                            $(this).trigger('click');
-                        }
-                });
-        };
-
-        // WebGL Shader Configuration
-        const vertex = `
-                varying vec2 vUv;
-                void main() {
-                        vUv = uv;
-                        gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
-                }
-        `;
-        const fragment = `
-                varying vec2 vUv;
-                uniform sampler2D currentImage;
-                uniform sampler2D nextImage;
-                uniform sampler2D disp;
-                uniform float dispFactor;
-                uniform float effectFactor;
-                uniform vec4 resolution;
-                void main() {
-                        vec2 uv = (vUv - vec2(0.5)) * resolution.zw + vec2(0.5);
-                        vec4 disp = texture2D(disp, uv);
-                        vec2 distortedPosition = vec2(uv.x + dispFactor * (disp.r * effectFactor), uv.y);
-                        vec2 distortedPosition2 = vec2(uv.x - (1.0 - dispFactor) * (disp.r * effectFactor), uv.y);
-                        vec4 _currentImage = texture2D(currentImage, distortedPosition);
-                        vec4 _nextImage = texture2D(nextImage, distortedPosition2);
-                        vec4 finalTexture = mix(_currentImage, _nextImage, dispFactor);
-                        gl_FragColor = finalTexture;
-                }
-        `;
-
-        const gl_canvas = new WebGL({
-            vertex: vertex,
-            fragment: fragment,
-        });
-
-        // Add events for the slide triggers
-        const addEvents = () => {
-            const triggerSlide = Array.from(document.getElementById('trigger-slides').querySelectorAll('.slide-wrap'));
-            gl_canvas.isRunning = false;
-
-            triggerSlide.forEach((el) => {
-                el.addEventListener('click', function () {
-                    if (!gl_canvas.isRunning) {
-                        gl_canvas.isRunning = true;
-
-                        document.getElementById('trigger-slides').querySelectorAll('.active')[0].className = '';
-                        this.className = 'active';
-
-                        const slideId = parseInt(this.dataset.slide, 10);
-
-                        gl_canvas.material.uniforms.nextImage.value = gl_canvas.textures[slideId];
-                        gl_canvas.material.uniforms.nextImage.needsUpdate = true;
-
-                        gsap.to(gl_canvas.material.uniforms.dispFactor, {
-                                duration: 1,
-                                value: 1,
-                                ease: 'Sine.easeInOut',
-                                onComplete: function () {
-                                        gl_canvas.material.uniforms.currentImage.value = gl_canvas.textures[slideId];
-                                        gl_canvas.material.uniforms.currentImage.needsUpdate = true;
-                                        gl_canvas.material.uniforms.dispFactor.value = 0.0;
-                                        gl_canvas.isRunning = false;
-                                },
-                        });
-                    }
-                });
-            });
-        };
-
-        // Initialize Swiper
-        const showcaseSwiper = new Swiper('#showcase-slider', {
-            direction: "horizontal",
-            loop: true,
-            slidesPerView: 'auto',
-            touchStartPreventDefault: false,
-            speed: 1000,
-            mousewheel: false,
-            autoplay: {
-                delay: 2000,
-            },
-            effect: 'fade',
-            simulateTouch: true,
-            parallax: true,
-            navigation: {
-                clickable: true,
-                prevEl: '.tp-hero-prev',
-                nextEl: '.tp-hero-next',
-            },
-            pagination: {
-                el: '.tp-slider-dot',
-                clickable: true,
-            },
-            on: {
-                slidePrevTransitionStart: function () {
-                    updateActiveSlide();
-                },
-                slideNextTransitionStart: function () {
-                    updateActiveSlide();
-                },
-                init: function () {
-                    updateSlideNumbers(this); // Update numbers on initial load
-                },
-                slideChange: function () {
-                    updateSlideNumbers(this); // Update numbers when slide changes
-                }
-            },
-        });
-
-        // Function to update slide numbers
-        function updateSlideNumbers(swiper) {
-            const current = swiper.realIndex + 1; // Get the real index of the current slide
-            const numbers = document.querySelector('.tp-hero-7-slider-numbers');
-            const formattedCurrent = current < 10 ? `0${current}` : current; // Add leading zero for single digits
-            numbers.innerHTML = `${formattedCurrent}`;
-        }
-
-        addEvents();
-    }
-
     /* ================================
       Brand Slider Js Start
     ================================ */
@@ -364,11 +227,12 @@
    if ($('.brand-slider').length > 0) {
     const brandSlider = new Swiper(".brand-slider", {
         spaceBetween: 30,
-        speed: 1300,
+        speed: 600,
         loop: true,
         autoplay: {
-            delay: 2000,
-            disableOnInteraction: false,
+            delay: 5000,
+            disableOnInteraction: true,
+            pauseOnMouseEnter: true,
         },
         navigation: {
             nextEl: ".array-next",
@@ -406,12 +270,13 @@
    if ($('.causes-slider').length > 0) {
     const causesSlider = new Swiper(".causes-slider", {
         spaceBetween: 30,
-        speed: 1300,
+        speed: 600,
         loop: true,
         centeredSlides: true,
         autoplay: {
-            delay: 2000,
-            disableOnInteraction: false,
+            delay: 5000,
+            disableOnInteraction: true,
+            pauseOnMouseEnter: true,
         },
         navigation: {
             nextEl: ".array-next",
@@ -453,12 +318,13 @@
    if ($('.testimonial-slider').length > 0) {
     const testimonialSlider = new Swiper(".testimonial-slider", {
         spaceBetween: 30,
-        speed: 1300,
+        speed: 600,
         loop: true,
         centeredSlides: true,
         autoplay: {
-            delay: 2000,
-            disableOnInteraction: false,
+            delay: 6000,
+            disableOnInteraction: true,
+            pauseOnMouseEnter: true,
         },
         navigation: {
             nextEl: ".array-next",
@@ -470,11 +336,12 @@
     if ($('.testimonial-slider-2').length > 0) {
     const testimonialSlider2 = new Swiper(".testimonial-slider-2", {
         spaceBetween: 30,
-        speed: 1300,
+        speed: 600,
         loop: true,
         autoplay: {
-            delay: 2000,
-            disableOnInteraction: false,
+            delay: 5000,
+            disableOnInteraction: true,
+            pauseOnMouseEnter: true,
         },
         navigation: {
             nextEl: ".array-next",
@@ -500,11 +367,12 @@
     if ($('.testimonial-slider-4').length > 0) {
     const testimonialSlider4 = new Swiper(".testimonial-slider-4", {
         spaceBetween: 30,
-        speed: 1300,
+        speed: 600,
         loop: true,
         autoplay: {
-            delay: 2000,
-            disableOnInteraction: false,
+            delay: 5000,
+            disableOnInteraction: true,
+            pauseOnMouseEnter: true,
         },
         navigation: {
             nextEl: ".array-next",
@@ -533,11 +401,12 @@
     if ($('.testimonial-slider-inner').length > 0) {
     const testimonialSliderInner = new Swiper(".testimonial-slider-inner", {
         spaceBetween: 30,
-        speed: 1300,
+        speed: 600,
         loop: true,
         autoplay: {
-            delay: 2000,
-            disableOnInteraction: false,
+            delay: 5000,
+            disableOnInteraction: true,
+            pauseOnMouseEnter: true,
         },
         navigation: {
             nextEl: ".array-next",
@@ -572,12 +441,13 @@
    if ($('.grt-news-slider').length > 0) {
     const grtNewsSlider = new Swiper(".grt-news-slider", {
         spaceBetween: 30,
-        speed: 1300,
+        speed: 600,
         loop: true,
         centeredSlides: true,
         autoplay: {
-            delay: 2000,
-            disableOnInteraction: false,
+            delay: 5000,
+            disableOnInteraction: true,
+            pauseOnMouseEnter: true,
         },
          navigation: {
             nextEl: ".array-next",
@@ -612,7 +482,7 @@
    if ($('.grt-footer-box-slider').length > 0) {
     const grtFooterBoxSlider = new Swiper(".grt-footer-box-slider", {
         spaceBetween: 60,
-        speed: 1300,
+        speed: 600,
         loop: true,
         // autoplay: {
         //     delay: 2000,
@@ -759,9 +629,9 @@
         let smoother = ScrollSmoother.create({
             wrapper: "#smooth-wrapper",
             content: "#smooth-content",
-            smooth: 2,
-            effects: true,
-            smoothTouch: 0.1,
+            smooth: 0.5,
+            effects: false,
+            smoothTouch: 0,
             normalizeScroll: false,
             ignoreMobileResize: true,
         });
@@ -978,12 +848,16 @@
        Preloader Js Start
     ================================ */
     $windowOn.on('load', function() {
-        setTimeout(function() {
-            $(".preloader").fadeOut(500, function() {
-                $('body').removeClass('s360-no-scroll');
-            });
-        }, 2000);
+        $(".preloader").fadeOut(300, function() {
+            $('body').removeClass('s360-no-scroll');
+        });
     });
+
+    // Hard safety fallback: scroll-lock can never stick permanently
+    setTimeout(function() {
+        $(".preloader").fadeOut(200);
+        $('body').removeClass('s360-no-scroll');
+    }, 4000);
 
   
   })(jQuery); // End jQuery

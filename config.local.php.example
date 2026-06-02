@@ -1,0 +1,5 @@
+<?php
+// Copy this file to config.local.php and fill in your credentials.
+// NEVER commit config.local.php — it is git-ignored and holds your live secrets.
+define('SMTP_USER', 'shootin360.officials@gmail.com');
+define('SMTP_PASS', 'YOUR_NEW_APP_PASSWORD_HERE');

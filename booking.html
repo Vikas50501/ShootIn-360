@@ -5,9 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="index, follow">
-        <meta name="description" content="Book a 360° Virtual Tour, Wedding, Pre-Wedding, Baby Shoot or Aerial Photography in Kanpur. Fill the form to get a custom quote from Shootin 360 – Google Trusted Photographer.">
+        <meta name="description" content="Book a 360° virtual tour, wedding, pre-wedding, baby shoot or drone photography in Kanpur. Get a fast custom quote from Shootin 360 — start today!">
         <meta name="keywords" content="book virtual tour kanpur, book wedding photography kanpur, book baby shoot kanpur, hire drone photographer kanpur, shootin 360 booking, google street view booking kanpur">
-        <title>Book a Shoot – Shootin 360 | 360° Virtual Tour & Photography | Kanpur</title>
+        <title>Book a 360° Tour or Photo Shoot in Kanpur | Shootin 360</title>
         <link rel="canonical" href="https://www.shootin360.com/booking.html">
         <meta property="og:type" content="website">
         <meta property="og:url" content="https://www.shootin360.com/booking.html">
@@ -18,9 +18,14 @@
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
         <link rel="stylesheet" href="assets/css/all.min.css">
         <link rel="stylesheet" href="assets/css/animate.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Quicksand:wght@500;700;800&display=swap">
         <link rel="stylesheet" href="assets/css/main.css">
         <style>
             :root { --theme:#F5C200; --bg:#1A1A1A; --header:#1A1A1A; --text:#555; --body:#F8F8F8; }
+            .s360-form-success { background:#e8f8ee; border:1px solid #6fcf97; color:#1b7a43; border-radius:8px; padding:14px 18px; font-size:14px; font-weight:600; display:flex; align-items:center; gap:10px; }
+            .s360-form-error   { background:#fff0f0; border:1px solid #e57373; color:#b71c1c; border-radius:8px; padding:14px 18px; font-size:14px; font-weight:600; display:flex; align-items:center; gap:10px; }
             .s360-page-banner { background:linear-gradient(135deg,#FFFDF4 0%,#FFF8E6 100%); border-bottom:3px solid #F5C200; padding:140px 0 80px; text-align:center; position:relative; overflow:hidden; }
             .s360-page-banner::before { content:''; position:absolute; top:0;left:0;right:0;bottom:0; background:radial-gradient(ellipse at 30% 60%,rgba(245,194,0,0.15) 0%,transparent 60%); pointer-events:none; }
             .s360-page-banner h1 { color:#1A1A1A; font-size:48px; font-weight:800; position:relative; z-index:2; }
@@ -156,7 +161,7 @@
             <button id="back-top" class="back-to-top"><i class="fa-regular fa-arrow-up"></i></button>
             <div class="mouseCursor cursor-outer"></div>
             <div class="mouseCursor cursor-inner"></div>
-            <a href="https://wa.me/919415039489" class="s360-wa-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://wa.me/919415039489" class="s360-wa-float" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
 
             <div class="fix-area">
                 <div class="offcanvas__info">
@@ -171,7 +176,7 @@
                             <div class="mobile-menu fix"></div>
                             <div class="off-contact-info">
                                 <span class="info-title">Contact Info</span>
-                                <div class="contact-details"><span class="sub-info">Phone</span><p><a href="tel:+919415039489">+91 94150 39489</a></p></div>
+                                <div class="contact-details"><span class="sub-info">Phone</span><p><a href="tel:+919415039489">+91 94150 39489</a> / <a href="tel:+919696039489">+91 96960 39489</a></p></div>
                             </div>
                         </div>
                         <div class="social-icon-list">
@@ -199,20 +204,14 @@
                                             <li><a href="about.html">About</a></li>
                                             <li><a href="services.html">Services</a></li>
                                             <li><a href="portfolio.html">Portfolio</a></li>
-                                            <li class="has-dropdown">
-                                                <a href="#">Pages <i class="fa-solid fa-chevron-down"></i></a>
-                                                <ul class="submenu">
-                                                    <li><a href="gallery.html">Gallery</a></li>
-                                                    <li><a href="faq.html">FAQ</a></li>
-                                                </ul>
-                                            </li>
+                                            <li><a href="faq.html">FAQ</a></li>
                                             <li><a href="contact.html">Contact</a></li>
                                         </ul>
                                     </nav>
                                 </div>
                             </div>
                             <div class="header-right d-flex justify-content-end align-items-center">
-                                <a href="booking.html" class="theme-btn header-bg" style="background:#F5C200;color:#1A1A1A;">Book a Shoot <i class="fa-regular fa-camera"></i></a>
+                                <a href="booking.html" class="theme-btn header-bg">Book a Shoot <i class="fa-regular fa-camera"></i></a>
                                 <div class="header__hamburger d-xl-none my-auto">
                                     <div class="sidebar__toggle"><span></span><span></span><span></span></div>
                                 </div>
@@ -247,35 +246,36 @@
                                     <h2 style="margin-bottom:10px;">Request a <span style="color:#F5C200;">Custom Quote</span></h2>
                                     <p style="color:#555;margin-bottom:32px;">Share your details and we'll get back to you with a personalized quote within 24 hours.</p>
                                     <div class="s360-booking-form">
-                                        <form>
+                                        <form id="bookingForm" novalidate>
+                                            <input type="hidden" name="form_type" value="booking">
                                             <div class="row g-4">
                                                 <div class="col-md-6">
                                                     <label class="form-label">Full Name *</label>
-                                                    <input type="text" class="form-control" placeholder="Rajesh Mehta" required>
+                                                    <input type="text" name="name" class="form-control" placeholder="Rajesh Mehta" required>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <label class="form-label">Business Name *</label>
-                                                    <input type="text" class="form-control" placeholder="Spice Garden Restaurant" required>
+                                                    <input type="text" name="business" class="form-control" placeholder="Spice Garden Restaurant" required>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <label class="form-label">Phone Number *</label>
-                                                    <input type="tel" class="form-control" placeholder="+91 94150 39489" required>
+                                                    <input type="tel" name="phone" class="form-control" placeholder="+91 94150 39489" required>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <label class="form-label">Email Address</label>
-                                                    <input type="email" class="form-control" placeholder="rajesh@business.com">
+                                                    <input type="email" name="email" class="form-control" placeholder="rajesh@business.com">
                                                 </div>
                                                 <div class="col-md-6">
                                                     <label class="form-label">City *</label>
-                                                    <input type="text" class="form-control" placeholder="Kanpur" required>
+                                                    <input type="text" name="city" class="form-control" placeholder="Kanpur" required>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <label class="form-label">Preferred Shoot Date</label>
-                                                    <input type="date" class="form-control">
+                                                    <input type="date" name="shoot_date" class="form-control">
                                                 </div>
                                                 <div class="col-md-6">
                                                     <label class="form-label">Business Type *</label>
-                                                    <select class="form-select" required>
+                                                    <select name="biz_type" class="form-select" required>
                                                         <option value="">Select Your Business Type</option>
                                                         <option>Hotel</option>
                                                         <option>Restaurant / Cafe / Bar</option>
@@ -294,7 +294,7 @@
                                                 </div>
                                                 <div class="col-md-6">
                                                     <label class="form-label">Space Size (Approx.)</label>
-                                                    <select class="form-select">
+                                                    <select name="space_size" class="form-select">
                                                         <option value="">Select Space Size</option>
                                                         <option>Small – Below 500 sq.ft.</option>
                                                         <option>Medium – 500 to 2000 sq.ft.</option>
@@ -305,18 +305,19 @@
                                                 </div>
                                                 <div class="col-12">
                                                     <label class="form-label">Special Requirements / Message</label>
-                                                    <textarea class="form-control" rows="5" placeholder="Tell us about your space, number of floors/rooms, any specific areas to cover, Google Business Profile details, or anything else..."></textarea>
+                                                    <textarea name="message" class="form-control" rows="5" placeholder="Tell us about your space, number of floors/rooms, any specific areas to cover, Google Business Profile details, or anything else..."></textarea>
                                                 </div>
                                                 <div class="col-12">
                                                     <div style="background:#F8F8F8;border:1px solid #e0e0e0;border-radius:10px;padding:16px;margin-bottom:4px;">
                                                         <label style="display:flex;align-items:flex-start;gap:12px;cursor:pointer;font-size:14px;color:#555;">
-                                                            <input type="checkbox" style="margin-top:3px;accent-color:#F5C200;" required>
+                                                            <input type="checkbox" id="bookingConsent" name="consent" style="margin-top:3px;accent-color:#F5C200;" required>
                                                             I agree to be contacted by Shootin 360 regarding my virtual tour inquiry. My data will not be shared with third parties.
                                                         </label>
                                                     </div>
                                                 </div>
+                                                <div class="col-12" id="bookingMsg"></div>
                                                 <div class="col-12">
-                                                    <button type="submit" class="s360-submit-btn">
+                                                    <button type="submit" id="bookingBtn" class="s360-submit-btn">
                                                         <i class="fa-solid fa-paper-plane"></i> Request a Quote – We'll Call You Back!
                                                     </button>
                                                     <p style="text-align:center;font-size:13px;color:#888;margin-top:12px;"><i class="fa-solid fa-lock" style="color:#F5C200;"></i> Your information is 100% secure. We'll respond within 24 hours.</p>
@@ -383,7 +384,7 @@
                                         <h5 style="color:#1A1A1A;margin-bottom:8px;font-size:16px;">Prefer to Talk?</h5>
                                         <p style="color:#888;font-size:13px;margin-bottom:20px;">Contact us directly via WhatsApp or phone for quick assistance.</p>
                                         <div class="s360-quick-contact">
-                                            <a href="https://wa.me/919415039489?text=Hi!%20I%20want%20to%20book%20a%20360%20virtual%20tour." class="s360-qc-btn wa" target="_blank">
+                                            <a href="https://wa.me/919415039489?text=Hi!%20I%20want%20to%20book%20a%20360%20virtual%20tour." class="s360-qc-btn wa" target="_blank" rel="noopener">
                                                 <i class="fab fa-whatsapp fa-lg"></i>
                                                 <span>Chat on WhatsApp</span>
                                             </a>
@@ -414,12 +415,12 @@
                                         <h2 style="font-family:'Quicksand',sans-serif;font-size:40px;font-weight:800;color:#1A1A1A;line-height:1.25;margin-bottom:12px;">
                                             Create Your Own <span style="color:#F5C200;">Package</span>
                                         </h2>
-                                        <p style="color:#777;font-size:15px;">Not sure which package fits? Tell us about your dream wedding and we'll craft a custom quote just for you.</p>
+                                        <p style="color:#777;font-size:15px;">Not sure which package fits? Tell us about your shoot — wedding, event, or business — and we'll craft a custom quote just for you.</p>
                                     </div>
-                                    <form style="background:#fff;border-radius:20px;padding:40px 36px;border:1px solid rgba(245,194,0,0.2);box-shadow:0 8px 40px rgba(0,0,0,0.06);" action="https://formsubmit.co/shootin360kanpur@gmail.com" method="POST">
+                                    <form style="background:#fff;border-radius:20px;padding:40px 36px;border:1px solid rgba(245,194,0,0.2);box-shadow:0 8px 40px rgba(0,0,0,0.06);" action="https://formsubmit.co/shootin360.officials@gmail.com" method="POST">
                                         <input type="hidden" name="_subject" value="Custom Package Inquiry – Shootin 360">
                                         <input type="hidden" name="_next" value="https://www.shootin360.com/booking.html">
-                                        <input type="hidden" name="_captcha" value="false">
+                                        <input type="hidden" name="_captcha" value="true">
                                         <div class="mb-4">
                                             <label style="font-weight:600;color:#1A1A1A;font-size:14px;margin-bottom:8px;display:block;">Events <span style="color:#F5C200;">*</span></label>
                                             <div style="display:flex;flex-wrap:wrap;gap:10px;">
@@ -477,7 +478,7 @@
                                         </div>
                                         <div class="mb-4">
                                             <label style="font-weight:600;color:#1A1A1A;font-size:14px;margin-bottom:8px;display:block;">Any Other Requirements</label>
-                                            <textarea name="requirements" rows="3" placeholder="Tell us anything else — your wedding date, venue, theme, or any special needs..." style="width:100%;border:1px solid rgba(245,194,0,0.3);border-radius:12px;padding:14px 16px;font-size:14px;color:#555;background:#FFFDF4;resize:vertical;outline:none;font-family:inherit;" onfocus="this.style.borderColor='#F5C200'" onblur="this.style.borderColor='rgba(245,194,0,0.3)'"></textarea>
+                                            <textarea name="requirements" rows="3" placeholder="Tell us anything else — your date, venue, theme, or any special needs..." style="width:100%;border:1px solid rgba(245,194,0,0.3);border-radius:12px;padding:14px 16px;font-size:14px;color:#555;background:#FFFDF4;resize:vertical;outline:none;font-family:inherit;" onfocus="this.style.borderColor='#F5C200'" onblur="this.style.borderColor='rgba(245,194,0,0.3)'"></textarea>
                                         </div>
                                         <div class="mb-4">
                                             <label style="font-weight:600;color:#1A1A1A;font-size:14px;margin-bottom:8px;display:block;">Your Name <span style="color:#F5C200;">*</span></label>
@@ -515,12 +516,12 @@
                                 <div class="col-lg-2 col-md-6 wow fadeInUp" data-wow-delay=".3s">
                                     <h5>Services</h5>
                                     <ul class="s360-footer-links">
-                                        <li><a href="services.html#hotel">Hotel & Restaurant</a></li>
-                                        <li><a href="services.html#school">School & College</a></li>
-                                        <li><a href="services.html#showroom">Showroom Tours</a></li>
-                                        <li><a href="services.html#realestate">Real Estate</a></li>
-                                        <li><a href="services.html#hospital">Hospital & Clinic</a></li>
-                                        <li><a href="services.html#gym">Gym & Salon</a></li>
+                                        <li><a href="service-virtual-tour.html#virtual-tours">360° Virtual Tours</a></li>
+                                        <li><a href="service-virtual-tour.html#streetview">Google Street View</a></li>
+                                        <li><a href="service-photography.html#wedding">Wedding Photography</a></li>
+                                        <li><a href="service-photography.html#pre-wedding">Pre-Wedding Shoots</a></li>
+                                        <li><a href="service-photography.html#baby-shoot">Baby Photography</a></li>
+                                        <li><a href="services.html">All Services</a></li>
                                     </ul>
                                 </div>
                                 <div class="col-lg-2 col-md-6 wow fadeInUp" data-wow-delay=".4s">
@@ -529,7 +530,6 @@
                                         <li><a href="index.html">Home</a></li>
                                         <li><a href="about.html">About Us</a></li>
                                         <li><a href="portfolio.html">Portfolio</a></li>
-                                        <li><a href="gallery.html">Gallery</a></li>
                                         <li><a href="faq.html">FAQ</a></li>
                                         <li><a href="contact.html">Contact</a></li>
                                     </ul>
@@ -537,8 +537,8 @@
                                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".5s">
                                     <h5>Contact Us</h5>
                                     <ul class="s360-footer-contact-f list-unstyled">
-                                        <li><i class="fa-solid fa-location-dot"></i><span>M-1231, AWAS VIKAS KESHAVPURAM, KALYANPUR, KANPUR 208017</span></li>
-                                        <li><i class="fa-solid fa-phone"></i><a href="tel:+919415039489">+91 94150 39489</a></li>
+                                        <li><i class="fa-solid fa-location-dot"></i><span>A-27 Balaji Enclave, Keshav Puram, Kalyanpur, Kanpur (Semi Lower Ground Office, Near Community Centre)</span></li>
+                                        <li><i class="fa-solid fa-phone"></i><a href="tel:+919415039489">+91 94150 39489</a> / <a href="tel:+919696039489">+91 96960 39489</a></li>
                                         <li><i class="fa-solid fa-envelope"></i><a href="mailto:shootin360.officials@gmail.com">shootin360.officials@gmail.com</a></li>
                                         <li><i class="fab fa-whatsapp"></i><a href="https://wa.me/919415039489">WhatsApp Us</a></li>
                                     </ul>
@@ -565,5 +565,56 @@
         <script src="assets/js/jquery.meanmenu.min.js"></script>
         <script src="assets/js/wow.min.js"></script>
         <script src="assets/js/main.js"></script>
+
+        <script>
+        (function () {
+            var form = document.getElementById('bookingForm');
+            var btn  = document.getElementById('bookingBtn');
+            var msg  = document.getElementById('bookingMsg');
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                // Basic validation
+                var name  = form.querySelector('[name="name"]').value.trim();
+                var phone = form.querySelector('[name="phone"]').value.trim();
+                var biz   = form.querySelector('[name="business"]').value.trim();
+                var btype = form.querySelector('[name="biz_type"]').value;
+                var consent = document.getElementById('bookingConsent').checked;
+
+                if (!name || !phone || !biz || !btype) {
+                    msg.innerHTML = '<div class="s360-form-error"><i class="fa-solid fa-triangle-exclamation"></i> Please fill all required fields.</div>';
+                    return;
+                }
+                if (!consent) {
+                    msg.innerHTML = '<div class="s360-form-error"><i class="fa-solid fa-triangle-exclamation"></i> Please accept the consent checkbox.</div>';
+                    return;
+                }
+
+                btn.disabled = true;
+                btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending…';
+                msg.innerHTML = '';
+
+                fetch('send-mail.php', { method: 'POST', body: new FormData(form) })
+                    .then(function (r) { return r.json(); })
+                    .then(function (res) {
+                        if (res.ok) {
+                            msg.innerHTML = '<div class="s360-form-success"><i class="fa-solid fa-circle-check"></i> ' + res.msg + '</div>';
+                            form.reset();
+                        } else {
+                            msg.innerHTML = '<div class="s360-form-error"><i class="fa-solid fa-triangle-exclamation"></i> ' + res.msg + '</div>';
+                        }
+                    })
+                    .catch(function () {
+                        msg.innerHTML = '<div class="s360-form-error"><i class="fa-solid fa-triangle-exclamation"></i> Network error. Please WhatsApp us at +91 94150 39489.</div>';
+                    })
+                    .finally(function () {
+                        btn.disabled = false;
+                        btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Request a Quote – We\'ll Call You Back!';
+                        msg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    });
+            });
+        })();
+        </script>
     </body>
 </html>
