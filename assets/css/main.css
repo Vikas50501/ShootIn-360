@@ -34,9 +34,9 @@ Version: 1.0.0
 }
 
 /* ===== Shootin360 fast scroll-reveal override (WOW.js / animate.css) ===== */
-.wow {
-  visibility: hidden;
-}
+/* NOTE: do NOT globally set .wow { visibility:hidden } — WOW.js manages hiding
+   itself, and a CSS-forced hide leaves content invisible if WOW doesn't run or
+   doesn't fire under GSAP ScrollSmoother. Keep only the faster timing below. */
 .animated {
   animation-duration: 0.6s;
   animation-fill-mode: both;

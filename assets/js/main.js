@@ -93,26 +93,30 @@
        Video & Image Popup Js Start
     ================================ */
 
-      $(".img-popup").magnificPopup({
-        type: "image",
-        gallery: {
-          enabled: true,
-        },
-      });
+      if ($.fn.magnificPopup) {
+        $(".img-popup").magnificPopup({
+          type: "image",
+          gallery: {
+            enabled: true,
+          },
+        });
 
-      $(".video-popup").magnificPopup({
-        type: "iframe",
-        callbacks: {},
-      });
-  
+        $(".video-popup").magnificPopup({
+          type: "iframe",
+          callbacks: {},
+        });
+      }
+
       /* ================================
        Counterup Js Start
     ================================ */
 
-      $(".count").counterUp({
-        delay: 15,
-        time: 4000,
-      });
+      if ($.fn.counterUp) {
+        $(".count").counterUp({
+          delay: 15,
+          time: 4000,
+        });
+      }
   
       /* ================================
        Wow Animation Js Start
