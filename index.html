@@ -442,6 +442,8 @@
                 z-index: 1;
                 box-shadow: 0 8px 24px rgba(245,194,0,0.3);
             }
+            .s360-step-num { transition: transform 0.3s cubic-bezier(0.22,0.61,0.36,1), box-shadow 0.3s ease; }
+            .s360-process-step:hover .s360-step-num { transform: scale(1.12) translateY(-4px); box-shadow: 0 16px 34px rgba(245,194,0,0.5); }
             .s360-process-step h4 { font-size: 18px; font-weight: 700; color: #1A1A1A; margin-bottom: 10px; }
             .s360-process-step p { color: var(--text); font-size: 14px; line-height: 1.6; }
 
@@ -1285,6 +1287,140 @@
                         </div>
                     </section>
 
+                    <!-- ===== PORTFOLIO PREVIEW ===== -->
+                    <section class="section-padding" style="background:#F8F8F8;">
+                        <div class="container">
+
+                            <!-- Section header -->
+                            <div class="row align-items-end mb-5 s360-head-gap">
+                                <div class="col-lg-7">
+                                    <div class="s360-section-label wow fadeInUp">Our Portfolio</div>
+                                    <h2 class="split-title">
+                                        Live 360° Tours &amp; Virtual Walkthroughs <br> Published on Google Maps
+                                    </h2>
+                                    <p class="wow fadeInUp" data-wow-delay=".25s" style="color:#888;font-size:15px;margin-top:12px;max-width:480px;">Click and drag inside any tour to explore in full 360°. Every tour is published live on Google Maps. Photography by © Gajendra Singh.</p>
+                                </div>
+                                <div class="col-lg-5 text-lg-end wow fadeInUp" data-wow-delay=".3s">
+                                    <a href="portfolio.html" class="theme-btn">
+                                        View All Tours <i class="fa-regular fa-arrow-up-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+
+                            <!-- Cards Grid -->
+                            <div class="row g-4">
+
+                                <!-- GD Goenka School -->
+                                <div class="col-lg-6 col-md-6 s360-port-item" data-category="college-school">
+                                    <div class="s360-port-card">
+                                        <div class="s360-port-iframe-wrap">
+                                            <iframe data-src="https://www.google.com/maps/embed?pb=!4v1779647318730!6m8!1m7!1sCAoSHENJQUJJaEFvUGhHTWpreXp6YWlZUG5Yb1JoVkg.!2m2!1d26.51833788282853!2d80.28161363197667!3f1.91!4f-1.2399999999999949!5f0.4000000000000002" loading="lazy" allowfullscreen title="GD Goenka School Kanpur"></iframe>
+                                            <div class="s360-port-cat">School</div>
+                                            <div class="s360-port-live"><i class="fa-solid fa-circle"></i> LIVE</div>
+                                        </div>
+                                        <div class="s360-port-info">
+                                            <h5>GD Goenka School</h5>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Kanpur</p>
+                                            <a href="booking.html" class="s360-port-cta"><i class="fa-solid fa-camera"></i> Book Similar Tour</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Showroom -->
+                                <div class="col-lg-6 col-md-6 s360-port-item" data-category="showroom">
+                                    <div class="s360-port-card">
+                                        <div class="s360-port-iframe-wrap">
+                                            <iframe data-src="https://www.google.com/maps/embed?pb=!4v1779644306171!6m8!1m7!1sCAoSLEFGMVFpcFBpeS1xS1VfalFRbEdoRklUZHBaQnlydURNM3F0S2J5VkRBZWdY!2m2!1d26.44916801279673!2d80.31212627429898!3f0.9!4f12.430000000000007!5f0.4000000000000002" loading="lazy" allowfullscreen title="Pages By Fairdeal Govind Nagar Kanpur"></iframe>
+                                            <div class="s360-port-cat">Showroom</div>
+                                            <div class="s360-port-live"><i class="fa-solid fa-circle"></i> LIVE</div>
+                                        </div>
+                                        <div class="s360-port-info">
+                                            <h5>Pages By Fairdeal</h5>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Govind Nagar, Kanpur</p>
+                                            <a href="booking.html" class="s360-port-cta"><i class="fa-solid fa-camera"></i> Book Similar Tour</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Salon -->
+                                <div class="col-lg-6 col-md-6 s360-port-item" data-category="salon">
+                                    <div class="s360-port-card">
+                                        <div class="s360-port-iframe-wrap">
+                                            <iframe data-src="https://www.google.com/maps/embed?pb=!4v1779644201656!6m8!1m7!1sCAoSLEFGMVFpcE5waVJHc3h0czFlX3dBN2c4YnB4QVFySU45WXI1ZlpzcmNLdi1r!2m2!1d26.44919995766685!2d80.31221579231853!3f358.48!4f5.640000000000001!5f0.7820865974627469" loading="lazy" allowfullscreen title="Stylush Salon Govind Nagar Kanpur"></iframe>
+                                            <div class="s360-port-cat">Salon</div>
+                                            <div class="s360-port-live"><i class="fa-solid fa-circle"></i> LIVE</div>
+                                        </div>
+                                        <div class="s360-port-info">
+                                            <h5>Stylush Salon</h5>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Govind Nagar, Kanpur</p>
+                                            <a href="booking.html" class="s360-port-cta"><i class="fa-solid fa-camera"></i> Book Similar Tour</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Dharm Sthals -->
+                                <div class="col-lg-6 col-md-6 s360-port-item" data-category="dharm-sthals">
+                                    <div class="s360-port-card">
+                                        <div class="s360-port-iframe-wrap">
+                                            <iframe data-src="https://www.google.com/maps/embed?pb=!4v1779643313223!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJRERvZDdoTWc.!2m2!1d26.52692836440426!2d80.27771686601476!3f5.12!4f51.41!5f0.4000000000000002" loading="lazy" allowfullscreen title="ISKCON Mandir Kanpur"></iframe>
+                                            <div class="s360-port-cat">Dharm Sthal</div>
+                                            <div class="s360-port-live"><i class="fa-solid fa-circle"></i> LIVE</div>
+                                        </div>
+                                        <div class="s360-port-info">
+                                            <h5>ISKCON Mandir</h5>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Kanpur</p>
+                                            <a href="booking.html" class="s360-port-cta"><i class="fa-solid fa-camera"></i> Book Similar Tour</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Hotel -->
+                                <div class="col-lg-6 col-md-6 s360-port-item" data-category="hotel">
+                                    <div class="s360-port-card">
+                                        <div class="s360-port-iframe-wrap">
+                                            <iframe data-src="https://www.google.com/maps/embed?pb=!4v1779644121065!6m8!1m7!1sCAoSHENJQUJJaEFCc2N6NEU3NGFtZUM3T3h5NXRiLWo.!2m2!1d26.46823274149743!2d80.31527941061711!3f354.33!4f6.439999999999998!5f0.4000000000000002" loading="lazy" allowfullscreen title="The Deep Hotel Kanpur"></iframe>
+                                            <div class="s360-port-cat">Hotel</div>
+                                            <div class="s360-port-live"><i class="fa-solid fa-circle"></i> LIVE</div>
+                                        </div>
+                                        <div class="s360-port-info">
+                                            <h5>The Deep Hotel</h5>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Kanpur</p>
+                                            <a href="booking.html" class="s360-port-cta"><i class="fa-solid fa-camera"></i> Book Similar Tour</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Jewellers -->
+                                <div class="col-lg-6 col-md-6 s360-port-item" data-category="jewellers">
+                                    <div class="s360-port-card">
+                                        <div class="s360-port-iframe-wrap">
+                                            <iframe data-src="https://www.google.com/maps/embed?pb=!4v1779643827499!6m8!1m7!1sCAoSLEFGMVFpcE5Gb0hfRnlhX21MLWEzRlJPT1M3NG1JSEFoRGt4NFRsOWhxUm00!2m2!1d26.47461392647747!2d80.34297179993234!3f0.33!4f3.4399999999999977!5f0.4000000000000002" loading="lazy" allowfullscreen title="Baijnath Jewellers PPN Market Kanpur"></iframe>
+                                            <div class="s360-port-cat">Jewellers</div>
+                                            <div class="s360-port-live"><i class="fa-solid fa-circle"></i> LIVE</div>
+                                        </div>
+                                        <div class="s360-port-info">
+                                            <h5>Baijnath Jewellers</h5>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> PPN Market, Kanpur</p>
+                                            <a href="booking.html" class="s360-port-cta"><i class="fa-solid fa-camera"></i> Book Similar Tour</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                            <!-- Bottom CTA -->
+                            <div class="text-center mt-5 wow fadeInUp" data-wow-delay=".3s">
+                                <a href="portfolio.html" class="btn-outline-360">
+                                    View Full Portfolio <i class="fa-regular fa-arrow-up-right"></i>
+                                </a>
+                            </div>
+
+                        </div>
+                    </section>
+
+
                     <!-- ===== WHY CHOOSE US ===== -->
                     <section class="section-padding" style="background:#ffffff;">
                         <div class="container">
@@ -1433,221 +1569,63 @@
                         </div>
                     </section>
 
-                    <!-- ===== PORTFOLIO PREVIEW ===== -->
-                    <section class="section-padding" style="background:#F8F8F8;">
-                        <div class="container">
-
-                            <!-- Section header -->
-                            <div class="row align-items-end mb-5 s360-head-gap">
-                                <div class="col-lg-7">
-                                    <div class="s360-section-label wow fadeInUp">Our Portfolio</div>
-                                    <h2 class="split-title">
-                                        Live 360° Tours &amp; Virtual Walkthroughs <br> Published on Google Maps
-                                    </h2>
-                                    <p class="wow fadeInUp" data-wow-delay=".25s" style="color:#888;font-size:15px;margin-top:12px;max-width:480px;">Click and drag inside any tour to explore in full 360°. Every tour is published live on Google Maps. Photography by © Gajendra Singh.</p>
-                                </div>
-                                <div class="col-lg-5 text-lg-end wow fadeInUp" data-wow-delay=".3s">
-                                    <a href="portfolio.html" class="theme-btn">
-                                        View All Tours <i class="fa-regular fa-arrow-up-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-
-
-                            <!-- Cards Grid -->
-                            <div class="row g-4">
-
-                                <!-- GD Goenka School -->
-                                <div class="col-lg-6 col-md-6 s360-port-item" data-category="college-school">
-                                    <div class="s360-port-card">
-                                        <div class="s360-port-iframe-wrap">
-                                            <iframe data-src="https://www.google.com/maps/embed?pb=!4v1779647318730!6m8!1m7!1sCAoSHENJQUJJaEFvUGhHTWpreXp6YWlZUG5Yb1JoVkg.!2m2!1d26.51833788282853!2d80.28161363197667!3f1.91!4f-1.2399999999999949!5f0.4000000000000002" loading="lazy" allowfullscreen title="GD Goenka School Kanpur"></iframe>
-                                            <div class="s360-port-cat">School</div>
-                                            <div class="s360-port-live"><i class="fa-solid fa-circle"></i> LIVE</div>
-                                        </div>
-                                        <div class="s360-port-info">
-                                            <h5>GD Goenka School</h5>
-                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Kanpur</p>
-                                            <a href="booking.html" class="s360-port-cta"><i class="fa-solid fa-camera"></i> Book Similar Tour</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Showroom -->
-                                <div class="col-lg-6 col-md-6 s360-port-item" data-category="showroom">
-                                    <div class="s360-port-card">
-                                        <div class="s360-port-iframe-wrap">
-                                            <iframe data-src="https://www.google.com/maps/embed?pb=!4v1779644306171!6m8!1m7!1sCAoSLEFGMVFpcFBpeS1xS1VfalFRbEdoRklUZHBaQnlydURNM3F0S2J5VkRBZWdY!2m2!1d26.44916801279673!2d80.31212627429898!3f0.9!4f12.430000000000007!5f0.4000000000000002" loading="lazy" allowfullscreen title="Pages By Fairdeal Govind Nagar Kanpur"></iframe>
-                                            <div class="s360-port-cat">Showroom</div>
-                                            <div class="s360-port-live"><i class="fa-solid fa-circle"></i> LIVE</div>
-                                        </div>
-                                        <div class="s360-port-info">
-                                            <h5>Pages By Fairdeal</h5>
-                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Govind Nagar, Kanpur</p>
-                                            <a href="booking.html" class="s360-port-cta"><i class="fa-solid fa-camera"></i> Book Similar Tour</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Salon -->
-                                <div class="col-lg-6 col-md-6 s360-port-item" data-category="salon">
-                                    <div class="s360-port-card">
-                                        <div class="s360-port-iframe-wrap">
-                                            <iframe data-src="https://www.google.com/maps/embed?pb=!4v1779644201656!6m8!1m7!1sCAoSLEFGMVFpcE5waVJHc3h0czFlX3dBN2c4YnB4QVFySU45WXI1ZlpzcmNLdi1r!2m2!1d26.44919995766685!2d80.31221579231853!3f358.48!4f5.640000000000001!5f0.7820865974627469" loading="lazy" allowfullscreen title="Stylush Salon Govind Nagar Kanpur"></iframe>
-                                            <div class="s360-port-cat">Salon</div>
-                                            <div class="s360-port-live"><i class="fa-solid fa-circle"></i> LIVE</div>
-                                        </div>
-                                        <div class="s360-port-info">
-                                            <h5>Stylush Salon</h5>
-                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Govind Nagar, Kanpur</p>
-                                            <a href="booking.html" class="s360-port-cta"><i class="fa-solid fa-camera"></i> Book Similar Tour</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Dharm Sthals -->
-                                <div class="col-lg-6 col-md-6 s360-port-item" data-category="dharm-sthals">
-                                    <div class="s360-port-card">
-                                        <div class="s360-port-iframe-wrap">
-                                            <iframe data-src="https://www.google.com/maps/embed?pb=!4v1779643313223!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJRERvZDdoTWc.!2m2!1d26.52692836440426!2d80.27771686601476!3f5.12!4f51.41!5f0.4000000000000002" loading="lazy" allowfullscreen title="ISKCON Mandir Kanpur"></iframe>
-                                            <div class="s360-port-cat">Dharm Sthal</div>
-                                            <div class="s360-port-live"><i class="fa-solid fa-circle"></i> LIVE</div>
-                                        </div>
-                                        <div class="s360-port-info">
-                                            <h5>ISKCON Mandir</h5>
-                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Kanpur</p>
-                                            <a href="booking.html" class="s360-port-cta"><i class="fa-solid fa-camera"></i> Book Similar Tour</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Hotel -->
-                                <div class="col-lg-6 col-md-6 s360-port-item" data-category="hotel">
-                                    <div class="s360-port-card">
-                                        <div class="s360-port-iframe-wrap">
-                                            <iframe data-src="https://www.google.com/maps/embed?pb=!4v1779644121065!6m8!1m7!1sCAoSHENJQUJJaEFCc2N6NEU3NGFtZUM3T3h5NXRiLWo.!2m2!1d26.46823274149743!2d80.31527941061711!3f354.33!4f6.439999999999998!5f0.4000000000000002" loading="lazy" allowfullscreen title="The Deep Hotel Kanpur"></iframe>
-                                            <div class="s360-port-cat">Hotel</div>
-                                            <div class="s360-port-live"><i class="fa-solid fa-circle"></i> LIVE</div>
-                                        </div>
-                                        <div class="s360-port-info">
-                                            <h5>The Deep Hotel</h5>
-                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Kanpur</p>
-                                            <a href="booking.html" class="s360-port-cta"><i class="fa-solid fa-camera"></i> Book Similar Tour</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Jewellers -->
-                                <div class="col-lg-6 col-md-6 s360-port-item" data-category="jewellers">
-                                    <div class="s360-port-card">
-                                        <div class="s360-port-iframe-wrap">
-                                            <iframe data-src="https://www.google.com/maps/embed?pb=!4v1779643827499!6m8!1m7!1sCAoSLEFGMVFpcE5Gb0hfRnlhX21MLWEzRlJPT1M3NG1JSEFoRGt4NFRsOWhxUm00!2m2!1d26.47461392647747!2d80.34297179993234!3f0.33!4f3.4399999999999977!5f0.4000000000000002" loading="lazy" allowfullscreen title="Baijnath Jewellers PPN Market Kanpur"></iframe>
-                                            <div class="s360-port-cat">Jewellers</div>
-                                            <div class="s360-port-live"><i class="fa-solid fa-circle"></i> LIVE</div>
-                                        </div>
-                                        <div class="s360-port-info">
-                                            <h5>Baijnath Jewellers</h5>
-                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> PPN Market, Kanpur</p>
-                                            <a href="booking.html" class="s360-port-cta"><i class="fa-solid fa-camera"></i> Book Similar Tour</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                            </div>
-
-                            <!-- Bottom CTA -->
-                            <div class="text-center mt-5 wow fadeInUp" data-wow-delay=".3s">
-                                <a href="portfolio.html" class="btn-outline-360">
-                                    View Full Portfolio <i class="fa-regular fa-arrow-up-right"></i>
-                                </a>
-                            </div>
-
-                        </div>
-                    </section>
-
-
                     <!-- ===== WEDDING PACKAGES TEASER ===== -->
-                    <section style="background:#0d0d0d;padding:80px 0;position:relative;overflow:hidden;">
-                        <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(245,194,0,0.08) 0%,transparent 60%);pointer-events:none;"></div>
+                    <section style="background:#FFFDF4;padding:80px 0;position:relative;overflow:hidden;">
+                        <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(245,194,0,0.10) 0%,transparent 60%);pointer-events:none;"></div>
                         <div class="container">
-
-                            <!-- Header -->
                             <div class="text-center mb-5 wow fadeInUp">
                                 <div style="display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:16px;">
                                     <div style="height:1px;width:50px;background:linear-gradient(to right,transparent,#F5C200);"></div>
-                                    <span style="color:#F5C200;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;">Wedding Photography &amp; Cinematography</span>
+                                    <span style="color:#c89600;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;">Wedding Photography &amp; Cinematography</span>
                                     <div style="height:1px;width:50px;background:linear-gradient(to left,transparent,#F5C200);"></div>
                                 </div>
-                                <h2 style="color:#ffffff;font-family:'Quicksand',sans-serif;font-weight:800;font-size:42px;line-height:1.15;margin-bottom:12px;">
-                                    Capturing Emotions,<br><span style="color:#F5C200;font-style:italic;">Creating Legacies</span>
+                                <h2 style="color:#1A1A1A;font-family:&#39;Quicksand&#39;,sans-serif;font-weight:800;font-size:42px;line-height:1.15;margin-bottom:12px;">
+                                    Capturing Emotions,<br><span style="color:#c89600;font-style:italic;">Creating Legacies</span>
                                 </h2>
-                                <p style="color:#777;font-size:15px;margin:0 auto;max-width:480px;">We don't just take pictures — we tell your story. Choose a package that fits your dream wedding.</p>
+                                <p style="color:#666;font-size:15px;margin:0 auto;max-width:480px;">We don&#39;t just take pictures &mdash; we tell your story. Choose a package that fits your dream wedding.</p>
                             </div>
-
-                            <!-- 3 compact cards -->
                             <div class="row g-4 mb-5">
-
-                                <!-- Silver -->
                                 <div class="col-lg-4 col-md-12 wow fadeInUp" data-wow-delay=".1s">
-                                    <div style="background:#111;border:1px solid rgba(245,194,0,0.18);border-radius:14px;padding:32px 28px;text-align:center;transition:all 0.3s;" onmouseover="this.style.borderColor='rgba(245,194,0,0.5)';this.style.transform='translateY(-4px)';" onmouseout="this.style.borderColor='rgba(245,194,0,0.18)';this.style.transform='translateY(0)';">
-                                        <div style="width:56px;height:56px;border:1.5px solid rgba(245,194,0,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;background:rgba(245,194,0,0.06);"><i class="fa-solid fa-camera" style="color:#F5C200;font-size:22px;"></i></div>
-                                        <div style="color:#aaa;font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:6px;">Silver</div>
-                                        <div style="color:#F5C200;font-family:'Quicksand',sans-serif;font-weight:800;font-size:34px;line-height:1;">₹40,000<sup style="font-size:14px;">*</sup></div>
-                                        <div style="color:#666;font-size:12px;font-style:italic;margin:8px 0 20px;">Perfect for intimate celebrations</div>
-                                        <ul style="list-style:none;padding:0;margin:0 0 24px;text-align:left;">
-                                            <li style="color:#aaa;font-size:13px;padding:5px 0;display:flex;gap:8px;"><i class="fa-solid fa-check" style="color:#F5C200;margin-top:2px;"></i> 1 Photographer</li>
-                                            <li style="color:#aaa;font-size:13px;padding:5px 0;display:flex;gap:8px;"><i class="fa-solid fa-check" style="color:#F5C200;margin-top:2px;"></i> Candid &amp; Unlimited Edited Photos</li>
-                                            <li style="color:#aaa;font-size:13px;padding:5px 0;display:flex;gap:8px;"><i class="fa-solid fa-check" style="color:#F5C200;margin-top:2px;"></i> 1 Event · Up to 6 Hours</li>
-                                            <li style="color:#aaa;font-size:13px;padding:5px 0;display:flex;gap:8px;"><i class="fa-solid fa-check" style="color:#F5C200;margin-top:2px;"></i> Online Gallery</li>
-                                        </ul>
-                                        <a href="service-photography.html#packages" style="display:block;border:1px solid rgba(245,194,0,0.35);color:#F5C200;font-size:11px;font-weight:700;padding:11px;border-radius:6px;text-decoration:none;letter-spacing:1.5px;text-transform:uppercase;">View Details</a>
+                                    <div style="background:#fff;border:1px solid rgba(245,194,0,0.25);border-radius:14px;padding:32px 28px;text-align:center;box-shadow:0 8px 30px rgba(0,0,0,0.06);transition:all 0.3s;" onmouseover="this.style.borderColor=&#39;#F5C200&#39;;this.style.transform=&#39;translateY(-6px)&#39;;" onmouseout="this.style.borderColor=&#39;rgba(245,194,0,0.25)&#39;;this.style.transform=&#39;translateY(0)&#39;;">
+                                        <div style="width:56px;height:56px;border:1.5px solid rgba(245,194,0,0.4);background:rgba(245,194,0,0.08);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;"><i class="fa-solid fa-camera" style="color:#c89600;font-size:22px;"></i></div>
+                                        <div style="color:#888;font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:6px;">Silver</div>
+                                        <div style="color:#c89600;font-family:&#39;Quicksand&#39;,sans-serif;font-weight:800;font-size:34px;line-height:1;">&#8377;40,000<sup style="font-size:14px;">*</sup></div>
+                                        <div style="color:#888;font-size:12px;font-style:italic;margin:8px 0 20px;">Perfect for intimate celebrations</div>
+                                        <ul style="list-style:none;padding:0;margin:0 0 24px;text-align:left;"><li style="color:#555;font-size:13px;padding:5px 0;display:flex;gap:8px;"><i class="fa-solid fa-check" style="color:#c89600;margin-top:2px;"></i> 1 Photographer</li><li style="color:#555;font-size:13px;padding:5px 0;display:flex;gap:8px;"><i class="fa-solid fa-check" style="color:#c89600;margin-top:2px;"></i> Candid &amp; Unlimited Edited Photos</li><li style="color:#555;font-size:13px;padding:5px 0;display:flex;gap:8px;"><i class="fa-solid fa-check" style="color:#c89600;margin-top:2px;"></i> 1 Event &middot; Up to 6 Hours</li><li style="color:#555;font-size:13px;padding:5px 0;display:flex;gap:8px;"><i class="fa-solid fa-check" style="color:#c89600;margin-top:2px;"></i> Online Gallery</li></ul>
+                                        <a href="service-photography.html#packages" style="display:block;border:1px solid rgba(245,194,0,0.5);color:#c89600;font-size:11px;font-weight:700;padding:11px;border-radius:6px;text-decoration:none;letter-spacing:1.5px;text-transform:uppercase;">View Details</a>
                                     </div>
                                 </div>
-
-                                <!-- Gold (featured) -->
                                 <div class="col-lg-4 col-md-12 wow fadeInUp" data-wow-delay=".2s">
-                                    <div style="background:linear-gradient(160deg,#1a1400,#111);border:2px solid #F5C200;border-radius:14px;padding:32px 28px;text-align:center;position:relative;box-shadow:0 0 32px rgba(245,194,0,0.12);">
-                                        <div style="position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:#F5C200;color:#1A1A1A;font-size:9px;font-weight:800;padding:4px 16px;border-radius:50px;letter-spacing:2px;text-transform:uppercase;white-space:nowrap;">★ Most Popular ★</div>
-                                        <div style="width:56px;height:56px;border:1.5px solid #F5C200;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;background:rgba(245,194,0,0.1);"><i class="fa-solid fa-video" style="color:#F5C200;font-size:22px;"></i></div>
-                                        <div style="color:#F5C200;font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:6px;">Gold</div>
-                                        <div style="color:#F5C200;font-family:'Quicksand',sans-serif;font-weight:800;font-size:34px;line-height:1;">₹60,000<sup style="font-size:14px;">*</sup></div>
-                                        <div style="color:#666;font-size:12px;font-style:italic;margin:8px 0 20px;">Perfect blend of photo &amp; film</div>
-                                        <ul style="list-style:none;padding:0;margin:0 0 24px;text-align:left;">
-                                            <li style="color:#aaa;font-size:13px;padding:5px 0;display:flex;gap:8px;"><i class="fa-solid fa-check" style="color:#F5C200;margin-top:2px;"></i> 1 Photographer + 1 Cinematographer</li>
-                                            <li style="color:#aaa;font-size:13px;padding:5px 0;display:flex;gap:8px;"><i class="fa-solid fa-check" style="color:#F5C200;margin-top:2px;"></i> Cinematic Wedding Film</li>
-                                            <li style="color:#aaa;font-size:13px;padding:5px 0;display:flex;gap:8px;"><i class="fa-solid fa-check" style="color:#F5C200;margin-top:2px;"></i> 1 Event · Up to 8 Hours</li>
-                                            <li style="color:#aaa;font-size:13px;padding:5px 0;display:flex;gap:8px;"><i class="fa-solid fa-check" style="color:#F5C200;margin-top:2px;"></i> Teaser + Highlight Film</li>
-                                        </ul>
+                                    <div style="background:#fff;border:2px solid #F5C200;border-radius:14px;padding:32px 28px;text-align:center;position:relative;box-shadow:0 14px 40px rgba(245,194,0,0.22);"><div style="position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:#F5C200;color:#1A1A1A;font-size:9px;font-weight:800;padding:4px 16px;border-radius:50px;letter-spacing:2px;text-transform:uppercase;white-space:nowrap;">&#9733; Most Popular &#9733;</div>
+                                        <div style="width:56px;height:56px;border:1.5px solid #F5C200;background:rgba(245,194,0,0.12);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;"><i class="fa-solid fa-video" style="color:#c89600;font-size:22px;"></i></div>
+                                        <div style="color:#c89600;font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:6px;">Gold</div>
+                                        <div style="color:#c89600;font-family:&#39;Quicksand&#39;,sans-serif;font-weight:800;font-size:34px;line-height:1;">&#8377;60,000<sup style="font-size:14px;">*</sup></div>
+                                        <div style="color:#888;font-size:12px;font-style:italic;margin:8px 0 20px;">Perfect blend of photo &amp; film</div>
+                                        <ul style="list-style:none;padding:0;margin:0 0 24px;text-align:left;"><li style="color:#555;font-size:13px;padding:5px 0;display:flex;gap:8px;"><i class="fa-solid fa-check" style="color:#c89600;margin-top:2px;"></i> 1 Photographer + 1 Cinematographer</li><li style="color:#555;font-size:13px;padding:5px 0;display:flex;gap:8px;"><i class="fa-solid fa-check" style="color:#c89600;margin-top:2px;"></i> Cinematic Wedding Film</li><li style="color:#555;font-size:13px;padding:5px 0;display:flex;gap:8px;"><i class="fa-solid fa-check" style="color:#c89600;margin-top:2px;"></i> 1 Event &middot; Up to 8 Hours</li><li style="color:#555;font-size:13px;padding:5px 0;display:flex;gap:8px;"><i class="fa-solid fa-check" style="color:#c89600;margin-top:2px;"></i> Teaser + Highlight Film</li></ul>
                                         <a href="booking.html#photography" style="display:block;background:#F5C200;color:#1A1A1A;font-size:11px;font-weight:800;padding:12px;border-radius:6px;text-decoration:none;letter-spacing:1.5px;text-transform:uppercase;">Book Now</a>
                                     </div>
                                 </div>
-
-                                <!-- Platinum -->
                                 <div class="col-lg-4 col-md-12 wow fadeInUp" data-wow-delay=".3s">
-                                    <div style="background:#111;border:1px solid rgba(245,194,0,0.18);border-radius:14px;padding:32px 28px;text-align:center;transition:all 0.3s;" onmouseover="this.style.borderColor='rgba(245,194,0,0.5)';this.style.transform='translateY(-4px)';" onmouseout="this.style.borderColor='rgba(245,194,0,0.18)';this.style.transform='translateY(0)';">
-                                        <div style="width:56px;height:56px;border:1.5px solid rgba(245,194,0,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;background:rgba(245,194,0,0.06);"><span style="color:#F5C200;font-size:24px;font-weight:800;">✦</span></div>
-                                        <div style="color:#aaa;font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:6px;">Platinum</div>
-                                        <div style="color:#F5C200;font-family:'Quicksand',sans-serif;font-weight:800;font-size:34px;line-height:1;">₹90,000<sup style="font-size:14px;">*</sup></div>
-                                        <div style="color:#666;font-size:12px;font-style:italic;margin:8px 0 20px;">The complete premium experience</div>
-                                        <ul style="list-style:none;padding:0;margin:0 0 24px;text-align:left;">
-                                            <li style="color:#aaa;font-size:13px;padding:5px 0;display:flex;gap:8px;"><i class="fa-solid fa-check" style="color:#F5C200;margin-top:2px;"></i> 1 Photographer + 2 Cinematographers</li>
-                                            <li style="color:#aaa;font-size:13px;padding:5px 0;display:flex;gap:8px;"><i class="fa-solid fa-check" style="color:#F5C200;margin-top:2px;"></i> Pre-Wedding + Full Length Film</li>
-                                            <li style="color:#aaa;font-size:13px;padding:5px 0;display:flex;gap:8px;"><i class="fa-solid fa-check" style="color:#F5C200;margin-top:2px;"></i> 2 Events · Drone + Premium Album</li>
-                                            <li style="color:#aaa;font-size:13px;padding:5px 0;display:flex;gap:8px;"><i class="fa-solid fa-check" style="color:#F5C200;margin-top:2px;"></i> Up to 12 Hours/Day</li>
-                                        </ul>
-                                        <a href="service-photography.html#packages" style="display:block;border:1px solid rgba(245,194,0,0.35);color:#F5C200;font-size:11px;font-weight:700;padding:11px;border-radius:6px;text-decoration:none;letter-spacing:1.5px;text-transform:uppercase;">View Details</a>
+                                    <div style="background:#fff;border:1px solid rgba(245,194,0,0.25);border-radius:14px;padding:32px 28px;text-align:center;box-shadow:0 8px 30px rgba(0,0,0,0.06);transition:all 0.3s;" onmouseover="this.style.borderColor=&#39;#F5C200&#39;;this.style.transform=&#39;translateY(-6px)&#39;;" onmouseout="this.style.borderColor=&#39;rgba(245,194,0,0.25)&#39;;this.style.transform=&#39;translateY(0)&#39;;">
+                                        <div style="width:56px;height:56px;border:1.5px solid rgba(245,194,0,0.4);background:rgba(245,194,0,0.08);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;"><span style="color:#c89600;font-size:24px;font-weight:800;">&#10022;</span></div>
+                                        <div style="color:#888;font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:6px;">Platinum</div>
+                                        <div style="color:#c89600;font-family:&#39;Quicksand&#39;,sans-serif;font-weight:800;font-size:34px;line-height:1;">&#8377;90,000<sup style="font-size:14px;">*</sup></div>
+                                        <div style="color:#888;font-size:12px;font-style:italic;margin:8px 0 20px;">The complete premium experience</div>
+                                        <ul style="list-style:none;padding:0;margin:0 0 24px;text-align:left;"><li style="color:#555;font-size:13px;padding:5px 0;display:flex;gap:8px;"><i class="fa-solid fa-check" style="color:#c89600;margin-top:2px;"></i> 1 Photographer + 2 Cinematographers</li><li style="color:#555;font-size:13px;padding:5px 0;display:flex;gap:8px;"><i class="fa-solid fa-check" style="color:#c89600;margin-top:2px;"></i> Pre-Wedding + Full Length Film</li><li style="color:#555;font-size:13px;padding:5px 0;display:flex;gap:8px;"><i class="fa-solid fa-check" style="color:#c89600;margin-top:2px;"></i> 2 Events &middot; Drone + Premium Album</li><li style="color:#555;font-size:13px;padding:5px 0;display:flex;gap:8px;"><i class="fa-solid fa-check" style="color:#c89600;margin-top:2px;"></i> Up to 12 Hours/Day</li></ul>
+                                        <a href="service-photography.html#packages" style="display:block;border:1px solid rgba(245,194,0,0.5);color:#c89600;font-size:11px;font-weight:700;padding:11px;border-radius:6px;text-decoration:none;letter-spacing:1.5px;text-transform:uppercase;">View Details</a>
                                     </div>
                                 </div>
-
                             </div>
-
-                            <!-- Bottom CTA -->
-                            <div class="text-center wow fadeInUp" data-wow-delay=".4s">
-                                <p style="color:#555;font-size:13px;margin-bottom:18px;"><i class="fa-solid fa-circle-info" style="color:#F5C200;margin-right:6px;"></i>*Prices inclusive of taxes &nbsp;·&nbsp; 30% advance to confirm booking</p>
-                                <a href="service-photography.html#packages" style="display:inline-flex;align-items:center;gap:10px;border:2px solid rgba(245,194,0,0.5);color:#F5C200;font-size:15px;font-weight:600;padding:14px 34px;border-radius:4px;text-decoration:none;transition:all 0.3s;" onmouseover="this.style.background='#F5C200';this.style.color='#1A1A1A';" onmouseout="this.style.background='transparent';this.style.color='#F5C200';">See Full Package Details <i class="fa-regular fa-arrow-up-right"></i></a>
+                            <div class="wow fadeInUp" data-wow-delay=".4s">
+                                <div style="max-width:780px;margin:0 auto 26px;background:#fff;border:1px solid rgba(245,194,0,0.25);border-radius:14px;padding:24px 28px;box-shadow:0 8px 30px rgba(0,0,0,0.05);">
+                                    <div style="display:flex;align-items:center;gap:8px;justify-content:center;margin-bottom:16px;"><i class="fa-solid fa-file-contract" style="color:#c89600;"></i><span style="font-family:&#39;Quicksand&#39;,sans-serif;font-weight:800;color:#1A1A1A;font-size:16px;">Terms &amp; Conditions</span></div>
+                                    <div class="row g-2" style="color:#555;font-size:13px;"><div class="col-md-6" style="display:flex;gap:8px;align-items:flex-start;"><i class="fa-solid fa-circle-check" style="color:#c89600;margin-top:3px;"></i><span>30% advance to confirm booking; balance before the event.</span></div><div class="col-md-6" style="display:flex;gap:8px;align-items:flex-start;"><i class="fa-solid fa-circle-check" style="color:#c89600;margin-top:3px;"></i><span>Photos delivered in 30&ndash;45 days; videos in 45&ndash;60 days.</span></div><div class="col-md-6" style="display:flex;gap:8px;align-items:flex-start;"><i class="fa-solid fa-circle-check" style="color:#c89600;margin-top:3px;"></i><span>Extra hours are chargeable as per package rates.</span></div><div class="col-md-6" style="display:flex;gap:8px;align-items:flex-start;"><i class="fa-solid fa-circle-check" style="color:#c89600;margin-top:3px;"></i><span>Travel &amp; stay outside Kanpur is extra. All prices include taxes.</span></div></div>
+                                </div>
+                                <div style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center;align-items:center;">
+                                    <a href="booking.html#photography" style="display:inline-flex;align-items:center;gap:10px;background:#F5C200;color:#1A1A1A;font-size:15px;font-weight:700;padding:14px 30px;border-radius:50px;text-decoration:none;box-shadow:0 10px 24px rgba(245,194,0,0.3);"><i class="fa-solid fa-wand-magic-sparkles"></i> Create Your Own Package</a>
+                                    <a href="service-photography.html#packages" style="display:inline-flex;align-items:center;gap:10px;border:2px solid rgba(245,194,0,0.6);color:#1A1A1A;font-size:15px;font-weight:600;padding:14px 30px;border-radius:50px;text-decoration:none;transition:all 0.3s;" onmouseover="this.style.background=&#39;#F5C200&#39;;" onmouseout="this.style.background=&#39;transparent&#39;;">See Full Package Details <i class="fa-regular fa-arrow-up-right"></i></a>
+                                </div>
                             </div>
-
                         </div>
                     </section>
 
@@ -2035,11 +2013,11 @@
                                 <div class="col-lg-7">
                                     <div class="s360-section-label wow fadeInUp">Service Areas</div>
                                     <h2 class="wow fadeInUp" data-wow-delay=".2s">
-                                        Serving Businesses Across <br> <span style="color:var(--theme)">Kanpur, UP & All India</span>
+                                        Serving Businesses &amp; Clients <br> <span style="color:var(--theme)">Globally</span>
                                     </h2>
                                 </div>
                                 <div class="col-lg-5 text-lg-end">
-                                    <p style="color:var(--text);" class="wow fadeInUp">We cover Kanpur and all major cities across Uttar Pradesh and travel pan-India for virtual tour shoots and photography assignments.</p>
+                                    <p style="color:var(--text);" class="wow fadeInUp">From local businesses to clients worldwide, we travel globally for 360° virtual tour shoots and photography assignments — wherever your story takes us.</p>
                                 </div>
                             </div>
                             <div class="text-center wow fadeInUp" data-wow-delay=".3s">
@@ -2199,7 +2177,7 @@
                                     <ul class="s360-footer-contact list-unstyled">
                                         <li>
                                             <i class="fa-solid fa-location-dot"></i>
-                                            <span>A-27 Balaji Enclave, Keshav Puram, Kalyanpur, Kanpur (Semi Lower Ground Office, Near Community Centre)</span>
+                                            <span><a href="https://www.google.com/maps/search/?api=1&amp;query=Shootin+360+A-27+Balaji+Enclave+Keshav+Puram+Kalyanpur+Kanpur" target="_blank" rel="noopener" title="View on Google Maps" style="color:inherit;text-decoration:none;">A-27 Balaji Enclave, Keshav Puram, Kalyanpur, Kanpur (Semi Lower Ground Office, Near Community Centre)</a></span>
                                         </li>
                                         <li>
                                             <i class="fa-solid fa-phone"></i>

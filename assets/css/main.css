@@ -10601,14 +10601,12 @@ span {
 /* Card hover lift */
 .s360-service-card,
 .s360-testi-card,
-.s360-svc-visual,
-.s360-process-step {
+.s360-svc-visual {
   transition: transform .28s cubic-bezier(0.22, 0.61, 0.36, 1), box-shadow .28s ease;
 }
 .s360-service-card:hover,
 .s360-testi-card:hover,
-.s360-svc-visual:hover,
-.s360-process-step:hover {
+.s360-svc-visual:hover {
   transform: translateY(-6px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
 }
