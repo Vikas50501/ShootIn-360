@@ -313,40 +313,58 @@
             }
 
             /* Services */
+            /* Image service cards — heading visible, content reveals on hover */
             .s360-service-card {
-                background: #ffffff;
-                border-radius: 12px;
-                padding: 36px 28px;
-                border: 1px solid var(--border);
-                transition: all 0.3s;
-                height: 100%;
                 position: relative;
+                height: 360px;
+                border-radius: 14px;
                 overflow: hidden;
+                background-color: #1A1A1A;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                padding: 28px 26px;
+                transition: transform 0.35s cubic-bezier(0.22,0.61,0.36,1), box-shadow 0.35s ease;
             }
             .s360-service-card::before {
                 content: '';
                 position: absolute;
-                bottom: 0; left: 0; right: 0;
-                height: 3px;
-                background: var(--theme);
-                transform: scaleX(0);
-                transition: transform 0.3s;
+                inset: 0;
+                background: linear-gradient(to top, rgba(10,10,10,0.92) 0%, rgba(10,10,10,0.5) 45%, rgba(10,10,10,0.12) 100%);
+                transition: background 0.4s ease;
+                z-index: 1;
             }
-            .s360-service-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
-            .s360-service-card:hover::before { transform: scaleX(1); }
+            .s360-service-card:hover { transform: translateY(-6px); box-shadow: 0 24px 48px rgba(0,0,0,0.28); }
+            .s360-service-card:hover::before {
+                background: linear-gradient(to top, rgba(10,10,10,0.96) 0%, rgba(10,10,10,0.82) 55%, rgba(10,10,10,0.42) 100%);
+            }
+            .s360-service-card > * { position: relative; z-index: 2; }
             .s360-service-icon {
-                width: 60px; height: 60px;
-                background: rgba(245,194,0,0.12);
+                width: 56px; height: 56px;
+                background: var(--theme);
                 border-radius: 12px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                font-size: 26px;
-                color: var(--theme);
-                margin-bottom: 20px;
+                font-size: 24px;
+                color: #1A1A1A;
+                margin-bottom: 16px;
+                box-shadow: 0 6px 18px rgba(245,194,0,0.35);
             }
-            .s360-service-card h4 { font-size: 20px; font-weight: 700; color: #1A1A1A; margin-bottom: 12px; }
-            .s360-service-card p { color: var(--text); font-size: 14px; line-height: 1.7; margin-bottom: 20px; }
+            .s360-service-card h4 { font-size: 20px; font-weight: 700; color: #ffffff; margin-bottom: 0; }
+            .s360-service-card p {
+                color: rgba(255,255,255,0.85);
+                font-size: 14px; line-height: 1.7;
+                margin: 0;
+                max-height: 0; opacity: 0;
+                overflow: hidden;
+                transform: translateY(8px);
+                transition: max-height 0.45s ease, opacity 0.35s ease, transform 0.35s ease, margin 0.35s ease;
+            }
+            .s360-service-card:hover p { max-height: 200px; opacity: 1; transform: translateY(0); margin: 12px 0 18px; }
             .s360-service-link {
                 color: var(--theme);
                 font-weight: 600;
@@ -355,9 +373,18 @@
                 display: inline-flex;
                 align-items: center;
                 gap: 6px;
-                transition: gap 0.3s;
+                max-height: 0; opacity: 0;
+                overflow: hidden;
+                transform: translateY(8px);
+                transition: max-height 0.45s ease, opacity 0.35s ease, transform 0.35s ease, gap 0.3s ease;
             }
+            .s360-service-card:hover .s360-service-link { max-height: 40px; opacity: 1; transform: translateY(0); }
             .s360-service-link:hover { gap: 10px; color: var(--theme); }
+            /* Touch devices have no hover — keep content visible */
+            @media (hover: none) {
+                .s360-service-card p { max-height: 200px; opacity: 1; transform: none; margin: 12px 0 18px; }
+                .s360-service-card .s360-service-link { max-height: 40px; opacity: 1; transform: none; }
+            }
 
             /* Why Choose */
             .s360-why-item {
@@ -1114,13 +1141,13 @@
                                             </circle>
                                         </svg>
                                         <div class="s360-tour-preview">
-                                            <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&auto=format&fit=crop&q=80" alt="360 Virtual Tour Preview - Hotel Lobby" fetchpriority="high" decoding="async">
+                                            <img src="assets/img/Home page/Hero Section.png" alt="360 Virtual Tour Preview - Hotel Lobby" fetchpriority="high" decoding="async">
                                             <div class="s360-tour-badge">
                                                 <i class="fab fa-google"></i> Google Street View
                                             </div>
                                         </div>
                                         <div class="s360-floating-stat s360-stat-1 wow fadeInUp" data-wow-delay=".7s">
-                                            <div class="num">100<span style="font-size:22px">+</span></div>
+                                            <div class="num">70<span style="font-size:22px">+</span></div>
                                             <div class="lbl">Businesses Listed</div>
                                         </div>
                                         <div class="s360-floating-stat s360-stat-2 wow fadeInUp" data-wow-delay=".9s">
@@ -1202,7 +1229,7 @@
                             </div>
                             <div class="row g-4">
                                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".2s">
-                                    <div class="s360-service-card">
+                                    <div class="s360-service-card" style="background-image:url('https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=600&auto=format&fit=crop&q=70')">
                                         <div class="s360-service-icon"><i class="fa-solid fa-street-view"></i></div>
                                         <h4>360° Virtual Tours</h4>
                                         <p>High-resolution panoramic experiences published directly to Google Street View. Complete spatial coverage, responsive on all devices.</p>
@@ -1210,7 +1237,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".3s">
-                                    <div class="s360-service-card">
+                                    <div class="s360-service-card" style="background-image:url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&auto=format&fit=crop&q=70')">
                                         <div class="s360-service-icon"><i class="fab fa-google"></i></div>
                                         <h4>Google Street View</h4>
                                         <p>Official publishing and optimization for maximum visibility in Google Search & Maps. Street View Trusted status & Business Profile enhancement.</p>
@@ -1218,7 +1245,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".4s">
-                                    <div class="s360-service-card">
+                                    <div class="s360-service-card" style="background-image:url('https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=600&auto=format&fit=crop&q=70')">
                                         <div class="s360-service-icon"><i class="fa-solid fa-helicopter"></i></div>
                                         <h4>Aerial 360° & Drone</h4>
                                         <p>Professional drone-captured aerial panoramas and stills for properties & large venues. 4K aerial imagery with 360° aerial perspectives.</p>
@@ -1226,7 +1253,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".5s">
-                                    <div class="s360-service-card">
+                                    <div class="s360-service-card" style="background-image:url('https://images.unsplash.com/photo-1519689680058-324335c77eba?w=600&auto=format&fit=crop&q=70')">
                                         <div class="s360-service-icon"><i class="fa-solid fa-baby"></i></div>
                                         <h4>Baby Shoot Photography</h4>
                                         <p>Precious newborn and baby moments captured in stunning studio setups with professional lighting. Creative themed setups for every milestone.</p>
@@ -1234,7 +1261,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".6s">
-                                    <div class="s360-service-card">
+                                    <div class="s360-service-card" style="background-image:url('https://images.unsplash.com/photo-1519741497674-611481863552?w=600&auto=format&fit=crop&q=70')">
                                         <div class="s360-service-icon"><i class="fa-solid fa-heart"></i></div>
                                         <h4>Pre-Wedding Photography</h4>
                                         <p>Romantic and candid pre-wedding shoots to capture your love story before the big day. Outdoor & studio sessions with same-day preview edits.</p>
@@ -1242,7 +1269,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".7s">
-                                    <div class="s360-service-card">
+                                    <div class="s360-service-card" style="background-image:url('https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=600&auto=format&fit=crop&q=70')">
                                         <div class="s360-service-icon"><i class="fa-solid fa-rings-wedding"></i></div>
                                         <h4>Wedding Photography</h4>
                                         <p>Full-day coverage of your wedding with a blend of journalistic and artistic photography. Complete ceremony & reception with high-res edited gallery.</p>
@@ -1250,7 +1277,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".8s">
-                                    <div class="s360-service-card">
+                                    <div class="s360-service-card" style="background-image:url('https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=600&auto=format&fit=crop&q=70')">
                                         <div class="s360-service-icon"><i class="fa-solid fa-cake-candles"></i></div>
                                         <h4>Birthday & Celebrations</h4>
                                         <p>Vibrant and joyful coverage of birthdays, anniversaries, and milestone celebrations. Candid moment capture with quick turnaround delivery.</p>
@@ -1258,7 +1285,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".9s">
-                                    <div class="s360-service-card">
+                                    <div class="s360-service-card" style="background-image:url('https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=600&auto=format&fit=crop&q=70')">
                                         <div class="s360-service-icon"><i class="fa-solid fa-briefcase"></i></div>
                                         <h4>Events & Corporate</h4>
                                         <p>Professional photography for corporate events, product launches, and brand activations. Conferences, seminars, headshots & team photos.</p>
