@@ -56,6 +56,14 @@
             .s360-port-info .loc i { color:#F5C200; font-size:11px; }
             .s360-port-cta { display:inline-flex; align-items:center; gap:7px; background:#F5C200; color:#1A1A1A; font-size:12px; font-weight:700; padding:7px 14px; border-radius:6px; text-decoration:none; transition:all 0.3s; }
             .s360-port-cta:hover { background:#1A1A1A; color:#F5C200; }
+            .s360-port-iframe-wrap { height:210px !important; min-height:210px !important; max-height:210px !important; display:flex; align-items:center; justify-content:center; background:linear-gradient(135deg,#161616 0%,#2c2c2c 100%); }
+            .s360-port-iframe-wrap::before { content:''; position:absolute; inset:0; background:radial-gradient(circle at 28% 22%, rgba(245,194,0,0.22) 0%, transparent 55%); z-index:0; }
+            .s360-port-bgicon { font-size:56px; color:var(--theme); position:relative; z-index:1; opacity:0.95; transition:transform .4s cubic-bezier(0.22,0.61,0.36,1); }
+            .s360-port-card:hover .s360-port-bgicon { transform:scale(1.14); }
+            .s360-port-play { position:absolute; inset:0; z-index:4; display:flex; align-items:center; justify-content:center; gap:8px; background:rgba(15,15,15,0.62); color:#fff; font-weight:700; font-size:14px; letter-spacing:0.3px; text-decoration:none; opacity:0; transition:opacity .3s ease; }
+            .s360-port-play i { color:var(--theme); }
+            .s360-port-card:hover .s360-port-play { opacity:1; }
+            @media (hover:none){ .s360-port-play{ display:none; } }
             /* Full-screen tour lightbox */
             .s360-tour-lb { display:none; position:fixed; inset:0; z-index:99998; background:rgba(0,0,0,0.94); align-items:center; justify-content:center; padding:16px; }
             .s360-tour-lb.open { display:flex; }
@@ -300,565 +308,605 @@
 
                             <!-- Portfolio Grid — Google Maps 360° embeds -->
                             <div class="row g-4" id="portfolioGrid">
-                                <div class="col-lg-4 col-md-6 port-item wow fadeInUp" data-cat="dharm" data-wow-delay=".1s">
-                                    <a href="https://maps.app.goo.gl/95vJzWXZMt9HgBkj9" target="_blank" rel="noopener" class="s360-tour-card">
-                                        <div class="s360-tour-head">
-                                            <i class="fa-solid fa-gopuram"></i>
-                                            <span class="s360-tour-badge"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</span>
+                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="dharm" data-wow-delay=".1s">
+                                    <div class="s360-port-card">
+                                        <div class="s360-port-iframe-wrap">
+                                            <i class="s360-port-bgicon fa-solid fa-gopuram"></i>
+                                            <a href="https://maps.app.goo.gl/95vJzWXZMt9HgBkj9" target="_blank" rel="noopener" class="s360-port-play"><i class="fa-solid fa-street-view"></i> View 360&deg; Tour</a>
+                                            <div class="s360-port-cat">Dharm Sthal</div>
+                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</div>
                                         </div>
-                                        <div class="s360-tour-body">
-                                            <span class="s360-tour-cat">Dharm Sthal</span>
+                                        <div class="s360-port-info">
                                             <h5>ISKCON Mandir</h5>
-                                            <p><i class="fa-solid fa-location-dot"></i> Kanpur</p>
-                                            <span class="s360-tour-link">View 360&deg; Tour <i class="fa-solid fa-arrow-up-right"></i></span>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Kanpur</p>
+                                            <a href="https://maps.app.goo.gl/95vJzWXZMt9HgBkj9" target="_blank" rel="noopener" class="s360-port-cta"><i class="fa-solid fa-street-view"></i> View on Google Maps</a>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 port-item wow fadeInUp" data-cat="dharm" data-wow-delay=".2s">
-                                    <a href="https://maps.app.goo.gl/xFdJseehago7pYer9" target="_blank" rel="noopener" class="s360-tour-card">
-                                        <div class="s360-tour-head">
-                                            <i class="fa-solid fa-gopuram"></i>
-                                            <span class="s360-tour-badge"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</span>
+                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="dharm" data-wow-delay=".2s">
+                                    <div class="s360-port-card">
+                                        <div class="s360-port-iframe-wrap">
+                                            <i class="s360-port-bgicon fa-solid fa-gopuram"></i>
+                                            <a href="https://maps.app.goo.gl/xFdJseehago7pYer9" target="_blank" rel="noopener" class="s360-port-play"><i class="fa-solid fa-street-view"></i> View 360&deg; Tour</a>
+                                            <div class="s360-port-cat">Dharm Sthal</div>
+                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</div>
                                         </div>
-                                        <div class="s360-tour-body">
-                                            <span class="s360-tour-cat">Dharm Sthal</span>
+                                        <div class="s360-port-info">
                                             <h5>Brahm Khunti</h5>
-                                            <p><i class="fa-solid fa-location-dot"></i> Bithur, Kanpur</p>
-                                            <span class="s360-tour-link">View 360&deg; Tour <i class="fa-solid fa-arrow-up-right"></i></span>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Bithur, Kanpur</p>
+                                            <a href="https://maps.app.goo.gl/xFdJseehago7pYer9" target="_blank" rel="noopener" class="s360-port-cta"><i class="fa-solid fa-street-view"></i> View on Google Maps</a>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 port-item wow fadeInUp" data-cat="dharm" data-wow-delay=".3s">
-                                    <a href="https://maps.app.goo.gl/Rp8snn8zqgppYdKr5" target="_blank" rel="noopener" class="s360-tour-card">
-                                        <div class="s360-tour-head">
-                                            <i class="fa-solid fa-gopuram"></i>
-                                            <span class="s360-tour-badge"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</span>
+                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="dharm" data-wow-delay=".1s">
+                                    <div class="s360-port-card">
+                                        <div class="s360-port-iframe-wrap">
+                                            <i class="s360-port-bgicon fa-solid fa-gopuram"></i>
+                                            <a href="https://maps.app.goo.gl/Rp8snn8zqgppYdKr5" target="_blank" rel="noopener" class="s360-port-play"><i class="fa-solid fa-street-view"></i> View 360&deg; Tour</a>
+                                            <div class="s360-port-cat">Dharm Sthal</div>
+                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</div>
                                         </div>
-                                        <div class="s360-tour-body">
-                                            <span class="s360-tour-cat">Dharm Sthal</span>
+                                        <div class="s360-port-info">
                                             <h5>Jageshwar Mandir</h5>
-                                            <p><i class="fa-solid fa-location-dot"></i> Nawab Ganj, Kanpur</p>
-                                            <span class="s360-tour-link">View 360&deg; Tour <i class="fa-solid fa-arrow-up-right"></i></span>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Nawab Ganj, Kanpur</p>
+                                            <a href="https://maps.app.goo.gl/Rp8snn8zqgppYdKr5" target="_blank" rel="noopener" class="s360-port-cta"><i class="fa-solid fa-street-view"></i> View on Google Maps</a>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 port-item wow fadeInUp" data-cat="dharm" data-wow-delay=".1s">
-                                    <a href="https://maps.app.goo.gl/Prd1iwcX3vX3k7XV9" target="_blank" rel="noopener" class="s360-tour-card">
-                                        <div class="s360-tour-head">
-                                            <i class="fa-solid fa-gopuram"></i>
-                                            <span class="s360-tour-badge"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</span>
+                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="dharm" data-wow-delay=".2s">
+                                    <div class="s360-port-card">
+                                        <div class="s360-port-iframe-wrap">
+                                            <i class="s360-port-bgicon fa-solid fa-gopuram"></i>
+                                            <a href="https://maps.app.goo.gl/Prd1iwcX3vX3k7XV9" target="_blank" rel="noopener" class="s360-port-play"><i class="fa-solid fa-street-view"></i> View 360&deg; Tour</a>
+                                            <div class="s360-port-cat">Dharm Sthal</div>
+                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</div>
                                         </div>
-                                        <div class="s360-tour-body">
-                                            <span class="s360-tour-cat">Dharm Sthal</span>
+                                        <div class="s360-port-info">
                                             <h5>Panchmukhi Hanuman Mandir</h5>
-                                            <p><i class="fa-solid fa-location-dot"></i> Panki, Kanpur</p>
-                                            <span class="s360-tour-link">View 360&deg; Tour <i class="fa-solid fa-arrow-up-right"></i></span>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Panki, Kanpur</p>
+                                            <a href="https://maps.app.goo.gl/Prd1iwcX3vX3k7XV9" target="_blank" rel="noopener" class="s360-port-cta"><i class="fa-solid fa-street-view"></i> View on Google Maps</a>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 port-item wow fadeInUp" data-cat="dharm" data-wow-delay=".2s">
-                                    <a href="https://maps.app.goo.gl/2j8XwZZQV8bvRpqQ9" target="_blank" rel="noopener" class="s360-tour-card">
-                                        <div class="s360-tour-head">
-                                            <i class="fa-solid fa-gopuram"></i>
-                                            <span class="s360-tour-badge"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</span>
+                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="dharm" data-wow-delay=".1s">
+                                    <div class="s360-port-card">
+                                        <div class="s360-port-iframe-wrap">
+                                            <i class="s360-port-bgicon fa-solid fa-gopuram"></i>
+                                            <a href="https://maps.app.goo.gl/2j8XwZZQV8bvRpqQ9" target="_blank" rel="noopener" class="s360-port-play"><i class="fa-solid fa-street-view"></i> View 360&deg; Tour</a>
+                                            <div class="s360-port-cat">Dharm Sthal</div>
+                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</div>
                                         </div>
-                                        <div class="s360-tour-body">
-                                            <span class="s360-tour-cat">Dharm Sthal</span>
+                                        <div class="s360-port-info">
                                             <h5>St. Xaviers Church</h5>
-                                            <p><i class="fa-solid fa-location-dot"></i> Ashok Nagar, Kanpur</p>
-                                            <span class="s360-tour-link">View 360&deg; Tour <i class="fa-solid fa-arrow-up-right"></i></span>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Ashok Nagar, Kanpur</p>
+                                            <a href="https://maps.app.goo.gl/2j8XwZZQV8bvRpqQ9" target="_blank" rel="noopener" class="s360-port-cta"><i class="fa-solid fa-street-view"></i> View on Google Maps</a>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 port-item wow fadeInUp" data-cat="dharm" data-wow-delay=".3s">
-                                    <a href="https://maps.app.goo.gl/NNNMmiAnqeLMriqC9" target="_blank" rel="noopener" class="s360-tour-card">
-                                        <div class="s360-tour-head">
-                                            <i class="fa-solid fa-gopuram"></i>
-                                            <span class="s360-tour-badge"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</span>
+                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="dharm" data-wow-delay=".2s">
+                                    <div class="s360-port-card">
+                                        <div class="s360-port-iframe-wrap">
+                                            <i class="s360-port-bgicon fa-solid fa-gopuram"></i>
+                                            <a href="https://maps.app.goo.gl/NNNMmiAnqeLMriqC9" target="_blank" rel="noopener" class="s360-port-play"><i class="fa-solid fa-street-view"></i> View 360&deg; Tour</a>
+                                            <div class="s360-port-cat">Dharm Sthal</div>
+                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</div>
                                         </div>
-                                        <div class="s360-tour-body">
-                                            <span class="s360-tour-cat">Dharm Sthal</span>
+                                        <div class="s360-port-info">
                                             <h5>Ranjeet Nagar Gurudwara</h5>
-                                            <p><i class="fa-solid fa-location-dot"></i> Kanpur</p>
-                                            <span class="s360-tour-link">View 360&deg; Tour <i class="fa-solid fa-arrow-up-right"></i></span>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Kanpur</p>
+                                            <a href="https://maps.app.goo.gl/NNNMmiAnqeLMriqC9" target="_blank" rel="noopener" class="s360-port-cta"><i class="fa-solid fa-street-view"></i> View on Google Maps</a>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 port-item wow fadeInUp" data-cat="dharm" data-wow-delay=".1s">
-                                    <a href="https://maps.app.goo.gl/NeEuuk4889m7wbR37" target="_blank" rel="noopener" class="s360-tour-card">
-                                        <div class="s360-tour-head">
-                                            <i class="fa-solid fa-gopuram"></i>
-                                            <span class="s360-tour-badge"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</span>
+                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="dharm" data-wow-delay=".1s">
+                                    <div class="s360-port-card">
+                                        <div class="s360-port-iframe-wrap">
+                                            <i class="s360-port-bgicon fa-solid fa-gopuram"></i>
+                                            <a href="https://maps.app.goo.gl/NeEuuk4889m7wbR37" target="_blank" rel="noopener" class="s360-port-play"><i class="fa-solid fa-street-view"></i> View 360&deg; Tour</a>
+                                            <div class="s360-port-cat">Dharm Sthal</div>
+                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</div>
                                         </div>
-                                        <div class="s360-tour-body">
-                                            <span class="s360-tour-cat">Dharm Sthal</span>
+                                        <div class="s360-port-info">
                                             <h5>Kesaw Madhuvan Park</h5>
-                                            <p><i class="fa-solid fa-location-dot"></i> Kesaw Nagar, Kanpur</p>
-                                            <span class="s360-tour-link">View 360&deg; Tour <i class="fa-solid fa-arrow-up-right"></i></span>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Kesaw Nagar, Kanpur</p>
+                                            <a href="https://maps.app.goo.gl/NeEuuk4889m7wbR37" target="_blank" rel="noopener" class="s360-port-cta"><i class="fa-solid fa-street-view"></i> View on Google Maps</a>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 port-item wow fadeInUp" data-cat="school" data-wow-delay=".2s">
-                                    <a href="https://maps.app.goo.gl/3Gmivy7BR8reTGHq8" target="_blank" rel="noopener" class="s360-tour-card">
-                                        <div class="s360-tour-head">
-                                            <i class="fa-solid fa-graduation-cap"></i>
-                                            <span class="s360-tour-badge"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</span>
+                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="school" data-wow-delay=".2s">
+                                    <div class="s360-port-card">
+                                        <div class="s360-port-iframe-wrap">
+                                            <i class="s360-port-bgicon fa-solid fa-graduation-cap"></i>
+                                            <a href="https://maps.app.goo.gl/3Gmivy7BR8reTGHq8" target="_blank" rel="noopener" class="s360-port-play"><i class="fa-solid fa-street-view"></i> View 360&deg; Tour</a>
+                                            <div class="s360-port-cat">School &amp; College</div>
+                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</div>
                                         </div>
-                                        <div class="s360-tour-body">
-                                            <span class="s360-tour-cat">School &amp; College</span>
+                                        <div class="s360-port-info">
                                             <h5>CSJM Institute of Journalism &amp; Mass Comm.</h5>
-                                            <p><i class="fa-solid fa-location-dot"></i> Kanpur</p>
-                                            <span class="s360-tour-link">View 360&deg; Tour <i class="fa-solid fa-arrow-up-right"></i></span>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Kanpur</p>
+                                            <a href="https://maps.app.goo.gl/3Gmivy7BR8reTGHq8" target="_blank" rel="noopener" class="s360-port-cta"><i class="fa-solid fa-street-view"></i> View on Google Maps</a>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 port-item wow fadeInUp" data-cat="school" data-wow-delay=".3s">
-                                    <a href="https://maps.app.goo.gl/YwGAgjyYHR9nh4gd9" target="_blank" rel="noopener" class="s360-tour-card">
-                                        <div class="s360-tour-head">
-                                            <i class="fa-solid fa-graduation-cap"></i>
-                                            <span class="s360-tour-badge"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</span>
+                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="school" data-wow-delay=".1s">
+                                    <div class="s360-port-card">
+                                        <div class="s360-port-iframe-wrap">
+                                            <i class="s360-port-bgicon fa-solid fa-graduation-cap"></i>
+                                            <a href="https://maps.app.goo.gl/YwGAgjyYHR9nh4gd9" target="_blank" rel="noopener" class="s360-port-play"><i class="fa-solid fa-street-view"></i> View 360&deg; Tour</a>
+                                            <div class="s360-port-cat">School &amp; College</div>
+                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</div>
                                         </div>
-                                        <div class="s360-tour-body">
-                                            <span class="s360-tour-cat">School &amp; College</span>
+                                        <div class="s360-port-info">
                                             <h5>Andh Vidyalaya J.H.S.</h5>
-                                            <p><i class="fa-solid fa-location-dot"></i> Jawahar Nagar, Kanpur</p>
-                                            <span class="s360-tour-link">View 360&deg; Tour <i class="fa-solid fa-arrow-up-right"></i></span>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Jawahar Nagar, Kanpur</p>
+                                            <a href="https://maps.app.goo.gl/YwGAgjyYHR9nh4gd9" target="_blank" rel="noopener" class="s360-port-cta"><i class="fa-solid fa-street-view"></i> View on Google Maps</a>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 port-item wow fadeInUp" data-cat="school" data-wow-delay=".1s">
-                                    <a href="https://maps.app.goo.gl/u3sacLLZpt7yBtaC6" target="_blank" rel="noopener" class="s360-tour-card">
-                                        <div class="s360-tour-head">
-                                            <i class="fa-solid fa-graduation-cap"></i>
-                                            <span class="s360-tour-badge"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</span>
+                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="school" data-wow-delay=".2s">
+                                    <div class="s360-port-card">
+                                        <div class="s360-port-iframe-wrap">
+                                            <i class="s360-port-bgicon fa-solid fa-graduation-cap"></i>
+                                            <a href="https://maps.app.goo.gl/u3sacLLZpt7yBtaC6" target="_blank" rel="noopener" class="s360-port-play"><i class="fa-solid fa-street-view"></i> View 360&deg; Tour</a>
+                                            <div class="s360-port-cat">School &amp; College</div>
+                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</div>
                                         </div>
-                                        <div class="s360-tour-body">
-                                            <span class="s360-tour-cat">School &amp; College</span>
+                                        <div class="s360-port-info">
                                             <h5>Satya Narayan U.S. Sansthan</h5>
-                                            <p><i class="fa-solid fa-location-dot"></i> Shravasti, Bahraich</p>
-                                            <span class="s360-tour-link">View 360&deg; Tour <i class="fa-solid fa-arrow-up-right"></i></span>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Shravasti, Bahraich</p>
+                                            <a href="https://maps.app.goo.gl/u3sacLLZpt7yBtaC6" target="_blank" rel="noopener" class="s360-port-cta"><i class="fa-solid fa-street-view"></i> View on Google Maps</a>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 port-item wow fadeInUp" data-cat="school" data-wow-delay=".2s">
-                                    <a href="https://maps.app.goo.gl/oPT32ytYjdGXiydEA" target="_blank" rel="noopener" class="s360-tour-card">
-                                        <div class="s360-tour-head">
-                                            <i class="fa-solid fa-graduation-cap"></i>
-                                            <span class="s360-tour-badge"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</span>
+                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="school" data-wow-delay=".1s">
+                                    <div class="s360-port-card">
+                                        <div class="s360-port-iframe-wrap">
+                                            <i class="s360-port-bgicon fa-solid fa-graduation-cap"></i>
+                                            <a href="https://maps.app.goo.gl/oPT32ytYjdGXiydEA" target="_blank" rel="noopener" class="s360-port-play"><i class="fa-solid fa-street-view"></i> View 360&deg; Tour</a>
+                                            <div class="s360-port-cat">School &amp; College</div>
+                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</div>
                                         </div>
-                                        <div class="s360-tour-body">
-                                            <span class="s360-tour-cat">School &amp; College</span>
+                                        <div class="s360-port-info">
                                             <h5>United Public School</h5>
-                                            <p><i class="fa-solid fa-location-dot"></i> Civil Lines, Kanpur</p>
-                                            <span class="s360-tour-link">View 360&deg; Tour <i class="fa-solid fa-arrow-up-right"></i></span>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Civil Lines, Kanpur</p>
+                                            <a href="https://maps.app.goo.gl/oPT32ytYjdGXiydEA" target="_blank" rel="noopener" class="s360-port-cta"><i class="fa-solid fa-street-view"></i> View on Google Maps</a>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 port-item wow fadeInUp" data-cat="school" data-wow-delay=".3s">
-                                    <a href="https://maps.app.goo.gl/wEBRMAk9kQfLfNC2A" target="_blank" rel="noopener" class="s360-tour-card">
-                                        <div class="s360-tour-head">
-                                            <i class="fa-solid fa-graduation-cap"></i>
-                                            <span class="s360-tour-badge"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</span>
+                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="school" data-wow-delay=".2s">
+                                    <div class="s360-port-card">
+                                        <div class="s360-port-iframe-wrap">
+                                            <i class="s360-port-bgicon fa-solid fa-graduation-cap"></i>
+                                            <a href="https://maps.app.goo.gl/wEBRMAk9kQfLfNC2A" target="_blank" rel="noopener" class="s360-port-play"><i class="fa-solid fa-street-view"></i> View 360&deg; Tour</a>
+                                            <div class="s360-port-cat">School &amp; College</div>
+                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</div>
                                         </div>
-                                        <div class="s360-tour-body">
-                                            <span class="s360-tour-cat">School &amp; College</span>
+                                        <div class="s360-port-info">
                                             <h5>CHS Education</h5>
-                                            <p><i class="fa-solid fa-location-dot"></i> Tatya Tope Nagar, Kanpur</p>
-                                            <span class="s360-tour-link">View 360&deg; Tour <i class="fa-solid fa-arrow-up-right"></i></span>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Tatya Tope Nagar, Kanpur</p>
+                                            <a href="https://maps.app.goo.gl/wEBRMAk9kQfLfNC2A" target="_blank" rel="noopener" class="s360-port-cta"><i class="fa-solid fa-street-view"></i> View on Google Maps</a>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 port-item wow fadeInUp" data-cat="school" data-wow-delay=".1s">
-                                    <a href="https://maps.app.goo.gl/q3ncJkLMTsfHnJH58" target="_blank" rel="noopener" class="s360-tour-card">
-                                        <div class="s360-tour-head">
-                                            <i class="fa-solid fa-graduation-cap"></i>
-                                            <span class="s360-tour-badge"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</span>
+                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="school" data-wow-delay=".1s">
+                                    <div class="s360-port-card">
+                                        <div class="s360-port-iframe-wrap">
+                                            <i class="s360-port-bgicon fa-solid fa-graduation-cap"></i>
+                                            <a href="https://maps.app.goo.gl/q3ncJkLMTsfHnJH58" target="_blank" rel="noopener" class="s360-port-play"><i class="fa-solid fa-street-view"></i> View 360&deg; Tour</a>
+                                            <div class="s360-port-cat">School &amp; College</div>
+                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</div>
                                         </div>
-                                        <div class="s360-tour-body">
-                                            <span class="s360-tour-cat">School &amp; College</span>
+                                        <div class="s360-port-info">
                                             <h5>Wisdom Public School</h5>
-                                            <p><i class="fa-solid fa-location-dot"></i> Keshav Puram, Kanpur</p>
-                                            <span class="s360-tour-link">View 360&deg; Tour <i class="fa-solid fa-arrow-up-right"></i></span>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Keshav Puram, Kanpur</p>
+                                            <a href="https://maps.app.goo.gl/q3ncJkLMTsfHnJH58" target="_blank" rel="noopener" class="s360-port-cta"><i class="fa-solid fa-street-view"></i> View on Google Maps</a>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 port-item wow fadeInUp" data-cat="school" data-wow-delay=".2s">
-                                    <a href="https://maps.app.goo.gl/JwtNnADTTM7KKQux6" target="_blank" rel="noopener" class="s360-tour-card">
-                                        <div class="s360-tour-head">
-                                            <i class="fa-solid fa-graduation-cap"></i>
-                                            <span class="s360-tour-badge"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</span>
+                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="school" data-wow-delay=".2s">
+                                    <div class="s360-port-card">
+                                        <div class="s360-port-iframe-wrap">
+                                            <i class="s360-port-bgicon fa-solid fa-graduation-cap"></i>
+                                            <a href="https://maps.app.goo.gl/JwtNnADTTM7KKQux6" target="_blank" rel="noopener" class="s360-port-play"><i class="fa-solid fa-street-view"></i> View 360&deg; Tour</a>
+                                            <div class="s360-port-cat">School &amp; College</div>
+                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</div>
                                         </div>
-                                        <div class="s360-tour-body">
-                                            <span class="s360-tour-cat">School &amp; College</span>
+                                        <div class="s360-port-info">
                                             <h5>Mother T.H. Secondary School</h5>
-                                            <p><i class="fa-solid fa-location-dot"></i> Keshav Nagar, Kanpur</p>
-                                            <span class="s360-tour-link">View 360&deg; Tour <i class="fa-solid fa-arrow-up-right"></i></span>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Keshav Nagar, Kanpur</p>
+                                            <a href="https://maps.app.goo.gl/JwtNnADTTM7KKQux6" target="_blank" rel="noopener" class="s360-port-cta"><i class="fa-solid fa-street-view"></i> View on Google Maps</a>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 port-item wow fadeInUp" data-cat="school" data-wow-delay=".3s">
-                                    <a href="https://maps.app.goo.gl/YPs5DRdSEPDswJv5A" target="_blank" rel="noopener" class="s360-tour-card">
-                                        <div class="s360-tour-head">
-                                            <i class="fa-solid fa-graduation-cap"></i>
-                                            <span class="s360-tour-badge"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</span>
+                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="school" data-wow-delay=".1s">
+                                    <div class="s360-port-card">
+                                        <div class="s360-port-iframe-wrap">
+                                            <i class="s360-port-bgicon fa-solid fa-graduation-cap"></i>
+                                            <a href="https://maps.app.goo.gl/YPs5DRdSEPDswJv5A" target="_blank" rel="noopener" class="s360-port-play"><i class="fa-solid fa-street-view"></i> View 360&deg; Tour</a>
+                                            <div class="s360-port-cat">School &amp; College</div>
+                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</div>
                                         </div>
-                                        <div class="s360-tour-body">
-                                            <span class="s360-tour-cat">School &amp; College</span>
+                                        <div class="s360-port-info">
                                             <h5>The Cherubs Play Group (MTC)</h5>
-                                            <p><i class="fa-solid fa-location-dot"></i> Keshav Nagar, Kanpur</p>
-                                            <span class="s360-tour-link">View 360&deg; Tour <i class="fa-solid fa-arrow-up-right"></i></span>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Keshav Nagar, Kanpur</p>
+                                            <a href="https://maps.app.goo.gl/YPs5DRdSEPDswJv5A" target="_blank" rel="noopener" class="s360-port-cta"><i class="fa-solid fa-street-view"></i> View on Google Maps</a>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 port-item wow fadeInUp" data-cat="jewellers" data-wow-delay=".1s">
-                                    <a href="https://maps.app.goo.gl/vwUx6nh8ARv6KQ1F7" target="_blank" rel="noopener" class="s360-tour-card">
-                                        <div class="s360-tour-head">
-                                            <i class="fa-solid fa-gem"></i>
-                                            <span class="s360-tour-badge"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</span>
+                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="jewellers" data-wow-delay=".2s">
+                                    <div class="s360-port-card">
+                                        <div class="s360-port-iframe-wrap">
+                                            <i class="s360-port-bgicon fa-solid fa-gem"></i>
+                                            <a href="https://maps.app.goo.gl/vwUx6nh8ARv6KQ1F7" target="_blank" rel="noopener" class="s360-port-play"><i class="fa-solid fa-street-view"></i> View 360&deg; Tour</a>
+                                            <div class="s360-port-cat">Jewellers</div>
+                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</div>
                                         </div>
-                                        <div class="s360-tour-body">
-                                            <span class="s360-tour-cat">Jewellers</span>
+                                        <div class="s360-port-info">
                                             <h5>Shri Mohan Jewellers</h5>
-                                            <p><i class="fa-solid fa-location-dot"></i> Birahna Road, Kanpur</p>
-                                            <span class="s360-tour-link">View 360&deg; Tour <i class="fa-solid fa-arrow-up-right"></i></span>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Birahna Road, Kanpur</p>
+                                            <a href="https://maps.app.goo.gl/vwUx6nh8ARv6KQ1F7" target="_blank" rel="noopener" class="s360-port-cta"><i class="fa-solid fa-street-view"></i> View on Google Maps</a>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 port-item wow fadeInUp" data-cat="jewellers" data-wow-delay=".2s">
-                                    <a href="https://maps.app.goo.gl/EXmWTkvMRTrfCeMY8" target="_blank" rel="noopener" class="s360-tour-card">
-                                        <div class="s360-tour-head">
-                                            <i class="fa-solid fa-gem"></i>
-                                            <span class="s360-tour-badge"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</span>
+                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="jewellers" data-wow-delay=".1s">
+                                    <div class="s360-port-card">
+                                        <div class="s360-port-iframe-wrap">
+                                            <i class="s360-port-bgicon fa-solid fa-gem"></i>
+                                            <a href="https://maps.app.goo.gl/EXmWTkvMRTrfCeMY8" target="_blank" rel="noopener" class="s360-port-play"><i class="fa-solid fa-street-view"></i> View 360&deg; Tour</a>
+                                            <div class="s360-port-cat">Jewellers</div>
+                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</div>
                                         </div>
-                                        <div class="s360-tour-body">
-                                            <span class="s360-tour-cat">Jewellers</span>
+                                        <div class="s360-port-info">
                                             <h5>Baijnath Jewellers</h5>
-                                            <p><i class="fa-solid fa-location-dot"></i> PPN Market, Civil Lines, Kanpur</p>
-                                            <span class="s360-tour-link">View 360&deg; Tour <i class="fa-solid fa-arrow-up-right"></i></span>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> PPN Market, Civil Lines, Kanpur</p>
+                                            <a href="https://maps.app.goo.gl/EXmWTkvMRTrfCeMY8" target="_blank" rel="noopener" class="s360-port-cta"><i class="fa-solid fa-street-view"></i> View on Google Maps</a>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 port-item wow fadeInUp" data-cat="jewellers" data-wow-delay=".3s">
-                                    <a href="https://maps.app.goo.gl/LcfZiyD5vJFC7VWBA" target="_blank" rel="noopener" class="s360-tour-card">
-                                        <div class="s360-tour-head">
-                                            <i class="fa-solid fa-gem"></i>
-                                            <span class="s360-tour-badge"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</span>
+                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="jewellers" data-wow-delay=".2s">
+                                    <div class="s360-port-card">
+                                        <div class="s360-port-iframe-wrap">
+                                            <i class="s360-port-bgicon fa-solid fa-gem"></i>
+                                            <a href="https://maps.app.goo.gl/LcfZiyD5vJFC7VWBA" target="_blank" rel="noopener" class="s360-port-play"><i class="fa-solid fa-street-view"></i> View 360&deg; Tour</a>
+                                            <div class="s360-port-cat">Jewellers</div>
+                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</div>
                                         </div>
-                                        <div class="s360-tour-body">
-                                            <span class="s360-tour-cat">Jewellers</span>
+                                        <div class="s360-port-info">
                                             <h5>Viya Modern Jewels by Baijnath</h5>
-                                            <p><i class="fa-solid fa-location-dot"></i> Swaroop Nagar, Kanpur</p>
-                                            <span class="s360-tour-link">View 360&deg; Tour <i class="fa-solid fa-arrow-up-right"></i></span>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Swaroop Nagar, Kanpur</p>
+                                            <a href="https://maps.app.goo.gl/LcfZiyD5vJFC7VWBA" target="_blank" rel="noopener" class="s360-port-cta"><i class="fa-solid fa-street-view"></i> View on Google Maps</a>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 port-item wow fadeInUp" data-cat="jewellers" data-wow-delay=".1s">
-                                    <a href="https://maps.app.goo.gl/2G8VwezFSwmz45Pq7" target="_blank" rel="noopener" class="s360-tour-card">
-                                        <div class="s360-tour-head">
-                                            <i class="fa-solid fa-gem"></i>
-                                            <span class="s360-tour-badge"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</span>
+                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="jewellers" data-wow-delay=".1s">
+                                    <div class="s360-port-card">
+                                        <div class="s360-port-iframe-wrap">
+                                            <i class="s360-port-bgicon fa-solid fa-gem"></i>
+                                            <a href="https://maps.app.goo.gl/2G8VwezFSwmz45Pq7" target="_blank" rel="noopener" class="s360-port-play"><i class="fa-solid fa-street-view"></i> View 360&deg; Tour</a>
+                                            <div class="s360-port-cat">Jewellers</div>
+                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</div>
                                         </div>
-                                        <div class="s360-tour-body">
-                                            <span class="s360-tour-cat">Jewellers</span>
+                                        <div class="s360-port-info">
                                             <h5>Aaina Silver Jewellery</h5>
-                                            <p><i class="fa-solid fa-location-dot"></i> Swaroop Nagar, Kanpur</p>
-                                            <span class="s360-tour-link">View 360&deg; Tour <i class="fa-solid fa-arrow-up-right"></i></span>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Swaroop Nagar, Kanpur</p>
+                                            <a href="https://maps.app.goo.gl/2G8VwezFSwmz45Pq7" target="_blank" rel="noopener" class="s360-port-cta"><i class="fa-solid fa-street-view"></i> View on Google Maps</a>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 port-item wow fadeInUp" data-cat="office" data-wow-delay=".2s">
-                                    <a href="https://maps.app.goo.gl/1ygGzYRKYgJc3LCg6" target="_blank" rel="noopener" class="s360-tour-card">
-                                        <div class="s360-tour-head">
-                                            <i class="fa-solid fa-briefcase"></i>
-                                            <span class="s360-tour-badge"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</span>
+                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="office" data-wow-delay=".2s">
+                                    <div class="s360-port-card">
+                                        <div class="s360-port-iframe-wrap">
+                                            <i class="s360-port-bgicon fa-solid fa-briefcase"></i>
+                                            <a href="https://maps.app.goo.gl/1ygGzYRKYgJc3LCg6" target="_blank" rel="noopener" class="s360-port-play"><i class="fa-solid fa-street-view"></i> View 360&deg; Tour</a>
+                                            <div class="s360-port-cat">Office</div>
+                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</div>
                                         </div>
-                                        <div class="s360-tour-body">
-                                            <span class="s360-tour-cat">Office</span>
+                                        <div class="s360-port-info">
                                             <h5>Traditional Interior</h5>
-                                            <p><i class="fa-solid fa-location-dot"></i> Chunni Ganj, Kanpur</p>
-                                            <span class="s360-tour-link">View 360&deg; Tour <i class="fa-solid fa-arrow-up-right"></i></span>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Chunni Ganj, Kanpur</p>
+                                            <a href="https://maps.app.goo.gl/1ygGzYRKYgJc3LCg6" target="_blank" rel="noopener" class="s360-port-cta"><i class="fa-solid fa-street-view"></i> View on Google Maps</a>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 port-item wow fadeInUp" data-cat="office" data-wow-delay=".3s">
-                                    <a href="https://maps.app.goo.gl/7m5XzU2o3CvL936a6" target="_blank" rel="noopener" class="s360-tour-card">
-                                        <div class="s360-tour-head">
-                                            <i class="fa-solid fa-briefcase"></i>
-                                            <span class="s360-tour-badge"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</span>
+                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="office" data-wow-delay=".1s">
+                                    <div class="s360-port-card">
+                                        <div class="s360-port-iframe-wrap">
+                                            <i class="s360-port-bgicon fa-solid fa-briefcase"></i>
+                                            <a href="https://maps.app.goo.gl/7m5XzU2o3CvL936a6" target="_blank" rel="noopener" class="s360-port-play"><i class="fa-solid fa-street-view"></i> View 360&deg; Tour</a>
+                                            <div class="s360-port-cat">Office</div>
+                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</div>
                                         </div>
-                                        <div class="s360-tour-body">
-                                            <span class="s360-tour-cat">Office</span>
+                                        <div class="s360-port-info">
                                             <h5>V R Consultant (Chartered Accountant)</h5>
-                                            <p><i class="fa-solid fa-location-dot"></i> Meerut</p>
-                                            <span class="s360-tour-link">View 360&deg; Tour <i class="fa-solid fa-arrow-up-right"></i></span>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Meerut</p>
+                                            <a href="https://maps.app.goo.gl/7m5XzU2o3CvL936a6" target="_blank" rel="noopener" class="s360-port-cta"><i class="fa-solid fa-street-view"></i> View on Google Maps</a>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 port-item wow fadeInUp" data-cat="clinic" data-wow-delay=".1s">
-                                    <a href="https://maps.app.goo.gl/TMHyiPy2MBQjeEAA6" target="_blank" rel="noopener" class="s360-tour-card">
-                                        <div class="s360-tour-head">
-                                            <i class="fa-solid fa-stethoscope"></i>
-                                            <span class="s360-tour-badge"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</span>
+                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="clinic" data-wow-delay=".2s">
+                                    <div class="s360-port-card">
+                                        <div class="s360-port-iframe-wrap">
+                                            <i class="s360-port-bgicon fa-solid fa-stethoscope"></i>
+                                            <a href="https://maps.app.goo.gl/TMHyiPy2MBQjeEAA6" target="_blank" rel="noopener" class="s360-port-play"><i class="fa-solid fa-street-view"></i> View 360&deg; Tour</a>
+                                            <div class="s360-port-cat">Doctor's Clinic</div>
+                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</div>
                                         </div>
-                                        <div class="s360-tour-body">
-                                            <span class="s360-tour-cat">Doctor's Clinic</span>
+                                        <div class="s360-port-info">
                                             <h5>Dr. Sanjay Rastogi</h5>
-                                            <p><i class="fa-solid fa-location-dot"></i> Swaroop Nagar, Kanpur</p>
-                                            <span class="s360-tour-link">View 360&deg; Tour <i class="fa-solid fa-arrow-up-right"></i></span>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Swaroop Nagar, Kanpur</p>
+                                            <a href="https://maps.app.goo.gl/TMHyiPy2MBQjeEAA6" target="_blank" rel="noopener" class="s360-port-cta"><i class="fa-solid fa-street-view"></i> View on Google Maps</a>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 port-item wow fadeInUp" data-cat="clinic" data-wow-delay=".2s">
-                                    <a href="https://maps.app.goo.gl/4iqAF5hjdsFVHNRE7" target="_blank" rel="noopener" class="s360-tour-card">
-                                        <div class="s360-tour-head">
-                                            <i class="fa-solid fa-stethoscope"></i>
-                                            <span class="s360-tour-badge"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</span>
+                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="clinic" data-wow-delay=".1s">
+                                    <div class="s360-port-card">
+                                        <div class="s360-port-iframe-wrap">
+                                            <i class="s360-port-bgicon fa-solid fa-stethoscope"></i>
+                                            <a href="https://maps.app.goo.gl/4iqAF5hjdsFVHNRE7" target="_blank" rel="noopener" class="s360-port-play"><i class="fa-solid fa-street-view"></i> View 360&deg; Tour</a>
+                                            <div class="s360-port-cat">Doctor's Clinic</div>
+                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</div>
                                         </div>
-                                        <div class="s360-tour-body">
-                                            <span class="s360-tour-cat">Doctor's Clinic</span>
+                                        <div class="s360-port-info">
                                             <h5>Dr. Raj Tilak</h5>
-                                            <p><i class="fa-solid fa-location-dot"></i> Swaroop Nagar, Kanpur</p>
-                                            <span class="s360-tour-link">View 360&deg; Tour <i class="fa-solid fa-arrow-up-right"></i></span>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Swaroop Nagar, Kanpur</p>
+                                            <a href="https://maps.app.goo.gl/4iqAF5hjdsFVHNRE7" target="_blank" rel="noopener" class="s360-port-cta"><i class="fa-solid fa-street-view"></i> View on Google Maps</a>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 port-item wow fadeInUp" data-cat="clinic" data-wow-delay=".3s">
-                                    <a href="https://maps.app.goo.gl/oxEnEdEZiB6yjpXA7" target="_blank" rel="noopener" class="s360-tour-card">
-                                        <div class="s360-tour-head">
-                                            <i class="fa-solid fa-stethoscope"></i>
-                                            <span class="s360-tour-badge"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</span>
+                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="clinic" data-wow-delay=".2s">
+                                    <div class="s360-port-card">
+                                        <div class="s360-port-iframe-wrap">
+                                            <i class="s360-port-bgicon fa-solid fa-stethoscope"></i>
+                                            <a href="https://maps.app.goo.gl/oxEnEdEZiB6yjpXA7" target="_blank" rel="noopener" class="s360-port-play"><i class="fa-solid fa-street-view"></i> View 360&deg; Tour</a>
+                                            <div class="s360-port-cat">Doctor's Clinic</div>
+                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</div>
                                         </div>
-                                        <div class="s360-tour-body">
-                                            <span class="s360-tour-cat">Doctor's Clinic</span>
+                                        <div class="s360-port-info">
                                             <h5>Dr. Anand Jha</h5>
-                                            <p><i class="fa-solid fa-location-dot"></i> Kakadeo, Kanpur</p>
-                                            <span class="s360-tour-link">View 360&deg; Tour <i class="fa-solid fa-arrow-up-right"></i></span>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Kakadeo, Kanpur</p>
+                                            <a href="https://maps.app.goo.gl/oxEnEdEZiB6yjpXA7" target="_blank" rel="noopener" class="s360-port-cta"><i class="fa-solid fa-street-view"></i> View on Google Maps</a>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 port-item wow fadeInUp" data-cat="gym" data-wow-delay=".1s">
-                                    <a href="https://maps.app.goo.gl/kCMrY5tw5iDhABfz9" target="_blank" rel="noopener" class="s360-tour-card">
-                                        <div class="s360-tour-head">
-                                            <i class="fa-solid fa-dumbbell"></i>
-                                            <span class="s360-tour-badge"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</span>
+                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="gym" data-wow-delay=".1s">
+                                    <div class="s360-port-card">
+                                        <div class="s360-port-iframe-wrap">
+                                            <i class="s360-port-bgicon fa-solid fa-dumbbell"></i>
+                                            <a href="https://maps.app.goo.gl/kCMrY5tw5iDhABfz9" target="_blank" rel="noopener" class="s360-port-play"><i class="fa-solid fa-street-view"></i> View 360&deg; Tour</a>
+                                            <div class="s360-port-cat">Gym &amp; Fitness</div>
+                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</div>
                                         </div>
-                                        <div class="s360-tour-body">
-                                            <span class="s360-tour-cat">Gym &amp; Fitness</span>
+                                        <div class="s360-port-info">
                                             <h5>Max Fitness Gym</h5>
-                                            <p><i class="fa-solid fa-location-dot"></i> Kidwai Nagar, Kanpur</p>
-                                            <span class="s360-tour-link">View 360&deg; Tour <i class="fa-solid fa-arrow-up-right"></i></span>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Kidwai Nagar, Kanpur</p>
+                                            <a href="https://maps.app.goo.gl/kCMrY5tw5iDhABfz9" target="_blank" rel="noopener" class="s360-port-cta"><i class="fa-solid fa-street-view"></i> View on Google Maps</a>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 port-item wow fadeInUp" data-cat="hotel" data-wow-delay=".2s">
-                                    <a href="https://maps.app.goo.gl/hNkJHRodKAm9sUfB7" target="_blank" rel="noopener" class="s360-tour-card">
-                                        <div class="s360-tour-head">
-                                            <i class="fa-solid fa-utensils"></i>
-                                            <span class="s360-tour-badge"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</span>
+                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="hotel" data-wow-delay=".2s">
+                                    <div class="s360-port-card">
+                                        <div class="s360-port-iframe-wrap">
+                                            <i class="s360-port-bgicon fa-solid fa-utensils"></i>
+                                            <a href="https://maps.app.goo.gl/hNkJHRodKAm9sUfB7" target="_blank" rel="noopener" class="s360-port-play"><i class="fa-solid fa-street-view"></i> View 360&deg; Tour</a>
+                                            <div class="s360-port-cat">Hotel &amp; Restaurant</div>
+                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</div>
                                         </div>
-                                        <div class="s360-tour-body">
-                                            <span class="s360-tour-cat">Hotel &amp; Restaurant</span>
+                                        <div class="s360-port-info">
                                             <h5>The Deep Hotel</h5>
-                                            <p><i class="fa-solid fa-location-dot"></i> Gumti, Kanpur</p>
-                                            <span class="s360-tour-link">View 360&deg; Tour <i class="fa-solid fa-arrow-up-right"></i></span>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Gumti, Kanpur</p>
+                                            <a href="https://maps.app.goo.gl/hNkJHRodKAm9sUfB7" target="_blank" rel="noopener" class="s360-port-cta"><i class="fa-solid fa-street-view"></i> View on Google Maps</a>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 port-item wow fadeInUp" data-cat="hotel" data-wow-delay=".3s">
-                                    <a href="https://maps.app.goo.gl/VoY1sc7MSocMRa2w5" target="_blank" rel="noopener" class="s360-tour-card">
-                                        <div class="s360-tour-head">
-                                            <i class="fa-solid fa-utensils"></i>
-                                            <span class="s360-tour-badge"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</span>
+                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="hotel" data-wow-delay=".1s">
+                                    <div class="s360-port-card">
+                                        <div class="s360-port-iframe-wrap">
+                                            <i class="s360-port-bgicon fa-solid fa-utensils"></i>
+                                            <a href="https://maps.app.goo.gl/VoY1sc7MSocMRa2w5" target="_blank" rel="noopener" class="s360-port-play"><i class="fa-solid fa-street-view"></i> View 360&deg; Tour</a>
+                                            <div class="s360-port-cat">Hotel &amp; Restaurant</div>
+                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</div>
                                         </div>
-                                        <div class="s360-tour-body">
-                                            <span class="s360-tour-cat">Hotel &amp; Restaurant</span>
+                                        <div class="s360-port-info">
                                             <h5>Haveli Restaurant</h5>
-                                            <p><i class="fa-solid fa-location-dot"></i> Kanpur</p>
-                                            <span class="s360-tour-link">View 360&deg; Tour <i class="fa-solid fa-arrow-up-right"></i></span>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Kanpur</p>
+                                            <a href="https://maps.app.goo.gl/VoY1sc7MSocMRa2w5" target="_blank" rel="noopener" class="s360-port-cta"><i class="fa-solid fa-street-view"></i> View on Google Maps</a>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 port-item wow fadeInUp" data-cat="hotel" data-wow-delay=".1s">
-                                    <a href="https://maps.app.goo.gl/X9V6SzBufZDvHChUA" target="_blank" rel="noopener" class="s360-tour-card">
-                                        <div class="s360-tour-head">
-                                            <i class="fa-solid fa-utensils"></i>
-                                            <span class="s360-tour-badge"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</span>
+                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="hotel" data-wow-delay=".2s">
+                                    <div class="s360-port-card">
+                                        <div class="s360-port-iframe-wrap">
+                                            <i class="s360-port-bgicon fa-solid fa-utensils"></i>
+                                            <a href="https://maps.app.goo.gl/X9V6SzBufZDvHChUA" target="_blank" rel="noopener" class="s360-port-play"><i class="fa-solid fa-street-view"></i> View 360&deg; Tour</a>
+                                            <div class="s360-port-cat">Hotel &amp; Restaurant</div>
+                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</div>
                                         </div>
-                                        <div class="s360-tour-body">
-                                            <span class="s360-tour-cat">Hotel &amp; Restaurant</span>
+                                        <div class="s360-port-info">
                                             <h5>Baba Jaan Hotel</h5>
-                                            <p><i class="fa-solid fa-location-dot"></i> Parade, Kanpur</p>
-                                            <span class="s360-tour-link">View 360&deg; Tour <i class="fa-solid fa-arrow-up-right"></i></span>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Parade, Kanpur</p>
+                                            <a href="https://maps.app.goo.gl/X9V6SzBufZDvHChUA" target="_blank" rel="noopener" class="s360-port-cta"><i class="fa-solid fa-street-view"></i> View on Google Maps</a>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 port-item wow fadeInUp" data-cat="hotel" data-wow-delay=".2s">
-                                    <a href="https://maps.app.goo.gl/6Rvqu8Qw2czqjJ4Z9" target="_blank" rel="noopener" class="s360-tour-card">
-                                        <div class="s360-tour-head">
-                                            <i class="fa-solid fa-utensils"></i>
-                                            <span class="s360-tour-badge"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</span>
+                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="hotel" data-wow-delay=".1s">
+                                    <div class="s360-port-card">
+                                        <div class="s360-port-iframe-wrap">
+                                            <i class="s360-port-bgicon fa-solid fa-utensils"></i>
+                                            <a href="https://maps.app.goo.gl/6Rvqu8Qw2czqjJ4Z9" target="_blank" rel="noopener" class="s360-port-play"><i class="fa-solid fa-street-view"></i> View 360&deg; Tour</a>
+                                            <div class="s360-port-cat">Hotel &amp; Restaurant</div>
+                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</div>
                                         </div>
-                                        <div class="s360-tour-body">
-                                            <span class="s360-tour-cat">Hotel &amp; Restaurant</span>
+                                        <div class="s360-port-info">
                                             <h5>Varshi Hotel</h5>
-                                            <p><i class="fa-solid fa-location-dot"></i> Chaman Ganj, Kanpur</p>
-                                            <span class="s360-tour-link">View 360&deg; Tour <i class="fa-solid fa-arrow-up-right"></i></span>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Chaman Ganj, Kanpur</p>
+                                            <a href="https://maps.app.goo.gl/6Rvqu8Qw2czqjJ4Z9" target="_blank" rel="noopener" class="s360-port-cta"><i class="fa-solid fa-street-view"></i> View on Google Maps</a>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 port-item wow fadeInUp" data-cat="hotel" data-wow-delay=".3s">
-                                    <a href="https://maps.app.goo.gl/bHo6BWbouVH5cChT9" target="_blank" rel="noopener" class="s360-tour-card">
-                                        <div class="s360-tour-head">
-                                            <i class="fa-solid fa-utensils"></i>
-                                            <span class="s360-tour-badge"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</span>
+                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="hotel" data-wow-delay=".2s">
+                                    <div class="s360-port-card">
+                                        <div class="s360-port-iframe-wrap">
+                                            <i class="s360-port-bgicon fa-solid fa-utensils"></i>
+                                            <a href="https://maps.app.goo.gl/bHo6BWbouVH5cChT9" target="_blank" rel="noopener" class="s360-port-play"><i class="fa-solid fa-street-view"></i> View 360&deg; Tour</a>
+                                            <div class="s360-port-cat">Hotel &amp; Restaurant</div>
+                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</div>
                                         </div>
-                                        <div class="s360-tour-body">
-                                            <span class="s360-tour-cat">Hotel &amp; Restaurant</span>
+                                        <div class="s360-port-info">
                                             <h5>Four Season Restaurant &amp; Hotel</h5>
-                                            <p><i class="fa-solid fa-location-dot"></i> Shyam Nagar, Kanpur</p>
-                                            <span class="s360-tour-link">View 360&deg; Tour <i class="fa-solid fa-arrow-up-right"></i></span>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Shyam Nagar, Kanpur</p>
+                                            <a href="https://maps.app.goo.gl/bHo6BWbouVH5cChT9" target="_blank" rel="noopener" class="s360-port-cta"><i class="fa-solid fa-street-view"></i> View on Google Maps</a>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 port-item wow fadeInUp" data-cat="salon" data-wow-delay=".1s">
-                                    <a href="https://maps.app.goo.gl/yZ3okgVuCwedJRH9A" target="_blank" rel="noopener" class="s360-tour-card">
-                                        <div class="s360-tour-head">
-                                            <i class="fa-solid fa-spa"></i>
-                                            <span class="s360-tour-badge"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</span>
+                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="salon" data-wow-delay=".1s">
+                                    <div class="s360-port-card">
+                                        <div class="s360-port-iframe-wrap">
+                                            <i class="s360-port-bgicon fa-solid fa-spa"></i>
+                                            <a href="https://maps.app.goo.gl/yZ3okgVuCwedJRH9A" target="_blank" rel="noopener" class="s360-port-play"><i class="fa-solid fa-street-view"></i> View 360&deg; Tour</a>
+                                            <div class="s360-port-cat">Salon &amp; Spa</div>
+                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</div>
                                         </div>
-                                        <div class="s360-tour-body">
-                                            <span class="s360-tour-cat">Salon &amp; Spa</span>
+                                        <div class="s360-port-info">
                                             <h5>Stylish Salon</h5>
-                                            <p><i class="fa-solid fa-location-dot"></i> Govind Nagar, Kanpur</p>
-                                            <span class="s360-tour-link">View 360&deg; Tour <i class="fa-solid fa-arrow-up-right"></i></span>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Govind Nagar, Kanpur</p>
+                                            <a href="https://maps.app.goo.gl/yZ3okgVuCwedJRH9A" target="_blank" rel="noopener" class="s360-port-cta"><i class="fa-solid fa-street-view"></i> View on Google Maps</a>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 port-item wow fadeInUp" data-cat="salon" data-wow-delay=".2s">
-                                    <a href="https://maps.app.goo.gl/VBjkyDUiP43p3NWq9" target="_blank" rel="noopener" class="s360-tour-card">
-                                        <div class="s360-tour-head">
-                                            <i class="fa-solid fa-spa"></i>
-                                            <span class="s360-tour-badge"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</span>
+                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="salon" data-wow-delay=".2s">
+                                    <div class="s360-port-card">
+                                        <div class="s360-port-iframe-wrap">
+                                            <i class="s360-port-bgicon fa-solid fa-spa"></i>
+                                            <a href="https://maps.app.goo.gl/VBjkyDUiP43p3NWq9" target="_blank" rel="noopener" class="s360-port-play"><i class="fa-solid fa-street-view"></i> View 360&deg; Tour</a>
+                                            <div class="s360-port-cat">Salon &amp; Spa</div>
+                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</div>
                                         </div>
-                                        <div class="s360-tour-body">
-                                            <span class="s360-tour-cat">Salon &amp; Spa</span>
+                                        <div class="s360-port-info">
                                             <h5>Coiffeur Salon</h5>
-                                            <p><i class="fa-solid fa-location-dot"></i> Tilak Nagar, Kanpur</p>
-                                            <span class="s360-tour-link">View 360&deg; Tour <i class="fa-solid fa-arrow-up-right"></i></span>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Tilak Nagar, Kanpur</p>
+                                            <a href="https://maps.app.goo.gl/VBjkyDUiP43p3NWq9" target="_blank" rel="noopener" class="s360-port-cta"><i class="fa-solid fa-street-view"></i> View on Google Maps</a>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 port-item wow fadeInUp" data-cat="salon" data-wow-delay=".3s">
-                                    <a href="https://maps.app.goo.gl/mkEogFmyr69scJTZA" target="_blank" rel="noopener" class="s360-tour-card">
-                                        <div class="s360-tour-head">
-                                            <i class="fa-solid fa-spa"></i>
-                                            <span class="s360-tour-badge"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</span>
+                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="salon" data-wow-delay=".1s">
+                                    <div class="s360-port-card">
+                                        <div class="s360-port-iframe-wrap">
+                                            <i class="s360-port-bgicon fa-solid fa-spa"></i>
+                                            <a href="https://maps.app.goo.gl/mkEogFmyr69scJTZA" target="_blank" rel="noopener" class="s360-port-play"><i class="fa-solid fa-street-view"></i> View 360&deg; Tour</a>
+                                            <div class="s360-port-cat">Salon &amp; Spa</div>
+                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</div>
                                         </div>
-                                        <div class="s360-tour-body">
-                                            <span class="s360-tour-cat">Salon &amp; Spa</span>
+                                        <div class="s360-port-info">
                                             <h5>Rider Salon</h5>
-                                            <p><i class="fa-solid fa-location-dot"></i> Somdatt Plaza, Naveen Market</p>
-                                            <span class="s360-tour-link">View 360&deg; Tour <i class="fa-solid fa-arrow-up-right"></i></span>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Somdatt Plaza, Naveen Market</p>
+                                            <a href="https://maps.app.goo.gl/mkEogFmyr69scJTZA" target="_blank" rel="noopener" class="s360-port-cta"><i class="fa-solid fa-street-view"></i> View on Google Maps</a>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 port-item wow fadeInUp" data-cat="salon" data-wow-delay=".1s">
-                                    <a href="https://maps.app.goo.gl/NUU1UbG92yfbxfjS9" target="_blank" rel="noopener" class="s360-tour-card">
-                                        <div class="s360-tour-head">
-                                            <i class="fa-solid fa-spa"></i>
-                                            <span class="s360-tour-badge"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</span>
+                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="salon" data-wow-delay=".2s">
+                                    <div class="s360-port-card">
+                                        <div class="s360-port-iframe-wrap">
+                                            <i class="s360-port-bgicon fa-solid fa-spa"></i>
+                                            <a href="https://maps.app.goo.gl/NUU1UbG92yfbxfjS9" target="_blank" rel="noopener" class="s360-port-play"><i class="fa-solid fa-street-view"></i> View 360&deg; Tour</a>
+                                            <div class="s360-port-cat">Salon &amp; Spa</div>
+                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</div>
                                         </div>
-                                        <div class="s360-tour-body">
-                                            <span class="s360-tour-cat">Salon &amp; Spa</span>
+                                        <div class="s360-port-info">
                                             <h5>Bluser Makeup &amp; Beauty Parlour</h5>
-                                            <p><i class="fa-solid fa-location-dot"></i> Keshav Puram, Kanpur</p>
-                                            <span class="s360-tour-link">View 360&deg; Tour <i class="fa-solid fa-arrow-up-right"></i></span>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Keshav Puram, Kanpur</p>
+                                            <a href="https://maps.app.goo.gl/NUU1UbG92yfbxfjS9" target="_blank" rel="noopener" class="s360-port-cta"><i class="fa-solid fa-street-view"></i> View on Google Maps</a>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 port-item wow fadeInUp" data-cat="showroom" data-wow-delay=".2s">
-                                    <a href="https://maps.app.goo.gl/Yzn2SJWpxXRq8Drv8" target="_blank" rel="noopener" class="s360-tour-card">
-                                        <div class="s360-tour-head">
-                                            <i class="fa-solid fa-store"></i>
-                                            <span class="s360-tour-badge"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</span>
+                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="showroom" data-wow-delay=".1s">
+                                    <div class="s360-port-card">
+                                        <div class="s360-port-iframe-wrap">
+                                            <i class="s360-port-bgicon fa-solid fa-store"></i>
+                                            <a href="https://maps.app.goo.gl/Yzn2SJWpxXRq8Drv8" target="_blank" rel="noopener" class="s360-port-play"><i class="fa-solid fa-street-view"></i> View 360&deg; Tour</a>
+                                            <div class="s360-port-cat">Showroom</div>
+                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</div>
                                         </div>
-                                        <div class="s360-tour-body">
-                                            <span class="s360-tour-cat">Showroom</span>
+                                        <div class="s360-port-info">
                                             <h5>Uma Vastra Grah</h5>
-                                            <p><i class="fa-solid fa-location-dot"></i> Naveen Market, Kanpur</p>
-                                            <span class="s360-tour-link">View 360&deg; Tour <i class="fa-solid fa-arrow-up-right"></i></span>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Naveen Market, Kanpur</p>
+                                            <a href="https://maps.app.goo.gl/Yzn2SJWpxXRq8Drv8" target="_blank" rel="noopener" class="s360-port-cta"><i class="fa-solid fa-street-view"></i> View on Google Maps</a>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 port-item wow fadeInUp" data-cat="showroom" data-wow-delay=".3s">
-                                    <a href="https://maps.app.goo.gl/tyUhYRi31LfdweSM7" target="_blank" rel="noopener" class="s360-tour-card">
-                                        <div class="s360-tour-head">
-                                            <i class="fa-solid fa-store"></i>
-                                            <span class="s360-tour-badge"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</span>
+                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="showroom" data-wow-delay=".2s">
+                                    <div class="s360-port-card">
+                                        <div class="s360-port-iframe-wrap">
+                                            <i class="s360-port-bgicon fa-solid fa-store"></i>
+                                            <a href="https://maps.app.goo.gl/tyUhYRi31LfdweSM7" target="_blank" rel="noopener" class="s360-port-play"><i class="fa-solid fa-street-view"></i> View 360&deg; Tour</a>
+                                            <div class="s360-port-cat">Showroom</div>
+                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</div>
                                         </div>
-                                        <div class="s360-tour-body">
-                                            <span class="s360-tour-cat">Showroom</span>
+                                        <div class="s360-port-info">
                                             <h5>Pages by Fairdeal Stationery</h5>
-                                            <p><i class="fa-solid fa-location-dot"></i> Govind Nagar, Kanpur</p>
-                                            <span class="s360-tour-link">View 360&deg; Tour <i class="fa-solid fa-arrow-up-right"></i></span>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Govind Nagar, Kanpur</p>
+                                            <a href="https://maps.app.goo.gl/tyUhYRi31LfdweSM7" target="_blank" rel="noopener" class="s360-port-cta"><i class="fa-solid fa-street-view"></i> View on Google Maps</a>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 port-item wow fadeInUp" data-cat="showroom" data-wow-delay=".1s">
-                                    <a href="https://maps.app.goo.gl/m8bZ4pL9vpqriDHA6" target="_blank" rel="noopener" class="s360-tour-card">
-                                        <div class="s360-tour-head">
-                                            <i class="fa-solid fa-store"></i>
-                                            <span class="s360-tour-badge"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</span>
+                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="showroom" data-wow-delay=".1s">
+                                    <div class="s360-port-card">
+                                        <div class="s360-port-iframe-wrap">
+                                            <i class="s360-port-bgicon fa-solid fa-store"></i>
+                                            <a href="https://maps.app.goo.gl/m8bZ4pL9vpqriDHA6" target="_blank" rel="noopener" class="s360-port-play"><i class="fa-solid fa-street-view"></i> View 360&deg; Tour</a>
+                                            <div class="s360-port-cat">Showroom</div>
+                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</div>
                                         </div>
-                                        <div class="s360-tour-body">
-                                            <span class="s360-tour-cat">Showroom</span>
+                                        <div class="s360-port-info">
                                             <h5>Singhvani Telecom</h5>
-                                            <p><i class="fa-solid fa-location-dot"></i> Somdatt Plaza, Naveen Market</p>
-                                            <span class="s360-tour-link">View 360&deg; Tour <i class="fa-solid fa-arrow-up-right"></i></span>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Somdatt Plaza, Naveen Market</p>
+                                            <a href="https://maps.app.goo.gl/m8bZ4pL9vpqriDHA6" target="_blank" rel="noopener" class="s360-port-cta"><i class="fa-solid fa-street-view"></i> View on Google Maps</a>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 port-item wow fadeInUp" data-cat="showroom" data-wow-delay=".2s">
-                                    <a href="https://maps.app.goo.gl/cir6nAipaqnft5p67" target="_blank" rel="noopener" class="s360-tour-card">
-                                        <div class="s360-tour-head">
-                                            <i class="fa-solid fa-store"></i>
-                                            <span class="s360-tour-badge"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</span>
+                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="showroom" data-wow-delay=".2s">
+                                    <div class="s360-port-card">
+                                        <div class="s360-port-iframe-wrap">
+                                            <i class="s360-port-bgicon fa-solid fa-store"></i>
+                                            <a href="https://maps.app.goo.gl/cir6nAipaqnft5p67" target="_blank" rel="noopener" class="s360-port-play"><i class="fa-solid fa-street-view"></i> View 360&deg; Tour</a>
+                                            <div class="s360-port-cat">Showroom</div>
+                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</div>
                                         </div>
-                                        <div class="s360-tour-body">
-                                            <span class="s360-tour-cat">Showroom</span>
+                                        <div class="s360-port-info">
                                             <h5>Sports Wala</h5>
-                                            <p><i class="fa-solid fa-location-dot"></i> Govind Nagar, Kanpur</p>
-                                            <span class="s360-tour-link">View 360&deg; Tour <i class="fa-solid fa-arrow-up-right"></i></span>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Govind Nagar, Kanpur</p>
+                                            <a href="https://maps.app.goo.gl/cir6nAipaqnft5p67" target="_blank" rel="noopener" class="s360-port-cta"><i class="fa-solid fa-street-view"></i> View on Google Maps</a>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 port-item wow fadeInUp" data-cat="showroom" data-wow-delay=".3s">
-                                    <a href="https://maps.app.goo.gl/oxEnEdEZiB6yjpXA7" target="_blank" rel="noopener" class="s360-tour-card">
-                                        <div class="s360-tour-head">
-                                            <i class="fa-solid fa-store"></i>
-                                            <span class="s360-tour-badge"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</span>
+                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="showroom" data-wow-delay=".1s">
+                                    <div class="s360-port-card">
+                                        <div class="s360-port-iframe-wrap">
+                                            <i class="s360-port-bgicon fa-solid fa-store"></i>
+                                            <a href="https://maps.app.goo.gl/oxEnEdEZiB6yjpXA7" target="_blank" rel="noopener" class="s360-port-play"><i class="fa-solid fa-street-view"></i> View 360&deg; Tour</a>
+                                            <div class="s360-port-cat">Showroom</div>
+                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</div>
                                         </div>
-                                        <div class="s360-tour-body">
-                                            <span class="s360-tour-cat">Showroom</span>
+                                        <div class="s360-port-info">
                                             <h5>Sports Wala</h5>
-                                            <p><i class="fa-solid fa-location-dot"></i> Saket Nagar, Kanpur</p>
-                                            <span class="s360-tour-link">View 360&deg; Tour <i class="fa-solid fa-arrow-up-right"></i></span>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Saket Nagar, Kanpur</p>
+                                            <a href="https://maps.app.goo.gl/oxEnEdEZiB6yjpXA7" target="_blank" rel="noopener" class="s360-port-cta"><i class="fa-solid fa-street-view"></i> View on Google Maps</a>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 port-item wow fadeInUp" data-cat="showroom" data-wow-delay=".1s">
-                                    <a href="https://maps.app.goo.gl/z3tC3wk6brxdjJMx9" target="_blank" rel="noopener" class="s360-tour-card">
-                                        <div class="s360-tour-head">
-                                            <i class="fa-solid fa-store"></i>
-                                            <span class="s360-tour-badge"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</span>
+                                <div class="col-lg-6 col-md-6 port-item wow fadeInUp" data-cat="showroom" data-wow-delay=".2s">
+                                    <div class="s360-port-card">
+                                        <div class="s360-port-iframe-wrap">
+                                            <i class="s360-port-bgicon fa-solid fa-store"></i>
+                                            <a href="https://maps.app.goo.gl/z3tC3wk6brxdjJMx9" target="_blank" rel="noopener" class="s360-port-play"><i class="fa-solid fa-street-view"></i> View 360&deg; Tour</a>
+                                            <div class="s360-port-cat">Showroom</div>
+                                            <div class="s360-360-live"><i class="fa-solid fa-circle"></i> 360&deg; LIVE</div>
                                         </div>
-                                        <div class="s360-tour-body">
-                                            <span class="s360-tour-cat">Showroom</span>
+                                        <div class="s360-port-info">
                                             <h5>Shukla Electronics</h5>
-                                            <p><i class="fa-solid fa-location-dot"></i> Keshav Puram, Kanpur</p>
-                                            <span class="s360-tour-link">View 360&deg; Tour <i class="fa-solid fa-arrow-up-right"></i></span>
+                                            <p class="loc"><i class="fa-solid fa-location-dot"></i> Keshav Puram, Kanpur</p>
+                                            <a href="https://maps.app.goo.gl/z3tC3wk6brxdjJMx9" target="_blank" rel="noopener" class="s360-port-cta"><i class="fa-solid fa-street-view"></i> View on Google Maps</a>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
                             </div>
 
