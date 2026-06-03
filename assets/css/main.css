@@ -10644,3 +10644,12 @@ span {
 /*# sourceMappingURL=main.css.map */
 .s360-addr-link{color:inherit;text-decoration:none;transition:color .25s ease;}
 .s360-addr-link:hover{color:var(--theme);}
+
+/* ===== How It Works — separate cards (used on service pages) ===== */
+.s360-process-step{text-align:center;padding:40px 28px;background:#fff;border:1px solid #ececec;border-radius:18px;box-shadow:0 10px 34px rgba(0,0,0,0.06);height:100%;position:relative;transition:transform .35s cubic-bezier(0.22,0.61,0.36,1),box-shadow .35s ease,border-color .35s ease;}
+.s360-process-step:hover{transform:translateY(-8px);border-color:var(--theme);box-shadow:0 22px 46px rgba(245,194,0,0.18);}
+.s360-process-step .s360-step-num{width:80px;height:80px;background:var(--theme);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-size:28px;font-weight:800;color:#1A1A1A;font-family:'Quicksand',sans-serif;box-shadow:0 8px 24px rgba(245,194,0,0.3);transition:transform .35s cubic-bezier(0.22,0.61,0.36,1),box-shadow .35s ease;}
+.s360-process-step:hover .s360-step-num{transform:scale(1.08);box-shadow:0 16px 34px rgba(245,194,0,0.5);}
+.s360-process-step h4{font-size:18px;font-weight:700;color:#1A1A1A;margin-bottom:10px;}
+.s360-process-step p{color:#555;font-size:14px;line-height:1.6;margin:0;}
+@media (max-width:767px){.s360-process-step{padding:30px 22px;}}

@@ -404,23 +404,23 @@
             .s360-stat-box .plus { font-size: 40px; }
             .s360-stat-box p { color: #aaaaaa; font-size: 15px; margin: 0; }
 
-            /* Process */
+            /* Process — separate cards */
             .s360-process-step {
                 text-align: center;
-                padding: 40px 24px;
+                padding: 40px 28px;
+                background: #ffffff;
+                border: 1px solid #ececec;
+                border-radius: 18px;
+                box-shadow: 0 10px 34px rgba(0,0,0,0.06);
+                height: 100%;
                 position: relative;
+                transition: transform 0.35s cubic-bezier(0.22,0.61,0.36,1), box-shadow 0.35s ease, border-color 0.35s ease;
             }
-            .s360-process-step::after {
-                content: '';
-                position: absolute;
-                top: 50px;
-                right: -50%;
-                width: 100%;
-                height: 2px;
-                background: linear-gradient(90deg, var(--theme) 0%, rgba(245,194,0,0.1) 100%);
-                z-index: 0;
+            .s360-process-step:hover {
+                transform: translateY(-8px);
+                border-color: var(--theme);
+                box-shadow: 0 22px 46px rgba(245,194,0,0.18);
             }
-            .s360-process-step:last-child::after { display: none; }
             .s360-step-num {
                 width: 80px; height: 80px;
                 background: var(--theme);
@@ -436,11 +436,11 @@
                 position: relative;
                 z-index: 1;
                 box-shadow: 0 8px 24px rgba(245,194,0,0.3);
+                transition: transform 0.35s cubic-bezier(0.22,0.61,0.36,1), box-shadow 0.35s ease;
             }
-            .s360-step-num { transition: transform 0.3s cubic-bezier(0.22,0.61,0.36,1), box-shadow 0.3s ease; }
-            .s360-process-step:hover .s360-step-num { transform: scale(1.12) translateY(-4px); box-shadow: 0 16px 34px rgba(245,194,0,0.5); }
+            .s360-process-step:hover .s360-step-num { transform: scale(1.08); box-shadow: 0 16px 34px rgba(245,194,0,0.5); }
             .s360-process-step h4 { font-size: 18px; font-weight: 700; color: #1A1A1A; margin-bottom: 10px; }
-            .s360-process-step p { color: var(--text); font-size: 14px; line-height: 1.6; }
+            .s360-process-step p { color: var(--text); font-size: 14px; line-height: 1.6; margin: 0; }
 
             /* Testimonial */
             .s360-testi-card {
@@ -1701,7 +1701,7 @@
                                     </svg>
                                 </div>
                             </div>
-                            <div class="row g-0">
+                            <div class="row g-4">
                                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
                                     <div class="s360-process-step">
                                         <div class="s360-step-num">01</div>
