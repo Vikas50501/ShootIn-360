@@ -10642,3 +10642,5 @@ span {
   }
 }
 /*# sourceMappingURL=main.css.map */
+.s360-addr-link{color:inherit;text-decoration:none;transition:color .25s ease;}
+.s360-addr-link:hover{color:var(--theme);}
