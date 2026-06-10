@@ -696,7 +696,7 @@ span {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #111111;
+  background: #ffffff;
 }
 
 .loader { display: none; }
@@ -773,7 +773,7 @@ span {
   font-family: 'Quicksand', sans-serif;
   font-weight: 800;
   font-size: 28px;
-  color: #ffffff;
+  color: #1A1A1A;
   letter-spacing: -0.5px;
 }
 .s360-pre-name span { color: #F5C200; }
