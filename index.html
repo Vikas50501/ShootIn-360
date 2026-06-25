@@ -366,11 +366,8 @@
             .s360-service-card:hover .s360-service-link,
             .s360-service-card:focus-within .s360-service-link { max-height: 40px; opacity: 1; transform: translateY(0); }
             .s360-service-link:hover { gap: 10px; color: var(--theme); }
-            /* Genuine touch devices (no hover + coarse pointer) — keep content visible */
-            @media (hover: none) and (pointer: coarse) {
-                .s360-service-card p { max-height: 400px; opacity: 1; transform: none; margin: 12px 0 18px; }
-                .s360-service-card .s360-service-link { max-height: 40px; opacity: 1; transform: none; }
-            }
+            /* Title shown by default everywhere; description + link reveal on
+               hover (mouse/trackpad) or tap/focus (touch). */
 
             /* Why Choose */
             .s360-why-item {
