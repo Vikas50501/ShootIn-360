@@ -348,7 +348,8 @@
                 transform: translateY(8px);
                 transition: max-height 0.45s ease, opacity 0.35s ease, transform 0.35s ease, margin 0.35s ease;
             }
-            .s360-service-card:hover p { max-height: 200px; opacity: 1; transform: translateY(0); margin: 12px 0 18px; }
+            .s360-service-card:hover p,
+            .s360-service-card:focus-within p { max-height: 400px; opacity: 1; transform: translateY(0); margin: 12px 0 18px; }
             .s360-service-link {
                 color: var(--theme);
                 font-weight: 600;
@@ -362,11 +363,12 @@
                 transform: translateY(8px);
                 transition: max-height 0.45s ease, opacity 0.35s ease, transform 0.35s ease, gap 0.3s ease;
             }
-            .s360-service-card:hover .s360-service-link { max-height: 40px; opacity: 1; transform: translateY(0); }
+            .s360-service-card:hover .s360-service-link,
+            .s360-service-card:focus-within .s360-service-link { max-height: 40px; opacity: 1; transform: translateY(0); }
             .s360-service-link:hover { gap: 10px; color: var(--theme); }
-            /* Touch devices have no hover — keep content visible */
-            @media (hover: none) {
-                .s360-service-card p { max-height: 200px; opacity: 1; transform: none; margin: 12px 0 18px; }
+            /* Genuine touch devices (no hover + coarse pointer) — keep content visible */
+            @media (hover: none) and (pointer: coarse) {
+                .s360-service-card p { max-height: 400px; opacity: 1; transform: none; margin: 12px 0 18px; }
                 .s360-service-card .s360-service-link { max-height: 40px; opacity: 1; transform: none; }
             }
 
